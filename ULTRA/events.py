@@ -15,7 +15,7 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, LOGSPAMMER
+from ULTRA import bot, BOTLOG_CHATID, LOGSPAMMER
 
 
 def register(**args):
@@ -86,7 +86,7 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**USERBOT ERROR REPORT**\n"
-                    link = "[LEGENDBOT Official Chat](https://t.me/teamishere)"
+                    link = "[ULTRA Official Chat](https://t.me/ULTRAXOT)"
                     text += "If you want to, you can report it"
                     text += f"- just forward this message to {link}.\n"
                     text += "Nothing is logged except the fact of error and date\n"
