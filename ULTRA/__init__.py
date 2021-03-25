@@ -6,7 +6,7 @@ from telethon import TelegramClient
 from ULTRA.helpers import functions as simpdef
 from ULTRA.uniborgConfig import Config
 from var import Var
-ultraxversion = "3.0"
+ultraxversion = "1.0"
 StartTime = time.time()
 
 os.system("pip install --upgrade pip")
