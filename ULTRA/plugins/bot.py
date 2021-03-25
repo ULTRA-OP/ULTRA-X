@@ -14,7 +14,7 @@ from telethon import events, Button, custom
 from userbot.utils import admin_cmd
 from userbot import ALIVE_NAME
 from userbot import bot as borg
-from telethon.tl.custom import Button
+from telethon.tl.custom import Button, custom
 from telethon.tl.types import ChannelParticipantsAdmins
 global ok
 ok = borg.uid
@@ -40,9 +40,10 @@ if TG_BOT_USER_NAME_BF_HER is not None:
                     Button.url("Repo", "https://github.com/LEGENDXOP/LEGEND-BOT"),
                     Button.url("Deploy", "https://heroku.com/deploy?template=https://github.com/legendx22/LEGEND-BOT/blob/master")],
                     [Button.url("String", "https://repl.it/legendx22/LEGEND-BOT#main.py"),
-                    Button.url("Channel", "https://t.me/teamishere"),
+                    Button.url("Channel", "https://t.me/teamishere")
                 ]
             ]
+             buttons += [[custom.Button.inline("HELP", data="helpme"), custom.Button.inline("restart", data='restart')]]
             if ALIVE_PHOTTO and ALIVE_PHOTTO.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(
                     ALIVE_PHOTTO,
