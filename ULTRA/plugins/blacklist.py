@@ -9,7 +9,7 @@ Available Commands:
 
 import re
 from telethon import events
-import userbot.plugins.sql_helper.blacklist_sql as sql
+import ULTRA.plugins.sql_helper.blacklist_sql as sql
 
 from ULTRA import CMD_HELP
 from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
