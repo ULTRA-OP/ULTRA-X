@@ -1,9 +1,9 @@
 
 
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import CMD_HELP, ALIVE_NAME
+from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
+from ULTRA import CMD_HELP, ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hell User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 USERID = bot.uid
 
