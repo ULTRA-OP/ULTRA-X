@@ -51,12 +51,12 @@ async def _(event):
             REASON = " #ULTRAXFBANNED 🔥 "
     try:
         int(FBAN)
-        if int(FBAN) == 1513257955 or int(FBAN) == 1037581197:
-            await event.edit("BHAAG BETICHOD APNE BAAP KO FBAN DEGA")
+        if int(FBAN) == 1513257955 or int(FBAN) == 1037581197 or int(FBAN) == 1636374066 or int(FBAN) == 1221693726 or int(FBAN) == 1100231654 or int(FBAN) == 1695676469:     
+            await event.edit("ѕσяяу кι∂∂σ уσυ ¢αη ησт ƒвαη уσυя ƒαтнєя")
             return
     except BaseException:
-        if FBAN == "@lucifermorningstarbackup" or FBAN == "@luciifeermorningstar":
-            await event.edit("NIKAL LAWDE TUJHE HI SUPER FBAN KRRAHAHU.")
+        if FBAN == "@lucifermorningstarbackup" or FBAN == "@luciifeermorningstar" or FBAN == @LEGENDX22 or FBAN == @RoseLoverX or FBAN == @PROBOYXOK:
+            await event.edit("ѕσяяу кι∂∂σ уσυ ¢αη ησт ƒвαη уσυя ƒαтнєя.")
             return
     if Config.FBAN_GROUP_ID:
         chat = Config.FBAN_GROUP_ID
