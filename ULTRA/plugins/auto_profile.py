@@ -3,14 +3,14 @@ import time
 
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
-from userbot.utils import edit_or_reply, admin_cmd
+from ULTRA.utils import edit_or_reply, admin_cmd
 
-from userbot import ALIVE_NAME, CMD_HELP, BIO_MSG
+from ULTRA import ALIVE_NAME, CMD_HELP, BIO_MSG
 
 
-DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt"
+DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "ʟɛɢɛռɖaʀʏ ᴀғ υℓтяα χ"
 DEL_TIME_OUT = 60
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hell User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 
 @bot.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
