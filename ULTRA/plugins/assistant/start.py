@@ -1,4 +1,5 @@
-from ULTRA import tbot, bot
+from LEGENDX import xbot as tbot
+from ULTRA import bot
 from telethon import events, Button
 
 @tbot.on(events.NewMessage(pattern="/start"))
