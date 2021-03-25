@@ -5,8 +5,8 @@
 
 import asyncio
 
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import ALIVE_NAME, CMD_HELP
+from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
+from ULTRA import ALIVE_NAME, CMD_HELP
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hell User"
 
@@ -14,8 +14,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hell User"
 @bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="imp(|n) (.*)", allow_sudo=True))
 async def _(event):
-    legendx22 = bot.uid
-    USERNAME = f"tg://user?id={legendx22}"
+    ultrax = bot.uid
+    USERNAME = f"tg://user?id={ultrax}"
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
     text1 = await edit_or_reply(event, "Hmm... Looks like Something is wrong here🤔🧐!!")
