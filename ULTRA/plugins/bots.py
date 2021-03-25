@@ -7,8 +7,8 @@ from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telegraph import Telegraph
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from ULTRA import CMD_HELP
+from ULTRA.utils import admin_cmd
 from var import Var
 telegraph = Telegraph()
 mee = telegraph.create_account(short_name="yohohehe")
