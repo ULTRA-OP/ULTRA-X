@@ -17,11 +17,11 @@ while True:
    session = client.session.save()
    client.send_message(
        "me",
-       f"Here is your TELEGRAM STRING SESSION\n(Tap to copy it)👇 \n\n `{session}` \n\n And Visit @teamishere For Any Help !"
+       f"Here Is Your String Session For Using UltraX Userbot\n(**Tap to copy it**)👇 \n\n `{session}` \n\n And Visit @UltraX_Userbot For Any Help !"
    )
 
    print(
-       "Thanks for Choosing Legend bot Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
+       "Thanks for Choosing UltraX Userbot Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
    )
  except:
   print("")
