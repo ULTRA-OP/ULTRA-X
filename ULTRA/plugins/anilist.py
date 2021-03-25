@@ -8,8 +8,8 @@ import requests
 import re
 import json
 import asyncio
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from ULTRA import CMD_HELP
+from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 async def callAPI(search_str):
     query = '''
