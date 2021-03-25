@@ -14,8 +14,8 @@ document
 cancel"""
 
 import asyncio
-from userbot.utils import admin_cmd
-from userbot import CMD_HELP
+from ULTRA.utils import admin_cmd
+from ULTRA import CMD_HELP
 
  
 @borg.on(admin_cmd(pattern="fake ?(.*)"))
@@ -28,7 +28,7 @@ async def _(event):
     if input_str:
         action = input_str
     async with borg.action(event.chat_id, action):
-        await asyncio.sleep(86400)  # type for 10 seconds
+        await asyncio.sleep(10)  # type for 10 seconds
         
         
         
