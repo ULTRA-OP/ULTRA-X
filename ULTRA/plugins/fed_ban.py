@@ -6,7 +6,7 @@ from ULTRA.legend import NAME
 from ULTRA import CMD_HELP
 from ULTRA.utils import admin_cmd, sudo_cmd
 # By (@proboy22), and (@LEGENDX22)
-from userbot import bot
+from ULTRA import bot
 PRO = NAME
 @bot.on(admin_cmd("superfban ?(.*)"))
 @bot.on(sudo_cmd("superfban ?(.*)", allow_sudo=True))
