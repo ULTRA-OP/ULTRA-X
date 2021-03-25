@@ -3,8 +3,8 @@ import time
 from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import CMD_HELP
+from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
+from ULTRA import CMD_HELP
 
 
 @bot.on(admin_cmd(pattern="stats$"))
@@ -76,7 +76,7 @@ async def stats(
     response += f'🔱 **Unread:** {unread} \n'
     response += f'🔱 **Unread Mentions:** {unread_mentions} \n\n'
     response += f'☣️   __It Took:__ {stop_time:.02f}s \n'
-    response += f'📌 **From The DataBase Of** :- [LEGEND BOT](https://github.com/legendx22/LEGEND-BOT)'
+    response += f'📌 **From The DataBase Of** :- [υℓтяα χ](https://github.com/ULTRA-OP/ULTRA-X)'
     await hell.edit(response)
 
 
