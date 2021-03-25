@@ -9,8 +9,8 @@ import asyncio
 import os
 import subprocess
 import sys
-from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
-from userbot import CMD_HELP
+from ULTRA.utils import admin_cmd, humanbytes, progress, time_formatter
+from ULTRA import CMD_HELP
 
 @borg.on(admin_cmd(pattern=r"getc"))
 async def get_media(event):
