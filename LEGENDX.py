@@ -29,6 +29,7 @@ NAME = str(ALIVE_NAME) if ALIVE_NAME else "UltraX User"
 PHOTO = os.environ.get("ALIVE_PHOTTO", None)
 LEGENDX = "[LEGEND X](https://t.me/LEGENDX22)"
 VERSION = "3.1.5"
+devs = [1100231654, 1636374066] # , id, id, id aise krke full krde
 ID = 1100231654
 REPO = "[LEGEND BOT](https://github.com/ULTRA-OP/ULTRA-X)"
 PRO = bot.uid
