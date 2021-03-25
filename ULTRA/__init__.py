@@ -199,4 +199,4 @@ SUDO_LIST = {}
 
 
 from ULTRA.helpers import *
-from ULTRA.helpers import functions as legdef
+from ULTRA.helpers import functions as ultradef
