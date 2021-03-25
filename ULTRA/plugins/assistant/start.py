@@ -1,5 +1,4 @@
 from ULTRA import tbot
-#Chack __init.py tbot in ULTRA
 from ULTRA import bot
 from telethon import events, Button
 
