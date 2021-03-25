@@ -56,7 +56,7 @@ for name in files:
 
 import ULTRA._core
 
-print("Ultra-X is Up and Awake! ©️TeamUltra 2021")
+print("Ultra-X is Up and Awake! ©️TeamUltraX 2021")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
