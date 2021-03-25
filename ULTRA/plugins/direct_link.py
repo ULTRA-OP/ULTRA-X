@@ -13,8 +13,8 @@ import requests
 from bs4 import BeautifulSoup
 from humanize import naturalsize
 
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import CMD_HELP
+from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
+from ULTRA import CMD_HELP
 
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"direct(?: |$)([\s\S]*)"))
