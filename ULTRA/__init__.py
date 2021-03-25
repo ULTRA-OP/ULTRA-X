@@ -3,10 +3,10 @@ import sys
 import time
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from userbot.helpers import functions as simpdef
-from userbot.uniborgConfig import Config
+from ULTRA.helpers import functions as simpdef
+from ULTRA.uniborgConfig import Config
 from var import Var
-ultraxversion = "3.0"
+ultraxversion = "X"
 StartTime = time.time()
 
 os.system("pip install --upgrade pip")
