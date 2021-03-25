@@ -9,5 +9,5 @@ async def restart(event):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit ()
   else:
-    pro = "DEPLOY YOUR OWN ULTRA X PLEASE"
+    pro = "∂єρℓσу уσυ υℓтяα χ υѕєявσт"
     await event.answer(pro, alert=True)
