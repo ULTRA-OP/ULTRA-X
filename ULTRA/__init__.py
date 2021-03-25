@@ -6,7 +6,7 @@ from telethon import TelegramClient
 from ULTRA.helpers import functions as simpdef
 from ULTRA.uniborgConfig import Config
 from var import Var
-ultraxversion = "X"
+ultraxversion = "3.0"
 StartTime = time.time()
 
 os.system("pip install --upgrade pip")
@@ -198,5 +198,5 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-from userbot.helpers import *
-from userbot.helpers import functions as legdef
+from ULTRA.helpers import *
+from ULTRA.helpers import functions as legdef
