@@ -11,7 +11,7 @@ async def startass(e):
   if e.is_group:
     ok = [[Button.url("come pm", f"https://t.me/{pro.username}")]]
     return await e.reply(f"HELLO @{boy} 😃", buttons=ok)
-  if e.sender_id = k:
+  if e.sender_id == k:
    await e.reply('Hello Master I am Alive and Awake')
   else:
    buttons=[[
