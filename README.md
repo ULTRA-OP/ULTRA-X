@@ -8,7 +8,7 @@
 # υℓтяα χ вσт
 This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram. All credits goes to its Respective Owners....
 
-This is the one and only official υℓтяα χ вσт made by [@TEAMULTRAX](https://t.me/TEAMULTRAX) Also join support channel and group :- https://t.me/teamishere Enjoy Your Bot!!💝
+This is the one and only official υℓтяα χ вσт made by [ Team Ultra](https://t.me/ULTRAXOT) Also join support channel and group :- https://t.me/teamishere Enjoy Your Bot!!💝
 [![υℓтяα χ вσт ℓσgσ](https://telegra.ph/file/a44f1363bddbba84a2b98.jpg)](https://t.me/ULTRAXOT)
 
 ## STATUS OF THIS BOTS 
