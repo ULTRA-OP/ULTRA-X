@@ -2,18 +2,18 @@
 #CREDITS TELEBOT
 # KEEP CREDITS PLEASE 🥺
 import asyncio
-from userbot.legend import NAME
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd, sudo_cmd
+from ULTRA.legend import NAME
+from ULTRA import CMD_HELP
+from ULTRA.utils import admin_cmd, sudo_cmd
 # By (@proboy22), and (@LEGENDX22)
 from userbot import bot
 PRO = NAME
-@bot.on(admin_cmd("devilfban ?(.*)"))
-@bot.on(sudo_cmd("devilfban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("superfban ?(.*)"))
+@bot.on(sudo_cmd("superfban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit(f"**𝚂𝚝𝚊𝚛𝚝𝚒𝚗𝚐 𝙳𝚎𝚟𝚒𝚕𝙵𝚋𝚊𝚗 𝙱𝚢 {PRO}**...")
+    await event.edit(f"**υℓтяα χ вσт ѕυρєяƒвαη ιѕ яυηηιηg ση σя∂єя σƒ {PRO}**...")
     fedList = []
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -35,12 +35,12 @@ async def _(event):
                 REASON = arg[2]
             else:
                 FBAN = arg[1]
-                REASON = " #DEVILFBANNED 🔥 "
+                REASON = " #ULTRAXFBANNED 🔥 "
         else:
             FBAN = previous_message.sender_id
             REASON = event.text.split(" ", maxsplit=1)[1]
             if REASON.strip() == "":
-                REASON = " #DEVILFBANNED 🔥"
+                REASON = " #ULTRAXFBANNED 🔥"
     else:
         arg = event.text.split(" ", maxsplit=2)
         if len(arg) > 2:
@@ -48,7 +48,7 @@ async def _(event):
             REASON = arg[2]
         else:
             FBAN = arg[1]
-            REASON = " #DEVILFBANNED 🔥 "
+            REASON = " #ULTRAXFBANNED 🔥 "
     try:
         int(FBAN)
         if int(FBAN) == 1513257955 or int(FBAN) == 1037581197:
@@ -115,7 +115,7 @@ async def _(event):
         if len(fedList) == 0:
             await event.edit("Something went wrong.")
             return
-    await event.edit(f"𝙳𝚎𝚟𝚒𝚕𝚏𝚋𝚊𝚗𝚗𝚒𝚗𝚐 IN {len(fedList)} BY {PRO} 🔥.")
+    await event.edit(f"υℓтяα χ вσт ƒвαηηιηg тнιѕ ηιggα кι∂ ιη {len(fedList)} ση σя∂єя σƒ {PRO} 🔥.")
     try:
         await bot.send_message(chat, f"/start")
     except BaseException:
@@ -145,11 +145,11 @@ async def _(event):
 # MODIFIED BY PROBOYX 
 
 
-@bot.on(admin_cmd("devilunfban ?(.*)"))
+@bot.on(admin_cmd("superunfban ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit(f"**STARTING 𝙳𝙴𝚅𝙸𝙻 UNFBANNING BY {PRO}**...")
+    await event.edit(f"**υℓтяα χ ѕтαятιηg ѕυρєяυηƒвαη ση σя∂єя σƒ {PRO}**...")
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         FBAN = previous_message.sender_id
@@ -215,7 +215,7 @@ async def _(event):
         await asyncio.sleep(5)
         await bot.send_message(chat, f"/unfban {FBAN}")
         await asyncio.sleep(5)
-    await event.edit(f"𝙳𝚎𝚟𝚒𝚕UnFBan Completed. Affected {len(fedList)} Feds by {PRO}.\n#DEVILBOT")
+    await event.edit(f"ULTRAUnFBan Completed. Affected {len(fedList)} Feds by {PRO}.\n#DEVILBOT")
 
 
 # By TEAMLEGEND
@@ -227,6 +227,6 @@ CMD_HELP.update(
         \n**Usage**: Mass-Ban in all feds you are admin in.\
         \nSet `EXCLUDE_FED fedid1|fedid2` in heroku vars to exclude those feds.\
         \nSet var `FBAN_GROUP_ID` to the group with rose, where you want FBan to take place.\
-        \n\nGet help - @lucifeermorningstar OR @deviluserbot."
+        \n\nGet help - @ULTRAXCHAT OR @UltraXOT."
     }
 )
