@@ -9,7 +9,7 @@ async def Buttons(event):
   pro = event.text[7:]
   pro, boy = pro.split("|")
   if "ULTRAX" == "PROBOYX":
-    await xbot.send_message(event.chat_id, "buttons")
+    await tbot.send_message(event.chat_id, "buttons")
   else:
     try:
       async with bot.conversation(ULTRAX) as proboyx:
