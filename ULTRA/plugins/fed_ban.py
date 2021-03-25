@@ -55,7 +55,7 @@ async def _(event):
             await event.edit("ѕσяяу кι∂∂σ уσυ ¢αη ησт ƒвαη уσυя ƒαтнєя")
             return
     except BaseException:
-        if FBAN == "@lucifermorningstarbackup" or FBAN == "@luciifeermorningstar" or FBAN == @LEGENDX22 or FBAN == @RoseLoverX or FBAN == @PROBOYXOK:
+        if FBAN == "@lucifermorningstarbackup" or FBAN == "@luciifeermorningstar" or FBAN == "@LEGENDX22" or FBAN == "@RoseLoverX" or FBAN == "@Alain_Champion" or FBAN == "@PROBOYXOK":
             await event.edit("ѕσяяу кι∂∂σ уσυ ¢αη ησт ƒвαη уσυя ƒαтнєя.")
             return
     if Config.FBAN_GROUP_ID:
