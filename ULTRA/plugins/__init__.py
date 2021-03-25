@@ -1,5 +1,5 @@
-from userbot import simpdef
-from ..helper import functions as legend
+from ULTRA import simpdef
+from ..helper import functions as ultra
 
 
 simpmusic = simpdef.simpmusic 
