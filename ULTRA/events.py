@@ -178,4 +178,4 @@ import time
 import datetime
 from ULTRA import StartTime
 def upt():
-   uptm = await get_readable_time((time.time() - StartTime))
+   uptm = get_readable_time((time.time() - StartTime))
