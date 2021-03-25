@@ -1,14 +1,15 @@
-from userbot import bot
+from ULTRA import bot
 from sys import argv
 import sys
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
 from telethon import TelegramClient
 from var import Var
-from userbot.utils import load_module
-from userbot import LOAD_PLUG, BOTLOG_CHATID, LOGS
+from ULTRA.utils import load_module
+from ULTRA import LOAD_PLUG, BOTLOG_CHATID, LOGS
 from pathlib import Path
 import asyncio
+from ULTRA import tbot, TOKEN
 import telethon.utils
 
 async def add_bot(bot_token):
@@ -37,9 +38,15 @@ else:
     else:
         bot.start()
     
+try:
+    tbot.start(bot_token=TOKEN)
+except Exception:
+    print("Invalid Bot_Token, Assistant Shutting Down!")
+    pass
+
 
 import glob
-path = 'userbot/plugins/*.py'
+path = 'ULTRA/plugins/*.py'
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -47,7 +54,7 @@ for name in files:
         shortname = path1.stem
         load_module(shortname.replace(".py", ""))
 
-import userbot._core
+import ULTRA._core
 
 print("Ultra-X is Up and Awake! ©️TeamLegend 2021")
 
