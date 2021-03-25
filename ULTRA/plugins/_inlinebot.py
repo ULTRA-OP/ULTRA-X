@@ -62,7 +62,7 @@ async def cmd_list(event):
 
                         allow_cache=False,
 
-                        caption="COMMANDS In LEGEND BOT",
+                        caption="¢σммαη∂ѕ ιη υℓтяα χ вσт",
 
                         reply_to=reply_to_id
 
@@ -78,7 +78,7 @@ async def cmd_list(event):
 
             if input_str in CMD_LIST:
 
-                string = "Commands found in {}:\n".format(input_str)
+                string = "¢σммαη∂ѕ ƒσυη∂ ιη {}:\n".format(input_str)
 
                 for i in CMD_LIST[input_str]:
 
@@ -94,9 +94,9 @@ async def cmd_list(event):
 
         else:
 
-            help_string = f"""Userbot Helper.. Provided by 🙂🙂{DEFAULTUSER}🙂🙂 \n
+            help_string = f""" υℓтяα χ вσт нєℓρєя ρяσνι∂є∂ ву тєαм υℓтяα χ\n
 
-Userbot Helper to reveal all the commands\nDo .help plugin_name for commands, in case popup doesn't appear."""
+υѕєявσт нєℓρєя тσ яєνєαℓ αℓℓ тнє ¢σммαη∂ѕ\nDσ .help ρℓυgιη_ηαмє ƒσя ¢σммαη∂ѕ, ιη ¢αѕє ρσρυρ ∂σєѕη'т appeaя."""
 
             results = await bot.inline_query(  # pylint:disable=E0602
 
@@ -150,7 +150,7 @@ async def _(event):
 
     logger.info(result)  # pylint:disable=E0602
 
-    await event.edit("Telethon UserBot powered LEGEND_BOT")
+    await event.edit("тєℓєтнση  вαѕє∂ υѕєявσт ρσωєяє∂ ву υℓтяα χ вσт")
 
 
 
@@ -172,7 +172,7 @@ async def _(event):
 
         help_string = CMD_LIST[plugin_name].doc
 
-        unload_string = f"Use .unload {plugin_name} to remove this plugin.\n           Â© LEGEND BOT"
+        unload_string = f"Use .unload {plugin_name} to remove this plugin.\n           Â© υℓтяα χ"
 
         
 
