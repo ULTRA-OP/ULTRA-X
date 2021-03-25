@@ -1,0 +1,3 @@
+build: 
+  procfile:
+      worker: Procfile
