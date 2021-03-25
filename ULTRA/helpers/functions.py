@@ -9,7 +9,7 @@ from os import getcwd
 from os.path import basename, join
 from textwrap import wrap
 from typing import Optional, Tuple
-
+from ULTRA.events import get_readable_time
 
 try:
     from colour import Color as asciiColor
@@ -76,27 +76,6 @@ async def take_screen_shot(video_file, output_directory, ttl):
 # https://github.com/Nekmo/telegram-upload/blob/master/telegram_upload/video.py#L26
 
 import time
-
-def get_readable_time(seconds: int) -> str:
-    count = 0
-    up_time = ""
-    time_list = []
-    time_suffix_list = ["s", "m", "h", "days"]
-    while count < 4:
-        count += 1
-        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
-        if seconds == 0 and remainder == 0:
-            break
-        time_list.append(int(result))
-        seconds = int(remainder)
-    hmm = len(time_list)
-    for x in range(hmm):
-        time_list[x] = str(time_list[x]) + time_suffix_list[x]
-    if len(time_list) == 4:
-        up_time += time_list.pop() + ", "
-    time_list.reverse()
-    up_time += ":".join(time_list)
-    return up_time
 
 async def cult_small_video(video_file, output_directory, start_time, end_time):
     # https://stackoverflow.com/a/13891070/4723940
@@ -245,10 +224,6 @@ async def solarize(imagefile, endname):
     image = Image.open(imagefile)
     inverted_image = PIL.ImageOps.solarize(image, threshold=128)
     inverted_image.save(endname)
-    
-    
-#pranks....
-#source - https://nekobot.xyz/api
 
     
 async def iphonex(text):
