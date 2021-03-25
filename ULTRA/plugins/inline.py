@@ -9,5 +9,5 @@ async def restart(event):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit ()
   else:
-    pro = "∂єρℓσу уσυ υℓтяα χ υѕєявσт"
+    pro = "ρℓєαѕє ∂єρℓσу уσυ σωη υℓтяα χ υѕєявσт"
     await event.answer(pro, alert=True)
