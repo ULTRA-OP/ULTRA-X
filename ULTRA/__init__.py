@@ -16,7 +16,11 @@ if Var.STRING_SESSION:
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
-tbot = TelegramClient(None, Var.API_KEY, Var.API_HASH)
+from LEGENDX import token
+tbot = TelegramClient(None, Var.API_KEY, Var.API_HASH).start(bot_token=token)
+if __name__ == "__main__":
+  tbot.start()
+  tbot.run_until_disconnected()
 
 CMD_LIST = {}
 CMD_HELP = {}
