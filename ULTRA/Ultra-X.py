@@ -2,9 +2,9 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from ULTRAX import ALIVE_NAME, StartTime
-from ULTRAX.utils import admin_cmd
-from ULTRAX import bot
+from ULTRA import ALIVE_NAME, StartTime
+from ULTRA.utils import admin_cmd
+from ULTRA import bot
 from telethon import version
 from math import ceil
 import json
@@ -12,7 +12,7 @@ import random
 import re
 from telethon import events, errors, custom
 import io
-from ULTRAX.helpers.functions import get_readable_time
+from ULTRA.helpers.functions import get_readable_time
 import time
 import os
 import datetime
