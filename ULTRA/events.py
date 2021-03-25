@@ -173,3 +173,9 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
+
+import time
+import datetime
+from ULTRA import StartTime
+def upt():
+   uptm = await get_readable_time((time.time() - StartTime))
