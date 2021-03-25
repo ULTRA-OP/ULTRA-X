@@ -23,8 +23,6 @@ API_HASH = os.environ.get("API_HASH", None)
 from telethon import events, custom, Button, TelegramClient
 import time
 from userbot import botnickname, ALIVE_NAME, bot
-token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
-xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 pbot = Client("LEGEND", api_id=API_ID, api_hash=API_HASH, bot_token=token)
 BOT = str(botnickname) if botnickname else "LEGEND BOT"
 NAME = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
