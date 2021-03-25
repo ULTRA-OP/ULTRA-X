@@ -4,8 +4,8 @@
 from asyncio import sleep
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins, ChatAdminRights
 from telethon.tl.functions.channels import EditBannedRequest
-from userbot.utils import admin_cmd
-from userbot import bot, CMD_HELP
+from ULTRA.utils import admin_cmd
+from ULTRA import bot, CMD_HELP
 
 
 @bot.on(admin_cmd(pattern=r"allban", outgoing=True))
@@ -15,7 +15,7 @@ async def testing(event):
     admin = nikal.admin_rights
     creator = nikal.creator
     if not admin and not creator:
-        await event.edit(" U Don't have sufficient permission 🧐 u noob 😑😑")
+        await event.edit("𝗬𝗢𝗨 𝗗𝗜𝗗𝗡𝗧 𝗛𝗔𝗩𝗘 𝗦𝗨𝗙𝗙𝗜𝗖𝗜𝗘𝗡𝗧 𝗥𝗜𝗚𝗛𝗧𝗦")
         return
     await event.edit("Doing Nothing 🙃🙂")#Kang with Credits
 # for Dark_Cobra
