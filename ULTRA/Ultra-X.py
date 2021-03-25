@@ -17,7 +17,7 @@ import time
 import os
 import datetime
 #importing finished
-from userbot import botnickname 
+from ULTRA import botnickname 
 BOT = str(botnickname) if botnickname else "υℓтяα χ вσт"
 NAME = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ вσу"
 tim = get_readable_time((time.time() - StartTime))
