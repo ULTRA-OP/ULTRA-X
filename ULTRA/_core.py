@@ -3,10 +3,10 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from userbot import ALIVE_NAME
-from userbot import bot 
-from userbot.utils import admin_cmd, load_module, remove_plugin, sudo_cmd
-from userbot.utils import edit_or_reply as eor
+from ULTRA import ALIVE_NAME
+from ULTRA import bot 
+from ULTRA.utils import admin_cmd, load_module, remove_plugin, sudo_cmd
+from ULTRA.utils import edit_or_reply as eor
 
 DELETE_TIMEOUT = 3
 thumb_image_path = "./Resources/IMG_20201211_144821_071.jpg"
@@ -37,12 +37,12 @@ async def send(event):
         time_taken_in_ms = (end - start).seconds
         await eor(
             pro,
-            f"==> Plugin name: {input_str}\n==> Uploaded in {time_taken_in_ms} seconds only.\n==> Uploaded by: {DEFAULTUSER}\n",
+            f"**==> Pʟᴜɢɪɴ ɴᴀᴍᴇ:** `{input_str}`\n**==> Uᴘʟᴏᴀᴅᴇᴅ ɪɴ:** `{time_taken_in_ms} Sᴇᴄᴏɴᴅs`.\n**==> Uᴘʟᴏᴀᴅᴇᴅ ʙʏ:** `{DEFAULTUSER}`\n",
         )
         await asyncio.sleep(DELETE_TIMEOUT)
-        await event.edit("sent!!") #only italic if loaded markdown else it doesn't look grp
+        await event.edit("sᴇɴᴛ !!!") #only italic if loaded markdown else it doesn't look grp
     else:
-        await eor(event, "sorry: File Not Found")
+        await eor(event, "𝚂𝙾𝚁𝚁𝚈 : ғɪʟᴇ ɴᴏᴛ ғᴏᴜɴᴅ")
 
 
 @bot.on(admin_cmd(pattern="install"))
