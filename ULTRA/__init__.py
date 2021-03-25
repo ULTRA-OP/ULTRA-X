@@ -77,7 +77,7 @@ if bool(ENV):
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
     PATTERNS = os.environ.get("PATTERNS", ".;!,")
     COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r"\.")
-  
+    TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
     # Bleep Blop, this is a bot ;)
     PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
