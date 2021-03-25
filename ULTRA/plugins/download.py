@@ -9,10 +9,10 @@ from datetime import datetime
 
 from pySmartDL import SmartDL
 
-from userbot.utils import admin_cmd, sudo_cmd, humanbytes, progress
-from userbot import ALIVE_NAME, CMD_HELP
+from ULTRA.utils import admin_cmd, sudo_cmd, humanbytes, progress
+from ULTRA import ALIVE_NAME, CMD_HELP
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hell User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 
 @bot.on(admin_cmd(pattern="download(?: |$)(.*)", outgoing=True))
