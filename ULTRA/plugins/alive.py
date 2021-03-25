@@ -2,7 +2,7 @@
 
 from telethon import events, Button, custom
 import re, os
-from UltraX import PHOTO, tbot, BOT, VERSION
+from LEGENDX import PHOTO, xbot, BOT, VERSION
 from ULTRA import bot
 @tbot.on(events.NewMessage(pattern=("/alive|/start")))
 async def awake(event):
