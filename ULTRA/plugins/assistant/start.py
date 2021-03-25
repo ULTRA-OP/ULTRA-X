@@ -1,11 +1,14 @@
 from ULTRA import tbot, bot
 from telethon import events, Button
 
-@tbot.on(events.NewMessage(pattern="^/start"))
+@tbot.on(events.NewMessage(pattern="/start"))
 async def startass(e):
   k = bot.me.id
+  pro = await tbot.get_me()
+  boy = e.sender.username
   if e.is_group:
-     return
+    ok = [[Button.url("come pm", f"https://t.me/{pro.username}")]]
+    return await e.reply(f"HELLO @{boy} 😃", buttons=ok)
   if e.sender_id = k:
    await e.reply('Hello Master I am Alive and Awake')
   else:
