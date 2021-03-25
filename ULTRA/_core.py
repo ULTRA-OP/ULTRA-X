@@ -89,10 +89,10 @@ async def unload(event):
     shortname = event.pattern_match["shortname"]
     try:
         remove_plugin(shortname)
-        qwe = await eor(event, f"LEGEND BOT Has Successfully unloaded {shortname}")
+        qwe = await eor(event, f"UltraX Has Successfully unloaded {shortname}")
     except Exception as e:
         await qwe.edit(
-            "LEGEND BOT has Successfully unloaded {shortname}\n{}".format(shortname, str(e))
+            "UltraX has Successfully unloaded {shortname}\n{}".format(shortname, str(e))
         )
 
 
