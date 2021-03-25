@@ -49,7 +49,30 @@ UNBAN_RIGHTS = ChatBannedRights(
 )
 
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
-serena = tgbot
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
-
+@tbot.on(events.NewMessage(pattern="/ban ?(.*)"))
+async def ban(event):
+    chat = await event.get_chat()
+    chat.admin_rights
+    chat.creator
+    user, reason = await get_user_from_event(event)
+    banned = await tbot.get_permissions(event.chat_id, user)
+    pro = user
+    fname = pro.first_name
+    if banned.is_admin:
+        await event.reply("Oh, Yeah? Lets Start Banning Admins.")
+        return
+    if user:
+        pass
+    else:
+        return
+    try:
+        await event.client(EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS))
+    except BadRequestError:
+        await event.reply("I Could't Ban That User Probably Due To Less Permissions.")
+        return
+    if reason:
+        await event.reply(f"Banned {fname} For \nReason: {reason}")
+    else:
+        await event.reply(f"Banned {fname} !")
