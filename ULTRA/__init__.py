@@ -19,7 +19,6 @@ else:
 tbot = TelegramClient(None, Var.API_KEY, Var.API_HASH)
 
 CMD_LIST = {}
-# for later purposes
 CMD_HELP = {}
 CMD_HELP_BOT = {}
 BRAIN_CHECKER = []
@@ -140,7 +139,7 @@ if bool(ENV):
     # Upstream Repo
     UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/LEGENDXOP/LEGEND-BOT.git")
+    "https://github.com/ULTRA-OP/ULTRA-X.git")
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
