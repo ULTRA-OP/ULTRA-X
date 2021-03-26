@@ -13,7 +13,7 @@ import time
 from datetime import datetime
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 GIT_TEMP_DIR = "./userbot/temp/"
 #@command(pattern="^.commit", outgoing=True)
