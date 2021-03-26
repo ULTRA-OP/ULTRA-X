@@ -1,7 +1,5 @@
 """
 (((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGEN
 """
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
