@@ -2,8 +2,8 @@
 
 
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd, sudo_cmd
+from ULTRA import CMD_HELP
+from ULTRA.utils import admin_cmd, sudo_cmd
 import html
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest
@@ -88,7 +88,7 @@ async def gspider(userbot):
                 f"**Didn't , Your Father Teach You ? That You Cant Gban your creator😑😑🖕**"
             )
         try:
-            from userbot.modules.sql_helper.gmute_sql import gmute
+            from ULTRA.modules.sql_helper.gmute_sql import gmute
         except:
             pass
         try:
@@ -152,7 +152,7 @@ async def gspider(userbot):
         if user.id == 1100231654:
             return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
         try:
-            from userbot.modules.sql_helper.gmute_sql import ungmute
+            from ULTRA.modules.sql_helper.gmute_sql import ungmute
         except:
             pass
         try:
@@ -189,7 +189,7 @@ async def gspider(userbot):
 async def handler(rkG): 
    if rkG.user_joined or rkG.user_added:      
        try:       	
-         from userbot.modules.sql_helper.gmute_sql import is_gmuted
+         from ULTRA.modules.sql_helper.gmute_sql import is_gmuted
          guser = await rkG.get_user()      
          gmuted = is_gmuted(guser.id)             
        except:      
