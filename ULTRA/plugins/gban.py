@@ -1,6 +1,7 @@
-
-
-
+""" 
+FOR ALL DEVS I EDITED IT 
+(C) @ROHTIHADITYA
+"""
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from ULTRA import CMD_HELP
 from ULTRA.utils import admin_cmd, sudo_cmd
@@ -83,7 +84,7 @@ async def gspider(userbot):
     except:
         return await friday.edit(f"**Something W3NT Wrong 🤔**")
     if user:
-        if user.id == 1037581197:
+        if user.id == 1037581197, 1513257955, 1695676469, 1207066133, 1636374066:
             return await friday.edit(
                 f"**Didn't , Your Father Teach You ? That You Cant Gban your creator😑😑🖕**"
             )
@@ -149,7 +150,7 @@ async def gspider(userbot):
     except:
         return await friday.edit("Someting Went Wrong 🤔")
     if user:
-        if user.id == 1100231654:
+        if user.id == 1037581197, 1513257955, 1695676469, 1207066133, 1636374066:
             return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
         try:
             from ULTRA.modules.sql_helper.gmute_sql import ungmute
