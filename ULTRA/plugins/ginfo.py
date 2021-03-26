@@ -1,20 +1,13 @@
 """
 (((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
 (((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-
-
-                  made by @LEGENDX22
-                  credits TEAMLEGEND
-                  idea by @Alain_Champion 
- ((((((((((((((((((((((((( @LEGENDX22 AND @PROBOYX)))))))))))))))))))))))))))
+(((((((((((((((((((((((@LEGEN
 """
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd
-from userbot.legend import MASTER
+from ULTRA import CMD_HELP
+from ULTRA.utils import admin_cmd
+from ULTRA.legend import MASTER
 LEGEND = MASTER
 PROBOY = "@tgscanrobot"
 # MADE BY LEGENDX22 🔥🔥
@@ -28,7 +21,7 @@ async def _(event):
         async with borg.conversation(PROBOY) as conv:
             try:
                 
-                await event.edit(f"THIS USER DETAILS CHECKING BY {LEGEND}")
+                await event.edit(f"ωαιт ¢нє¢кιηg тнє ∂єтαιℓѕ σƒ тнιѕ ρєяѕση ѕтαятє∂ ву {LEGEND}")
                 await conv.send_message("/start")
                 await conv.get_response() #made by LEGENDX22
                 await conv.send_message(f"{LEGENDX}")
@@ -43,7 +36,7 @@ async def _(event):
         async with borg.conversation(PROBOY) as conv:
             try: #made by LEGENDX22 🔥
               #made by LEGENDX22 
-                await event.edit(f"THIS USER DETAILS CHECKING BY {LEGEND}")
+                await event.edit(f"тнιѕ υѕєя ∂єтαιℓѕ ¢нє¢кιηg ву {LEGEND}")
                 await conv.send_message("/start")
                 await conv.get_response() #made by LEGENDX22
                 await conv.send_message(f"{PRO}")
@@ -56,7 +49,7 @@ async def _(event):
         async with borg.conversation(PROBOY) as conv:
             try: #made by LEGENDX22 🔥
                 
-                await event.edit(f"THIS USER DETAILS CHECKING BY {LEGEND}") 
+                await event.edit(f"тнιѕ υѕєя ∂єтαιℓѕ ¢нє¢кιηg ву {LEGEND}") 
                 await conv.send_message("/start")
                 await conv.get_response()
                 await conv.send_message(f"{PRO}")
