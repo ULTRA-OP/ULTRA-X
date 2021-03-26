@@ -21,7 +21,7 @@ from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
                                ChatBannedRights, MessageEntityMentionName,
                                MessageMediaPhoto)
-
+from LEGENDX import devs
 from ULTA import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from ULTRA.utils import register, errors_handler
 from ULTRA.utils import admin_cmd
@@ -322,9 +322,9 @@ async def spider(spdr):
     chat = await spdr.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
-
+    
     # If not admin and not creator, return
-    if not admin and not creator:
+    if not admin and not creator :
         await spdr.edit(NO_ADMIN)
         return
 
@@ -335,10 +335,11 @@ async def spider(spdr):
         return
 
     self_user = await spdr.client.get_me()
-
-    if user.id == self_user.id:
+    pro = await spdr.get_reply_message()
+    boy = pro.sender_id
+    if user.id == self_user.id or boy in devs:
         await spdr.edit(
-            "`Hands too short, can't duct tape myself...\n(ãƒ˜ï½¥_ï½¥)ãƒ˜â”³â”â”³`")
+            "I cant do it 🥺")
         return
 
     # If everything goes well, do announcing and mute
@@ -499,6 +500,8 @@ async def ungmoot(un_gmute):
 async def gspider(gspdr):
     """ For .gmute command, globally mutes the replied/tagged person """
     # Admin or creator check
+    pro = await gspdr.get_reply_message()
+    boy = pro.sender_id
     chat = await gspdr.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
@@ -516,6 +519,8 @@ async def gspider(gspdr):
         return
 
     user, reason = await get_user_from_event(gspdr)
+    if boy in devs:
+      await event edit("betichod ye  mera devloper h")
     if user:
         pass
     else:
