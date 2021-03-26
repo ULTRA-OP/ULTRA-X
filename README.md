@@ -12,37 +12,36 @@ This is the one and only official υℓтяα χ вσт made by [ Team Ultra](ht
 Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#Official-Support) Enjoy Your Bot!!💝
 [![υℓтяα χ вσт ℓσgσ](https://telegra.ph/file/e234b6871c00f90b0fe3b.jpg)](https://t.me/ULTRAXOT)
 
-## STATUS OF THIS BOTS 
+## Sᴛᴀᴛᴜs Oғ Tʜɪs Bᴏᴛ
 <p align="left"><a href="https://github.com/ULTRAX-OP/ULTRA-X/network/members"><img src="https://img.shields.io/github/forks/ULTRA-OP/ULTRA-X?label=Forks&logoColor=pink&style=social"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-X/stargazers"><img src="https://img.shields.io/github/stars/ULTRA-OP/ULTRA-X?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-x"><img src="https://img.shields.io/github/last-commit/Ultra-Op/Ultra-X?style=plastic"></a>
 
 ## The owner would not be responsible for any kind of bans due to the bot...
 
 
-# STRING SESSION:-
+# Sᴛʀɪɴɢ Sᴇssɪᴏɴ:-
 ## [String Session](https://repl.it/@legendx22/LEGEND-BOT#main.py)
 
-## FORK AT YOUR OWN RISK
-## Installing
-
+## Fᴏʀᴋ Aᴛ Yᴏᴜʀ Oᴡɴ Rɪsᴋ
+## Iɴsᴛᴀʟʟɪɴɢ
 
 -------------------------------------------------
 
-## FOR DEPLOY BOT 
+## Dᴇᴘʟᴏʏ
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FLEGENDXOP%2Flegendpack&template=https%3A%2F%2Fgithub.com%2FLEGENDXOP%2Flegendpack)
 
 ------------------------------------------------
 
 
-# Credits👀
+# Cʀᴇᴅɪᴛs
 ### • [LEGEND BOT](https://github.com/TeamLEGENDX/LegendBOT)
 ### One and only. Others with some misfuntioning brain stay out from this SUPER POWERFULL BOT😏
 
-## Official Support
+## Oғғɪᴄɪᴀʟ Sᴜᴘᴘᴏʀᴛ
 <a href="https://t.me/UltraXChat"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
 <a href="https://t.me/UltraX_Support"><img src="https://img.shields.io/badge/Join-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
-## The Normal Way
+## Tʜᴇ Nᴏʀᴍᴀʟ Wᴀʏ
 
 Simply clone the repository and run the main file:
 ```sh
@@ -69,7 +68,7 @@ class Development(Var):
   API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
 ```
 
-### UniBorg Configuration
+### Uɴɪʙᴏʀɢ Cᴏɴғɪɢʀɪᴜᴛɪᴏɴ
 
 The UniBorg Config is situated in `userbot/uniborgConfig.py`.
 
@@ -79,7 +78,7 @@ Simply just leave the Config as it is.
 **Local Configuration**
 Fortunately there are no Mandatory vars for the UniBorg Support Config.
 
-## Mandatory Vars
+## Mᴀɴᴏᴅɪᴛᴀʀʏ Vᴀʀs
 
 - Only two of the environment variables are mandatory.
 - This is because of `telethon.errors.rpc_error_list.ApiIdPublishedFloodError`
