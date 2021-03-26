@@ -1,30 +1,3 @@
-#    @keinshin a.k.a KeinShin
-
-#    Copyright (C) 2020 KeinShin
-
-
-
-#    This program is free software: you can redistribute it and/or modify
-
-#    it under the terms of the GNU Affero General Public License as published by
-
-#    the Free Software Foundation, either version 3 of the License, or
-
-#    maked by LEGENDX22 🔥🔥🔥🔥 helper shivam ⚡⚡⚡
-
-#    This program is distributed in the hope that it will be useful,
-
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-
-#    GNU Affero General Public License for more details.
-
-#
-
-#    You should have received a copy of the GNU Affero General Public License
-
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
 
@@ -38,17 +11,17 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 
-import userbot.plugins.sql_helper.pmpermit_sql as lightning_sql
+import ULTRA.plugins.sql_helper.pmpermit_sql as lightning_sql
 
-from userbot import ALIVE_NAME, bot
+from ULTRA import ALIVE_NAME, bot
 
-from userbot.uniborgConfig import Config
+from ULTRA.uniborgConfig import Config
 
 from var import Var
 
-LIGHTNINGUSER = str(ALIVE_NAME) if ALIVE_NAME else "Devil"
+LIGHTNINGUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
-from userbot.utils import admin_cmd as lightning_cmd
+from ULTRA.utils import admin_cmd as ultra_cmd
 
 
 
@@ -140,7 +113,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(lightning_cmd(pattern="(a|approve)"))
+    @borg.on(ultra_cmd(pattern="(a|approve)"))
 
     async def block(event):
 
@@ -182,7 +155,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(lightning_cmd(pattern="block$"))
+    @borg.on(ultra_cmd(pattern="block$"))
 
     async def lightning_approved_pm(event):
 
@@ -224,7 +197,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             
 
-    @borg.on(lightning_cmd(pattern="(da|disapprove)"))
+    @borg.on(ultra_cmd(pattern="(da|disapprove)"))
 
     async def lightning_approved_pm(event):
 
@@ -274,7 +247,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(lightning_cmd(pattern="listapproved$"))
+    @borg.on(ultra_cmd(pattern="listapproved$"))
 
     async def lightning_approved_pm(event):
 
