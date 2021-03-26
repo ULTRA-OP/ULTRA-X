@@ -1,19 +1,8 @@
-"""
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-(((((((((((((((((((((((@LEGENDX22)))))))))))))))))))))))))))
-
-                 MADE BY LEGENDX22
-                 IDEA BY PROBOYX
-                 CREDITS TEAMLEGEND
-                 PLEASE KEEP CREDITS 🥺
-"""
 
 
 
 from telethon import events, Button, custom
-from userbot.legend import BOT
+from ULTRA.legend import BOT
 import os,re
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions
@@ -28,4 +17,4 @@ async def inline_id_handler(event: events.InlineQuery.Event):
 async def callback_query_handler(event):
 
 # inline by LEGENDX22 and PROBOYX 🔥
-  await event.edit(text=f"{BOT} REPO AND GROUP LINK",buttons=[[Button.url(f"🔥{BOT} REPO🔥", url="https://github.com/lucifeermorningstar/Devil"), Button.url(f"⚡{BOT} SUPPORT⚡", url="https://t.me/deviluserbot")]])
+  await event.edit(text=f"{BOT} REPO AND GROUP LINK",buttons=[[Button.url(f"🔥{BOT} REPO🔥", url="https://github.com/ULTRA-OP/ULTRA-X"), Button.url(f"⚡{BOT} SUPPORT⚡", url="https://t.me/ULTRAXCHAT")]])
