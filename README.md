@@ -36,7 +36,7 @@ This is the one and only official υℓтяα χ вσт made by [ Team Ultra](ht
 ### • [LEGEND BOT](https://github.com/TeamLEGENDX/LegendBOT)
 ### One and only. Others with some misfuntioning brain stay out from this SUPER POWERFULL BOT😏
 
-## Official Support 💖
+## Official Support
 <a href="https://t.me/UltraXChat"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
 <a href="https://t.me/UltraX_Support"><img src="https://img.shields.io/badge/Join-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
