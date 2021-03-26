@@ -8,7 +8,7 @@ import logging
 
 
 
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 
