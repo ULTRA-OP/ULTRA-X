@@ -9,7 +9,7 @@
 This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram. All credits goes to its Respective Owners....
 
 This is the one and only official υℓтяα χ вσт made by [ Team Ultra](https://t.me/ULTRAXOT) Also join support channel and group :- https://t.me/teamishere Enjoy Your Bot!!💝
-[![υℓтяα χ вσт ℓσgσ](https://telegra.ph/file/a44f1363bddbba84a2b98.jpg)](https://t.me/ULTRAXOT)
+[![υℓтяα χ вσт ℓσgσ](https://telegra.ph/file/e234b6871c00f90b0fe3b.jpg)](https://t.me/ULTRAXOT)
 
 ## STATUS OF THIS BOTS 
 <p align="left"><a href="https://github.com/ULTRAX-OP/ULTRA-X/network/members"><img src="https://img.shields.io/github/forks/ULTRA-OP/ULTRA-X?label=Forks&logoColor=Silver&style=social"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-X/stargazers"><img src="https://img.shields.io/github/stars/ULTRA-OP/ULTRA-X?logoColor=Blue&style=social"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-X"><img src="https://github-readme-stats.vercel.app/api/pin?username=legendx22&show_icons=true&theme=meta&hide_border=true&repo=ULTRA-OP/ULTRA-X"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-x"><img src="https://img.shields.io/github/last-commit/legendx22/LEGEND-BOT?style=plastic"></a>
