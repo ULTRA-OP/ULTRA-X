@@ -1,8 +1,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7c51539e67b483bb8d7749acca51d3a)](https://app.codacy.com/gh/legendx22/LEGEND-BOT?utm_source=github.com&utm_medium=referral&utm_content=legendx22/LEGEND-BOT&utm_campaign=Badge_Grade_Settings)
 [![Python 3.8.6](https://img.shields.io/badge/Python-3.8.6%20or%20newer-blue.svg)](https://www.python.org/downloads/release/python-386/)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ULTRA-OP/ULTRA-X)
-[![HitCount](http://hits.dwyl.com/legendx22/LEGEND-BOT.svg)](http://hits.dwyl.com/legendx22/LEGEND-BOT)
-[![Contact Me](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/legendx22)
+[![HitCount](http://hits.dwyl.com/ULTRA-OP/ULTRA-X.svg)](http://hits.dwyl.com/ULTRA-OP/ULTRA-X)
 
 
 # υℓтяα χ вσт
