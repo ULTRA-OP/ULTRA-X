@@ -1,8 +1,8 @@
 import asyncio
 import os
 
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd, sudo_cmd
+from ULTRA import CMD_HELP
+from ULTRA.utils import admin_cmd, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern="repack ?(.*)", outgoing=True))
