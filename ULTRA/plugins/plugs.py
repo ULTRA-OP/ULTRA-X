@@ -9,11 +9,11 @@ import asyncio
 import os
 import sys
 import random
-from userbot import ALIVE_NAME, CMD_HELP
-from userbot.utils import admin_cmd, edit_or_reply
+from ULTRA import ALIVE_NAME, CMD_HELP
+from ULTRA.utils import admin_cmd, edit_or_reply
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Hell User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 legendx22 = bot.uid
 
