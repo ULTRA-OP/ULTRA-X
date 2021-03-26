@@ -38,8 +38,8 @@ Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#o%D2%9
 ### One and only. Others with some misfuntioning brain stay out from this SUPER POWERFULL BOT😏
 
 ## Oғғɪᴄɪᴀʟ Sᴜᴘᴘᴏʀᴛ
-<a href="https://t.me/UltraXChat"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
-<a href="https://t.me/UltraX_Support"><img src="https://img.shields.io/badge/Join-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/UltraXChat"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/UltraX_Support"><img src="https://img.shields.io/badge/Join-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
 ## Tʜᴇ Nᴏʀᴍᴀʟ Wᴀʏ
 
