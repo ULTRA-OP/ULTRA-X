@@ -9,7 +9,7 @@ This is a userbot made for telegram. I made this userbot with help of all other 
 
 This is the one and only official υℓтяα χ вσт made by [ Team Ultra](https://t.me/ULTRAXOT) 
 
-Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#Official-Support) Enjoy Your Bot!!💝
+Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#o%D2%93%D2%93%C9%AA%E1%B4%84%C9%AA%E1%B4%80%CA%9F-s%E1%B4%9C%E1%B4%98%E1%B4%98%E1%B4%8F%CA%80%E1%B4%9B) Enjoy Your Bot!!💝
 [![υℓтяα χ вσт ℓσgσ](https://telegra.ph/file/e234b6871c00f90b0fe3b.jpg)](https://t.me/ULTRAXOT)
 
 ## Sᴛᴀᴛᴜs Oғ Tʜɪs Bᴏᴛ
