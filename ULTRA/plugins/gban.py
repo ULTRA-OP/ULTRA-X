@@ -1,6 +1,9 @@
 """ 
 FOR ALL DEVS I EDITED IT 
 (C) @ROHTIHADITYA
+(C) @PROBOYX
+(C) @ROSELOVERX
+(C) @LEGENDX22
 """
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from ULTRA import CMD_HELP
@@ -12,7 +15,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from telethon.events import ChatAction
-
+from LEGENDX import devs
 async def get_full_user(event):  
     args = event.pattern_match.group(1).split(':', 1)
     extra = None
@@ -84,7 +87,7 @@ async def gspider(userbot):
     except:
         return await friday.edit(f"**Something W3NT Wrong 🤔**")
     if user:
-        if user.id == 1037581197, 1513257955, 1695676469, 1207066133, 1636374066:
+        if user.id in devs:
             return await friday.edit(
                 f"**Didn't , Your Father Teach You ? That You Cant Gban your creator😑😑🖕**"
             )
@@ -150,7 +153,7 @@ async def gspider(userbot):
     except:
         return await friday.edit("Someting Went Wrong 🤔")
     if user:
-        if user.id == 1037581197, 1513257955, 1695676469, 1207066133, 1636374066:
+        if user.id in devs:
             return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
         try:
             from ULTRA.modules.sql_helper.gmute_sql import ungmute
