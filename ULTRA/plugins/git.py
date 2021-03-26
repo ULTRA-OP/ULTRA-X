@@ -28,7 +28,7 @@ async def _(event):
 
             "https://github.com/lucifeermorningstar/deviluserbot",
 
-            "https://github.com/HellBoy-OP/deviluserbot"
+            "https://github.com/ULTRA-OP/ULTRA-X"
         ]
 
         for i in animation_ttl:
