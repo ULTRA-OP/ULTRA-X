@@ -1,12 +1,7 @@
-from telethon.sessions import StringSession
-from telethon import TelegramClient
-from var import Var
-if Var.STRING_SESSION:
-    session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
-else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
+try:
+  from ULTRA import bot
+except Exception as e:
+  print(e)
 from sys import argv
 import sys
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -30,6 +25,7 @@ async def add_bot(bot_token):
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
+  if bot:
     bot.tgbot = None
     if Var.TG_BOT_USER_NAME_BF_HER is not None:
         print("Initiating Inline Bot")
