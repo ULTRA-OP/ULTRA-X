@@ -78,7 +78,7 @@ async def cmd_list(event):
 
             if input_str in CMD_LIST:
 
-                string = "¢σммαη∂ѕ ƒσυη∂ ιη {}:\n".format(input_str)
+                string = "Command Found In {}:\n".format(input_str)
 
                 for i in CMD_LIST[input_str]:
 
@@ -94,9 +94,9 @@ async def cmd_list(event):
 
         else:
 
-            help_string = f""" υℓтяα χ вσт нєℓρєя ρяσνι∂є∂ ву тєαм υℓтяα χ\n
+            help_string = f""" υℓтяα χ вσт Helper Provided By тєαм υℓтяα χ\n
 
-υѕєявσт нєℓρєя тσ яєνєαℓ αℓℓ тнє ¢σммαη∂ѕ\nDσ .help ρℓυgιη_ηαмє ƒσя ¢σммαη∂ѕ, ιη ¢αѕє ρσρυρ ∂σєѕη'т appeaя."""
+Dσ .help Plugin_Name For Commands, If In Case Popup Dosent Appears."""
 
             results = await bot.inline_query(  # pylint:disable=E0602
 
