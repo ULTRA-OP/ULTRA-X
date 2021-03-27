@@ -2,7 +2,7 @@
 Syntax: .cpin [LOUD]"""
 from telethon import events
 from telethon.tl import functions, types
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 @borg.on(admin_cmd("cpin ?(.*)"))
