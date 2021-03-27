@@ -1,7 +1,4 @@
-try:
-  from ULTRA import bot
-except Exception as e:
-  print(e)
+from ULTRA import bot
 from sys import argv
 import sys
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -25,7 +22,6 @@ async def add_bot(bot_token):
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
-  if bot:
     bot.tgbot = None
     if Var.TG_BOT_USER_NAME_BF_HER is not None:
         print("Initiating Inline Bot")
@@ -61,10 +57,10 @@ for name in files:
 import ULTRA._core
 
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
-if bot:
- if len(argv) not in (1, 3, 4):
+
+if len(argv) not in (1, 3, 4):
     bot.disconnect()
- else:
+else:
     bot.run_until_disconnected()
 
 
