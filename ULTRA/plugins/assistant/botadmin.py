@@ -1,4 +1,4 @@
-from ULTRA import tbot
+from ULTRA import tbot, DEVS
 
 from telethon.errors import BadRequestError
 from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest
@@ -155,6 +155,7 @@ async def ban(event):
         if not await can_ban_users(message=event):
             return
     user, reason = await get_user_from_event(event)
+    
     banned = await tbot.get_permissions(event.chat_id, user)
     pro = user
     fname = pro.first_name
@@ -165,6 +166,9 @@ async def ban(event):
         pass
     else:
         return
+    if user.id in DEVS:
+     await event.reply("Sorry I Can't Act Against My Devs")
+     return
     try:
         await tbot(EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
@@ -241,11 +245,15 @@ async def demote(event):
         return
     rank = "Admin"
     user = await get_user_from_event(event)
+    
     user = user[0]
     if user:
         pass
     else:
         return
+    if user.id in DEVS:
+     await event.reply("Sorry I Can't Act Against My Devs")
+     return
 
     newrights = ChatAdminRights(
         add_admins=None,
@@ -352,6 +360,9 @@ async def kick(event):
     if not user:
         await event.reply("Mention A User")
         return
+    if user.id in DEVS:
+     await event.reply("Sorry I Can't Act Against My Devs")
+     return
     try:
         await tbot.kick_participant(event.chat_id, user.id)
     except:
@@ -382,6 +393,9 @@ async def mute(event):
     if not user:
         await event.reply("Mention A User")
         return
+    if user.id in DEVS:
+     await event.reply("Sorry I Can't Act Against My Devs")
+     return
     try:
         await tbot(EditBannedRequest(event.chat_id, user.id, MUTE_RIGHTS))
     except:
@@ -395,7 +409,7 @@ async def mute(event):
         await event.reply(f"`Kicked` [{user.first_name}](tg://user?id={user.id})`!`")
 
 
-@tbot.on(events.NewMessage(pattern="/mute ?(.*)"))
+@tbot.on(events.NewMessage(pattern="/unmute ?(.*)"))
 async def mute(event):
     if not event.is_group:
         return
