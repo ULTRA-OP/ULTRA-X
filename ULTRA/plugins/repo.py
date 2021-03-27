@@ -13,7 +13,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
  query = event.text
  result = DEVIL.article("DEVIL",text="REPO AND SUPPORT",buttons=X,link_preview=False)
  await event.answer([result])
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"obhai")))
+@tbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"obhai")))
 async def callback_query_handler(event):
 
 # inline by LEGENDX22 and PROBOYX 🔥 and Betichod
