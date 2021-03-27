@@ -1,4 +1,4 @@
-from ULTRA import simpdef
+from ULTRA.helpers import functions as simpdef
 from ..helper import functions as ultra
 
 
