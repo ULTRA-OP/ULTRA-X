@@ -1,5 +1,5 @@
 from ULTRA import tbot
-from google_trans_new import google_translator
+
 import requests
 from PyDictionary import PyDictionary
 from telethon import events
@@ -19,18 +19,17 @@ async def _(event):
         return
     text = text.strip()
     lan = lan.strip()
-    translator = google_translator()  
+    translator = 'ok'  
     try:
-        translated = translator.translate(text,lang_tgt=lan)  
-        after_tr_text = translated
-        detect_result = translator.detect(text)
+        
+        detect_result = 'pro'
         output_str = (
             "**TRANSLATED** from {} to {}\n\n"
             "{}"
         ).format(
-            detect_result[0],
-            lan,
-            after_tr_text
+            detect_result,
+            'ok',
+            'lel'
         )
         await event.reply(output_str)
     except Exception as exc:
