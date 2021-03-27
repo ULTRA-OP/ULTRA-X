@@ -16,7 +16,6 @@ if Var.STRING_SESSION:
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
-from LEGENDX import token
 tbot = TelegramClient(None, Var.API_KEY, Var.API_HASH)
 DEVS = [1100231654, 1636374066, 1037581197, 1695676469, 1221693726, 1207066133, 1513257955]
 
