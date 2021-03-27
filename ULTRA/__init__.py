@@ -15,7 +15,7 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 tbot = TelegramClient(None, Var.APP_ID, Var.API_HASH)
-
+DEVS = [69, 72]
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
