@@ -1,4 +1,4 @@
-from ULTRA import bot
+from ULTRA import bot, tbot
 from sys import argv
 import sys
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -9,6 +9,7 @@ from ULTRA.utils import load_module
 from ULTRA import LOAD_PLUG, BOTLOG_CHATID, LOGS
 from pathlib import Path
 import asyncio
+TOKEN = os.environ.get("TG_BOT_TOKEN", None)
 import telethon.utils
 
 async def add_bot(bot_token):
@@ -36,10 +37,13 @@ else:
         print("Startup Completed")
     else:
         bot.start()
-    
+try:
+    tbot.start(bot_token=TOKEN)
+except Exception:
+    print("Bot Token Invalid Assistant Stopping!")
 
 import glob
-path = 'ULTRA/plugins/*.py'
+path = 'ULTRA/plugins/assistant/*.py'
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -49,11 +53,13 @@ for name in files:
 
 import ULTRA._core
 
-print("LEGEND BOT is on fire 🔥🔥🔥 all files installed on your bot.... Join @teamishere for any help..")
+print("ULTRA-X is on fire 🔥🔥🔥 all files installed on your bot.... Join @teamishere for any help..")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
+    tbot.disconnect()
 else:
     bot.run_until_disconnected()
+    tbot.run_until_disconnected()
 
 
