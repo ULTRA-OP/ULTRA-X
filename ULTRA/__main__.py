@@ -5,7 +5,7 @@ from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
 from telethon import TelegramClient
 from var import Var
-from ULTRA.utils import load_module
+from ULTRA.utils import load_module, load_pro
 from ULTRA import LOAD_PLUG, BOTLOG_CHATID, LOGS
 from pathlib import Path
 import asyncio
@@ -43,13 +43,22 @@ except Exception:
     print("Bot Token Invalid Assistant Stopping!")
 
 import glob
-path = 'ULTRA/plugins/assistant/*.py'
+path = 'ULTRA/plugins/*.py'
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
         path1 = Path(f.name)
         shortname = path1.stem
         load_module(shortname.replace(".py", ""))
+
+
+path = 'ULTRA/plugins/assistant/*.py'
+files = glob.glob(path)
+for name in files:
+    with open(name) as f:
+        path1 = Path(f.name)
+        shortname = path1.stem
+        load_pro(shortname.replace(".py", ""))
 
 import ULTRA._core
 
