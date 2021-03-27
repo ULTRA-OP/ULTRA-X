@@ -2,11 +2,11 @@
 
 Betichod = "RoseLoverX"
 from telethon import events, Button, custom
-from ULTRA import bot
+from ULTRA import bot, tbot
 import os,re
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions
-@tgbot.on(events.InlineQuery(pattern=r"repo"))
+@tbot.on(events.InlineQuery(pattern=r"repo"))
 async def inline_id_handler(event: events.InlineQuery.Event):
  DEVIL = event.builder
  X= [[custom.Button.inline("🔥 CLICK ME 🔥",data="obhai")]]
