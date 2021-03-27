@@ -16,15 +16,17 @@ Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#o%D2%9
 
 [![υℓтяα χ вσт ℓσgσ](https://telegra.ph/file/e234b6871c00f90b0fe3b.jpg)](https://t.me/ULTRAXOT)
 
-## Sᴛᴀᴛᴜs Oғ Tʜɪs Bᴏᴛ
-<p align="left"><a href="https://github.com/ULTRAX-OP/ULTRA-X/network/members"><img src="https://img.shields.io/github/forks/ULTRA-OP/ULTRA-X?label=Forks&logoColor=pink&style=social"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-X/stargazers"><img src="https://img.shields.io/github/stars/ULTRA-OP/ULTRA-X?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-x"><img src="https://img.shields.io/github/last-commit/Ultra-Op/Ultra-X?style=plastic"></a>
+## Dᴇᴘʟᴏʏ
 
-## The owner would not be responsible for any kind of bans due to the bot...
-
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/ULTRA-OP/ULTRA-X)
 
 # Sᴛʀɪɴɢ Sᴇssɪᴏɴ:-
 ## [String Session](https://repl.it/@legendx22/LEGEND-BOT#main.py)
 
+## Sᴛᴀᴛᴜs Oғ Tʜɪs Bᴏᴛ
+<p align="left"><a href="https://github.com/ULTRAX-OP/ULTRA-X/network/members"><img src="https://img.shields.io/github/forks/ULTRA-OP/ULTRA-X?label=Forks&logoColor=pink&style=social"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-X/stargazers"><img src="https://img.shields.io/github/stars/ULTRA-OP/ULTRA-X?logoColor=red&style=social"></a><p align="left"><a href="https://github.com/ULTRA-OP/ULTRA-x"><img src="https://img.shields.io/github/last-commit/Ultra-Op/Ultra-X?style=plastic"></a>
+
+## The owner would not be responsible for any kind of bans due to the bot...
 ## Fᴏʀᴋ Aᴛ Yᴏᴜʀ Oᴡɴ Rɪsᴋ
 ## Iɴsᴛᴀʟʟɪɴɢ
 
