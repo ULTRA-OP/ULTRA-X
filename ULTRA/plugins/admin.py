@@ -520,7 +520,7 @@ async def gspider(gspdr):
 
     user, reason = await get_user_from_event(gspdr)
     if boy in devs:
-      await event edit("betichod ye  mera devloper h")
+      await gspdr.edit("betichod ye  mera devloper h")
     if user:
         pass
     else:
