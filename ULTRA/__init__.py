@@ -5,7 +5,6 @@ import time
 from telethon.sessions import StringSession
 from telethon import TelegramClient
 from ULTRA.uniborgConfig import Config
-from ULTRA.helpers import functions as simpdef
 from var import Var
 StartTime = time.time()
 os.system("pip install --upgrade pip")
