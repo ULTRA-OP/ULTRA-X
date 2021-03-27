@@ -1,8 +1,8 @@
 
 
-
+Betichod = "RoseLoverX"
 from telethon import events, Button, custom
-from ULTRA.legend import BOT
+from ULTRA import bot
 import os,re
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions
@@ -16,5 +16,5 @@ async def inline_id_handler(event: events.InlineQuery.Event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"obhai")))
 async def callback_query_handler(event):
 
-# inline by LEGENDX22 and PROBOYX 🔥
-  await event.edit(text=f"{BOT} REPO AND GROUP LINK",buttons=[[Button.url(f"🔥{BOT} REPO🔥", url="https://github.com/ULTRA-OP/ULTRA-X"), Button.url(f"⚡{BOT} SUPPORT⚡", url="https://t.me/ULTRAXCHAT")]])
+# inline by LEGENDX22 and PROBOYX 🔥 and Betichod
+  await event.edit(text=f"ULTRA-X Repo and Group link",buttons=[[Button.url(f"ULTRA-X REPO", url="https://github.com/ULTRA-OP/ULTRA-X"), Button.url(f"ULTRA-X SUPPORT", url="https://t.me/ULTRAXCHAT")]])
