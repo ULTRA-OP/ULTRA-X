@@ -16,9 +16,13 @@ Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#o%D2%9
 
 [![υℓтяα χ вσт ℓσgσ](https://telegra.ph/file/e234b6871c00f90b0fe3b.jpg)](https://t.me/ULTRAXOT)
 
+-------------------------------------------------
+
 ## Dᴇᴘʟᴏʏ
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/ULTRA-OP/ULTRA-X)
+
+------------------------------------------------
 
 # Sᴛʀɪɴɢ Sᴇssɪᴏɴ:-
 ## [String Session](https://repl.it/@legendx22/LEGEND-BOT#main.py)
@@ -29,15 +33,6 @@ Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#o%D2%9
 ## The owner would not be responsible for any kind of bans due to the bot...
 ## Fᴏʀᴋ Aᴛ Yᴏᴜʀ Oᴡɴ Rɪsᴋ
 ## Iɴsᴛᴀʟʟɪɴɢ
-
--------------------------------------------------
-
-## Dᴇᴘʟᴏʏ
-
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/ULTRA-OP/ULTRA-X)
-
-------------------------------------------------
-
 
 # Cʀᴇᴅɪᴛs
 ### • [LEGEND BOT](https://github.com/TeamLEGENDX/LegendBOT)
