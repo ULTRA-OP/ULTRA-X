@@ -1,1 +1,1 @@
-ULTRA X: python -m ULTRA
+ULTRA X: python3 -m ULTRA
