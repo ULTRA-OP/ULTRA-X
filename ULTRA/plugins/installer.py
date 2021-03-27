@@ -1,17 +1,17 @@
 # maded by shivam
 # ported by LEGENDX22
-from userbot import bot, CMD_HELP, CMD_LIST
+from ULTRA import bot, CMD_HELP, CMD_LIST
 from telethon import events
-from userbot.utils import remove_plugin, load_module, register
+from ULTRA.utils import remove_plugin, load_module, register
 from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
 from pathlib import Path
-from userbot import LOAD_PLUG
+from ULTRA import LOAD_PLUG
 from datetime import datetime
 DELETE_TIMEOUT = 5
 import sys, asyncio, traceback, os, importlib
-import userbot.utils
-from userbot import CMD_HELP
+import ULTRA.utils
+from ULTRA import CMD_HELP
 
 
 
