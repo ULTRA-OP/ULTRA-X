@@ -30,42 +30,6 @@ else:
 
 
 
-def load_assistant(shortname):
-    if shortname.startswith("__"):
-        pass
-    elif shortname.endswith("_"):
-        import ULTRA.utils
-
-        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
-        name = "ULTRA.plugins.assistant.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        LOGS.info("Successfully imported " + shortname)
-    else:
-        import ULTRA.utils
-
-        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
-        name = "ULTRA.plugins.assistant.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        mod.bot = bot
-        mod.tgbot = bot.tgbot
-        mod.Var = Var
-        mod.tbot = tbot
-        mod.command = command
-        mod.logger = logging.getLogger(shortname)
-        # support for uniborg
-        sys.modules["uniborg.util"] = ULTRA.utils
-        mod.Config = Config
-        mod.borg = bot
-        mod.edit_or_reply = edit_or_reply
-        # support for paperplaneextended
-        sys.modules["ULTRA.events"] = ULTRA.utils
-        spec.loader.exec_module(mod)
-        # for imports
-        sys.modules["ULTRA.plugins.assistant." + shortname] = mod
-        LOGS.info("Successfully imported " + shortname)
 
 
 def load_module(shortname):
@@ -103,6 +67,43 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["ULTRA.plugins." + shortname] = mod
+        LOGS.info("Successfully imported " + shortname)
+
+def load_pro(shortname):
+    if shortname.startswith("__"):
+        pass
+    elif shortname.endswith("_"):
+        import ULTRA.utils
+
+        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
+        name = "ULTRA.plugins.assistant.{}".format(shortname)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        LOGS.info("Successfully imported " + shortname)
+    else:
+        import ULTRA.utils
+
+        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
+        name = "ULTRA.plugins.assistant.{}".format(shortname)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        mod.bot = bot
+        mod.tgbot = bot.tgbot
+        mod.Var = Var
+        mod.tbot = tbot
+        mod.command = command
+        mod.logger = logging.getLogger(shortname)
+        # support for uniborg
+        sys.modules["uniborg.util"] = ULTRA.utils
+        mod.Config = Config
+        mod.borg = bot
+        mod.edit_or_reply = edit_or_reply
+        # support for paperplaneextended
+        sys.modules["ULTRA.events"] = ULTRA.utils
+        spec.loader.exec_module(mod)
+        # for imports
+        sys.modules["ULTRA.plugins.assistant." + shortname] = mod
         LOGS.info("Successfully imported " + shortname)
 
 
