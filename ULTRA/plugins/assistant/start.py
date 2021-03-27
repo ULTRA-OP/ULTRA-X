@@ -7,7 +7,7 @@ from telethon import Button, custom, events, functions
 import telethon
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
-from uniborgConfig import Config
+from ULTRA.uniborgConfig import Config
 from ULTRA import tbot, bot
 from ULTRA.modules.sql_helper.blacklist_ass import (
     add_nibba_in_db,
