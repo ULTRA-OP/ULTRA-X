@@ -1,9 +1,3 @@
-modify by legendx22
-#credits team dc
-#Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
-#A stark bhai chori karna aaya ho kya friday me ek bar back btn kang kar k man nahi bhara 
-#Agar stark nahi ho to kon hai be tu jo bhi hai kang karna he aaya hai mera back , open btn so get lost
-# aur  unload load back close open kang kara ya idea bhi le to credit dena pehli 6 line nahi to bhut bura hoga tumara sath
 from math import ceil
 import asyncio
 import json
@@ -20,18 +14,9 @@ from LEGENDX import bot
 alain = bot.uid
 
 DEAFULTUSER = str(NAME)
-#ABEE O KANGAR  BACK OPEN CLSE BTN KANG KIYA TO YE LONE CHIPKA DENA AUR GLOBALS K BINA NAHI CHALAGA aur global 5 gaja diff name and manipulation se imported hai 
-#Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
 from ULTRA.utils import remove_plugin,load_module
 from LEGENDX import ID as id
-#Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
-#A stark bhai chori karna aaya ho kya friday me ek bar back btn kang kar k man nahi bhara 
-#Agar stark nahi ho to kon hai be tu jo bhi hai kang karna he aaya hai mera back , open btn so get lost
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
-
-# 🇦 🇦 🇵     🇾 🇦 🇭 🇦    🇦 🇦 🇾 🇪    🇰 🇮 🇸     🇱 🇮 🇾 🇪 ??
-
-# 🇨 🇭 🇦 🇱 🇴      🇸 🇮 🇷    🇵 🇱 🇪 🇦 🇸 🇪    🇬 🇪 🇹 🇴 🇺 🇹    
 
 
 
@@ -46,9 +31,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 reply_pop_up_alert = "Please get your own Userbot,for more info visit @teamishere!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
        
-  #       🇮 🇹 🇳 🇦    🇰 🇾 🇺   🇸 🇵 🇾     🇰 🇷    🇷 🇭 🇪     🇭 🇴      🇸 🇭 🇦 🇦 🇩 🇮    🇰 🇷 🇳 🇮    🇭    🇰 🇾 🇦   🇧 🇸 🇩 🇰 
-
-    @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
+@tgbot.on(events.InlineQuery)  # pylint:disable=E0602
     async def inline_handler(event):
         builder = event.builder
         result = None
@@ -61,7 +44,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
               reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !"
               await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-    @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+
+
+@tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"helpme_next\((.+?)\)")
     ))#hehe
     async def on_plug_in_callback_query_handler(event):
@@ -77,7 +62,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             Cobra = "Please get your own Userbot, and don't use mine for more info visit @teamishere!"
             await event.answer(Cobra, cache_time=0, alert=True)
 
-    @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+@tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"helpme_prev\((.+?)\)")
     ))
     async def on_plug_in_callback_query_handler(event):
@@ -96,7 +81,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
               Thelegend = "𝗡𝗼𝘁 𝗙𝗼𝗿 𝗕𝗶𝘁𝗰𝗵 𝗚𝗲𝘁 𝗬𝗼𝘂𝗿 𝗢𝘄𝗻 🆄︎🆂︎🅴︎🆁︎🅱︎🅾︎🆃︎\n\n🆅︎🅸︎🆂︎🅸︎🆃︎ @𝗨𝗹𝘁𝗿𝗮𝗫𝗢𝗧 𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗜𝗻𝗳𝗼."
               await event.answer(Thelegend, cache_time=0, alert=True)
  #hehehehehhehhehhehe   
-    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id == id:
             danish = custom.Button.inline("◤✞ Oᴘᴇɴ Mᴀɪɴ Mᴇɴᴜ Aɢᴀɪɴ ✞◥", data="open")
@@ -106,8 +91,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
    
 
-  
-    @tgbot.on(
+ 
+@tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
             data=re.compile(b"us_plugin_(.*)")
         )
@@ -152,13 +137,10 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             else:
                 reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info visit @teamishere!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"load\((.+?)\)")))
-   
+
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"load\((.+?)\)"))) 
     async def on_plug_in_callback_query_handler(event):
-              if event.query.user_id == bot.uid or event.query.user_id == id:
-                    
-#  🇦 🇷 🇪      🇧 🇸 🇩 🇰      🇮 🇸 🇸 🇪    🇰 🇦 🇳 🇬  🇲 🇦 🇹   🇰 🇷    🇷 🇪   🇲 🇨 
-                    
+              if event.query.user_id == bot.uid or event.query.user_id == id:                    
                     try:
                         fcix = [custom.Button.inline("  𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝖀𝖓𝖑𝖔𝖆𝖉 ",data="unload({})".format(shivam_sh1vam))]
                         load_module(event.data_match.group(1).decode("UTF-8"))# kyu sir kang krne m musil aa rhi h kya ... Bolo help kr du kya 😂😂😂
@@ -170,12 +152,10 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     fcix = [custom.Button.inline("  𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝖀𝖓𝖑𝖔𝖆𝖉 ",data="unload({})".format(shivam_sh1vam))]
                     reply_pop_up_alert = "Please get your own Userbot,for more info visit @teamishere!"
                     await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"unload\((.+?)\)")))
-   
+
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"unload\((.+?)\)")))   
     async def on_plug_in_callback_query_handler(event):
               if event.query.user_id == bot.uid or event.query.user_id == id:
-                    
-                    
                     try:
                         fcix = [custom.Button.inline(" 𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝕷𝖔𝖆𝖉 ",data="load({})".format(shivam_sh1vam))]
                         remove_plugin(event.data_match.group(1).decode("UTF-8"))#kyu sir kang krne m muskil ho rhi h kya bologe toh help krdu 😂😂
@@ -187,8 +167,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     fcix = [custom.Button.inline("  𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝕷𝖔𝖆𝖉 ",data="load({})".format(shivam_sh1vam))]
                     reply_pop_up_alert = "Please get your own Userbot,for more info visit @teamishere!"
                     await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#hehehe
-    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back\((.+?)\)")))
-   
+
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back\((.+?)\)")))   
     async def on_plug_in_callback_query_handler(event):
             
             if event.query.user_id == bot.uid or event.query.user_id == id:
