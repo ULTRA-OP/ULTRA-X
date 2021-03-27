@@ -1,6 +1,6 @@
 from telethon import events
 import random, re
-from legend.util import admin_cmd
+from ULTRA.utils import admin_cmd
 
 METOOSTR = [
     "`Me too thanks`",
