@@ -34,7 +34,7 @@ async def start(event):
     vent = event.chat_id
     mypic = os.environ.get("ASSISTANT_START_PIC", None)
     starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={bot.uid}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/Ultra-XOT)"
-    if event.sender_id == bot.uid:
+    if event.sender_id == bot.me.id:
         await tbot.send_message(
             vent,
             message=f"Hi Master, It's Me {bot_id}, Your Assistant ! \nWhat You Wanna Do today ?",
