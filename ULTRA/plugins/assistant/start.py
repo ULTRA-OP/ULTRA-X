@@ -72,6 +72,8 @@ async def start(event):
 
 @tbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"users")))
 async def users(event):
+    pro = await bot.get_me()
+    boy = pro.id
     if event.is_group:
         await event.delete()
         total_users = get_all_users()
@@ -153,6 +155,10 @@ async def sed(event):
 
 @tbot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
 async def sedlyfsir(event):
+    pro = await bot.get_me()
+    boy = pro.id
+    if not event.sender_id == boy:
+         return
     msgtobroadcast = event.text.split(" ", maxsplit=1)[1]
     userstobc = get_all_users()
     error_count = 0
@@ -179,7 +185,7 @@ async def sedlyfsir(event):
 
 @tbot.on(events.NewMessage(pattern="/stats"))
 async def _(event):
-    if not event.sender_id == bot.uid:
+    if not event.sender_id == boy:
        return
     eberyone = get_all_users()
     await event.reply(
@@ -190,7 +196,7 @@ async def _(event):
 
 @tbot.on(events.NewMessage(pattern="/block ?(.*)"))
 async def ok(event):
-    if not event.sender_id == bot.uid:
+    if not event.sender_id == boy:
          return
     if event.sender_id == bot.uid:
         msg = await event.get_reply_message()
@@ -207,7 +213,7 @@ async def ok(event):
 
 @tbot.on(events.NewMessage(pattern="/unblock ?(.*)"))
 async def gey(event):
-    if not event.sender_id == bot.uid:
+    if not event.sender_id == boy:
         return
     if event.sender_id == bot.uid:
         msg = await event.get_reply_message()
