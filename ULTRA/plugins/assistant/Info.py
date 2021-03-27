@@ -31,7 +31,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 import os
 
-pro = await bot.get_me()
+pro = bot.get_me()
 boy = pro.id
 
 @tbot.on(events.NewMessage(pattern="/info ?(.*)"))
