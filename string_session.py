@@ -1,7 +1,7 @@
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
 print("")
-print("""Wᴇʟᴄᴏᴍᴇ ᴛᴏ UʟᴛʀᴀX Usᴇʀʙᴏʀ Sᴛʀɪɴɢ Gᴇɴᴇʀᴀᴛᴏʀ""")
+print("""Wᴇʟᴄᴏᴍᴇ ᴛᴏ UʟᴛʀᴀX Usᴇʀʙᴏᴛ Sᴛʀɪɴɢ Gᴇɴᴇʀᴀᴛᴏʀ""")
 print("""Kɪɴᴅʟʏ ᴇɴᴇᴛᴇʀ ʏᴏᴜʀ ᴅᴇᴛᴀɪʟs ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ ! """)
 
 API_KEY = input("API_KEY: ")
