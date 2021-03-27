@@ -8,6 +8,7 @@ from ULTRA.helpers import functions as simpdef
 from ULTRA.uniborgConfig import Config
 from var import Var
 StartTime = time.time()
+bot = "if bot is not running then use this"
 
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
