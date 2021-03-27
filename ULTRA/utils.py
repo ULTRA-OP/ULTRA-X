@@ -18,7 +18,7 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from var import Var
 
-from ULTRA import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
+from ULTRA import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot, tbot
 from ULTRA.helpers.exceptions import CancelProcess
 
 ENV = bool(os.environ.get("ENV", False))
@@ -36,8 +36,8 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import ULTRA.utils
 
-        path = Path(f"ULTRA/plugins/{shortname}.py")
-        name = "ULTRA.plugins.{}".format(shortname)
+        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
+        name = "ULTRA.plugins.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -45,13 +45,14 @@ def load_module(shortname):
     else:
         import ULTRA.utils
 
-        path = Path(f"ULTRA/plugins/{shortname}.py")
-        name = "ULTRA.plugins.{}".format(shortname)
+        path = Path(f"ULTRA/plugins/assistant/{shortname}.py")
+        name = "ULTRA.plugins.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
         mod.tgbot = bot.tgbot
         mod.Var = Var
+        mod.tbot = tbot
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
@@ -63,7 +64,7 @@ def load_module(shortname):
         sys.modules["ULTRA.events"] = ULTRA.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["ULTRA.plugins." + shortname] = mod
+        sys.modules["ULTRA.plugins.assistant." + shortname] = mod
         LOGS.info("Successfully imported " + shortname)
 
 
