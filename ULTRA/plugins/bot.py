@@ -25,7 +25,7 @@ from io import BytesIO
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
 
-pro_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n**уєѕ мαѕтєя, αм αℓινє αη∂ ѕуѕтємѕ αяє ωσякιηg ρєяƒє¢тℓу αѕ ιт ѕнσυℓ∂ вє...**\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ 1.19.5\n➾ **ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** ☞ [ᴊᴏɪɴ](https://t.me/ULTRAXOT)\n➾ **ʟɪᴄᴇɴꜱᴇ**  ☞ [υℓтяα χ](https://github.com/ULTRA-OP)\n➾ **ᴄᴏᴘʏʀɪɢʜᴛ ʙʏ** ☞ [υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)\n\n➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [{DEFAULTUSER}](tg://user?id={ok})\n")
+pro_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ 1.19.5\n➾ **ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** ☞ [ᴊᴏɪɴ](https://t.me/ULTRAXOT)\n➾ **ʟɪᴄᴇɴꜱᴇ**  ☞ [υℓтяα χ](https://github.com/ULTRA-OP)\n➾ **ᴄᴏᴘʏʀɪɢʜᴛ ʙʏ** ☞ [υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)\n\n➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [{DEFAULTUSER}](tg://user?id={ok})\n")
 TG_BOT_USER_NAME_BF_HER = os.environ.get("ALIVE_PHOTTO", None)
 if TG_BOT_USER_NAME_BF_HER is not None:
     @tgbot.on(events.InlineQuery)
@@ -39,7 +39,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
                 [
                     Button.url("Repo", "https://github.com/ULTRA-OP/ULTRA-X"),
                     Button.url("Deploy", "https://heroku.com/deploy?template=https://github.com/ULTRA-OP/ULTRA-X/blob/master")],
-                    [Button.url("String", "https://repl.it/legendx22/LEGEND-BOT#main.py"),
+                    [Button.url("String", "https://repl.it/ULTRA-OP/ULTRA-X#main.py"),
                     Button.url("Channel", "https://t.me/ULTRAXOT")
                 ]
             ]
