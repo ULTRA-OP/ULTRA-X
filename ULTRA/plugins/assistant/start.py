@@ -21,6 +21,8 @@ from ULTRA.plugins.sql_helper.idadder_sql import (
     already_added,
     get_all_users,
 )
+pro = await bot.get_me()
+boy = pro.id
 
 @tbot.on(events.NewMessage(pattern="/start$"))
 async def start(event):
@@ -32,9 +34,9 @@ async def start(event):
     devlop = await bot.get_me()
     hmmwow = devlop.first_name
     vent = event.chat_id
-    mypic = os.environ.get("ASSISTANT_START_PIC", None)
-    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id='bot') \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/Ultra-XOT)"
-    if event.is_group:
+    mypic = "https://telegra.ph/file/861231ccabc7e69b19231.png"
+    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={boy}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/Ultra-XOT)"
+    if event.sender_id == boy:
         await tbot.send_message(
             vent,
             message=f"Hi Master, It's Me {bot_id}, Your Assistant ! \nWhat You Wanna Do today ?",
