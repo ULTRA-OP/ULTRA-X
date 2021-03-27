@@ -61,10 +61,10 @@ for name in files:
 import ULTRA._core
 
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
-
-if len(argv) not in (1, 3, 4):
+if bot:
+ if len(argv) not in (1, 3, 4):
     bot.disconnect()
-else:
+ else:
     bot.run_until_disconnected()
 
 
