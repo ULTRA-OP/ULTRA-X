@@ -33,7 +33,7 @@ async def start(event):
     hmmwow = devlop.first_name
     vent = event.chat_id
     mypic = os.environ.get("ASSISTANT_START_PIC", None)
-    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={bot.uid}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/Ultra-XOT)"
+    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={bot.me.id}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/Ultra-XOT)"
     if event.sender_id == bot.me.id:
         await tbot.send_message(
             vent,
@@ -69,7 +69,7 @@ async def start(event):
 
 @tbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"users")))
 async def users(event):
-    if event.query.user_id == bot.uid:
+    if event.query.user_id == bot.me.id:
         await event.delete()
         total_users = get_all_users()
         users_list = "List Of Total Users In Bot. \n\n"
@@ -98,7 +98,7 @@ async def users(event):
 async def all_messages_catcher(event):
     if is_he_added(event.sender_id):
         return
-    if event.sender_id == bot.uid:
+    if event.sender_id == bot.me.id:
         return
     if event.raw_text.startswith("/"):
         return
