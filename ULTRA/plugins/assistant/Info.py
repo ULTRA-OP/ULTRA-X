@@ -31,8 +31,6 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 import os
 
-pro = bot.get_me()
-boy = pro.id
 
 @tbot.on(events.NewMessage(pattern="/info ?(.*)"))
 async def who(event):
@@ -80,6 +78,8 @@ async def get_user(event):
 
 async def detail(replied_user, event):
  try:
+    pro = await bot.get_me()
+    boy = pro.id
     user_id = replied_user.user.id
     first_name = replied_user.user.first_name
     last_name = replied_user.user.last_name
