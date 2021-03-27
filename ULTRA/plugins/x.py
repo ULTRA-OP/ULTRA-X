@@ -15,6 +15,9 @@ from telethon import events, errors, custom, functions
 from ULTRA import CMD_LIST, CMD_HELP
 from LEGENDX import NAME
 import io
+from LEGENDX import bot
+
+alain = bot.uid
 
 DEAFULTUSER = str(NAME)
 #ABEE O KANGAR  BACK OPEN CLSE BTN KANG KIYA TO YE LONE CHIPKA DENA AUR GLOBALS K BINA NAHI CHALAGA aur global 5 gaja diff name and manipulation se imported hai 
