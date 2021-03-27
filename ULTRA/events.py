@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module for managing events.
- One of the main components of the userbot. """
+ One of the main components of the ULTRA. """
 
 import sys
 from asyncio import create_subprocess_shell as asyncsubshell
@@ -129,8 +129,8 @@ def register(**args):
 
                     if LOGSPAMMER:
                         await check.client.respond(
-                            "`Sorry, my userbot has crashed😔, check logs for more info.\
-                        \nThe error logs are stored in the userbot's log chat.`"
+                            "`Sorry, my ULTRA has crashed😔, check logs for more info.\
+                        \nThe error logs are stored in the ULTRA's log chat.`"
                         )
 
                     await check.client.send_file(send_to,

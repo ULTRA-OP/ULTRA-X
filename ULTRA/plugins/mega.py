@@ -171,6 +171,6 @@ CMD_HELP.update(
         "mega": "**Plugin :** `mega`\
         \n\n**Syntax :** `.mega` <MEGA.nz link>\
         \n**Usage : **Reply to a MEGA.nz link or paste your MEGA.nz link\
-        \n\n__ It will download the file into your userbot server.__"
+        \n\n__ It will download the file into your ULTRA server.__"
     }
 )

@@ -1,4 +1,4 @@
-#port to userbot by @MoveAngel
+#port to ULTRA by @MoveAngel
 
 import datetime
 

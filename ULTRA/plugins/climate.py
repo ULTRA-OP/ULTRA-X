@@ -141,7 +141,7 @@ async def get_weather(weather):
 @bot.on(sudo_cmd(pattern="setcity(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def set_default_city(city):
-    """ For .ctime command, change the default userbot country for date and time commands. """
+    """ For .ctime command, change the default ULTRA country for date and time commands. """
     if not OWM_API:
         await edit_or_reply(
             city, "`Get an API key from` https://openweathermap.org/ `first.`"

@@ -44,7 +44,7 @@ if ENV:
         # DO NOT EDIT BELOW THIS LINE IF YOU DO NOT KNOW WHAT YOU ARE DOING
         # TG API limit. A message can have maximum 4096 characters!
         MAX_MESSAGE_SIZE_LIMIT = 4095
-        # set blacklist_chats where you do not want userbot's features
+        # set blacklist_chats where you do not want ULTRA's features
         UB_BLACK_LIST_CHAT = set(int(x) for x in os.environ.get("UB_BLACK_LIST_CHAT", "").split())
         # maximum number of messages for antiflood
         MAX_ANTI_FLOOD_MESSAGES = 10

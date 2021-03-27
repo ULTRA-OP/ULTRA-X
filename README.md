@@ -8,7 +8,7 @@
 
 
 # υℓтяα χ вσт
-This is a userbot made for telegram. I made this userbot with help of all other userbots available in telegram. All credits goes to its Respective Owners....
+This is a ULTRA made for telegram. I made this ULTRA with help of all other ULTRAs available in telegram. All credits goes to its Respective Owners....
 
 This is the one and only official υℓтяα χ вσт made by [ Team Ultra](https://t.me/ULTRAXOT) 
 
@@ -55,7 +55,7 @@ virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
 # <Create local_config.py with variables as given below>
-python3 -m userbot
+python3 -m ULTRA
 ```
 
 An example `local_config.py` file could be:
@@ -74,7 +74,7 @@ class Development(Var):
 
 ### Uɴɪʙᴏʀɢ Cᴏɴғɪɢʀɪᴜᴛɪᴏɴ
 
-The UniBorg Config is situated in `userbot/uniborgConfig.py`.
+The UniBorg Config is situated in `ULTRA/uniborgConfig.py`.
 
 **Heroku Configuration**
 Simply just leave the Config as it is.
@@ -88,4 +88,4 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 - This is because of `telethon.errors.rpc_error_list.ApiIdPublishedFloodError`
     - `APP_ID`:   You can get this value from https://my.telegram.org 
     - `API_HASH`:   You can get this value from https://my.telegram.org
-- The userbot will not work without setting the mandatory vars.
+- The ULTRA will not work without setting the mandatory vars.

@@ -83,7 +83,7 @@ async def on_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
-        # userbot's should not reply to other userbot's
+        # ULTRA's should not reply to other ULTRA's
         # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
         return False
     if USER_AFK and not (await event.get_sender()).bot:  # pylint:disable=E0602

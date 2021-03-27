@@ -18,7 +18,7 @@ API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 from telethon import events, custom, Button, TelegramClient
 import time
-from userbot import botnickname, ALIVE_NAME, bot
+from ULTRA import botnickname, ALIVE_NAME, bot
 pbot = Client("LEGEND", api_id=API_ID, api_hash=API_HASH, bot_token=token)
 BOT = str(botnickname) if botnickname else "υℓтяα χ"
 NAME = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"

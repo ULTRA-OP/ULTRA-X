@@ -1,5 +1,5 @@
 try:
-    from userbot.plugins.sql_helper import SESSION, BASE
+    from ULTRA.plugins.sql_helper import SESSION, BASE
 except ImportError:
     raise AttributeError
 

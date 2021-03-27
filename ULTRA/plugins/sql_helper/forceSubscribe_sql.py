@@ -16,7 +16,7 @@
 
 from sqlalchemy import Column, Numeric, String
 
-from userbot.plugins.sql_helper import BASE, SESSION
+from ULTRA.plugins.sql_helper import BASE, SESSION
 
 
 class forceSubscribe(BASE):

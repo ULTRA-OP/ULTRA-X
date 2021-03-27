@@ -114,7 +114,7 @@ CMD_HELP.update(
     {
         "list": "**Plugin : **`list`\
     \n\n**Syntax : **`.ls`\
-    \n**Function : **this plugin give you your full files from userbot"
+    \n**Function : **this plugin give you your full files from ULTRA"
     }
 )
 
