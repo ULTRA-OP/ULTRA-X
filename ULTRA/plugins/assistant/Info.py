@@ -1,5 +1,6 @@
 from telethon.utils import pack_bot_file_id
 from ULTRA import tbot
+frok telethon import events
 
 @tbot.on(events.NewMessage(pattern="/id ?(.*)"))
 async def _(event):
