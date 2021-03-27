@@ -21,11 +21,12 @@ from ULTRA.plugins.sql_helper.idadder_sql import (
     already_added,
     get_all_users,
 )
-pro = await bot.get_me()
-boy = pro.id
+# await function async def ke baad lagega
 
 @tbot.on(events.NewMessage(pattern="/start$"))
 async def start(event):
+    pro = await bot.get_me()
+    boy = pro.id
     iam = await tbot.get_me()
     bot_id = iam.first_name
     bot_username = iam.username
@@ -94,6 +95,7 @@ async def users(event):
 async def users(event):
     await event.delete()
     #@LEGENDX, #@PROBOY add cmd List Here
+    # later bro
     pass
 
 @tbot.on(events.NewMessage(func=lambda e: e.is_private))
