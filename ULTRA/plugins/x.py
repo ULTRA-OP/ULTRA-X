@@ -94,8 +94,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id == id:
-            danish = custom.Button.inline("◤✞ 𝕺𝖕𝖊𝖓 𝕸𝖆𝖎𝖓 𝕸𝖊𝖓𝖚 𝕬𝖌𝖆𝖎𝖓 ✞◥", data="open")
-            await event.edit("`Main Menu Has Been Closed`", buttons=danish)
+            danish = custom.Button.inline("◤✞ Oᴘᴇɴ Mᴀɪɴ Mᴇɴᴜ Aɢᴀɪɴ ✞◥", data="open")
+            await event.edit("`Mᴀɪɴ Mᴇɴᴜ Hᴀs Cʟᴏsᴇᴅ`", buttons=danish)
         else:
             reply_pop_up_alert = "Please get your own Userbot😁😁,for more info visit @teamishere! 😎😎"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
