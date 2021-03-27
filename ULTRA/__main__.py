@@ -19,13 +19,7 @@ async def add_bot(bot_token):
     bot.uid = telethon.utils.get_peer_id(bot.me)
 
 
-path = 'ULTRA/plugins/*.py'
-files = glob.glob(path)
-for name in files:
-    with open(name) as f:
-        path1 = Path(f.name)
-        shortname = path1.stem
-        load_module(shortname.replace(".py", ""))
+
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
@@ -51,6 +45,13 @@ except Exception:
 
 import glob
 
+path = 'ULTRA/plugins/*.py'
+files = glob.glob(path)
+for name in files:
+    with open(name) as f:
+        path1 = Path(f.name)
+        shortname = path1.stem
+        load_module(shortname.replace(".py", ""))
 
 path = 'ULTRA/plugins/assistant/*.py'
 files = glob.glob(path)
