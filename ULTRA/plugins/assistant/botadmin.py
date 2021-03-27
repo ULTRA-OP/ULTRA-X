@@ -298,7 +298,7 @@ async def pin(event):
     await event.reply("Pinned This Message Sucessfully.")
     await get_user_sender_id(event.sender_id, event)
 
-@register(pattern="^/permapin(?: |$)(.*)")
+@tbot.on(events.NewMessage(pattern="/permapin ?(.*)"))
 async def pin(event):
     if event.is_group:
         if not await can_pin_msg(message=event):
