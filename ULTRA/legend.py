@@ -1,0 +1,1 @@
+from LEGENDX import NAME, MASTER
