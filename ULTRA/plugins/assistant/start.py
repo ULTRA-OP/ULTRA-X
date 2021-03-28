@@ -8,7 +8,8 @@ import telethon
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
 from ULTRA.uniborgConfig import Config
-from LEGENDX import xbot, bot
+from LEGENDX import xbot, devs as DEVS
+from ULTRA import bot
 from ULTRA.plugins.sql_helper.blacklist_ass import (
     add_nibba_in_db,
     is_he_added,
@@ -39,7 +40,7 @@ async def start(event):
     starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={boy}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/Ultra-XOT)"
     if event.sender_id == boy:
         await xbot.send_message(
-            vent,
+            event.chat_id,
             message=f"Hi Master, It's Me {bot_id}, Your Assistant ! \nWhat You Wanna Do today ?",
             buttons=[
                 [custom.Button.inline("Show Bot Users", data="users")],
