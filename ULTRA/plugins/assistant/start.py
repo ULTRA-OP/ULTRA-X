@@ -157,8 +157,8 @@ async def sed(event):
             reply_to=reply_message_id,
         )
         info = event.sender_id
-        legend = f"this is user id `{info}` ")
-        await xbot.send_message(user_id, info)
+        legend = f"this is user id `{info}` "
+        await xbot.send_message(user_id, legend)
 
 
 @xbot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
