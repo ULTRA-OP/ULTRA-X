@@ -23,7 +23,8 @@ CMD_HELP_BOT = {}
 BRAIN_CHECKER = []
 INT_PLUG = ""
 LOAD_PLUG = {}
-
+from LEGENDX import xbot 
+tbot = xbot
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
