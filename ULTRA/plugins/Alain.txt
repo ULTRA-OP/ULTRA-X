@@ -78,7 +78,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             
             await event.edit(buttons=dc)
         else:
-              Thelegend = "𝗡𝗼𝘁 𝗙𝗼𝗿 𝗕𝗶𝘁𝗰𝗵 𝗚𝗲𝘁 𝗬𝗼𝘂𝗿 𝗢𝘄𝗻 🆄︎🆂︎🅴︎🆁︎🅱︎🅾︎🆃︎\n\n🆅︎🅸︎🆂︎🅸︎🆃︎ @𝗨𝗹𝘁𝗿𝗮𝗫𝗢𝗧 𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗜𝗻𝗳𝗼."
+              Thelegend = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !"
               await event.answer(Thelegend, cache_time=0, alert=True)
  #hehehehehhehhehhehe   
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
