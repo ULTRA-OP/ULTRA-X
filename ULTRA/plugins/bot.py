@@ -15,7 +15,7 @@ from telethon import events, Button, custom
 from ULTRA.utils import admin_cmd
 from ULTRA import ALIVE_NAME
 from ULTRA import bot as ultra
-from telethon.tl.custom import Button, custom
+from telethon import Button, custom
 from telethon.tl.types import ChannelParticipantsAdmins
 global ok
 ok = ultra.uid
