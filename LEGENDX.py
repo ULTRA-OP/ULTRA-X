@@ -7,8 +7,10 @@ import asyncio
 import os
 import asyncio
 from telethon import TelegramClient
-from ULTRA.utils import admin_cmd as legendx
-from ULTRA import bot as LEGENDX22
+try:
+  from ULTRA import bot 
+except:
+  pass
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
