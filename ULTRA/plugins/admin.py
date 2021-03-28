@@ -22,7 +22,7 @@ from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
                                ChatBannedRights, MessageEntityMentionName,
                                MessageMediaPhoto)
 from LEGENDX import devs
-from ULTA import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
+from ULTRA import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from ULTRA.utils import register, errors_handler
 from ULTRA.utils import admin_cmd
 from LEGENDX import NAME, MASTER, BOT
