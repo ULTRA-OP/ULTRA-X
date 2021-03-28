@@ -1,4 +1,4 @@
-from ULTRA import tbot
+from LEGENDX import xbot
 from google_trans_new import google_translator
 import requests
 from PyDictionary import PyDictionary

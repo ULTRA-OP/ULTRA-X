@@ -1,4 +1,4 @@
-from ULTRA import tbot, DEVS
+from LEGENDX import xbot, DEVS
 
 from telethon.errors import BadRequestError
 from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest

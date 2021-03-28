@@ -1,4 +1,4 @@
-from ULTRA import tbot
+from LEGENDX import xbot
 from telethon import events
 from ULTRA import StartTime
 import time

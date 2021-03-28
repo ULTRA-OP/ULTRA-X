@@ -8,7 +8,7 @@ import telethon
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
 from ULTRA.uniborgConfig import Config
-from ULTRA import tbot, bot
+from LEGENDX import xbot, bot
 from ULTRA.plugins.sql_helper.blacklist_ass import (
     add_nibba_in_db,
     is_he_added,

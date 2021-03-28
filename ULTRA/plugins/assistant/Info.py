@@ -1,5 +1,5 @@
 from telethon.utils import pack_bot_file_id
-from ULTRA import tbot, bot, DEVS
+from LEGENDX import xbot, bot, DEVS
 from telethon import events
 
 @tbot.on(events.NewMessage(pattern="/id ?(.*)"))
