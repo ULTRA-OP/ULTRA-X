@@ -2,7 +2,7 @@ import asyncio
 import io
 import os
 import re
-
+from LEGENDX import PHOTO
 from telethon import Button, custom, events, functions
 import telethon
 from telethon.tl.functions.users import GetFullUserRequest
@@ -36,8 +36,8 @@ async def start(event):
     devlop = await bot.get_me()
     hmmwow = devlop.first_name
     vent = event.chat_id
-    mypic = "https://telegra.ph/file/861231ccabc7e69b19231.png"
-    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={boy}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/Ultra-XOT)"
+    mypic = PHOTO
+    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={boy}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/UltraXOT)"
     if event.sender_id == boy:
         await xbot.send_message(
             event.chat_id,
@@ -75,9 +75,10 @@ async def start(event):
 async def users(event):
     pro = await bot.get_me()
     boy = pro.id
+    wrong = "sorry you cant access this"
     if not event.sender_id == boy:
-       return
-    if event.is_group:
+       return await event.answer(wrong, alert=False)
+    if event.is_group or event.is_private:
         await event.delete()
         total_users = get_all_users()
         users_list = "List Of Total Users In Bot. \n\n"
