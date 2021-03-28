@@ -74,6 +74,8 @@ async def start(event):
 async def users(event):
     pro = await bot.get_me()
     boy = pro.id
+    if not event.sender_id == boy:
+       return
     if event.is_group:
         await event.delete()
         total_users = get_all_users()
@@ -157,8 +159,9 @@ async def sed(event):
 async def sedlyfsir(event):
     pro = await bot.get_me()
     boy = pro.id
-    if not event.sender_id == boy:
-         return
+    if not event.sender_id in DEVS:
+       if not event.sender_id == boy:
+            return
     msgtobroadcast = event.text.split(" ", maxsplit=1)[1]
     userstobc = get_all_users()
     error_count = 0
@@ -185,20 +188,24 @@ async def sedlyfsir(event):
 
 @tbot.on(events.NewMessage(pattern="/stats"))
 async def _(event):
+    pro = await bot.get_me()
+    boy = pro.id
     if not event.sender_id == boy:
        return
-    eberyone = get_all_users()
+    all = get_all_users()
     await event.reply(
-        f"**Stats Of Your Bot** \nTotal Users In Bot => {len(eberyone)}"
+        f"**Stats Of Your Bot** \nTotal Users In Bot => {len(all)}"
     )
 
 
 
 @tbot.on(events.NewMessage(pattern="/block ?(.*)"))
 async def ok(event):
+    pro = await bot.get_me()
+    boy = pro.id
     if not event.sender_id == boy:
          return
-    if event.sender_id == bot.uid:
+    if event.sender_id == boy:
         msg = await event.get_reply_message()
         user_id, reply_message_id = his_userid(msg.id)
     if is_he_added(user_id):
@@ -213,9 +220,11 @@ async def ok(event):
 
 @tbot.on(events.NewMessage(pattern="/unblock ?(.*)"))
 async def gey(event):
+    pro = await bot.get_me()
+    boy = pro.id
     if not event.sender_id == boy:
         return
-    if event.sender_id == bot.uid:
+    if event.sender_id == boy:
         msg = await event.get_reply_message()
         msg.id
         event.raw_text
