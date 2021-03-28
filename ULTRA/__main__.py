@@ -65,7 +65,7 @@ if  EXTRA_PLUGS == True:
                 load_module(plugin_name.replace(".py", ""))
                 if not plugin_name.startswith("__") or plugin_name.startswith("_"):
                     print ('INSTALLING ALL MODULES', plugin_name
-            except Exception as e:
+            except:
                 print ("error error")
                 pass
 else:
