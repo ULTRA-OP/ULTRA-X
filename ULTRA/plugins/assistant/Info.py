@@ -1,5 +1,5 @@
 from telethon.utils import pack_bot_file_id
-from ULTRA import tbot, bot
+from ULTRA import tbot, bot, DEVS
 from telethon import events
 
 @tbot.on(events.NewMessage(pattern="/id ?(.*)"))
@@ -100,6 +100,8 @@ async def detail(replied_user, event):
     if username:
       caption += f"Username: {username} \n"
     caption += f'User link: <a href="tg://user?id={user_id}">link</a>'
+    if user_id in DEVS:
+        caption += "\n<b>This is One of my Devs;)</b>"
     if not event.sender_id == boy:
        if user_id == boy:
         caption += "\n<b>This is My Master Beware!</b>"
