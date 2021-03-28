@@ -14,7 +14,7 @@ from pathlib import Path
 import asyncio
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
 import telethon.utils
-
+EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me() 
@@ -53,13 +53,29 @@ for name in files:
         shortname = path1.stem
         load_pro(shortname.replace(".py", ""))
 
-path = 'ULTRA/plugins/*.py'
-files = glob.glob(path)
-for name in files:
-    with open(name) as f:
-        path1 = Path(f.name)
-        shortname = path1.stem
-        load_module(shortname.replace(".py", ""))
+if  EXTRA_PLUGS == True:
+    os.system("git clone https://github.com/ULTRA-OP/ULTRA_PLUGS.git ./ULTRA/plugins/")
+    path = "ULTRA/plugins/*.py"
+    files = glob.glob(path)
+    for name in files:
+        with open(name) as a:
+            patt = Path(a.name)
+            plugin_name = patt.stem
+            try:
+                load_module(plugin_name.replace(".py", ""))
+                if not plugin_name.startswith("__") or plugin_name.startswith("_"):
+                    print ('INSTALLING ALL MODULES', plugin_name
+            except Exception as e:
+                print ("error error")
+                pass
+else:
+  path = 'ULTRA/plugins/*.py'
+  files = glob.glob(path)
+  for name in files:
+      with open(name) as f:
+          path1 = Path(f.name)
+          shortname = path1.stem
+          load_module(shortname.replace(".py", ""))
 
 
 import ULTRA._core
