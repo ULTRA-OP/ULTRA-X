@@ -2,6 +2,7 @@
 
 from telethon import events, Button, custom
 import os,re
+from LEGENDX import ID
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions
 @tgbot.on(events.InlineQuery(pattern=r"restart"))
@@ -16,7 +17,7 @@ from telethon import Button, custom, events
 import os, re, sys, asyncio
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart')))
 async def restart(event):
-  if event.sender_id == bot.me.id:
+  if event.sender_id == bot.me.id or event.sender_id == ID:
     await event.edit("restarting your bot please wait")
     await asyncio.sleep(2)
     await event.edit("restarting......")
