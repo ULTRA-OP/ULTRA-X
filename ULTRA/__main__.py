@@ -66,7 +66,6 @@ if  EXTRA_PLUGS == True:
                 if not plugin_name.startswith("__") or plugin_name.startswith("_"):
                     print ('INSTALLING ALL MODULES', plugin_name
             except:
-                print ("error error")
                 pass
 else:
   path = 'ULTRA/plugins/*.py'
