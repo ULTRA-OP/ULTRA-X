@@ -38,13 +38,13 @@ if TG_BOT_USER_NAME_BF_HER is not None:
         if query.startswith("alive") and event.query.user_id == me.id:
             buttons = [
                 [
-                    Button.url("Repo", "https://github.com/ULTRA-OP/ULTRA-X"),
-                    Button.url("Deploy", "https://heroku.com/deploy?template=https://github.com/ULTRA-OP/ULTRA-X/blob/master")],
-                    [Button.url("String", "https://repl.it/ULTRA-OP/ULTRA-X#main.py"),
-                    Button.url("Channel", "https://t.me/ULTRAXOT")
+                    Button.url("Rᴇᴘᴏ", "https://github.com/ULTRA-OP/ULTRA-X"),
+                    Button.url("Dᴇᴘʟᴏʏ", "https://heroku.com/deploy?template=https://github.com/ULTRA-OP/ULTRA-X/blob/master")],
+                    [Button.url("Sᴛʀɪɴɢ", "https://repl.it/ULTRA-OP/ULTRA-X#main.py"),
+                    Button.url("Cʜᴀɴɴᴇʟ", "https://t.me/ULTRAXOT")
                 ]
             ]
-            buttons += [[custom.Button.inline("HELP", data="helpme"), custom.Button.inline("restart", data='restart')]]
+            buttons += [[custom.Button.inline("Hᴇʟᴘ", data="helpme"), custom.Button.inline("Rᴇsᴛᴀʀᴛ", data='restart')]]
             if ALIVE_PHOTTO and ALIVE_PHOTTO.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(
                     ALIVE_PHOTTO,
