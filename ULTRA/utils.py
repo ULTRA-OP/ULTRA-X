@@ -18,7 +18,8 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from var import Var
 
-from ULTRA import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot, tbot
+from ULTRA import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
+from LEGENDX import xbot
 from ULTRA.helpers.exceptions import CancelProcess
 
 ENV = bool(os.environ.get("ENV", False))
@@ -54,7 +55,7 @@ def load_module(shortname):
         mod.bot = bot
         mod.tgbot = bot.tgbot
         mod.Var = Var
-        mod.tbot = tbot
+        mod.xbot = xbot
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
@@ -91,7 +92,7 @@ def load_pro(shortname):
         mod.bot = bot
         mod.tgbot = bot.tgbot
         mod.Var = Var
-        mod.tbot = tbot
+        mod.xbot = xbot
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
