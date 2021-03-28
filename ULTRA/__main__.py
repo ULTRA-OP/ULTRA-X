@@ -1,6 +1,8 @@
 from ULTRA import bot, tbot
 from sys import argv
 import sys
+import os
+os.system("pip install google_trans_new")
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
