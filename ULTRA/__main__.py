@@ -48,8 +48,6 @@ except Exception:
 import glob
 
 
-
-
 path = 'ULTRA/plugins/assistant/*.py'
 files = glob.glob(path)
 for name in files:
@@ -57,6 +55,15 @@ for name in files:
         path1 = Path(f.name)
         shortname = path1.stem
         load_pro(shortname.replace(".py", ""))
+
+
+path = 'ULTRA/plugins/*.py'
+files = glob.glob(path)
+for name in files:
+    with open(name) as f:
+        path1 = Path(f.name)
+        shortname = path1.stem
+        load_module(shortname.replace(".py", ""))
 
 import ULTRA._core
 
