@@ -105,7 +105,7 @@ async def detail(replied_user, event):
     if not event.sender_id == boy:
        if user_id == boy:
         caption += "\n<b>This is My Master Beware!</b>"
-    else:
+    elif event.sender_id == boy and user_id == boy:
         caption += "\n<b>Hello Master☺️</b>"
     return caption
  except Exception:
