@@ -5,7 +5,7 @@ import asyncio
 import os
 import time
 from datetime import datetime
-from ULTRA.util import admin_cmd, progress
+from ULTRA.utils import admin_cmd, progress
 
 
 @borg.on(admin_cmd(pattern="nfc (.*)"))  # pylint:disable=E0602
