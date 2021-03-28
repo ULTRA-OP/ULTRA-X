@@ -9,7 +9,7 @@ import os
 from telethon import TelegramClient
 from var import Var
 from ULTRA.utils import load_module, load_pro
-from ULTRA import LOAD_PLUG, BOTLOG_CHATID, LOGS
+from ULTRA import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
 import asyncio
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
