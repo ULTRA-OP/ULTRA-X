@@ -2,28 +2,28 @@ from telethon.utils import pack_bot_file_id
 from LEGENDX import xbot, bot, DEVS
 from telethon import events
 
-@tbot.on(events.NewMessage(pattern="/id ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/id ?(.*)"))
 async def _(event):
     if event.reply_to_msg_id:
         await event.get_input_chat()
         r_msg = await event.get_reply_message()
         if r_msg.media:
             bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await tbot.send_message(
+            await xbot.send_message(
                 event.chat_id,
                 "Current Chat ID: `{}`\nFrom User ID: `{}`\nBot API File ID: `{}`".format(
                     str(event.chat_id), str(r_msg.sender_id), bot_api_file_id
                 ),
             )
         else:
-            await tbot.send_message(
+            await xbot.send_message(
                 event.chat_id,
                 "Current Chat ID: `{}`\nFrom User ID: `{}`".format(
                     str(event.chat_id), str(r_msg.sender_id)
                 ),
             )
     else:
-        await tbot.send_message(
+        await xbot.send_message(
             event.chat_id, "Current Chat ID: `{}`".format(str(event.chat_id))
         )
 
@@ -32,7 +32,7 @@ from telethon.tl.types import MessageEntityMentionName
 import os
 
 
-@tbot.on(events.NewMessage(pattern="/info ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/info ?(.*)"))
 async def who(event):
     replied_user = await get_user(event)
     try:
@@ -49,7 +49,7 @@ async def who(event):
 async def get_user(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
-        replied_user = await tbot(GetFullUserRequest(previous_message.sender_id))
+        replied_user = await xbot(GetFullUserRequest(previous_message.sender_id))
     else:
         user = event.pattern_match.group(1)
 
@@ -65,11 +65,11 @@ async def get_user(event):
 
             if isinstance(probable_user_mention_entity, MessageEntityMentionName):
                 user_id = probable_user_mention_entity.user_id
-                replied_user = await tbot(GetFullUserRequest(user_id))
+                replied_user = await xbot(GetFullUserRequest(user_id))
                 return replied_user
         try:
-            user_object = await tbot.get_entity(user)
-            replied_user = await tbot(GetFullUserRequest(user_object.id))
+            user_object = await xbot.get_entity(user)
+            replied_user = await xbot(GetFullUserRequest(user_object.id))
         except (TypeError, ValueError) as err:
             await event.reply("I don't seem to have interacted with this user before - please forward a message from them to give me control! (like a voodoo doll, I need a piece of them to be able to execute certain commands...)")
             return None

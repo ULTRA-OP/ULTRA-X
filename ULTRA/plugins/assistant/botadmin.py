@@ -57,7 +57,7 @@ async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
         return isinstance(
             (
-                await tbot(functions.channels.GetParticipantRequest(chat, user))
+                await xbot(functions.channels.GetParticipantRequest(chat, user))
             ).participant,
             (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
         )
@@ -66,7 +66,7 @@ async def is_register_admin(chat, user):
 
 
 async def can_promote_users(message):
-    result = await tbot(
+    result = await xbot(
         functions.channels.GetParticipantRequest(
             channel=message.chat_id,
             user_id=message.sender_id,
@@ -79,7 +79,7 @@ async def can_promote_users(message):
 
 
 async def can_ban_users(message):
-    result = await tbot(
+    result = await xbot(
         functions.channels.GetParticipantRequest(
             channel=message.chat_id,
             user_id=message.sender_id,
@@ -94,7 +94,7 @@ async def can_ban_users(message):
 
 
 async def can_pin_msg(message):
-    result = await tbot(
+    result = await xbot(
         functions.channels.GetParticipantRequest(
             channel=message.chat_id,
             user_id=message.sender_id,
@@ -147,7 +147,7 @@ async def get_user_sender_id(user, event):
     return user_obj
 
 
-@tbot.on(events.NewMessage(pattern="/ban ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/ban ?(.*)"))
 async def ban(event):
     if not event.is_group:
         return
@@ -156,7 +156,7 @@ async def ban(event):
             return
     user, reason = await get_user_from_event(event)
     
-    banned = await tbot.get_permissions(event.chat_id, user)
+    banned = await xbot.get_permissions(event.chat_id, user)
     pro = user
     fname = pro.first_name
     if banned.is_admin:
@@ -170,7 +170,7 @@ async def ban(event):
      await event.reply("Sorry I Can't Act Against My Devs")
      return
     try:
-        await tbot(EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS))
+        await xbot(EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
         await event.reply("I Could't Ban That User Probably Due To Less Permissions.")
         return
@@ -179,7 +179,7 @@ async def ban(event):
     else:
         await event.reply(f"Banned {fname} !")
 
-@tbot.on(events.NewMessage(pattern="/unban ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/unban ?(.*)"))
 async def unban(event):
     if not event.is_group:
         return
@@ -193,14 +193,14 @@ async def unban(event):
     else:
         return
     try:
-        await tbot(EditBannedRequest(event.chat_id, user.id, UNBAN_RIGHTS))
+        await xbot(EditBannedRequest(event.chat_id, user.id, UNBAN_RIGHTS))
         await event.reply("`Unbanned Successfully. Granting another chance.🚶`")
     except BadRequestError:
         await event.reply("I Could't UnBan That User Probably Due To Less Permissions.")
         return
 
 
-@tbot.on(events.NewMessage(pattern="/promote ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/promote ?(.*)"))
 async def promote(event):
     if event.is_group:
           if not await can_promote_users(message=event):
@@ -227,7 +227,7 @@ async def promote(event):
     else:
         return
     try:
-        await tbot(EditAdminRequest(event.chat_id, user.id, new_rights, rank))
+        await xbot(EditAdminRequest(event.chat_id, user.id, new_rights, rank))
         await event.reply("Promoted Successfully! Now give Party")
     except BadRequestError:
         await event.reply(
@@ -236,7 +236,7 @@ async def promote(event):
         return
 
 
-@tbot.on(events.NewMessage(pattern="/demote ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/demote ?(.*)"))
 async def demote(event):
     if event.is_group:
           if not await can_promote_users(message=event):
@@ -273,7 +273,7 @@ async def demote(event):
     await event.reply("Demoted This User Sucessfully.")
 
 
-@tbot.on(events.NewMessage(pattern="/pin ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/pin ?(.*)"))
 async def pin(event):
     if event.is_group:
         if not await can_pin_msg(message=event):
@@ -289,7 +289,7 @@ async def pin(event):
     if options.lower() == "loud":
         is_silent = False
     try:
-        await tbot(UpdatePinnedMessageRequest(event.to_id, to_pin, is_silent))
+        await xbot(UpdatePinnedMessageRequest(event.to_id, to_pin, is_silent))
     except BadRequestError:
         await event.reply(
             "I Could't Pin That Message Probably Due To Less Permissions."
@@ -298,7 +298,7 @@ async def pin(event):
     await event.reply("Pinned This Message Sucessfully.")
     await get_user_sender_id(event.sender_id, event)
 
-@tbot.on(events.NewMessage(pattern="/permapin ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/permapin ?(.*)"))
 async def pin(event):
     if event.is_group:
         if not await can_pin_msg(message=event):
@@ -306,7 +306,7 @@ async def pin(event):
     else:
         return
     previous_message = await msg.get_reply_message()
-    k = await tbot.send_message(
+    k = await xbot.send_message(
             msg.chat_id,
             previous_message
           )
@@ -319,7 +319,7 @@ async def pin(event):
     if options.lower() == "loud":
         is_silent = False
     try:
-        await tbot(UpdatePinnedMessageRequest(event.to_id, to_pin, is_silent))
+        await xbot(UpdatePinnedMessageRequest(event.to_id, to_pin, is_silent))
     except BadRequestError:
         await event.reply(
             "I Could't Pin That Message Probably Due To Less Permissions."
@@ -329,21 +329,21 @@ async def pin(event):
     await get_user_sender_id(event.sender_id, event)
 
 
-@tbot.on(events.NewMessage(pattern="/unpin"))
+@xbot.on(events.NewMessage(pattern="/unpin"))
 async def pin(msg):
     if msg.is_group:
         if not await can_pin_msg(message=msg):
             return
     try:
         c = await msg.get_reply_message()
-        await tbot.unpin_message(msg.chat_id, c)
+        await xbot.unpin_message(msg.chat_id, c)
         await msg.reply("Unpinned Successfully.")
     except Exception:
         await msg.reply("Failed to unpin.")
 
 
 
-@tbot.on(events.NewMessage(pattern="/kick ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/kick ?(.*)"))
 async def kick(event):
     if not event.is_group:
         return
@@ -351,7 +351,7 @@ async def kick(event):
         if not await can_ban_users(message=event):
             return
     user, reason = await get_user_from_event(event)
-    kekme = await tbot.get_permissions(event.chat_id, user)
+    kekme = await xbot.get_permissions(event.chat_id, user)
     momos = user
     momos.first_name
     if kekme.is_admin:
@@ -364,7 +364,7 @@ async def kick(event):
      await event.reply("Sorry I Can't Act Against My Devs")
      return
     try:
-        await tbot.kick_participant(event.chat_id, user.id)
+        await xbot.kick_participant(event.chat_id, user.id)
     except:
         await event.reply("I Could't Kick That User Probably Due To Less Permissions.")
         return
@@ -376,7 +376,7 @@ async def kick(event):
         await event.reply(f"`Kicked` [{user.first_name}](tg://user?id={user.id})`!`")
 
 
-@tbot.on(events.NewMessage(pattern="/mute ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/mute ?(.*)"))
 async def mute(event):
     if not event.is_group:
         return
@@ -384,7 +384,7 @@ async def mute(event):
         if not await can_ban_users(message=event):
             return
     user, reason = await get_user_from_event(event)
-    kekme = await tbot.get_permissions(event.chat_id, user)
+    kekme = await xbot.get_permissions(event.chat_id, user)
     momos = user
     momos.first_name
     if kekme.is_admin:
@@ -397,7 +397,7 @@ async def mute(event):
      await event.reply("Sorry I Can't Act Against My Devs")
      return
     try:
-        await tbot(EditBannedRequest(event.chat_id, user.id, MUTE_RIGHTS))
+        await xbot(EditBannedRequest(event.chat_id, user.id, MUTE_RIGHTS))
     except:
         await event.reply("I Could't Mute That User Probably Due To Less Permissions.")
         return
@@ -409,7 +409,7 @@ async def mute(event):
         await event.reply(f"`Kicked` [{user.first_name}](tg://user?id={user.id})`!`")
 
 
-@tbot.on(events.NewMessage(pattern="/unmute ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/unmute ?(.*)"))
 async def mute(event):
     if not event.is_group:
         return
@@ -421,7 +421,7 @@ async def mute(event):
         await event.reply("Mention A User")
         return
     try:
-        await tbot(EditBannedRequest(event.chat_id, user.id, UNMUTE_RIGHTS))
+        await xbot(EditBannedRequest(event.chat_id, user.id, UNMUTE_RIGHTS))
     except:
         await event.reply(
             "I Could't UnMute That User Probably Due To Less Permissions."

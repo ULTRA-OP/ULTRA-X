@@ -23,14 +23,14 @@ from ULTRA.plugins.sql_helper.idadder_sql import (
 )
 # await function async def ke baad lagega
 
-@tbot.on(events.NewMessage(pattern="/start$"))
+@xbot.on(events.NewMessage(pattern="/start$"))
 async def start(event):
     pro = await bot.get_me()
     boy = pro.id
-    iam = await tbot.get_me()
+    iam = await xbot.get_me()
     bot_id = iam.first_name
     bot_username = iam.username
-    replied_user = await tbot(GetFullUserRequest(event.sender_id))
+    replied_user = await xbot(GetFullUserRequest(event.sender_id))
     firstname = replied_user.user.first_name
     devlop = await bot.get_me()
     hmmwow = devlop.first_name
@@ -38,7 +38,7 @@ async def start(event):
     mypic = "https://telegra.ph/file/861231ccabc7e69b19231.png"
     starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={boy}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/Ultra-XOT)"
     if event.sender_id == boy:
-        await tbot.send_message(
+        await xbot.send_message(
             vent,
             message=f"Hi Master, It's Me {bot_id}, Your Assistant ! \nWhat You Wanna Do today ?",
             buttons=[
@@ -56,7 +56,7 @@ async def start(event):
             pass
         elif not already_added(event.sender_id):
             add_usersid_in_db(event.sender_id)
-        await tbot.send_file(
+        await xbot.send_file(
             event.chat_id,
             file=mypic,
             caption=starttext,
@@ -70,7 +70,7 @@ async def start(event):
             os.remove(mypic)
 
 
-@tbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"users")))
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"users")))
 async def users(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -84,7 +84,7 @@ async def users(event):
             users_list += ("=> {} \n").format(int(ultrappl.chat_id))
         with io.BytesIO(str.encode(users_list)) as tedt_file:
             tedt_file.name = "userlist.txt"
-            await tbot.send_file(
+            await xbot.send_file(
                 event.chat_id,
                 tedt_file,
                 force_document=True,
@@ -95,14 +95,14 @@ async def users(event):
         pass
 
 
-@tbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"cmds")))
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"cmds")))
 async def users(event):
     await event.delete()
     #@LEGENDX, #@PROBOY add cmd List Here
     # later bro
     pass
 
-@tbot.on(events.NewMessage(func=lambda e: e.is_private))
+@xbot.on(events.NewMessage(func=lambda e: e.is_private))
 async def all_messages_catcher(event):
     if is_he_added(event.sender_id):
         return
@@ -112,7 +112,7 @@ async def all_messages_catcher(event):
         return
     if os.environ.get("SUB_TO_MSG_ASSISTANT", False):
         try:
-            result = await tbot(
+            result = await xbot(
                 functions.channels.GetParticipantRequest(
                     channel=Config.JTM_CHANNEL_ID, user_id=event.sender_id
                 )
@@ -126,7 +126,7 @@ async def all_messages_catcher(event):
     add_me_in_db(sed.id, event.sender_id, event.id)
 
 
-@tbot.on(events.NewMessage(func=lambda e: e.is_private))
+@xbot.on(events.NewMessage(func=lambda e: e.is_private))
 async def sed(event):
     msg = await event.get_reply_message()
     if msg is None:
@@ -140,7 +140,7 @@ async def sed(event):
         return
     elif event.text is not None and event.media:
         bot_api_file_id = pack_bot_file_id(event.media)
-        await tbot.send_file(
+        await xbot.send_file(
             user_id,
             file=bot_api_file_id,
             caption=event.text,
@@ -148,14 +148,14 @@ async def sed(event):
         )
     else:
         msg_s = event.raw_text
-        await tbot.send_message(
+        await xbot.send_message(
             user_id,
             msg_s,
             reply_to=reply_message_id,
         )
 
 
-@tbot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
 async def sedlyfsir(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -176,17 +176,17 @@ async def sedlyfsir(event):
     for uzers in userstobc:
         try:
             sent_count += 1
-            await tbot.send_message(int(uzers.chat_id), msgtobroadcast)
+            await xbot.send_message(int(uzers.chat_id), msgtobroadcast)
             await asyncio.sleep(0.2)
         except:
             error_count += 1
-    await tbot.send_message(
+    await xbot.send_message(
         event.chat_id,
         f"Broadcast Done in {sent_count} Group/Users and I got {error_count} Error and Total Number Was {len(userstobc)}",
     )
 
 
-@tbot.on(events.NewMessage(pattern="/stats"))
+@xbot.on(events.NewMessage(pattern="/stats"))
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -199,7 +199,7 @@ async def _(event):
 
 
 
-@tbot.on(events.NewMessage(pattern="/block ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/block ?(.*)"))
 async def ok(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -213,12 +213,12 @@ async def ok(event):
     elif not is_he_added(user_id):
         add_nibba_in_db(user_id)
         await event.reply("Blacklisted This Dumb Person")
-        await tbot.send_message(
+        await xbot.send_message(
             user_id, "You Have Been Blacklisted And You Can't Message My Master Now."
         )
 
 
-@tbot.on(events.NewMessage(pattern="/unblock ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/unblock ?(.*)"))
 async def gey(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -234,6 +234,6 @@ async def gey(event):
     elif is_he_added(user_id):
         removenibba(user_id)
         await event.reply("DisBlacklisted This Dumb Person")
-        await tbot.send_message(
+        await xbot.send_message(
             user_id, "Congo! You Have Been Unblacklisted By My Master."
         )

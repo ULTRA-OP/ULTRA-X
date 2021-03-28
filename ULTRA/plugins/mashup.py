@@ -16,7 +16,7 @@ async def _(event):
         return 
     input_str = event.pattern_match.group(1)
     reply_message = await event.get_reply_message()
-    chat = "@vixtbot"
+    chat = "@vixxbot"
     await event.edit("```Checking...```")
     async with event.client.conversation(chat) as conv:
           try:     
@@ -24,7 +24,7 @@ async def _(event):
               await event.client.send_message(chat, "{}".format(input_str))
               response = await response 
           except YouBlockedUserError: 
-              await event.reply("```Unblock @vixtbot```")
+              await event.reply("```Unblock @vixxbot```")
               return
           if response.text.startswith("I can't find that"):
              await event.edit("😐")

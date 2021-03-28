@@ -32,7 +32,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-@tbot.on(events.NewMessage(pattern="/ping"))
+@xbot.on(events.NewMessage(pattern="/ping"))
 async def ok(event):
     start_time = datetime.datetime.now()
     message = await event.reply("Pinging_")

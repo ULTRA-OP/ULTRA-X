@@ -5,7 +5,7 @@ from PyDictionary import PyDictionary
 from telethon import events
 from telethon.tl import functions
 
-@tbot.on(events.NewMessage(pattern="/tr ?(.*)"))
+@xbot.on(events.NewMessage(pattern="/tr ?(.*)"))
 async def _(event):
     input_str = event.pattern_match.group(1)
     if event.reply_to_msg_id:
@@ -36,7 +36,7 @@ async def _(event):
     except Exception as exc:
         await event.reply(str(exc))
 
-@tbot.on(events.NewMessage(pattern="/define"))
+@xbot.on(events.NewMessage(pattern="/define"))
 async def _(event):
     text = event.text[len("/define "):]
     word = f"{text}"
@@ -47,7 +47,7 @@ async def _(event):
     got = net.replace("'", "")
     await event.reply(got)
 
-@tbot.on(events.NewMessage(pattern="/ud"))
+@xbot.on(events.NewMessage(pattern="/ud"))
 async def _(event):
     text = event.text[len("/ud "):]
     results = requests.get(f'http://api.urbandictionary.com/v0/define?term={text}').json()
