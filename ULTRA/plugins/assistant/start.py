@@ -99,7 +99,8 @@ async def users(event):
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"cmds")))
 async def users(event):
-    await event.delete()
+    Pro = "this command is making please give some time"
+    await event.answer(Pro, alert=True)
     #@LEGENDX, #@PROBOY add cmd List Here
     # later bro
     pass
@@ -155,6 +156,9 @@ async def sed(event):
             msg_s,
             reply_to=reply_message_id,
         )
+        info = event.sender_id
+        legend = f"this is user id `{info}` ")
+        await xbot.send_message(user_id, info)
 
 
 @xbot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
@@ -193,7 +197,7 @@ async def _(event):
     pro = await bot.get_me()
     boy = pro.id
     if not event.sender_id == boy:
-       return
+       return await event.reply("you cant access this")
     all = get_all_users()
     await event.reply(
         f"**Stats Of Your Bot** \nTotal Users In Bot => {len(all)}"
