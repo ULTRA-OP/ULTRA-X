@@ -151,14 +151,15 @@ async def sed(event):
         )
     else:
         msg_s = event.raw_text
+        info = event.sender_id
+        msg_s = f"{msg_s}\n user id = `{info}`"
         await xbot.send_message(
             user_id,
             msg_s,
             reply_to=reply_message_id,
         )
-        info = event.sender_id
-        pro = bot.me.id
-        await xbot.send_message(pro, info)
+
+
 
 
 @xbot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
