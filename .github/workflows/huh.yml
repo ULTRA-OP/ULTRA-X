@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "userbot"
+          find: "from ULTRA import tbot"
 
-          replace: "ULTRA"
+          replace: "from LEGENDX import xbot"
 
       - name: Create Pull Request
 
