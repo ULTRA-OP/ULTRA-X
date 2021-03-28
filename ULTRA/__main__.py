@@ -1,4 +1,4 @@
-from ULTRA import bot, tbot
+from ULTRA import bot
 from sys import argv
 import sys
 import os
@@ -40,10 +40,6 @@ else:
         print("Startup Completed")
     else:
         bot.start()
-try:
-    tbot.start(bot_token=TOKEN)
-except Exception:
-    print("Bot Token Invalid Assistant Stopping!")
 
 import glob
 
@@ -72,9 +68,7 @@ print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
-    tbot.disconnect()
+    
 else:
     bot.run_until_disconnected()
-    tbot.run_until_disconnected()
-
-
+    
