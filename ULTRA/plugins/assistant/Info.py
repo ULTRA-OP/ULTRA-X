@@ -1,6 +1,7 @@
 from telethon.utils import pack_bot_file_id
-from LEGENDX import xbot, bot, DEVS
+from LEGENDX import xbot, devs as DEVS
 from telethon import events
+from ULTRA import bot
 
 @xbot.on(events.NewMessage(pattern="/id ?(.*)"))
 async def _(event):
