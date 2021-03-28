@@ -4,7 +4,7 @@ from LEGENDX import xbot, NAME
 from telethon import Button
 @borg.on(admin_cmd(pattern="button (.*)"))
 async def Buttons(event):
-  await event.edit("making your button")
+  await event.edit("`Mᴀᴋɪɴɢ Yᴏᴜʀ Bᴜᴛᴛᴏɴ ᴡᴇɪᴛ ᴍᴀsᴛᴇʀ !!!`")
   ULTRAX = Var.TG_BOT_USER_NAME_BF_HER
   pro = event.text[7:]
   pro, boy = pro.split("|")
