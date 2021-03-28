@@ -25,8 +25,8 @@ VERSION = "3.1.5"
 devs = [1100231654, 1636374066, 1037581197, 1695676469, 1221693726, 1207066133]
 ID = 1100231654
 REPO = "[υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)"
-PRO = bot.uid
-MASTER = f"[{NAME}](tg://user?id={PRO})"
+
+MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/UltraXChat)"
 if __name__=="__main__":
   xbot.run_until_disconnected()
