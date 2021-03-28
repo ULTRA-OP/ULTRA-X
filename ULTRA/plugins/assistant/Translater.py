@@ -1,5 +1,5 @@
 from ULTRA import tbot
-
+from google_trans_new import google_translator
 import requests
 from PyDictionary import PyDictionary
 from telethon import events
@@ -7,6 +7,7 @@ from telethon.tl import functions
 
 @tbot.on(events.NewMessage(pattern="/tr ?(.*)"))
 async def _(event):
+    async def _(event):
     input_str = event.pattern_match.group(1)
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -19,17 +20,18 @@ async def _(event):
         return
     text = text.strip()
     lan = lan.strip()
-    translator = 'ok'  
+    translator = google_translator()  
     try:
-        
-        detect_result = 'pro'
+        translated = translator.translate(text,lang_tgt=lan)  
+        after_tr_text = translated
+        detect_result = translator.detect(text)
         output_str = (
             "**TRANSLATED** from {} to {}\n\n"
             "{}"
         ).format(
-            detect_result,
-            'ok',
-            'lel'
+            detect_result[0],
+            lan,
+            after_tr_text
         )
         await event.reply(output_str)
     except Exception as exc:
