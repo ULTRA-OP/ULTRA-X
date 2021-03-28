@@ -6,7 +6,7 @@ import sys
 import git
 import heroku3
 
-from ULTRA.utils import admin_cmd
+from userbot.utils import admin_cmd
 
 IS_SELECTED_DIFFERENT_BRANCH = (
     "It looks like a custom branch {branch_name} "
@@ -23,7 +23,7 @@ RESTARTING_APP = "Restarting App..."
 
 
 
-@borg.on(admin_cmd("update ?(.*)", outgoing=True))
+@borg.on(admin_cmd("upd ?(.*)", outgoing=True))
 async def updater(message):
     folder = os.path.abspath("/app")
     try:
