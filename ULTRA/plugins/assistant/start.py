@@ -37,17 +37,17 @@ async def start(event):
     hmmwow = devlop.first_name
     vent = event.chat_id
     mypic = PHOTO
-    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy Master [{hmmwow}](tg://user?id={boy}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/UltraXOT)"
+    starttext = f"Hello, {firstname}!! Nice To Meet You, Well I'm {bot_id}, A Powerful Assistant Bot. \n\nMy Master is [{hmmwow}](tg://user?id={boy}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/UltraXOT)"
     if event.sender_id == boy:
         await xbot.send_message(
             event.chat_id,
-            message=f"Hi Master, It's Me {bot_id}, Your Assistant ! \nWhat You Wanna Do today ?",
+            message=f"Hi Master, It's Me {bot_id}, Your Assistant !! \nWhat You Wanna Do today ?",
             buttons=[
-                [custom.Button.inline("Show Bot Users", data="users")],
-                [custom.Button.inline("Show My Commands", data="cmds")],
+                [custom.Button.inline("Bot Users 🔥", data="users")],
+                [custom.Button.inline("Show My Commands ⚙️", data="cmds")],
                 [
                     Button.url(
-                        "Add Me to Group 👥", f"t.me/{bot_username}?startgroup=true"
+                        "Invite me to a Group 👥", f"t.me/{bot_username}?startgroup=true"
                     )
                 ],
             ],
@@ -99,7 +99,7 @@ async def users(event):
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"cmds")))
 async def users(event):
-    Pro = "this command is making please give some time"
+    Pro = "The button is under construction...\nSorry for inconvenience, Will update soon....\nThanks..."
     await event.answer(Pro, alert=True)
     #@LEGENDX, #@PROBOY add cmd List Here
     # later bro
@@ -189,7 +189,7 @@ async def sedlyfsir(event):
             error_count += 1
     await xbot.send_message(
         event.chat_id,
-        f"Broadcast Done in {sent_count} Group/Users and I got {error_count} Error and Total Number Was {len(userstobc)}",
+        f"**Broadcast Completed in {sent_count} Group/Users..**\n__➥ Error :__ {error_count}\n__➥ Total Number Was :__ {len(userstobc)}",
     )
 
 
@@ -201,7 +201,7 @@ async def _(event):
        return await event.reply("you cant access this")
     all = get_all_users()
     await event.reply(
-        f"**Stats Of Your Bot** \nTotal Users In Bot => {len(all)}"
+        f"**Stats Of Your Bot**\nTotal Users In Bot => {len(all)}"
     )
 
 
