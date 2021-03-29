@@ -1,6 +1,8 @@
 # make by @LEGENDX22
 # inline alive
 # modify by proboy22
+# master and assistant button by madboy482
+
 import asyncio
 import os
 from LEGENDX import BOT, PHOTO, VERSION, ALIVE_USERNAME, ALIVE_BOT_USERNAME
