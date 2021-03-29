@@ -13,11 +13,11 @@ import os,re
 import urllib
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions
-from userbot import CMD_LIST, CMD_HELP
+from ULTRA import CMD_LIST, CMD_HELP
 import io
 #ABEE O KANGAR  BACK OPEN CLSE BTN KANG KIYA TO YE LONE CHIPKA DENA AUR GLOBALS K BINA NAHI CHALAGA aur global 5 gaja diff name and manipulation se imported hai 
 #Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
-from userbot.utils import remove_plugin,load_module
+from ULTRA.utils import remove_plugin,load_module
 from LEGENDX import ID as id
 #Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
 #A stark bhai chori karna aaya ho kya friday me ek bar back btn kang kar k man nahi bhara 
