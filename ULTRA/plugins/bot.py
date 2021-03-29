@@ -1,4 +1,3 @@
-
 # make by @LEGENDX22
 # inline alive
 # modify by proboy22
@@ -42,8 +41,8 @@ if TG_BOT_USER_NAME_BF_HER is not None:
                     Button.url("Dᴇᴘʟᴏʏ", "https://heroku.com/deploy?template=https://github.com/ULTRA-OP/ULTRA-X/blob/master")],
                     [Button.url("Sᴛʀɪɴɢ", "https://repl.it/ULTRA-OP/ULTRA-X#main.py"),
                     Button.url("Cʜᴀɴɴᴇʟ", "https://t.me/ULTRAXOT")],
-                    [Button.url("Master", "https://t.me/{ALIVE_USERNAME}),
-                    Button.url("Assistant", "https://t.me/{ALIVE_BOT_USERNAME})
+                    [Button.url("Master", "https://t.me/{ALIVE_USERNAME}"),
+                    Button.url("Assistant", "https://t.me/{ALIVE_BOT_USERNAME}")
                 ]
             ]
             buttons += [[custom.Button.inline("Hᴇʟᴘ", data="helpme"), custom.Button.inline("Rᴇsᴛᴀʀᴛ", data='restart')]]
