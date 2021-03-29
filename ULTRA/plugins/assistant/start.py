@@ -109,7 +109,7 @@ async def users(event):
 async def all_messages_catcher(event):
     if is_he_added(event.sender_id):
         return
-    if event.is_group:
+    if event.is_group or event.sender_id == bot.me.id:
         return
     if event.raw_text.startswith("/"):
         return
@@ -139,7 +139,7 @@ async def sed(event):
     user_id, reply_message_id = his_userid(msg.id)
     if event.sender_id != bot.uid:
         return
-    elif event.raw_text.startswith("/"):
+    elif event.raw_text.startswith("/") or event.sender_id == bot.me.id:
         return
     elif event.text is not None and event.media:
         bot_api_file_id = pack_bot_file_id(event.media)
