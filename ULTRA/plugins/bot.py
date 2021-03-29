@@ -13,7 +13,7 @@ from datetime import datetime
 import random
 from telethon import events, Button, custom
 from ULTRA.utils import admin_cmd
-from ULTRA import ALIVE_NAME
+from ULTRA import ALIVE_NAME, ALIVE_USERNAME, ALIVE_BOT_USERNAME
 from ULTRA import bot as ultra
 from telethon import Button, custom
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -25,7 +25,6 @@ import requests
 from io import BytesIO
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
-from ..Config import Config
 
 pro_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➥ **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** : 1.19.5\n➥ **Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** : [UʟᴛʀᴀX Sᴜᴘᴘᴏʀᴛ](https://t.me/UltraXOT)\n➥ **Lɪᴄᴇɴꜱᴇ** : [UʟᴛʀᴀX](https://github.com/ULTRA-OP)\n➥ **Cᴏᴘʏʀɪɢʜᴛ ʙʏ** : [UʟᴛʀᴀX Usᴇʀʙᴏᴛ](https://github.com/ULTRA-OP/ULTRA-X)\n\n➥ **Mʏ ᴍᴀsᴛᴇʀ** : [{DEFAULTUSER}](tg://user?id={ok})\n")
 TG_BOT_USER_NAME_BF_HER = os.environ.get("ALIVE_PHOTTO", None)
@@ -35,8 +34,8 @@ if TG_BOT_USER_NAME_BF_HER is not None:
         builder = event.builder
         result = None
         query = event.text
-        ALIVE_USERNAME = Config.ALIVE_USERNAME
-        ALIVE_BOT_USERNAME = Config.ALIVE_BOT_USERNAME
+        ALIVE_USERNAME = var.ALIVE_USERNAME
+        ALIVE_BOT_USERNAME = var.ALIVE_BOT_USERNAME
         me = await ultra.get_me()
         if query.startswith("alive") and event.query.user_id == me.id:
             buttons = [
