@@ -38,7 +38,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 dc = paginate_help(current_page_number, CMD_LIST, "helpme")
                 await event.edit("`>>>\n\nReopened The Main Menu of \n©LEGENDBOT` ", buttons=dc)
             else:
-                reply_pop_up_alert = "Please get your own Userbot,for more info visit @teamishere!"
+                reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
        
   #       🇮 🇹 🇳 🇦    🇰 🇾 🇺   🇸 🇵 🇾     🇰 🇷    🇷 🇭 🇪     🇭 🇴      🇸 🇭 🇦 🇦 🇩 🇮    🇰 🇷 🇳 🇮    🇭    🇰 🇾 🇦   🇧 🇸 🇩 🇰 
@@ -54,7 +54,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             result = builder.article("© LEGEND BOT Userbot Help",text="{}\nCurrently Loaded Plugins: {}".format(query, len(CMD_LIST)),buttons=dc,link_preview=False)
             await event.answer([result] if result else None)
         else:
-              reply_pop_up_alert = "Please get your own Userbot😁😁,for more info visit @teamishere! 😎😎"
+              reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
               await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"helpme_next\((.+?)\)")
@@ -69,7 +69,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
           
             await event.edit(buttons=dc)
         else:
-            Cobra = "Please get your own Userbot, and don't use mine for more info visit @teamishere!"
+            Cobra = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
             await event.answer(Cobra, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -88,7 +88,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             
             await event.edit(buttons=dc)
         else:
-              Thelegend = "Please get your own Userbot😁😁,for more info visit @teamishere! 😎😎"
+              Thelegend = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
               await event.answer(Thelegend, cache_time=0, alert=True)
  #hehehehehhehhehhehe   
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
@@ -97,7 +97,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             danish = custom.Button.inline("◤✞ 𝕺𝖕𝖊𝖓 𝕸𝖆𝖎𝖓 𝕸𝖊𝖓𝖚 𝕬𝖌𝖆𝖎𝖓 ✞◥", data="open")
             await event.edit("`Main Menu Has Been Closed`", buttons=danish)
         else:
-            reply_pop_up_alert = "Please get your own Userbot😁😁,for more info visit @teamishere! 😎😎"
+            reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
    
 
@@ -109,7 +109,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     )
     async def on_plug_in_callback_query_handler(event):
         if not event.query.user_id == bot.uid or event.query.user_id == id:
-            atul= "Please get your own Userbot😁😁,for more info visit @teamishere! 😎😎"
+            atul= "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !"
             await event.answer(atul, cache_time=0, alert=True)
             return
         plugin_name = event.data_match.group(1).decode("UTF-8")
@@ -137,7 +137,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 dc = [custom.Button.inline(" 𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝖀𝖓𝖑𝖔𝖆𝖉 ",data="unload({})".format(shivam_sh1vam))]
                 await event.edit(reply_pop_up_alert, buttons=dc)
             else:
-                reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info visit @teamishere!"
+                reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#hehe
         except: 
             if event.query.user_id == bot.uid or event.query.user_id == id:
@@ -145,7 +145,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 halps = "Do .help {} to get the list of commands.".format(plugin_name)
                 await event.edit(halps,buttons=sh1vam)
             else:
-                reply_pop_up_alert = "Please get your own Userbot, and don't use mine for more info visit @teamishere!"
+                reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"load\((.+?)\)")))
    
@@ -163,7 +163,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
               else:
                     shortname = event.data_match.group(1).decode("UTF-8")
                     fcix = [custom.Button.inline("  𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝖀𝖓𝖑𝖔𝖆𝖉 ",data="unload({})".format(shivam_sh1vam))]
-                    reply_pop_up_alert = "Please get your own Userbot,for more info visit @teamishere!"
+                    reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                     await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"unload\((.+?)\)")))
    
@@ -180,7 +180,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
               else:
                     shortname = event.data_match.group(1).decode("UTF-8")
                     fcix = [custom.Button.inline("  𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝕷𝖔𝖆𝖉 ",data="load({})".format(shivam_sh1vam))]
-                    reply_pop_up_alert = "Please get your own Userbot,for more info visit @teamishere!"
+                    reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                     await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#hehehe
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back\((.+?)\)")))
    
@@ -195,7 +195,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     buttons = paginate_help(0, CMD_HELP, "helpme")
                     await event.edit("`>>> Here Is The Main Menu Of\n\n©LEGENDBOT`", buttons=buttons)
             else:
-                reply_pop_up_alert = "Please get your own Userbot,for more info visit @teamishere!"
+                reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 def paginate_help(page_number, loaded_plugins, prefix):
