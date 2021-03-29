@@ -85,7 +85,7 @@ import ULTRA._core
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
   try:
-   await xbot.send_message(bot.me.id, "I am now online!!😎😎")
+   await xbot.send_message(bot.me.id, "I am now online!!😎😎\nCheck out moi PING time by /ping..✅")
   except:
      pass
 bot.loop.run_until_complete(legend())
