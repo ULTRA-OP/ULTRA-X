@@ -130,7 +130,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 
         reply_pop_up_alert = help_string
         reply_pop_up_alert += (
-            "\n\n __Click on buttons below to load or unload them..report us if you find any bug__\n\n **©LEGEND USERBOT**".format(plugin_name)
+            "\n\n __Cʟɪᴄᴋ Oɴ Tʜᴇ Bᴜᴛᴛᴏɴs Bᴇʟᴏᴡ Tᴏ Lᴏᴀᴅ Oʀ Uɴʟᴏᴀᴅ Pʟᴜɢɪɴs..Rᴇᴘᴏʀᴛ Us Fᴏʀ Aɴʏ Hᴇʟᴘ__\n\n **© @UltraXOT**".format(plugin_name)
         )
         try:
             if event.query.user_id == bot.uid or event.query.user_id == id:
