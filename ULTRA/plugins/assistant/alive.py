@@ -120,9 +120,9 @@ async def heroku(event):
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
           try:
-            heroku_var['BOT_NICK_NAME'] = f'{op}'
+            heroku_var['BOT_NICK_NAME'] = f'{op.text}'
           except Exception as e:
-            await event.reply(f"{e.text}")  
+            await event.reply(f"{e}")  
   else:
      pro = "chala ja bhosdike"
      await event.answer(pro, alert=True)
