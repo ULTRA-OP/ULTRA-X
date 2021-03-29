@@ -190,10 +190,10 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 try:
                     current_page_number = int(event.data_match.group(1).decode("UTF-8"))
                     buttons = paginate_help(current_page_number-2, CMD_HELP, "helpme")
-                    await event.edit("`>>> Here Is The Main Menu of\n\n©LEGENDBOT`", buttons=buttons)
+                    await event.edit("`>>> Hᴇʀᴇ ɪs ᴛʜᴇ ᴍᴀɪɴ ᴍᴇɴᴜ ᴏғ \n\n© υℓтяα χ υѕєявσт`", buttons=buttons)
                 except:
                     buttons = paginate_help(0, CMD_HELP, "helpme")
-                    await event.edit("`>>> Here Is The Main Menu Of\n\n©LEGENDBOT`", buttons=buttons)
+                    await event.edit("`>>> Hᴇʀᴇ ɪs ᴛʜᴇ ᴍᴀɪɴ ᴍᴇɴᴜ ᴏғ \n\n© υℓтяα χ υѕєявσт`", buttons=buttons)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
