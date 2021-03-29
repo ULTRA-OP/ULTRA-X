@@ -1,4 +1,5 @@
 from LEGENDX import xbot
+import heroku3
 from telethon import events
 from ULTRA import StartTime
 import time
@@ -98,3 +99,25 @@ async def ok(event):
         "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode="html",
     )
+
+
+Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
+@xbot.on(events.NewMessage(pattern="/set"))
+async def heroku(event):
+  pro = [[Button.inline("BOT NICK NAME", data="nick")]]
+  await xbot.send_message(event.chat_id, "choose", buttons=pro)
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nick')))
+async def heroku(event):
+  Pro = bot.me.id
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == Pro:
+     if event.is_private:
+        async with xbot.conversation(Pro) as pro:
+        await pro.send_message("give your bot name")
+        op = await pro.get_response()
+        await pro.send_message("now wait i am restarting")
+        heroku_var['BOT_NICK_NAME'] = op
+  else:
+     pro = "chala ja bhosdike"
+     await event.answer(pro, alert=True)
