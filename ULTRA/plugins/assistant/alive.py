@@ -248,36 +248,36 @@ async def heroku(event):
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nick')))
 async def call_back(event):
-  legend = [[Button.inline("SET ?", data='setnick')
-  legend += [[Button.inline("BACK ?", data='ass_back')
+  legend = [[Button.inline("SET ?", data='setnick')]]
+  legend += [[Button.inline("BACK ?", data='ass_back')]]
   if event.is_private:
     await xbot.send_message(event.chat_id, "want set the bot name", buttons=legend)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_name')))
 async def call_back(event):
-  legend = [[Button.inline("SET ?", data='setname')
-  legend += [[Button.inline("BACK ?", data='ass_back')
+  legend = [[Button.inline("SET ?", data='setname')]]
+  legend += [[Button.inline("BACK ?", data='ass_back')]]
   if event.is_private:
     await xbot.send_message(event.chat_id, "want set your name", buttons=legend)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'session')))
 async def call_back(event):
-  legend = [[Button.inline("SET ?", data='setsession')
-  legend += [[Button.inline("BACK ?", data='ass_back')
+  legend = [[Button.inline("SET ?", data='setsession')]]
+  legend += [[Button.inline("BACK ?", data='ass_back')]]
   if event.is_private:
     await xbot.send_message(event.chat_id, "want set your StringSession", buttons=legend)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'fban_id')))
 async def call_back(event):
-  legend = [[Button.inline("SET ?", data='setfban')
-  legend += [[Button.inline("BACK ?", data='ass_back')
+  legend = [[Button.inline("SET ?", data='setfban')]]
+  legend += [[Button.inline("BACK ?", data='ass_back')]]
   if event.is_private:
     await xbot.send_message(event.chat_id, "want set the FBAN iD", buttons=legend)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_photo')))
 async def call_back(event):
-  legend = [[Button.inline("SET ?", data='setphoto')
-  legend += [[Button.inline("BACK ?", data='ass_back')
+  legend = [[Button.inline("SET ?", data='setphoto')]]
+  legend += [[Button.inline("BACK ?", data='ass_back')]]
   if event.is_private:
     await xbot.send_message(event.chat_id, "want set your photo", buttons=legend)
 
