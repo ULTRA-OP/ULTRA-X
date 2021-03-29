@@ -115,10 +115,10 @@ async def heroku(event):
   if event.sender_id == Pro:
      if event.is_private:
         async with xbot.conversation(Pro) as pro:
-        await pro.send_message("give your bot name")
-        op = await pro.get_response()
-        await pro.send_message("now wait i am restarting")
-        heroku_var['BOT_NICK_NAME'] = op
+          await pro.send_message("give your bot name")
+          op = await pro.get_response()
+          await pro.send_message("now wait i am restarting")
+          heroku_var['BOT_NICK_NAME'] = op
   else:
      pro = "chala ja bhosdike"
      await event.answer(pro, alert=True)
