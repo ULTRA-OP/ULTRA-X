@@ -110,6 +110,7 @@ async def heroku(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nick')))
 async def heroku(event):
   Pro = bot.me.id
+  global Heroku
   app = Heroku.app(Var.HEROKU_APP_NAME)
   heroku_var = app.config()
   if event.sender_id == Pro:
@@ -118,7 +119,10 @@ async def heroku(event):
           await pro.send_message("give your bot name")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
-          heroku_var['BOT_NICK_NAME'] = op
+          try:
+            heroku_var['BOT_NICK_NAME'] = op
+          except Exception as e:
+            await event.reply(f"{e}")  
   else:
      pro = "chala ja bhosdike"
      await event.answer(pro, alert=True)
