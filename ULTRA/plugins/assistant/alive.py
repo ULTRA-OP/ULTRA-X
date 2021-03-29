@@ -135,7 +135,7 @@ async def heroku(event):
      if event.is_private:
         await event.delete()
         async with xbot.conversation(event.chat_id) as pro:
-          await pro.send_message("give your bot name")
+          await pro.send_message("give your value")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
           try:
@@ -183,7 +183,7 @@ async def heroku(event):
      if event.is_private:
         await event.delete()
         async with xbot.conversation(event.chat_id) as pro:
-          await pro.send_message("give your bot name")
+          await pro.send_message("give your value")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
           try:
@@ -207,7 +207,7 @@ async def heroku(event):
      if event.is_private:
         await event.delete()
         async with xbot.conversation(event.chat_id) as pro:
-          await pro.send_message("give your bot name")
+          await pro.send_message("give your value")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
           try:
@@ -232,7 +232,7 @@ async def heroku(event):
      if event.is_private:
         await event.delete()
         async with xbot.conversation(event.chat_id) as pro:
-          await pro.send_message("give your bot name")
+          await pro.send_message("give your value")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
           try:
