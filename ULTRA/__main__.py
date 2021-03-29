@@ -90,7 +90,7 @@ async def legend():
      pass
 bot.loop.run_until_complete(legend())
 
-async def ()
+
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
     
