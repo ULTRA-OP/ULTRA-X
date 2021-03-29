@@ -33,7 +33,8 @@ if TG_BOT_USER_NAME_BF_HER is not None:
         builder = event.builder
         result = None
         query = event.text
-        me = await ultra.get_me()
+        me = await bot.get_me()
+        x = await xbot.get_me()
         if query.startswith("alive") and event.query.user_id == me.id:
             buttons = [
                 [
@@ -41,8 +42,8 @@ if TG_BOT_USER_NAME_BF_HER is not None:
                     Button.url("Dᴇᴘʟᴏʏ", "https://heroku.com/deploy?template=https://github.com/ULTRA-OP/ULTRA-X/blob/master")],
                     [Button.url("Sᴛʀɪɴɢ", "https://repl.it/ULTRA-OP/ULTRA-X#main.py"),
                     Button.url("Cʜᴀɴɴᴇʟ", "https://t.me/ULTRAXOT")],
-                    [Button.url("Master", "@{ALIVE_USERNAME}"),
-                    Button.url("Assistant", "@{ALIVE_BOT_USERNAME}")
+                    [Button.url("Master", f"https://t.me/{me.username}"),
+                    Button.url("Assistant", f"https://t.me/{x.username}")
                 ]
             ]
             buttons += [[custom.Button.inline("Hᴇʟᴘ", data="helpme"), custom.Button.inline("Rᴇsᴛᴀʀᴛ", data='restart')]]
