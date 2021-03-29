@@ -139,7 +139,7 @@ async def heroku(event):
         async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("Give your value....")
           op = await pro.get_response()
-          await pro.send_message("Now wait..I am restarting./.\./.\")
+          await pro.send_message("Now wait..I am restarting./.\./.\.")
           try:
             heroku_var['BOT_NICK_NAME'] = f'{op.message}'
           except Exception as e:
@@ -163,7 +163,7 @@ async def heroku(event):
         async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("Give your value....")
           op = await pro.get_response()
-          await pro.send_message("Now wait..I am restarting./.\./.\")
+          await pro.send_message("Now wait..I am restarting./.\./.\.")
           try:
             heroku_var['ALIVE_PHOTTO'] = f'{op.message}'
           except Exception as e:
@@ -187,7 +187,7 @@ async def heroku(event):
         async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("Give your value....")
           op = await pro.get_response()
-          await pro.send_message("Now wait..I am restarting./.\./.\")
+          await pro.send_message("Now wait..I am restarting./.\./.\.")
           try:
             heroku_var['FBAN_GROUP_ID'] = f'{op.message}'
           except Exception as e:
@@ -211,7 +211,7 @@ async def heroku(event):
         async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("Give your value....")
           op = await pro.get_response()
-          await pro.send_message("Now wait..I am restarting./.\./.\")
+          await pro.send_message("Now wait..I am restarting./.\./.\.")
           try:
             heroku_var['ALIVE_NAME'] = f'{op.message}'
           except Exception as e:
@@ -236,7 +236,7 @@ async def heroku(event):
         async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("Give your value....")
           op = await pro.get_response()
-          await pro.send_message("Now wait..I am restarting./.\./.\")
+          await pro.send_message("Now wait..I am restarting./.\./.\.")
           try:
             heroku_var['STRING_SESSION'] = f'{op.message}'
           except Exception as e:
