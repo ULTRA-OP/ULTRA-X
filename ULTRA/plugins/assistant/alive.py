@@ -1,6 +1,6 @@
 # COPYRIGHT (C) 2021-2022 BY LEGENDX22
 from ULTRA import bot
-from LEGENDX import xbot
+from LEGENDX import xbot, ID
 import heroku3
 from telethon import events
 from ULTRA import StartTime
@@ -105,7 +105,7 @@ async def ok(event):
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 @xbot.on(events.NewMessage(pattern="/set"))
 async def heroku(event):
-  if event.sender_id == bot.me.id:
+  if event.sender_id == bot.me.id or event.sender_id == ID:
     pro = [[Button.inline("BOT NICK NAME", data="nick")]]
     pro += [[Button.inline("ALIVE PHOTO", data="alive_photo")]]
     pro += [[Button.inline("FBAN GROUP ID", data="fban_id")]]
@@ -116,7 +116,7 @@ async def heroku(event):
     await event.reply("ja na lawde kaam kr apna")
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'ass_back')))
 async def heroku(event):
-  if event.sender_id == bot.me.id:
+  if event.sender_id == bot.me.id or event.sender_id == ID:
     pro = [[Button.inline("BOT NICK NAME", data="nick")]]
     pro += [[Button.inline("ALIVE PHOTO", data="alive_photo")]]
     pro += [[Button.inline("FBAN GROUP ID", data="fban_id")]]
@@ -125,17 +125,16 @@ async def heroku(event):
     await event.edit("choose", buttons=pro)
   else:
     await event.answer("ja na lawde kaam kr apna", alert=True)
-@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nick')))
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setnick')))
 async def heroku(event):
   Pro = bot.me.id
-  LEGENDX = [[Button.inline("BACK", data="ass_back")]]
   global Heroku
   app = Heroku.app(Var.HEROKU_APP_NAME)
   heroku_var = app.config()
-  if event.sender_id == Pro:
+  if event.sender_id == Pro or event.sender_id == ID:
      if event.is_private:
-        await event.edit(buttons=LEGENDX)
-        async with xbot.conversation(Pro) as pro:
+        await event.delete()
+        async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("give your bot name")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
@@ -150,16 +149,16 @@ async def heroku(event):
      pro = "chala ja bhosdike"
      await event.answer(pro, alert=True)
 
-@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_photo')))
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setphoto')))
 async def heroku(event):
   Pro = bot.me.id
   global Heroku
   app = Heroku.app(Var.HEROKU_APP_NAME)
   heroku_var = app.config()
-  if event.sender_id == Pro:
+  if event.sender_id == Pro or event.sender_id == ID:
      if event.is_private:
         await event.delete()
-        async with xbot.conversation(Pro) as pro:
+        async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("give your bot name")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
@@ -174,16 +173,16 @@ async def heroku(event):
      pro = "chala ja bhosdike"
      await event.answer(pro, alert=True)
 
-@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'fban_id')))
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setfban')))
 async def heroku(event):
   Pro = bot.me.id
   global Heroku
   app = Heroku.app(Var.HEROKU_APP_NAME)
   heroku_var = app.config()
-  if event.sender_id == Pro:
+  if event.sender_id == Pro or event.sender_id == ID:
      if event.is_private:
         await event.delete()
-        async with xbot.conversation(Pro) as pro:
+        async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("give your bot name")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
@@ -198,16 +197,16 @@ async def heroku(event):
      pro = "chala ja bhosdike"
      await event.answer(pro, alert=True)
 
-@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_name')))
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setname')))
 async def heroku(event):
   Pro = bot.me.id
   global Heroku
   app = Heroku.app(Var.HEROKU_APP_NAME)
   heroku_var = app.config()
-  if event.sender_id == Pro:
+  if event.sender_id == Pro or event.sender_id == Id:
      if event.is_private:
         await event.delete()
-        async with xbot.conversation(Pro) as pro:
+        async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("give your bot name")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
@@ -223,16 +222,16 @@ async def heroku(event):
      await event.answer(pro, alert=True)
 
 
-@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'session')))
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setsession')))
 async def heroku(event):
   Pro = bot.me.id
   global Heroku
   app = Heroku.app(Var.HEROKU_APP_NAME)
   heroku_var = app.config()
-  if event.sender_id == Pro:
+  if event.sender_id == Pro or event.sender_id == ID:
      if event.is_private:
         await event.delete()
-        async with xbot.conversation(Pro) as pro:
+        async with xbot.conversation(event.chat_id) as pro:
           await pro.send_message("give your bot name")
           op = await pro.get_response()
           await pro.send_message("now wait i am restarting")
@@ -246,5 +245,40 @@ async def heroku(event):
   else:
      pro = "chala ja bhosdike"
      await event.answer(pro, alert=True)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nick')))
+async def call_back(event):
+  legend = [[Button.inline("SET ?", data='setnick')
+  legend += [[Button.inline("BACK ?", data='ass_back')
+  if event.is_private:
+    await xbot.send_message(event.chat_id, "want set the bot name", buttons=legend)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_name')))
+async def call_back(event):
+  legend = [[Button.inline("SET ?", data='setname')
+  legend += [[Button.inline("BACK ?", data='ass_back')
+  if event.is_private:
+    await xbot.send_message(event.chat_id, "want set your name", buttons=legend)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'session')))
+async def call_back(event):
+  legend = [[Button.inline("SET ?", data='setsession')
+  legend += [[Button.inline("BACK ?", data='ass_back')
+  if event.is_private:
+    await xbot.send_message(event.chat_id, "want set your StringSession", buttons=legend)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'fban_id')))
+async def call_back(event):
+  legend = [[Button.inline("SET ?", data='setfban')
+  legend += [[Button.inline("BACK ?", data='ass_back')
+  if event.is_private:
+    await xbot.send_message(event.chat_id, "want set the FBAN iD", buttons=legend)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_photo')))
+async def call_back(event):
+  legend = [[Button.inline("SET ?", data='setphoto')
+  legend += [[Button.inline("BACK ?", data='ass_back')
+  if event.is_private:
+    await xbot.send_message(event.chat_id, "want set your photo", buttons=legend)
 
 
