@@ -1,3 +1,4 @@
+from LEGENDX import xbot
 from ULTRA import bot
 from sys import argv
 import sys
@@ -82,7 +83,14 @@ else:
 import ULTRA._core
 
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
+async def legend():
+  try:
+   await xbot.send_message(bot.me.id, "i am online")
+  except:
+     pass
+bot.loop.run_until_complete(legend())
 
+async def ()
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
     
