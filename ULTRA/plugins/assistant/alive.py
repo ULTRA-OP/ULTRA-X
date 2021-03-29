@@ -1,10 +1,11 @@
+# COPYRIGHT (C) 2021-2022 BY LEGENDX22
+from ULTRA import bot
 from LEGENDX import xbot
 import heroku3
 from telethon import events
 from ULTRA import StartTime
 import time
 import datetime
-# COPYRIGHT (C) 2021-2022 BY LEGENDX22
 
 from telethon import events, Button, custom
 import re, os
