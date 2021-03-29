@@ -105,8 +105,15 @@ async def ok(event):
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 @xbot.on(events.NewMessage(pattern="/set"))
 async def heroku(event):
-  pro = [[Button.inline("BOT NICK NAME", data="nick")]]
-  await xbot.send_message(event.chat_id, "choose", buttons=pro)
+  if event.sender_id == bot.me.id and event.is_private:
+    pro = [[Button.inline("BOT NICK NAME", data="nick")]]
+    pro += [[Button.inline("ALIVE PHOTO", data="alive_photo")]]
+    pro += [[Button.inline("FBAN GROUP ID", data="fban_id")]]
+    pro += [[Button.inline("ALIVE_NAME", data="alive_name")]]
+    pro += [[Button.inline("STRING SESSION", data="session")]]
+    await xbot.send_message(event.chat_id, "choose", buttons=pro)
+  else:
+    await event.reply("ja na lawde kaam kr apna")
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nick')))
 async def heroku(event):
   Pro = bot.me.id
@@ -115,6 +122,7 @@ async def heroku(event):
   heroku_var = app.config()
   if event.sender_id == Pro:
      if event.is_private:
+        await event.delete()
         async with xbot.conversation(Pro) as pro:
           await pro.send_message("give your bot name")
           op = await pro.get_response()
@@ -123,6 +131,108 @@ async def heroku(event):
             heroku_var['BOT_NICK_NAME'] = f'{op.message}'
           except Exception as e:
             await event.reply(f"{e}")  
+     else:
+         warn = "please use in pm"
+         await event.answer(warn, alert=True)
   else:
      pro = "chala ja bhosdike"
      await event.answer(pro, alert=True)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_photo')))
+async def heroku(event):
+  Pro = bot.me.id
+  global Heroku
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == Pro:
+     if event.is_private:
+        await event.delete()
+        async with xbot.conversation(Pro) as pro:
+          await pro.send_message("give your bot name")
+          op = await pro.get_response()
+          await pro.send_message("now wait i am restarting")
+          try:
+            heroku_var['ALIVE_PHOTTO'] = f'{op.message}'
+          except Exception as e:
+            await event.reply(f"{e}")  
+     else:
+         warn = "please use in pm"
+         await event.answer(warn, alert=True)
+  else:
+     pro = "chala ja bhosdike"
+     await event.answer(pro, alert=True)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'fban_id')))
+async def heroku(event):
+  Pro = bot.me.id
+  global Heroku
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == Pro:
+     if event.is_private:
+        await event.delete()
+        async with xbot.conversation(Pro) as pro:
+          await pro.send_message("give your bot name")
+          op = await pro.get_response()
+          await pro.send_message("now wait i am restarting")
+          try:
+            heroku_var['FBAN_GROUP_ID'] = f'{op.message}'
+          except Exception as e:
+            await event.reply(f"{e}")  
+     else:
+         warn = "please use in pm"
+         await event.answer(warn, alert=True)
+  else:
+     pro = "chala ja bhosdike"
+     await event.answer(pro, alert=True)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_name')))
+async def heroku(event):
+  Pro = bot.me.id
+  global Heroku
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == Pro:
+     if event.is_private:
+        await event.delete()
+        async with xbot.conversation(Pro) as pro:
+          await pro.send_message("give your bot name")
+          op = await pro.get_response()
+          await pro.send_message("now wait i am restarting")
+          try:
+            heroku_var['ALIVE_NAME'] = f'{op.message}'
+          except Exception as e:
+            await event.reply(f"{e}")  
+     else:
+         warn = "please use in pm"
+         await event.answer(warn, alert=True)
+  else:
+     pro = "chala ja bhosdike"
+     await event.answer(pro, alert=True)
+
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'session')))
+async def heroku(event):
+  Pro = bot.me.id
+  global Heroku
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == Pro:
+     if event.is_private:
+        await event.delete()
+        async with xbot.conversation(Pro) as pro:
+          await pro.send_message("give your bot name")
+          op = await pro.get_response()
+          await pro.send_message("now wait i am restarting")
+          try:
+            heroku_var['STRING_SESSION'] = f'{op.message}'
+          except Exception as e:
+            await event.reply(f"{e}")  
+     else:
+         warn = "please use in pm"
+         await event.answer(warn, alert=True)
+  else:
+     pro = "chala ja bhosdike"
+     await event.answer(pro, alert=True)
+
+
