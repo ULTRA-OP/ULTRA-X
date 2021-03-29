@@ -105,7 +105,7 @@ async def ok(event):
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 @xbot.on(events.NewMessage(pattern="/set"))
 async def heroku(event):
-  if event.sender_id == bot.me.id and event.is_private:
+  if event.sender_id == bot.me.id:
     pro = [[Button.inline("BOT NICK NAME", data="nick")]]
     pro += [[Button.inline("ALIVE PHOTO", data="alive_photo")]]
     pro += [[Button.inline("FBAN GROUP ID", data="fban_id")]]
@@ -114,15 +114,27 @@ async def heroku(event):
     await xbot.send_message(event.chat_id, "choose", buttons=pro)
   else:
     await event.reply("ja na lawde kaam kr apna")
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'ass_back')))
+async def heroku(event):
+  if event.sender_id == bot.me.id:
+    pro = [[Button.inline("BOT NICK NAME", data="nick")]]
+    pro += [[Button.inline("ALIVE PHOTO", data="alive_photo")]]
+    pro += [[Button.inline("FBAN GROUP ID", data="fban_id")]]
+    pro += [[Button.inline("ALIVE_NAME", data="alive_name")]]
+    pro += [[Button.inline("STRING SESSION", data="session")]]
+    await event.edit("choose", buttons=pro)
+  else:
+    await event.answer("ja na lawde kaam kr apna", alert=True)
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nick')))
 async def heroku(event):
   Pro = bot.me.id
+  LEGENDX = [[Button.inline("BACK", data="ass_back")]]
   global Heroku
   app = Heroku.app(Var.HEROKU_APP_NAME)
   heroku_var = app.config()
   if event.sender_id == Pro:
      if event.is_private:
-        await event.delete()
+        await event.edit(buttons=LEGENDX)
         async with xbot.conversation(Pro) as pro:
           await pro.send_message("give your bot name")
           op = await pro.get_response()
