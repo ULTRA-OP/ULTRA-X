@@ -282,7 +282,7 @@ async def heroku(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nick')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setnick')]]
-  legend += [[Button.inline("SEE CURRUNT STATUS", data="seenick")]]
+  legend += [[Button.inline("SEE CURRENT STATUS ☺️", data="seenick")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set the bot name", buttons=legend)
