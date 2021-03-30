@@ -128,7 +128,7 @@ async def heroku(event):
     pro += [[Button.inline("➪ Aʟɪᴠᴇ Nᴀᴍᴇ", data="alive_name")]]
     pro += [[Button.inline("➪ Sᴛʀɪɴɢ Sᴇssɪᴏɴ", data="session")]]
     pro += [[Button.inline("➪ ADD SUDO", data="addsudo")]]
-    await xbot.send_message(event.chat_id, "**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
+    await event.edit("**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
   else:
     await event.answer("**Hey kid go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !", alert=True)
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setnick')))
