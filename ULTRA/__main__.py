@@ -85,7 +85,21 @@ import ULTRA._core
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
   try:
-   await xbot.send_message(bot.me.id, "I am now online!!😎😎\nCheck out moi PING time by /ping..✅")
+    pro = await xbot.get_me()
+    legend = await bot.get_me()
+    LEGENDX = f"""
+**Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
+
+**☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎**
+
+**Dɪɴɢ Dᴏɴɢ UʟᴛʀᴀX Hᴀs Bᴇᴇɴ Dᴇᴘʟᴏʏᴇᴅ !**
+
+**Mᴀsᴛᴇʀ** ➪ @{legend.username}
+**Assɪsᴛᴀɴᴛ** ➪ @{pro.username}
+**Sᴜᴘᴘᴏʀᴛ** ➪ @UltraXchaT
+**Cʜᴀɴɴᴇʟ** ➪ @UltraX_SupporT
+"""
+   await xbot.send_message(bot.me.id, LEGENDX)
   except:
      pass
 bot.loop.run_until_complete(legend())
@@ -97,3 +111,4 @@ if len(argv) not in (1, 3, 4):
 else:
     bot.run_until_disconnected()
     
+
