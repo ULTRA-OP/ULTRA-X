@@ -273,8 +273,11 @@ async def demote(event):
     await event.reply("Demoted This User Sucessfully.")
 
 
-@xbot.on(events.NewMessage(pattern="/pin ?(.*)"))
+@xbot.on(events.NewMessage(pattern=None))
 async def pin(event):
+    msg = str(event.text)
+    if not msg == "/pin":
+     return
     if event.is_group:
         if not await can_pin_msg(message=event):
             return
@@ -284,7 +287,7 @@ async def pin(event):
     if not to_pin:
         await event.reply("`Reply to a message to pin it.`")
         return
-    options = event.pattern_match.group(1)
+    options = None
     is_silent = True
     if options.lower() == "loud":
         is_silent = False
