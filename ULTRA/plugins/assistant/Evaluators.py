@@ -18,7 +18,7 @@ async def _(event):
           return
     if event.fwd_from:
         return
-    cmd = event.pattern_match.group(1)
+    cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
         return await event.reply("What should i run ?..")
     proevent = await event.reply("Running ...")
@@ -75,7 +75,7 @@ async def _(event):
           return
     if event.fwd_from:
         return
-    cmd = event.pattern_match.group(1)
+    cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
         return await event.reply("What should i execute?..")
     proevent = await event.reply("Executing.....")
