@@ -113,7 +113,7 @@ async def heroku(event):
     pro += [[Button.inline("🙂 FBAN GROUP ID 🙂", data="fban_id")]]
     pro += [[Button.inline("🙂 ALIVE_NAME 🙂", data="alive_name")]]
     pro += [[Button.inline("🙂 STRING SESSION 🙂", data="session")]]
-    await xbot.send_message(event.chat_id, "choose", buttons=pro)
+    await xbot.send_message(event.chat_id, "**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
   else:
     await event.reply("JNL, Mera bot mat chuu!!")
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'ass_back')))
@@ -124,7 +124,7 @@ async def heroku(event):
     pro += [[Button.inline("🙂 FBAN GROUP ID 🙂", data="fban_id")]]
     pro += [[Button.inline("🙂 ALIVE_NAME 🙂", data="alive_name")]]
     pro += [[Button.inline("🙂 STRING SESSION 🙂", data="session")]]
-    await event.edit("choose", buttons=pro)
+    await event.edit("**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ ᴛᴏᴅᴀʏ ?**", buttons=pro)
   else:
     await event.answer("JNL, Mera bot mat chu!!", alert=True)
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setnick')))
