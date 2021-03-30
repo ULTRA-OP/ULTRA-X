@@ -15,14 +15,7 @@ except:
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
-STRING_SESSION = os.environ.get("STRING_SESSION")
-try:
-  session_name = str(STRING_SESSION)
-  bot = TelegramClient(StringSession(session_name), APP_ID, API_HASH)
-  xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
-except:
-  pass
-
+xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 import time
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
