@@ -93,21 +93,21 @@ async def detail(replied_user, event):
     )
     username = "@{}".format(username) if username else None
 
-    caption = "<b>User Info:</b> \n"
-    caption += f"ID: <code>{user_id}</code> \n"
-    caption += f"First Name: {first_name} \n"
+    caption = "<b>╔═══*.·:·.☽✧ User Info: ✧☾.·:·.*═══╗</b> \n"
+    caption += f"<b>➥ ID:</b> <code>{user_id}</code> \n"
+    caption += f"<b>➥ First Name:</b> {first_name} \n"
     if last_name:
-      caption += f"Last Name: {last_name} \n"
+      caption += f"<b>➥ Last Name:</b> {last_name} \n"
     if username:
-      caption += f"Username: {username} \n"
-    caption += f'User link: <a href="tg://user?id={user_id}">link</a>'
+      caption += f"<b>➥ Username:</b> {username} \n"
+    caption += f'<b>➥ User link:</b> <a href="tg://user?id={user_id}">link</a>'
     if user_id in DEVS:
-        caption += "\n<b>This is One of my Devs;)</b>"
+        caption += "\n<b>╚⊶⊶⊶⊶⊶ This is one of my DEVs;) ⊷⊷⊷⊷⊷╝</b>"
     if not event.sender_id == boy:
        if user_id == boy:
-        caption += "\n<b>This is My Master Beware!</b>"
+        caption += "\n<b>╚⊶⊶⊶⊶⊶ This is My Master Beware! ⊷⊷⊷⊷⊷╝</b>"
     elif event.sender_id == boy and user_id == boy:
-        caption += "\n<b>Hello Master☺️</b>"
+        caption += "\n<b>Hello Master ☺️</b>"
     return caption
  except Exception:
         print("lel")
