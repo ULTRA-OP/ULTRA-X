@@ -99,7 +99,7 @@ async def legend():
 **Sᴜᴘᴘᴏʀᴛ** ➪ @UltraXchaT
 **Cʜᴀɴɴᴇʟ** ➪ @UltraX_SupporT
 """
-   await xbot.send_message(bot.me.id, LEGENDX)
+    await xbot.send_message(bot.me.id, LEGENDX)
   except:
      pass
 bot.loop.run_until_complete(legend())
