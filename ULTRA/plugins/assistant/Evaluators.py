@@ -8,7 +8,7 @@ from LEGENDX import xbot, devs
 from telethon import events
 from ULTRA import bot
 
-@xbot.on(events.NewMessage(pattern="/eval ?(*.)"))
+@xbot.on(events.NewMessage(pattern=("/eval ?(*.)")))
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -64,7 +64,7 @@ async def aexec(code, smessatatus):
     )
 
 
-@xbot.on(events.NewMessage(pattern="/exec ?(*.)"))
+@xbot.on(events.NewMessage(pattern=("/exec ?(*.)")))
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
