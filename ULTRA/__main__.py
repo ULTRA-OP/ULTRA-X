@@ -87,6 +87,7 @@ async def legend():
   try:
     pro = await xbot.get_me()
     legend = await bot.get_me()
+    PROBOYX = [[Button.inline("HEROKU", data='ass_back')]]
     LEGENDX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
 
@@ -99,7 +100,7 @@ async def legend():
 **Sᴜᴘᴘᴏʀᴛ** ➪ @UltraXchaT
 **Cʜᴀɴɴᴇʟ** ➪ @UltraX_SupporT
 """
-    await xbot.send_message(bot.me.id, LEGENDX)
+    await xbot.send_message(bot.me.id, LEGENDX, buttons=PROBOYX)
   except:
      pass
 bot.loop.run_until_complete(legend())
