@@ -295,12 +295,62 @@ async def see(event):
   global Heroku
   app = Heroku.app(Var.HEROKU_APP_NAME)
   heroku_var = app.config()
-  LEGENDX = heroku_var['BOT_NICK_NAME']
-  await event.answer(LEGENDX, alert=True)
+  if event.sender_id == bot.me.id or event.sender_id == ID:
+    LEGENDX = heroku_var['BOT_NICK_NAME']
+    await event.answer(LEGENDX, alert=True)
+  else:
+    await event.answer("sry you cant see", alert=True)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'seephoto')))
+async def see(event):
+  global Heroku
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == bot.me.id or event.sender_id == ID:
+    LEGENDX = heroku_var['ALIVE_PHOTTO']
+    await event.answer(LEGENDX, alert=True)
+  else:
+    await event.answer("sry you cant see", alert=True)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'seefban')))
+async def see(event):
+  global Heroku
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == bot.me.id or event.sender_id == ID:
+    LEGENDX = heroku_var['FBAN_GROUP_ID']
+    await event.answer(LEGENDX, alert=True)
+  else:
+    await event.answer("sry you cant see", alert=True)
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'seename')))
+async def see(event):
+  global Heroku
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == bot.me.id or event.sender_id == ID:
+    LEGENDX = heroku_var['ALIVE_NAME']
+    await event.answer(LEGENDX, alert=True)
+  else:
+    await event.answer("sry you cant see", alert=True)
+
+
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'seesudo')))
+async def see(event):
+  global Heroku
+  app = Heroku.app(Var.HEROKU_APP_NAME)
+  heroku_var = app.config()
+  if event.sender_id == bot.me.id or event.sender_id == ID:
+    LEGENDX = heroku_var['SUDO_USERS']
+    await event.answer(LEGENDX, alert=True)
+  else:
+    await event.answer("sry you cant see", alert=True)
+
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_name')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setname')]]
+  legend += [[Button.inline("SEE CURRUNT STATUS", data="seename")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set your name", buttons=legend)
@@ -324,6 +374,7 @@ async def call_back(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'addsudo')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setsudo')]]
+  legend += [[Button.inline("SEE CURRUNT STATUS", data="seesudo")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set the SUDO USER", buttons=legend)
@@ -334,6 +385,7 @@ async def call_back(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'fban_id')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setfban')]]
+  legend += [[Button.inline("SEE CURRUNT STATUS", data="seefban")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set the FBAN ID", buttons=legend)
@@ -346,6 +398,8 @@ async def call_back(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_photo')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setphoto')]]
+ 
+  legend += [[Button.inline("SEE CURRUNT STATUS", data="seephoto")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set your photo", buttons=legend)
