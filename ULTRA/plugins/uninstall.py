@@ -19,7 +19,7 @@ async def unload(event):
     try:
         remove_plugin(shortname)
         os.remove(dir_path)
-        await event.edit(f"Uninstalled {shortname} successfully")
+        await event.edit(f"**Uɴɪɴsᴛᴀʟʟᴇᴅ** `{shortname}` **Sᴜᴄᴄᴇssғᴜʟʟʏ**")
     except OSError as e:
         await event.edit("Error: %s : %s" % (dir_path, e.strerror))
 
