@@ -32,11 +32,11 @@ async def awake(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"LEGENDX")))
 async def callback_query_handler(event):
 # inline by LEGENDX22 and PROBOY22 🔥
-  PROBOYX = [[Button.url("Rᴇᴘᴏ UʟᴛʀᴀX", "https://github.com/LEGENDXOP/LEGEND-BOT")]]
+  PROBOYX = [[Button.url("Rᴇᴘᴏ UʟᴛʀᴀX", "https://github.com/ULTRA-OP/ULTRA-X")]]
   PROBOYX +=[[Button.url("Dᴇᴘʟᴏʏ UʟᴛʀᴀX", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FLEGENDXOP%2Flegendpack&template=https%3A%2F%2Fgithub.com%2FLEGENDXOP%2Flegendpack")]]
   PROBOYX +=[[Button.url("Tᴜᴛᴏʀɪᴀʟ", "https://youtu.be/rGCSSFPsS4Q"), Button.url("Sᴛʀɪɴɢ Sᴇssɪᴏɴ", "https://repl.it/@legendx22/LEGEND-BOT#main.py")]]
   PROBOYX +=[[Button.url("Aᴘɪ Iᴅ & Aᴘɪ Hᴀsʜ", "https://t.me/usetgxbot"), Button.url("Rᴇᴅɪs", "https://redislabs.com")]]
-  PROBOYX +=[[Button.url("Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ", "https://t.me/LEGENDBOT_OFFICIAL"), Button.url("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", "https://t.me/LEGEND_USERBOT_SUPPORT")]]
+  PROBOYX +=[[Button.url("Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ", "https://t.me/LEGENDBOT_OFFICIAL"), Button.url("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", "https://t.me/UltraXChat")]]
   PROBOYX +=[[custom.Button.inline("«« Aʟɪᴠᴇ", data="PROBOY")]]
   await event.edit(text=f"Aʟʟ Dᴇᴛᴀɪʟs Oғ Rᴇᴘᴏs", buttons=PROBOYX)
 
