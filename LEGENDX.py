@@ -22,6 +22,7 @@ try:
   xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 except:
   pass
+
 import time
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
