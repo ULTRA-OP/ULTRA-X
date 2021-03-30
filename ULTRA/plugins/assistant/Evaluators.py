@@ -4,7 +4,7 @@ import io
 import os
 import sys
 import traceback
-from LEGENDX import xbot, devs
+from LEGENDX import xbot, ID as id
 from telethon import events
 from ULTRA import bot
 
@@ -13,7 +13,7 @@ from ULTRA import bot
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if not event.sender_id == boy:
+    if not event.sender_id == boy or event.sender_id == id:
           return
     if event.fwd_from:
         return
