@@ -87,7 +87,7 @@ async def legend():
   try:
     pro = await xbot.get_me()
     legend = await bot.get_me()
-    PROBOYX = [[Button.inline("HEROKU", data='ass_back')]]
+    PROBOYX = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data='ass_back')]]
     LEGENDX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
 
