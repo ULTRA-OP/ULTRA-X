@@ -1,9 +1,15 @@
 #hmm
-from LEGENDX import xbot
+from LEGENDX import xbot, devs
 from telethon import events
+from ULTRA import bot
 
 @xbot.on(events.NewMessage(pattern="/eval ?(*.)"))
 async def _(event):
+    pro = await bot.get_me()
+    boy = pro.id
+    if not event.sender_id in devs:
+        if not event.sender_id == boy:
+          return
     if event.fwd_from:
         return
     cmd = event.pattern_match.group(1)
