@@ -1,5 +1,5 @@
 # COPYRIGHT (C) 2021-2022 BY LEGENDX22
-# modify by madboy482
+# modify by madboy482 and alain_champion
 
 from ULTRA import bot
 from LEGENDX import xbot, ID
