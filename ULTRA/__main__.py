@@ -7,7 +7,7 @@ os.system("pip install google_trans_new")
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
-from telethon import TelegramClient
+from telethon import TelegramClient, Button
 from var import Var
 from ULTRA.utils import load_module, load_pro
 from ULTRA import LOAD_PLUG, BOTLOG_CHATID
