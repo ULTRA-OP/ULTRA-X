@@ -108,14 +108,14 @@ Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 @xbot.on(events.NewMessage(pattern="/set"))
 async def heroku(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
-    pro = [[Button.inline("🙂 BOT NICK NAME 🙂", data="nick")]]
-    pro += [[Button.inline("🙂 ALIVE PHOTO 🙂", data="alive_photo")]]
-    pro += [[Button.inline("🙂 FBAN GROUP ID 🙂", data="fban_id")]]
-    pro += [[Button.inline("🙂 ALIVE_NAME 🙂", data="alive_name")]]
-    pro += [[Button.inline("🙂 STRING SESSION 🙂", data="session")]]
+    pro = [[Button.inline("➪ Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ", data="nick")]]
+    pro += [[Button.inline("➪ Aʟɪᴠᴇ Pʜᴏᴛᴏ", data="alive_photo")]]
+    pro += [[Button.inline("➪ Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ", data="fban_id")]]
+    pro += [[Button.inline("➪ Aʟɪᴠᴇ Nᴀᴍᴇ", data="alive_name")]]
+    pro += [[Button.inline("➪ Sᴛʀɪɴɢ Sᴇssɪᴏɴ", data="session")]]
     await xbot.send_message(event.chat_id, "**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
   else:
-    await event.reply("JNL, Mera bot mat chuu!!")
+    await event.reply("**Hey kid go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !")
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'ass_back')))
 async def heroku(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
