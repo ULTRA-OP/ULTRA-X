@@ -44,8 +44,8 @@ if TG_BOT_USER_NAME_BF_HER is not None:
                     Button.url("Dᴇᴘʟᴏʏ", "https://heroku.com/deploy?template=https://github.com/ULTRA-OP/ULTRA-X/blob/master")],
                     [Button.url("Sᴛʀɪɴɢ", "https://repl.it/ULTRA-OP/ULTRA-X#main.py"),
                     Button.url("Cʜᴀɴɴᴇʟ", "https://t.me/ULTRAXOT")],
-                    [Button.url("Master", f"https://t.me/{me.username}"),
-                    Button.url("Assistant", f"https://t.me/{x.username}")
+                    [Button.url("Mᴀsᴛᴇʀ", f"https://t.me/{me.username}"),
+                    Button.url("Assɪsᴛᴀɴᴛ", f"https://t.me/{x.username}")
                 ]
             ]
             buttons += [[custom.Button.inline("Hᴇʟᴘ", data="open"), custom.Button.inline("Rᴇsᴛᴀʀᴛ", data='restart')]]
