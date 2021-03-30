@@ -48,7 +48,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
                     Button.url("Assistant", f"https://t.me/{x.username}")
                 ]
             ]
-            buttons += [[custom.Button.inline("Hᴇʟᴘ", data="helpme"), custom.Button.inline("Rᴇsᴛᴀʀᴛ", data='restart')]]
+            buttons += [[custom.Button.inline("Hᴇʟᴘ", data="open"), custom.Button.inline("Rᴇsᴛᴀʀᴛ", data='restart')]]
             if ALIVE_PHOTTO and ALIVE_PHOTTO.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(
                     ALIVE_PHOTTO,
