@@ -1,4 +1,4 @@
-#hmm
+# COPYRIGHT © BY ULTRA X
 import asyncio
 import io
 import os
