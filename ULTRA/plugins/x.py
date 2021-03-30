@@ -116,7 +116,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         global shivam_sh1vam
         shivam_sh1vam="{}".format(plugin_name)
         help_string = "Commands found in {}:\n".format(plugin_name)
-        k = "CMND ➪"
+        k = "➪"
         u = 0
         for i in CMD_LIST[plugin_name]:
             u += 1
