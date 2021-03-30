@@ -58,7 +58,7 @@ async def callback_query_handler(event):
 
 @xbot.on(events.NewMessage(pattern=("/repo")))
 async def repo(event):
-  await xbot.send_message(event.chat, "**Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇᴘᴏ ғᴏʀ υℓтяα χ Usᴇʀʙᴏᴛ** \n\nFᴏʀ Aɴʏ Hᴇʟᴘ :- @UltraXOT", buttons=[[Button.url("🔰 Rᴇᴘᴏ 🔰", "https://github.com/ULTRA-OP/ULTRA-X")]])
+  await xbot.send_message(event.chat, "**Hᴇʀᴇ Is Tʜᴇ Rᴇᴘᴏ Fᴏʀ υℓтяα χ Usᴇʀʙᴏᴛ** \n\nFᴏʀ Aɴʏ Hᴇʟᴘ :- @UltraXOT", buttons=[[Button.url("🔰 Rᴇᴘᴏ 🔰", "https://github.com/ULTRA-OP/ULTRA-X")]])
 
 
 def get_readable_time(seconds: int) -> str:
@@ -97,9 +97,9 @@ async def ok(event):
     telegram_ping = str(round(pingtime.total_seconds(), 2)) + "s"
     uptime = get_readable_time((time.time() - StartTime))
     await message.edit(
-        "<b><i>☞ PONG!!</i></b>\n"
-        "<b>➥ Time Taken:</b> <code>{}</code>\n"
-        "<b>➥ Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
+        "<b><i>☞ Pᴏɴɢ !!</i></b>\n"
+        "<b>➥ Tɪᴍᴇ Tᴀᴋᴇɴ:</b> <code>{}</code>\n"
+        "<b>➥ Sᴇʀᴠɪᴄᴇ Uᴘᴛɪᴍᴇ:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode="html",
     )
 
