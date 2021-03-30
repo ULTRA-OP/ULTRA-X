@@ -36,7 +36,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             if event.query.user_id == bot.uid or event.query.user_id == id:
                 current_page_number=0
                 dc = paginate_help(current_page_number, CMD_LIST, "helpme")
-                await event.edit("`>>>\n\nReopened The Main Menu of \n©LEGENDBOT` ", buttons=dc)
+                await event.edit("`>>>\n\nopened The Main Menu of \n©ULTRA X` ", buttons=dc)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
@@ -116,7 +116,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         global shivam_sh1vam
         shivam_sh1vam="{}".format(plugin_name)
         help_string = "Commands found in {}:\n".format(plugin_name)
-        k = "💠⚡💎"
+        k = "CMND ➪"
         u = 0
         for i in CMD_LIST[plugin_name]:
             u += 1
@@ -126,7 +126,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 f"**📤 PLUGIN NAME 📤 :** `{plugin_name}` \n\n{CMD_HELP[plugin_name]}"
             )
         else:
-            help_string += "❌"
+            help_string += "NO CMND HELP ADDED "
 
         reply_pop_up_alert = help_string
         reply_pop_up_alert += (
@@ -159,7 +159,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                         load_module(event.data_match.group(1).decode("UTF-8"))# kyu sir kang krne m musil aa rhi h kya ... Bolo help kr du kya 😂😂😂
                         await event.edit( "`Your LEGEND BOT Has Successfully loaded` >>>" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
                     except Exception as e:
-                        await event.edit("Error{}".format(shortname, str(e))+ "LEGEND BOT Has Successfully loaded" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
+                        await event.edit("Error{}".format(shortname, str(e))+ "ULTRA X Has Successfully loaded" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
               else:
                     shortname = event.data_match.group(1).decode("UTF-8")
                     fcix = [custom.Button.inline("  𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝖀𝖓𝖑𝖔𝖆𝖉 ",data="unload({})".format(shivam_sh1vam))]
