@@ -112,27 +112,23 @@ Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 @xbot.on(events.NewMessage(pattern="/set"))
 async def heroku(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
-    pro = [[Button.inline("➪ Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ", data="nick")]]
-    pro += [[Button.inline("➪ Aʟɪᴠᴇ Pʜᴏᴛᴏ", data="alive_photo")]]
-    pro += [[Button.inline("➪ Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ", data="fban_id")]]
-    pro += [[Button.inline("➪ Aʟɪᴠᴇ Nᴀᴍᴇ", data="alive_name")]]
-    pro += [[Button.inline("➪ Sᴛʀɪɴɢ Sᴇssɪᴏɴ", data="session")]]
-    pro += [[Button.inline("➪ ADD SUDO", data="addsudo")]]
-    await xbot.send_message(event.chat_id, "**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
+    pro = [[Button.inline("••• Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ •••", data="nick")]]
+    pro += [[Button.inline("••• Aʟɪᴠᴇ Pʜᴏᴛᴏ •••", data="alive_photo")]]
+    pro += [[Button.inline("••• Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ•••", data="fban_id")]]
+    pro += [[Button.inline("••• Aʟɪᴠᴇ Nᴀᴍᴇ •••", data="alive_name")]]
+    pro += [[Button.inline("••• Sᴛʀɪɴɢ Sᴇssɪᴏɴ •••", data="session")]]
+    await xbot.send_message(event.chat_id, "Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?", buttons=pro)
   else:
-    await event.reply("**Hey kid go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !")
-
-
+    await event.reply("Hey kid go away and don't use my bot deploy your own bot 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !")
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'ass_back')))
 async def heroku(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
-    pro = [[Button.inline("➪ Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ", data="nick")]]
-    pro += [[Button.inline("➪ Aʟɪᴠᴇ Pʜᴏᴛᴏ", data="alive_photo")]]
-    pro += [[Button.inline("➪ Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ", data="fban_id")]]
-    pro += [[Button.inline("➪ Aʟɪᴠᴇ Nᴀᴍᴇ", data="alive_name")]]
-    pro += [[Button.inline("➪ Sᴛʀɪɴɢ Sᴇssɪᴏɴ", data="session")]]
-    pro += [[Button.inline("➪ ADD SUDO", data="addsudo")]]
-    await event.edit("**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
+    pro = [[Button.inline("••• Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ •••", data="nick")]]
+    pro += [[Button.inline("••• Aʟɪᴠᴇ Pʜᴏᴛᴏ •••", data="alive_photo")]]
+    pro += [[Button.inline("••• Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ•••", data="fban_id")]]
+    pro += [[Button.inline("••• Aʟɪᴠᴇ Nᴀᴍᴇ •••", data="alive_name")]]
+    pro += [[Button.inline("••• Sᴛʀɪɴɢ Sᴇssɪᴏɴ •••", data="session")]]
+    await event.edit("Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ ᴛᴏᴅᴀʏ ?", buttons=pro)
   else:
     await event.answer("**Hey kid go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !", alert=True)
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setnick')))
