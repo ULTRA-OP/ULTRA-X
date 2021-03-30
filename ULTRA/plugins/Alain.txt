@@ -7,15 +7,15 @@ import urllib
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions
 from ULTRA import CMD_LIST, CMD_HELP
-from LEGENDX import NAME
+from ULTRAX import NAME
 import io
-from LEGENDX import bot
+from ULTRAX import bot
 
 alain = bot.uid
 
 DEAFULTUSER = str(NAME)
 from ULTRA.utils import remove_plugin,load_module
-from LEGENDX import ID as id
+from ULTRAX import ID as id
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 '''
 

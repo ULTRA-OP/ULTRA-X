@@ -4,7 +4,7 @@ import io
 import os
 import sys
 import traceback
-from LEGENDX import xbot, ID as id
+from ULTRAX import xbot, ID as id
 from telethon import events
 from ULTRA import bot
 

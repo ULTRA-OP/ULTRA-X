@@ -5,7 +5,7 @@
 
 import asyncio
 import os
-from LEGENDX import BOT, PHOTO, VERSION, ALIVE_USERNAME, ALIVE_BOT_USERNAME
+from ULTRAX import BOT, PHOTO, VERSION, ALIVE_USERNAME, ALIVE_BOT_USERNAME
 import requests
 import time
 from PIL import Image

@@ -2,13 +2,13 @@ import asyncio
 import io
 import os
 import re
-from LEGENDX import PHOTO, ID as id
+from ULTRAX import PHOTO, ID as id
 from telethon import Button, custom, events, functions
 import telethon
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
 from ULTRA.uniborgConfig import Config
-from LEGENDX import xbot, devs as DEVS
+from ULTRAX import xbot, devs as DEVS
 from ULTRA import bot
 from ULTRA.plugins.sql_helper.blacklist_ass import (
     add_nibba_in_db,

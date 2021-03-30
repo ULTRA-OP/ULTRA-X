@@ -1,7 +1,7 @@
 
 from telethon import events, Button, custom
 from ULTRA import bot
-from LEGENDX import xbot
+from ULTRAX import xbot
 import os,re
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions

@@ -1,1 +1,1 @@
-from LEGENDX import NAME, MASTER, BOT
+from ULTRAX import NAME, MASTER, BOT

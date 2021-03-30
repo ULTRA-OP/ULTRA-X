@@ -1,6 +1,6 @@
 # COPYRIGHT (C) 2021-2022 © Ultra X Bot
 from ULTRA.utils import admin_cmd
-from LEGENDX import xbot, NAME
+from ULTRAX import xbot, NAME
 from telethon import Button
 @borg.on(admin_cmd(pattern="button (.*)"))
 async def Buttons(event):
