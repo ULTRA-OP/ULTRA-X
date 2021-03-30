@@ -18,11 +18,11 @@ import os, re, sys, asyncio
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart')))
 async def restart(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
-    await event.edit("restarting your bot please wait")
+    await event.edit("Ya wait....Your Bot is being restarted...\nPlease Wait...")
     await asyncio.sleep(2)
-    await event.edit("restarting......")
+    await event.edit("Restarting the Heroku connection.....")
     await asyncio.sleep(2)
-    await event.edit("restarted your bot succesfully")
+    await event.edit("Yay!! Restarted your bot succesfully..\n✅✅")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit ()
   else:
