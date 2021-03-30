@@ -88,8 +88,12 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-@xbot.on(events.NewMessage(pattern="/ping"))
+@xbot.on(events.NewMessage(pattern=None))
 async def ok(event):
+    msg = str(event.text)
+    if not msg == "/ping":
+     return
+
     start_time = datetime.datetime.now()
     message = await event.reply("_.._.._Pinging_.._.._")
     end_time = datetime.datetime.now()
