@@ -2,7 +2,7 @@
 #credits shivam thanks bruh
 
 from telethon import events
-from userbot.events import remove_plugin, load_module
+from ULTRA.events import remove_plugin, load_module
 from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
 from ULTRA.utils import command, remove_plugin, load_module
