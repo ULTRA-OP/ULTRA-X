@@ -7,8 +7,8 @@ from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
 from userbot.utils import command, remove_plugin, load_module
 from pathlib import Path
-from userbot import LOAD_PLUG, CMD_HELP
-from userbot.utils import admin_cmd
+from ULTRA import LOAD_PLUG, CMD_HELP
+from ULTRA.utils import admin_cmd
 import os
 @bot.on(admin_cmd(pattern=r"^uninstall (?P<shortname>\w+)$"))
 async def unload(event):
