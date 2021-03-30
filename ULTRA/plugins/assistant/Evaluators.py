@@ -19,8 +19,8 @@ async def _(event):
         return
     cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
-        return await event.reply("What should i run ?..")
-    proevent = await event.reply("Running ...")
+        return await event.reply("What should I run ?..\n\nGive me something to run, u dumbo!!")
+    proevent = await event.reply("Running.....")
     old_stderr = sys.stderr
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
@@ -42,8 +42,8 @@ async def _(event):
     elif stdout:
         evaluation = stdout
     else:
-        evaluation = "Success"
-    final_output = f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n`{evaluation}` \n"
+        evaluation = "Sᴜᴄᴄᴇss ✅"
+    final_output = f"**•  Eᴠᴀʟ : **\n`{cmd}` \n\n**•  Rᴇsᴜʟᴛ : **\n`{evaluation}` \n"
     await proevent.edit(final_output)
 
 
@@ -71,7 +71,7 @@ async def _(event):
         return
     cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
-        return await event.reply("What should i execute?..")
+        return await event.reply("What should I execute?..\n\nGive me somwthing to execute, u dumbo!!")
     proevent = await event.reply("Executing.....")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
