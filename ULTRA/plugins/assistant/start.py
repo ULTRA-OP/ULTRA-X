@@ -37,14 +37,14 @@ async def start(event):
     hmmwow = devlop.first_name
     vent = event.chat_id
     mypic = PHOTO
-    starttext = f"Hello, {firstname}!! Nice To Meet You, Well I'm {bot_id}, A Powerful Assistant Bot. \n\nMy Master is [{hmmwow}](tg://user?id={boy}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/UltraXOT)"
+    starttext = f"Hello, **{firstname}**!!\nNice To Meet You 🤗 ! Well I'm **{bot_id}**.\n\n**A Pᴏᴡᴇʀғᴜʟ Assɪᴛᴀɴᴛ Oғ** [{hmmwow}](tg://user?id={boy})\n\n      **Pᴏᴡᴇʀᴇᴅ Bʏ** [UʟᴛʀᴀX](t.me/UltraXOT) \nYou Ca\n\nIf You Want Your Own Assistant Bot You Can Deploy From Button Below. \n\nPowered By [ULTRA-X](t.me/UltraXOT)"
     if event.sender_id == boy:
         await xbot.send_message(
             event.chat_id,
             message=f"Hi Master, It's Me {bot_id}, Your Assistant !! \nWhat You Wanna Do today ?",
             buttons=[
                 [custom.Button.inline("Bᴏᴛ Usᴇʀs 🔥", data="users")],
-                [custom.Button.inline("Hᴇʀᴏᴋᴜ Mᴇɴᴜ ⚙️", data="ass_back")],
+                [custom.Button.inline("Hᴇʀᴏᴋᴜ Mᴇɴᴜ ⚙️", data="ass_back")]
                 [
                     Button.url(
                         "Iɴᴠɪᴛᴇ Mᴇ Tᴏ A Gʀᴏᴜᴘ 👥", f"t.me/{bot_username}?startgroup=true"
