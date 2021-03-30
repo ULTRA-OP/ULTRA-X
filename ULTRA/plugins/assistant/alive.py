@@ -112,12 +112,12 @@ Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 @xbot.on(events.NewMessage(pattern="/set"))
 async def heroku(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
-    pro = [[Button.inline("➪ Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ", data="nick")]]
-    pro += [[Button.inline("➪ Aʟɪᴠᴇ Pʜᴏᴛᴏ", data="alive_photo")]]
-    pro += [[Button.inline("➪ Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ", data="fban_id")]]
-    pro += [[Button.inline("➪ Aʟɪᴠᴇ Nᴀᴍᴇ", data="alive_name")]]
-    pro += [[Button.inline("➪ Sᴛʀɪɴɢ Sᴇssɪᴏɴ", data="session")]]
-    pro += [[Button.inline("➪ ADD SUDO", data="addsudo")]]
+    pro = [[Button.inline("••• Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ •••", data="nick")]]
+    pro += [[Button.inline("••• Aʟɪᴠᴇ Pʜᴏᴛᴏ •••", data="alive_photo")]]
+    pro += [[Button.inline("••• Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ •••", data="fban_id")]]
+    pro += [[Button.inline("••• Aʟɪᴠᴇ Nᴀᴍᴇ •••", data="alive_name")]]
+    pro += [[Button.inline("••• Sᴛʀɪɴɢ Sᴇssɪᴏɴ •••", data="session")]]
+    pro += [[Button.inline("••• Aᴅᴅ Sᴜᴅᴏ •••", data="addsudo")]]
     await xbot.send_message(event.chat_id, "**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
   else:
     await event.reply("**Hey kid go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !")
@@ -126,15 +126,15 @@ async def heroku(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'ass_back')))
 async def heroku(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
-    pro = [[Button.inline("➪ Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ", data="nick")]]
-    pro += [[Button.inline("➪ Aʟɪᴠᴇ Pʜᴏᴛᴏ", data="alive_photo")]]
-    pro += [[Button.inline("➪ Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ", data="fban_id")]]
-    pro += [[Button.inline("➪ Aʟɪᴠᴇ Nᴀᴍᴇ", data="alive_name")]]
-    pro += [[Button.inline("➪ Sᴛʀɪɴɢ Sᴇssɪᴏɴ", data="session")]]
-    pro += [[Button.inline("➪ ADD SUDO", data="addsudo")]]
+    pro = [[Button.inline("••• Bᴏᴛ Nɪᴄᴋɴᴀᴍᴇ •••", data="nick")]]
+    pro += [[Button.inline("••• Aʟɪᴠᴇ Pʜᴏᴛᴏ •••", data="alive_photo")]]
+    pro += [[Button.inline("••• Fʙᴀɴ Gʀᴏᴜᴘ Iᴅ •••", data="fban_id")]]
+    pro += [[Button.inline("••• Aʟɪᴠᴇ Nᴀᴍᴇ •••", data="alive_name")]]
+    pro += [[Button.inline("••• Sᴛʀɪɴɢ Sᴇssɪᴏɴ •••", data="session")]]
+    pro += [[Button.inline("••• Aᴅᴅ Sᴜᴅᴏ •••", data="addsudo")]]
     await event.edit("**Hᴇʟʟᴏ Mᴀsᴛᴇʀ, Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴɴᴀ Sᴇᴛ Tᴏᴅᴀʏ ?**", buttons=pro)
   else:
-    await event.answer("**Hey kid go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !", alert=True)
+    await event.answer("**Hey kid, go away and don't use my bot deploy your own bot** 😕 !!\n\nFᴏʀ Aɴʏ Hᴇʟᴘ Asᴋ Iɴ @UltraXChat !", alert=True)
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'setnick')))
 async def heroku(event):
   Pro = bot.me.id
@@ -299,7 +299,7 @@ async def see(event):
     LEGENDX = heroku_var['BOT_NICK_NAME']
     await event.answer(LEGENDX, alert=True)
   else:
-    await event.answer("sry you cant see", alert=True)
+    await event.answer("Sry you aren't allowed to see!!", alert=True)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'seephoto')))
 async def see(event):
@@ -310,7 +310,7 @@ async def see(event):
     LEGENDX = heroku_var['ALIVE_PHOTTO']
     await event.answer(LEGENDX, alert=True)
   else:
-    await event.answer("sry you cant see", alert=True)
+    await event.answer("Sry you aren't allowed to see!!", alert=True)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'seefban')))
 async def see(event):
@@ -321,7 +321,7 @@ async def see(event):
     LEGENDX = heroku_var['FBAN_GROUP_ID']
     await event.answer(LEGENDX, alert=True)
   else:
-    await event.answer("sry you cant see", alert=True)
+    await event.answer("Sry you aren't allowed to see!!", alert=True)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'seename')))
 async def see(event):
@@ -332,7 +332,7 @@ async def see(event):
     LEGENDX = heroku_var['ALIVE_NAME']
     await event.answer(LEGENDX, alert=True)
   else:
-    await event.answer("sry you cant see", alert=True)
+    await event.answer("Sry you aren't allowed to see!!", alert=True)
 
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'seesudo')))
@@ -344,13 +344,13 @@ async def see(event):
     LEGENDX = heroku_var['SUDO_USERS']
     await event.answer(LEGENDX, alert=True)
   else:
-    await event.answer("sry you cant see", alert=True)
+    await event.answer("Sry you aren't allowed to see!!", alert=True)
 
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_name')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setname')]]
-  legend += [[Button.inline("SEE CURRUNT STATUS", data="seename")]]
+  legend += [[Button.inline("SEE CURRENT STATUS 🙂", data="seename")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set your name", buttons=legend)
@@ -374,7 +374,7 @@ async def call_back(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'addsudo')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setsudo')]]
-  legend += [[Button.inline("SEE CURRUNT STATUS", data="seesudo")]]
+  legend += [[Button.inline("SEE CURRENT STATUS 🙂", data="seesudo")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set the SUDO USER", buttons=legend)
@@ -385,7 +385,7 @@ async def call_back(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'fban_id')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setfban')]]
-  legend += [[Button.inline("SEE CURRUNT STATUS", data="seefban")]]
+  legend += [[Button.inline("SEE CURRENT STATUS 🙂", data="seefban")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set the FBAN ID", buttons=legend)
@@ -398,8 +398,7 @@ async def call_back(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'alive_photo')))
 async def call_back(event):
   legend = [[Button.inline("SET ?", data='setphoto')]]
- 
-  legend += [[Button.inline("SEE CURRUNT STATUS", data="seephoto")]]
+  legend += [[Button.inline("SEE CURRENT STATUS 🙂", data="seephoto")]]
   legend += [[Button.inline("«« BACK", data='ass_back')]]
   if event.is_private:
     await event.edit("Want to set your photo", buttons=legend)
