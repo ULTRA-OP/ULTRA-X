@@ -45,11 +45,7 @@ async def _(event):
     else:
         evaluation = "Success"
     final_output = f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n`{evaluation}` \n"
-    await proevent.edit(
-        text=final_output,
-        aslink=True,
-        linktext=f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n",
-    )
+    await proevent.edit(final_output)
 
 
 async def aexec(code, smessatatus):
