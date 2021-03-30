@@ -95,14 +95,14 @@ async def detail(replied_user, event):
 
     caption = "<b>╔═══*.·:·.☽✧ User Info: ✧☾.·:·.*═══╗</b> \n"
     caption += f"<b>➥ ID:</b> <code>{user_id}</code> \n"
-    caption += f"<b>➥ First Name:</b> {first_name} \n"
+    caption += f"<b>➥ First Name:</b> <code>{first_name}</code> \n"
     if last_name:
-      caption += f"<b>➥ Last Name:</b> {last_name} \n"
+      caption += f"<b>➥ Last Name:</b> <code>{last_name}</code> \n"
     if username:
-      caption += f"<b>➥ Username:</b> {username} \n"
-    caption += f'<b>➥ User link:</b> <a href="tg://user?id={user_id}">link</a>'
+      caption += f"<b>➥ Username:</b> <i>{username}</i> \n"
+    caption += f'<b>➥ User link:</b> <i><a href="tg://user?id={user_id}">Perma Link</a></i>'
     if user_id in DEVS:
-        caption += "\n<b>╚⊶⊶⊶⊶⊶ This is one of my DEVs;) ⊷⊷⊷⊷⊷╝</b>"
+        caption += "\n<b>╚⊶⊶⊶⊶⊶ This is one of my DEVs ;) ⊷⊷⊷⊷⊷╝</b>"
     if not event.sender_id == boy:
        if user_id == boy:
         caption += "\n<b>╚⊶⊶⊶⊶⊶ This is My Master Beware! ⊷⊷⊷⊷⊷╝</b>"
