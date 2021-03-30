@@ -5,7 +5,7 @@ from telethon import events
 from userbot.events import remove_plugin, load_module
 from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
-from userbot.utils import command, remove_plugin, load_module
+from ULTRA.utils import command, remove_plugin, load_module
 from pathlib import Path
 from ULTRA import LOAD_PLUG, CMD_HELP
 from ULTRA.utils import admin_cmd
