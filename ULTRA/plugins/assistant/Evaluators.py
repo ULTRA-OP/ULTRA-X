@@ -8,7 +8,8 @@ from LEGENDX import xbot, devs
 from telethon import events
 from ULTRA import bot
 
-@xbot.on(events.NewMessage(pattern=("/eval ?(*.)")))
+
+@xbot.on(events.NewMessage(pattern="/eval ?(.*)"))
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -64,7 +65,8 @@ async def aexec(code, smessatatus):
     )
 
 
-@xbot.on(events.NewMessage(pattern=("/exec ?(*.)")))
+
+@xbot.on(events.NewMessage(pattern="/exec ?(.*)"))
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -73,7 +75,7 @@ async def _(event):
           return
     if event.fwd_from:
         return
-    cmd = "".join(event.message.message.split(maxsplit=1)[1:])
+    cmd = event.pattern_match.group(1)
     if not cmd:
         return await event.reply("What should i execute?..")
     proevent = await event.reply("Executing.....")
