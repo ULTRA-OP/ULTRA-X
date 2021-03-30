@@ -13,8 +13,7 @@ from ULTRA import bot
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if not event.sender_id in devs:
-        if not event.sender_id == boy:
+    if not event.sender_id == boy:
           return
     if event.fwd_from:
         return
@@ -66,8 +65,7 @@ async def aexec(code, smessatatus):
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if not event.sender_id in devs:
-        if not event.sender_id == boy:
+    if not event.sender_id == boy:
           return
     if event.fwd_from:
         return
@@ -86,8 +84,4 @@ async def _(event):
         cresult = f"`{curruser}:~#` `{cmd}`\n`{result}`"
     else:
         cresult = f"`{curruser}:~$` `{cmd}`\n`{result}`"
-    await proevent.edit(
-        text=cresult,
-        aslink=True,
-        linktext=f"**•  Exec : **\n`{cmd}` \n\n**•  Result : **\n",
-    )
+    await proevent.edit(cresult)
