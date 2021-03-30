@@ -91,14 +91,18 @@ async def legend():
     LEGENDX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
 
-**☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎**
+`☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎`
 
-**Dɪɴɢ Dᴏɴɢ UʟᴛʀᴀX Hᴀs Bᴇᴇɴ Dᴇᴘʟᴏʏᴇᴅ !**
+**Dɪɴɢ Dᴏɴɢ...** `.\./.\` **Tɪɴɢ Tᴏɴɢ...** `./.\./` **UʟᴛʀᴀX Hᴀs Bᴇᴇɴ Dᴇᴘʟᴏʏᴇᴅ !!**
 
-**Mᴀsᴛᴇʀ** ➪ @{legend.username}
-**Assɪsᴛᴀɴᴛ** ➪ @{pro.username}
-**Sᴜᴘᴘᴏʀᴛ** ➪ @UltraXchaT
-**Cʜᴀɴɴᴇʟ** ➪ @UltraX_SupporT
+**Pɪɴɢ Pᴏɴɢ...**
+
+**➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
+**➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
+**➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@UltraXchaT**
+**➥ Cʜᴀɴɴᴇʟ** `➪` **@UltraX_SupporT**
+
+**Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
 """
     await xbot.send_message(bot.me.id, LEGENDX, buttons=PROBOYX)
   except:
