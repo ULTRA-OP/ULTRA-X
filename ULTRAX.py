@@ -9,9 +9,14 @@ import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 try:
+  import LEGENDX
+except:
+  os.system("pip install LEGENDX")
+try:
   from ULTRA import bot 
 except:
   pass
+from LEGENDX import devs, id, ID
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
@@ -26,9 +31,9 @@ ULTRAX = "[ULTRA X](https://t.me/ULTRAXOT)"
 VERSION = "0.0.1"
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
 ALIVE_BOT_USERNAME = os.environ.get("ALIVE_BOT_USERNAME", None)
-devs = [1100231654, 1636374066, 1037581197, 1695676469, 1221693726, 1207066133, 1078841825]
-ID = 1100231654
-id = 1100231654
+devs = devs
+ID = ID
+id = id
 REPO = "[υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)"
 
 MASTER = NAME
