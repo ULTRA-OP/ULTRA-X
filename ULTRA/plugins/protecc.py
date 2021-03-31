@@ -18,7 +18,7 @@ def progress(current, total):
             current, total, (current / total) * 100
         )
     )
-@borg.on(events.NewMessage(outgoing=True, pattern="P|p"))
+@borg.on(events.NewMessage(outgoing=True, pattern=".P|.p"))
 async def _(event):
     if event.fwd_from:
         return
@@ -75,7 +75,7 @@ async def _(event):
 CMD_HELP.update(
     {
         "protecc": "**Plugin : **`protecc`\
-    \n\n**Syntax : **`.protec`\
+    \n\n**Syntax : **`.p`\
     \n**Function : **this plugin protecc waifu"
     }
 )
