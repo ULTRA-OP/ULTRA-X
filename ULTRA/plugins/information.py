@@ -35,7 +35,7 @@ async def _(event):
         first_name = first_name.replace("\u2060", "")
     last_name = replied_user.user.last_name
     last_name = last_name.replace(
-        "\u2060", "") if last_name else ("Nᴏᴛ Fᴏᴜɴᴅ")
+        "\u2060", "") if last_name else ("`Nᴏᴛ Fᴏᴜɴᴅ`")
     user_bio = replied_user.about
     if user_bio is not None:
         user_bio = html.escape(replied_user.about)
@@ -43,7 +43,7 @@ async def _(event):
     try:
         dc_id, location = get_input_location(replied_user.profile_photo)
     except Exception as e:
-        dc_id = "`Need a Profile Picture to check **this**`"
+        dc_id = "`Nᴏ Pʀᴏғɪʟᴇ Pɪᴄ Fᴏᴜɴᴅ`"
         location = str(e)
     caption = """<b>Exᴛʀᴀᴄᴛᴇᴅ Usᴇʀ Iɴғᴏ Bʏ UʟᴛʀᴀX</b>\n
 <b>┏━━━━━━━━━━━━━━━━━━━━━</b>
