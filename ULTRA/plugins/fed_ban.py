@@ -13,7 +13,7 @@ PRO = NAME
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit(f"**υℓтяα χ вσт ѕυρєяƒвαη ιѕ яυηηιηg ση σя∂єя σƒ {PRO}**...")
+    await event.edit(f"**UʟᴛʀᴀX Sᴜᴘᴇʀғᴀʙɴ Cᴏᴍɪɴɢ Oɴ Oʀᴅᴇʀ Oғ {PRO}**...")
     fedList = []
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
