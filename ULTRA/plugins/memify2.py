@@ -6,7 +6,7 @@ created by: @A_Dark_Princ3
 from PIL import Image, ImageFont, ImageDraw
 
 import textwrap, os
-from ULTRA.utils import admin_cmd
+from userbot.utils import admin_cmd
 
 
 

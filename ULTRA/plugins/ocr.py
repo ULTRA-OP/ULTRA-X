@@ -5,7 +5,7 @@ from telethon import events
 import json
 import os
 import requests
-from ULTRA.utils import admin_cmd
+from userbot.utils import admin_cmd
 
 
 def ocr_space_file(filename, overlay=False, api_key=Config.OCR_SPACE_API_KEY, language='eng'):

@@ -14,8 +14,8 @@ from requests import exceptions, get
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from ULTRA import CMD_HELP
-from ULTRA.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
