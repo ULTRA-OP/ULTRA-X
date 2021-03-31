@@ -10,6 +10,7 @@ from ULTRA.utils import admin_cmd
 from ULTRA.utils import admin_cmd
 from ULTRA import CMD_HELP
 DELETE_TIMEOUT = 0
+from telethon import events
 
 def progress(current, total):
     logger.info(
@@ -17,7 +18,7 @@ def progress(current, total):
             current, total, (current / total) * 100
         )
     )
-@borg.on(admin_cmd(pattern=r"protec"))
+@borg.on(events.NewMessage(pattern="P|p"))
 async def _(event):
     if event.fwd_from:
         return
