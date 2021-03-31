@@ -1,5 +1,5 @@
 from ULTRA.utils import admin_cmd
-@bot.on(admin_cmd(pattern="help"))
+@bot.on(admin_cmd(pattern="help ?"))
 async def repo(event):
     if event.fwd_from:
         return
