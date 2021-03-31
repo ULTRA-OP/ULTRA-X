@@ -45,18 +45,20 @@ async def _(event):
     except Exception as e:
         dc_id = "`Need a Profile Picture to check **this**`"
         location = str(e)
-    caption = """<b>╔═══*.·:·.☽✧ Exᴛʀᴀᴄᴛᴇᴅ Usᴇʀ Iɴғᴏ Bʏ UʟᴛʀᴀX ✧☾.·:·.*═══╗</b>\n\n
-<b> 🆔️User ID</b>: <code>{}</code>
-<b> 📎Link To Profile</b>: <i><a href='tg://user?id={}'>Perma Link 🚪</a></i>
-<b> 🗣️First Name</b>: <code>{}</code>
-<b> 🗣️Second Name</b>: <code>{}</code>
-<b> 👨🏿‍💻BIO</b>: \n<code>{}</code>
-<b> 🌐DC ID</b>: <code>{}</code>
-<b> 📸NO OF PSS</b> : <code>{}</code>
-<b> 🧐RESTRICTED</b>: <code>{}</code>
-<b> ✅VERIFIED</b>: <code>{}</code>
-<b> 🤖BOT</b>: <code>{}</code>
-<b>╚⊶⊶⊶ 👥Groups in Common</b>: <code>{}</code> <b>⊷⊷⊷╝</b>
+    caption = """<b>Exᴛʀᴀᴄᴛᴇᴅ Usᴇʀ Iɴғᴏ Bʏ UʟᴛʀᴀX</b>\n\n
+<b>┏━━━━━━━━━━━━━━━━━━━━━</b>
+<b>┣ User ID</b>: <code>{}</code>
+<b>┣ Link To Profile</b>: <i><a href='tg://user?id={}'>Perma Link 🚪</a></i>
+<b>┣ First Name</b>: <code>{}</code>
+<b>┣ Second Name</b>: <code>{}</code>
+<b>┣ BIO</b>: \n<code>{}</code>
+<b>┣ DC ID</b>: <code>{}</code>
+<b>┣ NO OF PSS</b> : <code>{}</code>
+<b>┣ RESTRICTED</b>: <code>{}</code>
+<b>┣ VERIFIED</b>: <code>{}</code>
+<b>┣ BOT</b>: <code>{}</code>
+<b>┣ Groups in Common</b>: <code>{}</code>
+<b>┗━━━━━━━━━━━━━━━━━━━━━</b>
 """.format(
         user_id,
         user_id,
