@@ -137,14 +137,14 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         )
         try:
             if event.query.user_id == bot.uid or event.query.user_id == id:
-                dc = [custom.Button.inline( " 🄱🄰🄲🄺 ",data="back({})".format(shivam)),custom.Button.inline(" 🄲🄻🄾🅂🄴 ", data="close"),custom.Button.inline(" 🅄🄽🄻🄾🄰🄳 ",data="unload({})".format(shivam_sh1vam))]
+                dc = [custom.Button.inline( " ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐔𝐧𝐥𝐨𝐚𝐝 ✪ ⁂ ",data="unload({})".format(shivam_sh1vam))]
                 await event.edit(reply_pop_up_alert, buttons=dc)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#hehe
         except: 
             if event.query.user_id == bot.uid or event.query.user_id == id:
-                sh1vam = [custom.Button.inline("◤✞ 🄶🄾 🄱🄰🄲🄺 ✞◥",data="back({})".format(shivam)),custom.Button.inline("◤✞ 🄲🄻🄾🅂🄴 ✞◥", data="close")]
+                sh1vam = [custom.Button.inline("◤✞ ⁂ 𝐁𝐚𝐜𝐤 ⁂ ✞◥",data="back({})".format(shivam)),custom.Button.inline("◤✞ ⁂ 𝐂𝐥𝐨𝐬𝐞 ⁂ ✞◥", data="close")]
                 halps = "Do .help {} to get the list of commands.".format(plugin_name)
                 await event.edit(halps,buttons=sh1vam)
             else:
@@ -158,7 +158,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 #  🇦 🇷 🇪      🇧 🇸 🇩 🇰      🇮 🇸 🇸 🇪    🇰 🇦 🇳 🇬  🇲 🇦 🇹   🇰 🇷    🇷 🇪   🇲 🇨 
                     
                     try:
-                        fcix = [custom.Button.inline(" 🄱🄰🄲🄺 ",data="back({})".format(shivam)),custom.Button.inline(" 🄲🄻🄾🅂🄴 ", data="close"),custom.Button.inline(" 🅄🄽🄻🄾🄰🄳 ",data="unload({})".format(shivam_sh1vam))]
+                        fcix = [custom.Button.inline(" ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐔𝐧𝐥𝐨𝐚𝐝 ✪ ⁂ ",data="unload({})".format(shivam_sh1vam))]
                         load_module(event.data_match.group(1).decode("UTF-8"))
 # kyu sir kang krne m musil aa rhi h kya ... Bolo help kr du kya 😂😂😂
                         await event.edit( "`Yᴏᴜʀ UʟᴛʀᴀX ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ` >>>" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
@@ -166,7 +166,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                         await event.edit("Error{}".format(shortname, str(e))+ "UʟᴛʀᴀX ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
               else:
                     shortname = event.data_match.group(1).decode("UTF-8")
-                    fcix = [custom.Button.inline(" 🄱🄰🄲🄺 ",data="back({})".format(shivam)),custom.Button.inline(" 🄲🄻🄾🅂🄴 ", data="close"),custom.Button.inline(" 🅄🄽🄻🄾🄰🄳 ",data="unload({})".format(shivam_sh1vam))]
+                    fcix = [custom.Button.inline(" ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐔𝐧𝐥𝐨𝐚𝐝 ✪ ⁂ ",data="unload({})".format(shivam_sh1vam))]
                     reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                     await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"unload\((.+?)\)")))
@@ -176,17 +176,18 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     
                     
                     try:
-                        fcix = [custom.Button.inline(" 🄱🄰🄲🄺 ",data="back({})".format(shivam)),custom.Button.inline(" 🄲🄻🄾🅂🄴 ", data="close"),custom.Button.inline(" 🅄🄽🄻🄾🄰🄳 ",data="load({})".format(shivam_sh1vam))]
+                        fcix = [custom.Button.inline(" ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐔𝐧𝐥𝐨𝐚𝐝 ✪ ⁂ ",data="load({})".format(shivam_sh1vam))]
                         remove_plugin(event.data_match.group(1).decode("UTF-8"))
 #kyu sir kang krne m muskil ho rhi h kya bologe toh help krdu 😂😂
-                        await event.edit( "`Your LEGEND BOT Has Successfully unloaded` >>>" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
+                        await event.edit( "`Yᴏᴜʀ UʟᴛʀᴀX ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴʟᴏᴀᴅᴇᴅ` >>>" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
                     except Exception as e:
-                        await event.edit("Error{}".format(shortname, str(e)) +"LEGENDBOT Has Successfully unloaded"+ str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
+                        await event.edit("Error{}".format(shortname, str(e)) +"UʟᴛʀᴀX ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴʟᴏᴀᴅᴇᴅ"+ str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
               else:
                     shortname = event.data_match.group(1).decode("UTF-8")
-                    fcix = [custom.Button.inline("  𝕭𝖆𝖈𝖐 ",data="back({})".format(shivam)),custom.Button.inline(" 𝕮𝖑𝖔𝖘𝖊 ", data="close"),custom.Button.inline(" 𝕷𝖔𝖆𝖉 ",data="load({})".format(shivam_sh1vam))]
+                    fcix = [custom.Button.inline(" ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐋𝐨𝐚𝐝 ✪ ⁂ ",data="load({})".format(shivam_sh1vam))]
                     reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-                    await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#hehehe
+                    await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+#hehehe
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back\((.+?)\)")))
    
     async def on_plug_in_callback_query_handler(event):
@@ -195,10 +196,10 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 try:
                     current_page_number = int(event.data_match.group(1).decode("UTF-8"))
                     buttons = paginate_help(current_page_number-2, CMD_HELP, "helpme")
-                    await event.edit("`>>> Hᴇʀᴇ ɪs ᴛʜᴇ ᴍᴀɪɴ ᴍᴇɴᴜ ᴏғ \n\n© υℓтяα χ υѕєявσт`", buttons=buttons)
+                    await event.edit("`>>> Hᴇʀᴇ ɪs ᴛʜᴇ Mᴀɪɴ Mᴇɴᴜ ᴏғ \n\n© υℓтяα χ υѕєявσт`", buttons=buttons)
                 except:
                     buttons = paginate_help(0, CMD_HELP, "helpme")
-                    await event.edit("`>>> Hᴇʀᴇ ɪs ᴛʜᴇ ᴍᴀɪɴ ᴍᴇɴᴜ ᴏғ \n\n© υℓтяα χ υѕєявσт`", buttons=buttons)
+                    await event.edit("`>>> Hᴇʀᴇ ɪs ᴛʜᴇ Mᴀɪɴ Mᴇɴᴜ ᴏғ \n\n© υℓтяα χ υѕєявσт`", buttons=buttons)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
@@ -226,9 +227,9 @@ def paginate_help(page_number, loaded_plugins, prefix):
     if len(pairs) > number_of_rows:
         pairs = pairs[modulo_page * number_of_rows:number_of_rows * (modulo_page + 1)] + \
             [
-            (custom.Button.inline("◃:✮🅟🅡🅔🅥.❃", data="{}_prev({})".format(prefix, modulo_page)),
-             custom.Button.inline("⋇⋆🅒🅛🅞🅢🅔⋆⋇", data="close"),
-             custom.Button.inline("❃.🅝🅔🅧🅣✮:▹", data="{}_next({})".format(prefix, modulo_page)))
+            (custom.Button.inline("◃:✮✪ 𝐏𝐫𝐞𝐯𝐢𝐨𝐮𝐬 ✪.❃", data="{}_prev({})".format(prefix, modulo_page)),
+             custom.Button.inline("⋇⋆✪ 𝐂𝐥𝐨𝐬𝐞 ✪⋆⋇", data="close"),
+             custom.Button.inline("❃.✪ 𝐍𝐞𝐱𝐭 ✪✮:▹", data="{}_next({})".format(prefix, modulo_page)))
         ]
     return pairs
 
