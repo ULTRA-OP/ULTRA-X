@@ -11,7 +11,7 @@ from random import randint
 from time import sleep
 
 
-from userbot.events import register
+from ULTRA.events import register
 
 
 @register(outgoing=True, pattern="^.random")

@@ -10,8 +10,8 @@ import requests
 from datetime import datetime
 from pytz import country_timezones as c_tz, timezone as tz, country_names as c_n
 
-from userbot import OPEN_WEATHER_MAP_APPID as OWM_API, CMD_HELP
-from userbot.events import register, errors_handler
+from ULTRA import OPEN_WEATHER_MAP_APPID as OWM_API, CMD_HELP
+from ULTRA.events import register, errors_handler
 
 # ===== CONSTANT =====
 DEFCITY = 'Ahmedabad'

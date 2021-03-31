@@ -11,7 +11,7 @@ import asyncio
 import random
 import re
 import time
-from userbot import ALIVE_NAME
+from ULTRA import ALIVE_NAME
 
 from collections import deque
 
@@ -21,9 +21,9 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
 from cowpy import cow
-from userbot import bot
-from userbot import CMD_HELP,YOUTUBE_API_KEY
-from userbot.utils import register,admin_cmd
+from ULTRA import bot
+from ULTRA import CMD_HELP,YOUTUBE_API_KEY
+from ULTRA.utils import register,admin_cmd
 
 # ================= CONSTANT =================
 RENDISTR = [

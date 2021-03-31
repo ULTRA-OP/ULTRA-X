@@ -11,7 +11,7 @@ By:- git: jaskaranSM tg: @Zero_cool7870
 
 
 
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 from random import choice
 from urllib import parse
 from os import remove

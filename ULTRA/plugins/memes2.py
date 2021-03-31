@@ -9,7 +9,7 @@ from telethon import events
 import requests
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 # ================= CONSTANT =================
