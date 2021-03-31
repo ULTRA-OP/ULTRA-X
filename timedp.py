@@ -5,7 +5,7 @@ from pySmartDL import SmartDL
 from telethon.tl import functions
 import asyncio
 import shutil
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 FONT_FILE_TO_USE = "Fonts/digital.ttf"

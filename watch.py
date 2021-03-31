@@ -8,7 +8,7 @@
 
 from telethon import events
 import requests
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 from justwatch import JustWatch
 
 def get_stream_data(query):

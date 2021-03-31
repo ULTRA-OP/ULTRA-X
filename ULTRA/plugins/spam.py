@@ -5,10 +5,10 @@
 
 import asyncio
 from asyncio import wait
-from userbot import CMD_HELP
+from ULTRA import CMD_HELP
 
 
-from userbot.events import register
+from ULTRA.events import register
 
 @register(outgoing=True, pattern="^.tspam")
 async def tmeme(e):

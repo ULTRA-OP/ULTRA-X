@@ -10,7 +10,7 @@ import zipfile
 
 from telethon import events
 from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
-from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
+from ULTRA.utils import admin_cmd, humanbytes, progress, time_formatter
 import time
 from datetime import datetime
 from pySmartDL import SmartDL

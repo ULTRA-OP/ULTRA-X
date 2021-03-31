@@ -8,7 +8,7 @@ import traceback
 from datetime import datetime
 from selenium import webdriver
 from telethon import events
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="screenshot (.*)"))

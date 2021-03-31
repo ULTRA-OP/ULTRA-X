@@ -9,9 +9,9 @@
 import requests , re
 from PIL import Image
 from validators.url import url
-from userbot import CMD_HELP
-from userbot.helpers.functions import trumptweet, changemymind, kannagen, moditweet, miatweet, papputweet, sunnytweet, sinstweet, taklatweet, deEmojify, tweets
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from ULTRA import CMD_HELP
+from ULTRA.helpers.functions import trumptweet, changemymind, kannagen, moditweet, miatweet, papputweet, sunnytweet, sinstweet, taklatweet, deEmojify, tweets
+from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 @bot.on(admin_cmd(pattern=r"tweet(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="tweet(?: |$)(.*)", allow_sudo=True))

@@ -21,7 +21,7 @@ import io
 import os
 import requests
 from telethon import events
-from userbot.utils import progress, admin_cmd
+from ULTRA.utils import progress, admin_cmd
 
 
 @borg.on(admin_cmd("rmbg ?(.*)"))

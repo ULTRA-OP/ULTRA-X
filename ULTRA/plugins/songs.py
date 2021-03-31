@@ -6,7 +6,7 @@
 
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 import asyncio
 
  
@@ -83,8 +83,8 @@ from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from validators.url import url
 from html import unescape
 from urllib.error import HTTPError
-from userbot.utils import admin_cmd, edit_or_reply, progress, humanbytes, time_formatter
-from userbot import CMD_HELP
+from ULTRA.utils import admin_cmd, edit_or_reply, progress, humanbytes, time_formatter
+from ULTRA import CMD_HELP
 import bs4
 from bs4 import BeautifulSoup
 from youtube_dl import YoutubeDL
@@ -348,8 +348,8 @@ async def download_video(v_url):
 
 from telethon import events
 import asyncio
-from userbot.events import register 
-from userbot import bot, CMD_HELP
+from ULTRA.events import register 
+from ULTRA import bot, CMD_HELP
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 import os
@@ -400,9 +400,9 @@ async def getmusic(so):
 
 from telethon import events
 import asyncio
-#from userbot.utils import admin_cmd
-from userbot.events import register 
-from userbot import bot, CMD_HELP
+#from ULTRA.utils import admin_cmd
+from ULTRA.events import register 
+from ULTRA import bot, CMD_HELP
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 import os
 try:
@@ -456,7 +456,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 @borg.on(admin_cmd("sdd ?(.*)"))
 async def _(event):

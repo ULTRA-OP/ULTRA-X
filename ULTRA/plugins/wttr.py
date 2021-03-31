@@ -14,7 +14,7 @@ import time
 
 from datetime import tzinfo, datetime
 
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 

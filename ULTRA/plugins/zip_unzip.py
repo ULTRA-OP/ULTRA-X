@@ -11,7 +11,7 @@ import subprocess
 from pySmartDL import SmartDL
 from telethon import events
 from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
-from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
+from ULTRA.utils import admin_cmd, humanbytes, progress, time_formatter
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from telethon import events

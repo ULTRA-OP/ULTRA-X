@@ -15,8 +15,8 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeVideo
 
-from userbot import LOGS, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
-from userbot.events import register
+from ULTRA import LOGS, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
+from ULTRA.events import register
 
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):

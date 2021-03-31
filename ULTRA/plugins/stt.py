@@ -4,7 +4,7 @@ from telethon import events
 import requests
 import os
 from datetime import datetime
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="stt (.*)"))

@@ -6,7 +6,7 @@ import aiohttp
 import io
 import time
 from datetime import tzinfo, datetime
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="weathers (.*)"))

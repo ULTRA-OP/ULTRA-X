@@ -2,7 +2,7 @@
 Syntax: .schd <time_in_seconds> ;=; <message to send>"""
 from telethon import events
 import asyncio
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 @borg.on(admin_cmd("schd ?(.*)"))

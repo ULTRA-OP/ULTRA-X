@@ -8,7 +8,7 @@ import os
 import subprocess
 from datetime import datetime
 from gtts import gTTS
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 @borg.on(admin_cmd("tts (.*)"))

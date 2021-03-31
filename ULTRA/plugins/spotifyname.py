@@ -11,7 +11,7 @@ from json import loads
 from json.decoder import JSONDecodeError
 from os import environ
 from sys import setrecursionlimit
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 from requests import get
 from telethon import events
 from telethon.tl import functions, types
@@ -19,7 +19,7 @@ from telethon.tl.functions.account import UpdateProfileRequest
 
 
 import spotify_token as st
-from userbot.uniborgConfig import Config
+from ULTRA.uniborgConfig import Config
 
 # =================== CONSTANT ===================
 SPO_BIO_ENABLED = "```Spotify Current Music to Name enabled.```"

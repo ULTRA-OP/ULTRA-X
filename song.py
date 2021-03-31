@@ -67,7 +67,7 @@ import json
 
 from math import ceil
 
-from userbot.uniborgConfig import Config
+from ULTRA.uniborgConfig import Config
 
 
 
@@ -75,7 +75,7 @@ from telethon import Button, custom, events, functions
 
 
 
-from userbot import ALIVE_NAME, CMD_HELP, CMD_LIST, bot
+from ULTRA import ALIVE_NAME, CMD_HELP, CMD_LIST, bot
 
 
 
@@ -101,7 +101,7 @@ from pathlib import Path
 
 
 
-from userbot.utils import load_module, remove_plugin,admin_cmd as lightning_cmd
+from ULTRA.utils import load_module, remove_plugin,admin_cmd as lightning_cmd
 
 
 
@@ -195,7 +195,7 @@ else:
 
 
 
-from userbot import CMD_HELP
+from ULTRA import CMD_HELP
 
 @tgbot.on(events.InlineQuery)
 

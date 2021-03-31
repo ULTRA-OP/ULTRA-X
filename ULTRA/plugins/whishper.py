@@ -1,6 +1,6 @@
 #Made by@LEGENDX22 for @LEGEND_USERBOT_SUPPORT
 
-from userbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from ULTRA.utils import admin_cmd, sudo_cmd, edit_or_reply
 from var import Var
 
 

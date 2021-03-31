@@ -13,7 +13,7 @@ import aria2p
 from telethon import events
 import asyncio
 import os
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 cmd = "aria2c --enable-rpc --rpc-listen-all=false --rpc-listen-port 6800  --max-connection-per-server=10 --rpc-max-request-size=1024M --seed-time=0.01 --min-split-size=10M --follow-torrent=mem --split=10 --daemon=true --allow-overwrite=true"

@@ -7,7 +7,7 @@ By:-@Zero_cool7870
 """
 from bs4 import BeautifulSoup as bs 
 import requests
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 import asyncio
 import json
 from bs4 import BeautifulSoup 

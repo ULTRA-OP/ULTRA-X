@@ -3,7 +3,7 @@
 .kickme
 """
 from telethon.tl.functions.channels import LeaveChannelRequest
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 import time
 
 @borg.on(admin_cmd("kickme", outgoing=True))
