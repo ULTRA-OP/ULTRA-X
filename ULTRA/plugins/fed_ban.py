@@ -91,7 +91,7 @@ async def _(event):
                     else:
                         return
                 if len(fedList) == 0:
-                    await event.edit(f"Wᴇɪᴛ Mᴀsᴛᴇʀ I Aᴍ Cʜᴇᴄᴋɪɴɢ Aʟʟ Fᴇᴅs Oғ **{PRO}** Pʟᴇᴀsᴇ Gɪᴠᴇ Mᴇ Sᴏᴍᴇ Tɪᴍᴇ **({a+1}/3)**...")
+                    await event.edit(f"Wᴇɪᴛ Mᴀsᴛᴇʀ I Aᴍ Cʜᴇᴄᴋɪɴɢ Aʟʟ Fᴇᴅs Oғ **{PRO}**\nPʟᴇᴀsᴇ Gɪᴠᴇ Mᴇ Sᴏᴍᴇ Tɪᴍᴇ **({a+1}/3)**...")
                 else:
                     break
         else:
@@ -115,7 +115,7 @@ async def _(event):
         if len(fedList) == 0:
             await event.edit("Something went wrong.")
             return
-    await event.edit(f"UʟᴛʀᴀX Fʙᴀɴɴɪɴɢ Tʜɪs Kɪᴅ Iɴ `{len(fedList)}` Oɴ Tʜᴇ Oʀᴅᴇʀ Oғ `{PRO}` 🔥.")
+    await event.edit(f"UʟᴛʀᴀX Fʙᴀɴɴɪɴɢ Tʜɪs Kɪᴅ Iɴ **{len(fedList)}** Oɴ Tʜᴇ Oʀᴅᴇʀ Oғ **{PRO}** 🔥.")
     try:
         await bot.send_message(chat, f"/start")
     except BaseException:
@@ -137,7 +137,7 @@ async def _(event):
         await bot.send_message(chat, f"/fban {FBAN} {REASON}")
         await asyncio.sleep(2)
     await event.edit(
-        f"Sᴜᴘᴇʀғʙᴀɴ Cᴏᴍᴘʟᴇᴛᴇᴅ, Aғғᴇᴄᴛᴇᴅ `{len(fedList) - exCount}` Fᴇᴅs.\n#UltraX Userbot"
+        f"Sᴜᴘᴇʀғʙᴀɴ Cᴏᴍᴘʟᴇᴛᴇᴅ, Aғғᴇᴄᴛᴇᴅ Iɴ **{len(fedList) - exCount}** Fᴇᴅs.\n\n#UltraX Userbot"
     )
 
 
