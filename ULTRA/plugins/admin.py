@@ -232,7 +232,7 @@ async def ban(bon):
         return
 
     # Announce that we're going to whack the pest
-    await bon.edit("`BANNING THIS MADARCHOD`")
+    await bon.edit(f"`{MASTER} Bᴀɴɴɪɴɢ Tʜɪs Rᴜᴅᴇ Gᴜʏ`")
 
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id,
