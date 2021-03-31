@@ -78,7 +78,7 @@ async def cmd_list(event):
 
             if input_str in CMD_LIST:
 
-                string = "Command Found In {}:\n".format(input_str)
+                string = "Cᴏᴍᴍᴀɴᴅ ғᴏᴜɴᴅ ɪɴ {}:\n".format(input_str)
 
                 for i in CMD_LIST[input_str]:
 
@@ -90,13 +90,13 @@ async def cmd_list(event):
 
             else:
 
-                await event.edit(input_str + " is not a valid plugin!")
+                await event.edit(input_str + " ɪs ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ Pʟᴜɢɪɴ")
 
         else:
 
-            help_string = f""" υℓтяα χ вσт Helper Provided By тєαм υℓтяα χ\n
+            help_string = f""" υℓтяα χ вσт Hᴇʟᴘ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ тєαм υℓтяα χ\n
 
-Dσ .help Plugin_Name For Commands, If In Case Popup Dosent Appears."""
+Dᴏ `.help` PLUGIN_NAME ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs, ɪғ ɪɴ ᴄᴀsᴇ Pᴏᴘ-Uᴘ ᴅᴏᴇsɴ'ᴛ ᴀᴘᴘᴇᴀʀ."""
 
             results = await bot.inline_query(  # pylint:disable=E0602
 
@@ -172,23 +172,23 @@ async def _(event):
 
         help_string = CMD_LIST[plugin_name].doc
 
-        unload_string = f"Use .unload {plugin_name} to remove this plugin.\n           Â© υℓтяα χ"
+        unload_string = f"Usᴇ `.unload` {plugin_name} ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜɪs Pʟᴜɢɪɴ.\n           Â© υℓтяα χ"
 
         
 
         if help_string:
 
-            plugin_syntax = f"Syntax for plugin {plugin_name}:\n\n{help_string}\n{unload_string}"
+            plugin_syntax = f"Sʏɴᴛᴀx ғᴏʀ ᴘʟᴜɢɪɴ {plugin_name}:\n\n{help_string}\n{unload_string}"
 
         else:
 
-            plugin_syntax = f"No DOCSTRING has been setup for {plugin_name} plugin."
+            plugin_syntax = f"Nᴏ DOCSTRING ʜᴀs ʙᴇᴇɴ sᴇᴛᴜᴘ ғᴏʀ {plugin_name} Pʟᴜɢɪɴ."
 
     else:
 
 
 
-        plugin_syntax = "Enter valid Plugin name.\nDo .plinfo or .help to get list of valid plugin names."
+        plugin_syntax = "Eɴᴛᴇʀ ᴠᴀʟɪᴅ Pʟᴜɢɪɴ ɴᴀᴍᴇ.\nDᴏ `.plinfo` ᴏʀ `.help` ᴛᴏ ɢᴇᴛ ʟɪsᴛ ᴏғ ᴠᴀʟɪᴅ Pʟᴜɢɪɴ ɴᴀᴍᴇs."
 
 
 
