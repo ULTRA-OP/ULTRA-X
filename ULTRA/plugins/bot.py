@@ -78,7 +78,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
 from ULTRA import bot 
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="ultrax"))
+@bot.on(admin_cmd(outgoing=True, pattern="alive"))
 async def repo(event):
     if event.fwd_from:
         return
@@ -89,9 +89,9 @@ async def repo(event):
     await response[0].click(event.chat_id)
     await event.delete()
 from ULTRA.utils import admin_cmd
-@bot.on(admin_cmd(pattern="help"))
+@bot.on(events.NewMessage(pattern=None))
 async def repo(event):
-    if event.fwd_from:
+    if not event.text.startswith(".help"):
         return
     LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
     if event.reply_to_msg_id:
@@ -110,51 +110,3 @@ async def repo(event):
     await response[0].click(event.chat_id)
     await event.delete()
 
-# normal alive, bhk bsdk isko bhi kang krega, mdc
-# madboy482 😜😁
-
-op_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➥ **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** : 1.19.5\n➥ **Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** : UʟᴛʀᴀX Sᴜᴘᴘᴏʀᴛ\n➥ **Lɪᴄᴇɴꜱᴇ** : UʟᴛʀᴀX\n➥ **Cᴏᴘʏʀɪɢʜᴛ ʙʏ** : UʟᴛʀᴀX Usᴇʀʙᴏᴛ\n\n➥ **Mʏ ᴍᴀsᴛᴇʀ** : {DEFAULTUSER}\n")
-TG_BOT_USER_NAME_BF_HER = os.environ.get("ALIVE_PHOTTO", None)
-if TG_BOT_USER_NAME_BF_HER is not None:
-    @tgbot.on(events.InlineQuery)
-    async def inline_handler(event):
-        builder = event.builder
-        result = None
-        query = event.text
-        me = await bot.get_me()
-        x = await xbot.get_me()
-        if query.startswith("alive") and event.query.user_id == me.id:
-            buttons = [
-                [
-                    Button.url("Rᴇᴘᴏ", "https://github.com/ULTRA-OP/ULTRA-X"),
-                    Button.url("Dᴇᴘʟᴏʏ", "https://heroku.com/deploy?template=https://github.com/ULTRA-OP/ULTRA-X/blob/master")],
-                    [Button.url("Sᴛʀɪɴɢ", "https://repl.it/ULTRA-OP/ULTRA-X#main.py")],
-            ]
-        elif ALIVE_PHOTTO:
-                result = builder.document(
-                    ALIVE_PHOTTO,
-                    title="υℓтяα χ",
-                    text=op_text,
-                    buttons=buttons,
-                    link_preview=False,
-                )
-        else:
-                result = builder.article(
-                    title="υℓтяα χ",
-                    text=op_text,
-                    buttons=buttons,
-                    link_preview=False,
-                )
-        await event.answer([result] if result else None)
-from telethon import events
-from ULTRAX import bot
-@bot.on(events.NewMessage(outgoing=True, pattern="alive"))
-async def repo(event):
-    if event.fwd_from:
-        return
-    ULTRAX = Var.TG_BOT_USER_NAME_BF_HER
-    if event.reply_to_msg_id:
-        await event.get_reply_message()
-    response = await bot.inline_query(ULTRAX, "alive")
-    await response[0].click(event.chat_id)
-    await event.delete()
