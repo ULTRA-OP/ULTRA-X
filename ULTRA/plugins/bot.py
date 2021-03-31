@@ -113,30 +113,6 @@ async def repo(event):
 # normal alive, bhk bsdk isko bhi kang krega, mdc
 # madboy482 😜😁
 
-import asyncio
-import os
-from ULTRAX import BOT, PHOTO, VERSION, ALIVE_USERNAME, ALIVE_BOT_USERNAME
-import requests
-import time
-from PIL import Image
-from io import BytesIO
-from datetime import datetime
-import random
-from telethon import events, Button, custom
-from ULTRA.utils import admin_cmd
-from ULTRA import ALIVE_NAME
-from ULTRA import bot as ultra
-from telethon import Button, custom
-from telethon.tl.types import ChannelParticipantsAdmins
-global ok
-ok = ultra.uid
-from ULTRA.utils import admin_cmd
-from PIL import Image
-import requests
-from io import BytesIO
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
-ALIVE_PHOTTO = PHOTO   
-
 op_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➥ **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** : 1.19.5\n➥ **Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ** : UʟᴛʀᴀX Sᴜᴘᴘᴏʀᴛ\n➥ **Lɪᴄᴇɴꜱᴇ** : UʟᴛʀᴀX\n➥ **Cᴏᴘʏʀɪɢʜᴛ ʙʏ** : UʟᴛʀᴀX Usᴇʀʙᴏᴛ\n\n➥ **Mʏ ᴍᴀsᴛᴇʀ** : {DEFAULTUSER}\n")
 TG_BOT_USER_NAME_BF_HER = os.environ.get("ALIVE_PHOTTO", None)
 if TG_BOT_USER_NAME_BF_HER is not None:
