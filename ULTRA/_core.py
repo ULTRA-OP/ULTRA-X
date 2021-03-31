@@ -9,7 +9,7 @@ from ULTRA.utils import admin_cmd, load_module, remove_plugin, sudo_cmd
 from ULTRA.utils import edit_or_reply as eor
 
 DELETE_TIMEOUT = 3
-thumb_image_path = "./Resources/IMG_20201211_144821_071.jpg"
+thumb_image_path = "./Resources/UltraX.jpg"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOT"
 
 
