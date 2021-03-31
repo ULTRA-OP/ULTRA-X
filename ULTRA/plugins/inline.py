@@ -8,14 +8,14 @@ from telethon import events, errors, custom, functions
 @tgbot.on(events.InlineQuery(pattern=r"restart"))
 async def inline_id_handler(event: events.InlineQuery.Event):
  LEGEND = event.builder
- X = [[custom.Button.inline("🔥 RESTART 🔥",data="restart")]]
- query = event.text
- result = LEGEND.article("LEGEND",text="REPO AND SUPPORT",buttons=X,link_preview=False)
- await event.answer([result])
+ X = [[custom.Button.inline("🔥 RESTART 🔥",data="restart")]] #RESTART
+ query = event.text #PROBOYX 
+ result = LEGEND.article("LEGEND",text="RESTARTER",buttons=X,link_preview=False)
+ await event.answer([result]) #LEGENDX
 
 from telethon import Button, custom, events
 import os, re, sys, asyncio
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart')))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart'))) # PROBOYX
 async def restart(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
     await event.edit("Ya wait....Your Bot is being restarted...\nPlease Wait...")
@@ -24,7 +24,7 @@ async def restart(event):
     await asyncio.sleep(2)
     await event.edit("Yay!! Restarted your bot succesfully..\n✅✅")
     os.execl(sys.executable, sys.executable, *sys.argv)
-    quit ()
+    quit ()#OP
   else:
     pro = "ρℓєαѕє ∂єρℓσу уσυ σωη υℓтяα χ υѕєявσт"
     await event.answer(pro, alert=True)
