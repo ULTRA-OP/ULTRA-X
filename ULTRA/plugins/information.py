@@ -35,7 +35,7 @@ async def _(event):
         first_name = first_name.replace("\u2060", "")
     last_name = replied_user.user.last_name
     last_name = last_name.replace(
-        "\u2060", "") if last_name else ("Last Name not found")
+        "\u2060", "") if last_name else ("Nᴏᴛ Fᴏᴜɴᴅ")
     user_bio = replied_user.about
     if user_bio is not None:
         user_bio = html.escape(replied_user.about)
@@ -47,17 +47,17 @@ async def _(event):
         location = str(e)
     caption = """<b>Exᴛʀᴀᴄᴛᴇᴅ Usᴇʀ Iɴғᴏ Bʏ UʟᴛʀᴀX</b>\n
 <b>┏━━━━━━━━━━━━━━━━━━━━━</b>
-<b>┣ User ID</b>: <code>{}</code>
-<b>┣ Link To Profile</b>: <i><a href='tg://user?id={}'>Perma Link 🚪</a></i>
-<b>┣ First Name</b>: <code>{}</code>
-<b>┣ Second Name</b>: <code>{}</code>
-<b>┣ BIO</b>: \n<code>{}</code>
-<b>┣ DC ID</b>: <code>{}</code>
-<b>┣ NO OF PSS</b> : <code>{}</code>
-<b>┣ RESTRICTED</b>: <code>{}</code>
-<b>┣ VERIFIED</b>: <code>{}</code>
-<b>┣ BOT</b>: <code>{}</code>
-<b>┣ Groups in Common</b>: <code>{}</code>
+<b>┣ Usᴇʀ Iᴅ</b>: <code>{}</code>
+<b>┣ Lɪɴᴋ Tᴏ Pʀᴏғɪʟᴇ</b>: <i><a href='tg://user?id={}'>Perma Link 🚪</a></i>
+<b>┣ Fɪʀsᴛ Nᴀᴍᴇ</b>: <code>{}</code>
+<b>┣ Sᴇᴄᴏɴᴅ Nᴀᴍᴇ</b>: <code>{}</code>
+<b>┣ Bɪᴏ</b>: <code>{}</code>
+<b>┣ Dᴄ Iᴅ</b>: <code>{}</code>
+<b>┣ Nᴏ Oғ Pғᴘ</b> : <code>{}</code>
+<b>┣ Rᴇsᴛʀɪᴄᴛᴇᴅ</b>: <code>{}</code>
+<b>┣ Vᴇʀɪғɪᴇᴅ</b>: <code>{}</code>
+<b>┣ Bᴏᴛ</b>: <code>{}</code>
+<b>┣ Gʀᴏᴜᴘs Iɴ Cᴏᴍᴍᴀɴ</b>: <code>{}</code>
 <b>┗━━━━━━━━━━━━━━━━━━━━━</b>
 """.format(
         user_id,
