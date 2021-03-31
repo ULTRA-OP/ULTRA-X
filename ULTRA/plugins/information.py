@@ -45,7 +45,7 @@ async def _(event):
     except Exception as e:
         dc_id = "`Need a Profile Picture to check **this**`"
         location = str(e)
-    caption = """<b>╔═══*.·:·.☽✧ Extracted User info From Telegram By ULTRA-X ✧☾.·:·.*═══╗</b>
+    caption = """<b>╔═══*.·:·.☽✧ Extracted User info From DUROV's DatabBase By ULTRA-X ✧☾.·:·.*═══╗</b>\n\n
 <b>➥ 🆔️User ID</b>: <code>{}</code>
 <b>➥ 📎Link To Profile</b>: <i><a href='tg://user?id={}'>Perma Link 🚪</a></i>
 <b>➥ 🗣️First Name</b>: <code>{}</code>
@@ -56,7 +56,7 @@ async def _(event):
 <b>➥ 🧐RESTRICTED</b>: <code>{}</code>
 <b>➥ ✅VERIFIED</b>: <code>{}</code>
 <b>➥ 🤖BOT</b>: <code>{}</code>
-<b>╚⊶⊶⊶⊶⊶ 👥Groups in Common ⊷⊷⊷⊷⊷╝</b>: {}
+<b>╚⊶⊶⊶⊶⊶ 👥Groups in Common</b>: <code>{}</code> <b>⊷⊷⊷⊷⊷╝</b>
 """.format(
         user_id,
         user_id,
