@@ -1,4 +1,17 @@
-
+# (c) Shrimadhav U K
+#
+# This file is part of @UniBorg
+#
+# @UniBorg is free software; you cannot redistribute it and/or modify
+# it under the terms of the GNU General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# @UniBorg is not distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
 """Remove.BG Plugin for @UniBorg
 Syntax: .rmbg https://link.to/image.extension
 Syntax: .rmbg as reply to a media"""
@@ -8,7 +21,7 @@ import io
 import os
 import requests
 from telethon import events
-from ULTRA.utils import progress, admin_cmd
+from userbot.utils import progress, admin_cmd
 
 
 @borg.on(admin_cmd("rmbg ?(.*)"))
