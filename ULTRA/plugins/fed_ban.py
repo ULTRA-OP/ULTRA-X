@@ -67,9 +67,9 @@ async def _(event):
             async with bot.conversation("@MissRose_bot") as bot_conv:
                 await bot_conv.send_message("/start")
                 await bot_conv.send_message("/myfeds")
-                await asyncio.sleep(3)
+                await asyncio.sleep(2)
                 response = await bot_conv.get_response()
-                await asyncio.sleep(3)
+                await asyncio.sleep(2)
                 if "make a file" in response.text:
                     await asyncio.sleep(6)
                     await response.click(0)
@@ -133,9 +133,9 @@ async def _(event):
             exCount += 1
             continue
         await bot.send_message(chat, f"/joinfed {fed}")
-        await asyncio.sleep(3)
+        await asyncio.sleep(2)
         await bot.send_message(chat, f"/fban {FBAN} {REASON}")
-        await asyncio.sleep(3)
+        await asyncio.sleep(2)
     await event.edit(
         f"Sᴜᴘᴇʀғʙᴀɴ Cᴏᴍᴘʟᴇᴛᴇᴅ, Aғғᴇᴄᴛᴇᴅ `{len(fedList) - exCount}` Fᴇᴅs.\n#UltraX Userbot"
     )
@@ -215,7 +215,7 @@ async def _(event):
         await asyncio.sleep(5)
         await bot.send_message(chat, f"/unfban {FBAN}")
         await asyncio.sleep(5)
-    await event.edit(f"ULTRAUnFBan Completed. Affected {len(fedList)} Feds by {PRO}.\n#DEVILBOT")
+    await event.edit(f"ULTRAUnFBan Completed. Affected {len(fedList)} Feds by {PRO}.\n#UltraX Userbot")
 
 
 # By TEAMLEGEND
