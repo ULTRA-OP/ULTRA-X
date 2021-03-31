@@ -1,4 +1,4 @@
-#modify by legendx22
+#modify by legendx22 and madboy482
 #credits team dc
 #Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
 #A stark bhai chori karna aaya ho kya friday me ek bar back btn kang kar k man nahi bhara 
@@ -97,7 +97,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id == id:
-            danish = custom.Button.inline("◤✞ 🅞🅟🅔🅝 🅜🅐🅘🅝 🅜🅔🅝🅤 ✞◥", data="open")
+            danish = custom.Button.inline("✞✞ 𝐎𝐩𝐞𝐧 𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮 ✞✞", data="open")
             await event.edit("**Mᴀɪɴ Mᴇɴᴜ ᴡᴀs ᴄʟᴏsᴇᴅ**", buttons=danish)
         else:
             reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
