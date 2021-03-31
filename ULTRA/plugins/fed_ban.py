@@ -91,7 +91,7 @@ async def _(event):
                     else:
                         return
                 if len(fedList) == 0:
-                    await event.edit(f"𝚠𝚊𝚒𝚝 𝙼𝙰𝚂𝚃𝙴𝚁 𝙸 𝙰𝙼 𝙲𝙷𝙴𝙲𝙺𝙸𝙽𝙶 {PRO} 𝙰𝙻𝙻 𝙵𝙴𝙳𝚂 𝙶𝙸𝚅𝙴 𝙼𝙴 𝚃𝙸𝙼𝙴 ({a+1}/3)...")
+                    await event.edit(f"Wᴇɪᴛ Mᴀsᴛᴇʀ I Aᴍ Cʜᴇᴄᴋɪɴɢ Aʟʟ Fᴇᴅs Oғ **{PRO}** Pʟᴇᴀsᴇ Gɪᴠᴇ Mᴇ Sᴏᴍᴇ Tɪᴍᴇ **({a+1}/3)**...")
                 else:
                     break
         else:
@@ -115,7 +115,7 @@ async def _(event):
         if len(fedList) == 0:
             await event.edit("Something went wrong.")
             return
-    await event.edit(f"υℓтяα χ вσт ƒвαηηιηg тнιѕ ηιggα кι∂ ιη {len(fedList)} ση σя∂єя σƒ {PRO} 🔥.")
+    await event.edit(f"UʟᴛʀᴀX Fʙᴀɴɴɪɴɢ Tʜɪs Kɪᴅ Iɴ `{len(fedList)}` Oɴ Tʜᴇ Oʀᴅᴇʀ Oғ `{PRO}` 🔥.")
     try:
         await bot.send_message(chat, f"/start")
     except BaseException:
