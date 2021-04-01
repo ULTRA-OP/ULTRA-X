@@ -18,11 +18,11 @@ import os, re, sys, asyncio
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart'))) # PROBOYX
 async def restart(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
-    await event.edit("**Yᴀ ᴡᴀɪᴛ....Yᴏᴜʀ ʙᴏᴛ ɪs ʙᴇɪɴɢ ʀᴇsᴛᴀʀᴛᴇᴅ...\nPʟᴇᴀsᴇ ᴡᴀɪᴛ**")
+    await event.edit("**Rᴇsᴛᴀʀᴛɪɴɢ Bᴏᴛ\nPʟᴇᴀsᴇ ᴡᴀɪᴛ**")
     await asyncio.sleep(2)
     await event.edit("**Rᴇsᴛᴀʀᴛɪɴɢ ᴛʜᴇ Hᴇʀᴏᴋᴜ Cᴏɴɴᴇᴄᴛɪᴏɴ.....**")
-    await asyncio.sleep(2)
-    await event.edit("**Yᴀʏ!! Rᴇsᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ sᴜᴄᴄᴇssғᴜʟʟʏ**\n✅✅")
+    await asyncio.sleep(1)
+    await event.edit("**Rᴇsᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ sᴜᴄᴄᴇssғᴜʟʟʏ**\n✅✅")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit ()#OP
   else:
