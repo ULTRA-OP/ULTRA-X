@@ -91,7 +91,7 @@ async def repo(event):
 from ULTRA.utils import admin_cmd
 @bot.on(events.NewMessage(outgoing=True, pattern=None))
 async def repo(event):
-    if not event.text.startswith(".help"):
+    if not event.text == ".help":
         return
     LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
     if event.reply_to_msg_id:
