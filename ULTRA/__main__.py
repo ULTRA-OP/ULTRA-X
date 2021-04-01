@@ -3,7 +3,7 @@ try:
   from LEGENDX import xbot
 except:
   os.system("pip install LEGENDX")
-  from LEGENDX import xbot
+  from ULTRAX import xbot
 from ULTRA import bot
 from sys import argv
 import sys
