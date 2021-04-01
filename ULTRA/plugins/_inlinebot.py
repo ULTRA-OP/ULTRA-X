@@ -18,9 +18,9 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 #@command(pattern="^.help ?(.*)")
 
-@borg.on(admin_cmd(pattern=r"help ?(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=r"ihelp ?(.*)", outgoing=True))
 
-@borg.on(sudo_cmd(pattern=r"help ?(.*)", outgoing=True, allow_sudo=True))
+@borg.on(sudo_cmd(pattern=r"ihelp ?(.*)", outgoing=True, allow_sudo=True))
 
 async def cmd_list(event):
 
@@ -120,7 +120,7 @@ Dᴏ `.help` PLUGIN_NAME ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs, ɪғ ɪɴ ᴄᴀsᴇ P�
 
             
 
-@borg.on(admin_cmd(pattern="dc"))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="legend"))  # pylint:disable=E0602
 
 async def _(event):
 
