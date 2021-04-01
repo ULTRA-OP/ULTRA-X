@@ -24,7 +24,10 @@ async def _(event):
                 await conv.get_response() #made by LEGENDX22
                 await conv.send_message(f"{LEGENDX}")
                 TEAMX = await conv.get_response()
-                await borg.send_message(event.chat_id, TEAMX.text)
+                TEAMX = TEAMX.message
+                if TEAMX.startsawith("This human"):
+                  return await event.edit("no details Found")
+                await borg.send_message(event.chat_id, TEAMX)
                 await event.delete() #made by LEGENDX22
             except YouBlockedUserError:
                 await event.edit("Error: @tgscanrobot unblock and retry!")
@@ -39,7 +42,10 @@ async def _(event):
                 await conv.get_response() #made by LEGENDX22
                 await conv.send_message(f"{PRO}")
                 TEAMX = await conv.get_response()
-                await borg.send_message(event.chat_id, TEAMX.text)
+                TEAMX = TEAMX.message
+                if TEAMX.startswith("This human"):
+                  return await event.edit("no details Found")
+                await borg.send_message(event.chat_id, TEAMX)
                 await event.delete()
             except YouBlockedUserError: #made by LEGENDX22
                 await event.edit("Error: unblock @tgscanrobot and try again!")
@@ -52,7 +58,10 @@ async def _(event):
                 await conv.get_response()
                 await conv.send_message(f"{PRO}")
                 TEAMX = await conv.get_response()
-                await borg.send_message(event.chat_id, TEAMX.text)
+                TEAMX = TEAMX.message
+                if TEAMX.startswith("This human"):
+                  return await event.edit("no details found")
+                await borg.send_message(event.chat_id, TEAMX)
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock  @tgscanrobot `and try again!")
