@@ -17,7 +17,7 @@ import io
 #ABEE O KANGER, BACK OPEN CLOSE BTN KANG KIYA TO YE CODE CHIPKA DENA AUR GLOBALS K BINA NAHI CHALAGA aur global 5 jgah diff name and manipulation se imported hai 
 #Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
 from ULTRA.utils import remove_plugin,load_module
-from ULTRAX import ID as id
+from . import id
 #Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
 #A stark bhai chori karna aaya ho kya friday me ek bar back btn kang kar k man nahi bhara 
 #Agar stark nahi ho to kon hai be tu jo bhi hai kang karna he aaya hai mera back , open btn so get lost
@@ -42,7 +42,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 await event.edit("`>>>\n\nOᴘᴇɴᴇᴅ ᴛʜᴇ Mᴀɪɴ Mᴇɴᴜ ғᴏʀ \n© υℓтяα χ` ", buttons=dc)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+                await event.answer(reply_pop_up_alert, alert=True)
        
   #       🇮 🇹 🇳 🇦    🇰 🇾 🇺   🇸 🇵 🇾     🇰 🇷    🇷 🇭 🇪     🇭 🇴      🇸 🇭 🇦 🇦 🇩 🇮    🇰 🇷 🇳 🇮    🇭    🇰 🇾 🇦   🇧 🇸 🇩 🇰 
 
@@ -58,7 +58,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.answer([result] if result else None)
         else:
               reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-              await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+              await event.answer(reply_pop_up_alert, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"helpme_next\((.+?)\)")
     ))#hehe
@@ -73,7 +73,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.edit(buttons=dc)
         else:
             Cobra = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-            await event.answer(Cobra, cache_time=0, alert=True)
+            await event.answer(Cobra,  alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"helpme_prev\((.+?)\)")
@@ -92,7 +92,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.edit(buttons=dc)
         else:
               Thelegend = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-              await event.answer(Thelegend, cache_time=0, alert=True)
+              await event.answer(Thelegend, alert=True)
  #hehehehehhehhehhehe   
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
@@ -101,7 +101,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             await event.edit("**Mᴀɪɴ Mᴇɴᴜ ᴡᴀs ᴄʟᴏsᴇᴅ**", buttons=danish)
         else:
             reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+            await event.answer(reply_pop_up_alert, alert=True)
    
 
   
@@ -111,9 +111,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         )
     )
     async def on_plug_in_callback_query_handler(event):
-        if not event.query.user_id == bot.uid or event.query.user_id == id:
-            atul= "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !"
-            await event.answer(atul, cache_time=0, alert=True)
+        if not event.query.user_id == bot.uid or not event.query.user_id == id:
+            pro= "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !"
+            await event.answer(pro, alert=True)
             return
         plugin_name = event.data_match.group(1).decode("UTF-8")
         global shivam_sh1vam
@@ -141,7 +141,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 await event.edit(reply_pop_up_alert, buttons=dc)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)#hehe
+                await event.answer(reply_pop_up_alert, alert=True)#hehe
         except: 
             if event.query.user_id == bot.uid or event.query.user_id == id:
                 sh1vam = [custom.Button.inline("◤✞ ⁂ 𝐁𝐚𝐜𝐤 ⁂ ✞◥",data="back({})".format(shivam)),custom.Button.inline("◤✞ ⁂ 𝐂𝐥𝐨𝐬𝐞 ⁂ ✞◥", data="close")]
@@ -149,7 +149,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 await event.edit(halps,buttons=sh1vam)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+                await event.answer(reply_pop_up_alert, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"load\((.+?)\)")))
    
     async def on_plug_in_callback_query_handler(event):
@@ -168,7 +168,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     shortname = event.data_match.group(1).decode("UTF-8")
                     fcix = [custom.Button.inline(" ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐔𝐧𝐥𝐨𝐚𝐝 ✪ ⁂ ",data="unload({})".format(shivam_sh1vam))]
                     reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-                    await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+                    await event.answer(reply_pop_up_alert, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"unload\((.+?)\)")))
    
     async def on_plug_in_callback_query_handler(event):
@@ -186,7 +186,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     shortname = event.data_match.group(1).decode("UTF-8")
                     fcix = [custom.Button.inline(" ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐋𝐨𝐚𝐝 ✪ ⁂ ",data="load({})".format(shivam_sh1vam))]
                     reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-                    await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+                    await event.answer(reply_pop_up_alert, alert=True)
 #hehehe
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back\((.+?)\)")))
    
@@ -202,7 +202,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     await event.edit("`>>> Hᴇʀᴇ ɪs ᴛʜᴇ Mᴀɪɴ Mᴇɴᴜ ᴏғ \n\n© υℓтяα χ υѕєявσт`", buttons=buttons)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
-                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+                await event.answer(reply_pop_up_alert, alert=True)
 
 def paginate_help(page_number, loaded_plugins, prefix):
     number_of_rows = Config.NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD
