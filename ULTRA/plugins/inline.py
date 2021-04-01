@@ -8,9 +8,9 @@ from telethon import events, errors, custom, functions
 @tgbot.on(events.InlineQuery(pattern=r"restart"))
 async def inline_id_handler(event: events.InlineQuery.Event):
  LEGEND = event.builder
- X = [[custom.Button.inline("🔥 RESTART 🔥",data="restart")]] #RESTART
+ X = [[custom.Button.inline("⁂⁂ 𝐑𝐞𝐬𝐭𝐚𝐫𝐭 ⁂⁂",data="restart")]] #RESTART
  query = event.text #PROBOYX 
- result = LEGEND.article("LEGEND",text="RESTARTER",buttons=X,link_preview=False)
+ result = LEGEND.article("LEGEND",text="Cʟɪᴄᴋ Rᴇsᴛᴀʀᴛ Tᴏ Rᴇsᴛᴀʀᴛ Yᴏᴜʀ Bᴏᴛ",buttons=X,link_preview=False)
  await event.answer([result]) #LEGENDX
 
 from telethon import Button, custom, events
