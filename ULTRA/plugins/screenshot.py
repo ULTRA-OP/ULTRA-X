@@ -48,7 +48,7 @@ async def _(event):
         if event.reply_to_msg_id:
             message_id = event.reply_to_msg_id
         with io.BytesIO(im_png) as out_file:
-            out_file.name = "LEGEND BOT.ScreenCapture.PNG"
+            out_file.name = "ULTRA X.ScreenCapture.PNG"
             await borg.send_file(
                 event.chat_id,
                 out_file,

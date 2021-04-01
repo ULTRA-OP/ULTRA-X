@@ -38,7 +38,7 @@ Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#o%D2%9
 ## Iɴsᴛᴀʟʟɪɴɢ
 
 # Cʀᴇᴅɪᴛs
-### • [LEGEND BOT](https://github.com/LEGENDXOP/LEGEND-BOT)
+### • [ULTRA X](https://github.com/LEGENDXOP/LEGEND-BOT)
 ### One and only. Others with some misfuntioning brain stay out from this SUPER POWERFULL BOT😏
 
 ## Oғғɪᴄɪᴀʟ Sᴜᴘᴘᴏʀᴛ

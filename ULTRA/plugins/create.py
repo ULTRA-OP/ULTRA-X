@@ -50,7 +50,7 @@ async def _(event):
             r = await event.client(
                 functions.channels.CreateChannelRequest(
                     title=group_name,
-                    about="Created By LEGEND BOT",
+                    about="Created By ULTRA X",
                     megagroup=type_of_group != "c",
                 )
             )

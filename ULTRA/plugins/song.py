@@ -45,7 +45,7 @@ Midhun_xD
 
 
 
-"""Only LEGEND BOT and DC (Can Use Without Credits) Can Use This Inline WithOut Copyright (Just Give The Credits Pls)
+"""Only ULTRA X and DC (Can Use Without Credits) Can Use This Inline WithOut Copyright (Just Give The Credits Pls)
 
 Thanks"""
 
@@ -136,7 +136,7 @@ BOT_MSG = os.environ.get("BOT_MSG", None)
 
 if BOT_MSG is None:
 
-    BOT_LIT = f"Hello Sir MySelf LEGEND BOT Here For  {LIGHTNINGUSER}'s Protection "
+    BOT_LIT = f"Hello Sir MySelf ULTRA X Here For  {LIGHTNINGUSER}'s Protection "
 
 else:
 

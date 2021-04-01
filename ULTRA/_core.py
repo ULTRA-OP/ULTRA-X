@@ -10,7 +10,7 @@ from ULTRA.utils import edit_or_reply as eor
 
 DELETE_TIMEOUT = 3
 thumb_image_path = "./Resources/UltraX.jpg"
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOT"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ULTRA X"
 
 
 @bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
@@ -111,5 +111,5 @@ async def load(event):
         qwe = await eor(event, f"Successfully loaded {shortname}")
     except Exception as e:
         await qwe.edit(
-            f"LEGEND BOT could not load {shortname} because of the following error.\n{str(e)}"
+            f"ULTRA X could not load {shortname} because of the following error.\n{str(e)}"
         )
