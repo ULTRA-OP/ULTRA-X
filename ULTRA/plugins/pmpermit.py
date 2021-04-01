@@ -103,7 +103,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     lightning_sql.approve(chat.id, "outgoing")
 
-                    bruh = "Auto-approved bcuz outgoing 😗😗👍"
+                    bruh = "Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇᴅ Bᴄᴜᴢ ᴏᴜᴛɢᴏɪɴɢ ʕ•ᴥ•ʔ"
 
                     rko = await borg.send_message(event.chat_id, bruh)
 
