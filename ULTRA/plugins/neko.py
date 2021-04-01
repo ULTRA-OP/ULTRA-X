@@ -1,7 +1,7 @@
 # pastebin for catuserbot
 
 import os
-
+from ULTRA import CMD_HELP
 import pygments
 import requests
 from pygments.formatters import ImageFormatter
@@ -118,6 +118,15 @@ async def code_print(event):
     os.remove("out.png")
     os.remove(d_file_name)
 
-
+CMD_HELP.update(
+    {
+        "neko":
+        "\n\n•  **Syntax : **`.neko <text/reply>`\
+        \n•  **Function : **__Create a paste or a shortened url using nekobin __`https://nekobin.com`\
+        \n\n•  **Syntax : **`.pcode reply/input`\
+        \n•  **Function : **__Will paste the entire text on the blank page and will send as image__\
+    "
+    }
+)
         
  
