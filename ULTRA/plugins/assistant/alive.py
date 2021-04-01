@@ -8,7 +8,7 @@ from telethon import events
 from ULTRA import StartTime
 import time
 import datetime
-from LEGENDX.ULTRAX import *
+from . import *
 from telethon import events, Button, custom
 import re, os
 from ULTRAX import PHOTO, xbot, BOT, VERSION
