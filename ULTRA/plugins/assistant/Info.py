@@ -12,7 +12,7 @@ async def _(event):
             bot_api_file_id = pack_bot_file_id(r_msg.media)
             await xbot.send_message(
                 event.chat_id,
-                "Current Chat ID: `{}`\nFrom User ID: `{}`\nBot API File ID: `{}`".format(
+                "**Cᴜʀʀᴇɴᴛ Cʜᴀᴛ Iᴅ:** `{}`\n**Fʀᴏᴍ Usᴇʀ Iᴅ:** `{}`\n**Bᴏᴛ Aᴘɪ Fɪʟᴇ Iᴅ:** `{}`".format(
                     str(event.chat_id), str(r_msg.sender_id), bot_api_file_id
                 ),
             )
