@@ -19,13 +19,13 @@ async def _(event):
         else:
             await xbot.send_message(
                 event.chat_id,
-                "Current Chat ID: `{}`\nFrom User ID: `{}`".format(
+                "**Cᴜʀʀᴇɴᴛ Cʜᴀᴛ Iᴅ:** `{}`\n**Fʀᴏᴍ Usᴇʀ Iᴅ:** `{}`".format(
                     str(event.chat_id), str(r_msg.sender_id)
                 ),
             )
     else:
         await xbot.send_message(
-            event.chat_id, "Current Chat ID: `{}`".format(str(event.chat_id))
+            event.chat_id, "**Cᴜʀʀᴇɴᴛ Cʜᴀᴛ Iᴅ:** `{}`".format(str(event.chat_id))
         )
 
 from telethon.tl.functions.users import GetFullUserRequest
