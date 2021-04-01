@@ -1,5 +1,5 @@
 # pastebin for catuserbot
-
+from ULTRA.utils import admin_cmd, sudo_cmd
 import os
 from ULTRA import CMD_HELP
 import pygments
