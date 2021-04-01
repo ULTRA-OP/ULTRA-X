@@ -17,7 +17,7 @@ def progress(current, total):
             current, total, (current / total) * 100
         )
     )
-
+from ULTRA.utils import admin_cmd
 
 @bot.on(admin_cmd(pattern="neko(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="neko(?: |$)(.*)", allow_sudo=True))
