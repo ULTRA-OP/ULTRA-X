@@ -178,7 +178,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     
                     
                     try:
-                        fcix = [custom.Button.inline(" ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐔𝐧𝐥𝐨𝐚𝐝 ✪ ⁂ ",data="load({})".format(shivam_sh1vam))]
+                        fcix = [custom.Button.inline(" ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐥𝐨𝐚𝐝 ✪ ⁂ ",data="load({})".format(shivam_sh1vam))]
                         remove_plugin(event.data_match.group(1).decode("UTF-8"))
 #kyu sir kang krne m muskil ho rhi h kya bologe toh help krdu 😂😂
                         await event.edit( "`Yᴏᴜʀ UʟᴛʀᴀX ʜᴀs sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴʟᴏᴀᴅᴇᴅ` >>>" + str(event.data_match.group(1).decode("UTF-8")),buttons=fcix)
