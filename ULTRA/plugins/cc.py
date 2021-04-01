@@ -12,5 +12,5 @@ async def _devil(dark):
     cyber = dc()
     killer = cyber.name()
     kali = cyber.address()
-    danish = cyber.credit_card_full()
-    await dark.edit(f"ℕ𝕒𝕞𝕖:-\n`{killer}`\n\n𝔸𝕕𝕕𝕣𝕖𝕤𝕤:-\n`{kali}`\n\nℂ𝕒𝕣𝕕:-\n`{danish}`")
+    alain = cyber.credit_card_full()
+    await dark.edit(f"ℕ𝕒𝕞𝕖:-\n`{killer}`\n\n𝔸𝕕𝕕𝕣𝕖𝕤𝕤:-\n`{kali}`\n\nℂ𝕒𝕣𝕕:-\n`{alain}`")
