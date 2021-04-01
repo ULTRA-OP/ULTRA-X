@@ -1,4 +1,4 @@
-from ULTRAX import xbot
+from LEGENDX import xbot
 from ULTRA import bot
 from sys import argv
 import sys
