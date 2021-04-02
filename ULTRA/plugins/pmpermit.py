@@ -51,7 +51,7 @@ LIGHTNING_PM = os.environ.get("PMPERMIT_PIC", None)
 
 CUSTOM_LIGHTNING_PM_PIC = LIGHTNING_PM
 
-FUCK_OFF_WARN = f"**Blocked You As You Spammed {LIGHTNINGUSER}'s DM\n\n **IDC**"
+FUCK_OFF_WARN = f"**Blocked You As You Spammed {LIGHTNINGUSER}'s DM**\n\n**IDC**"
 
 
 
@@ -63,13 +63,15 @@ FUCK_OFF_WARN = f"**Blocked You As You Spammed {LIGHTNINGUSER}'s DM\n\n **IDC**"
 
 OVER_POWER_WARN = (
 
-    f"**Hello Sir Im Here To Protect {LIGHTNINGUSER} Dont Under Estimate Me 😈😈 **\n\n"
+    f"__Hey There!! I'm__ **υℓтяα χ** __and I'm here to protect {LIGHTNINGUSER}..\nDon't under estimate Me 😈😈__\n\n"
 
-    f"`My Master {LIGHTNINGUSER} is Busy Right Now !` \n"
+    f"`My Master **{LIGHTNINGUSER}** is Busy Right Now !`\n"
 
-    f"{LIGHTNINGUSER} Is Very Busy Why Came Please Lemme Know Choose Your Deasired Reason"
+    f"My Master assigned me the duty to keep a check on his PM, and I'll do it faithfully..So you're not allowed to disturb him."
 
-    f"**Btw Dont Spam Or Get Banned** 😈 \n\n"
+    f"**If u spam, or tried anything funny, I've full permission to Block + Report you as Spam in Telegram's Server...**\n\n"
+    
+    f"**Better be Careful..**\n\n"
 
     f"**{CUSTOM_LIGHTNING_PM_PIC}**\n"
 
