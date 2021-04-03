@@ -1,6 +1,6 @@
-#originally created by legendx22
+# originally created by legendx22
 
-#team LEGEND
+# team LEGEND
 from asyncio import sleep
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins, ChatAdminRights
 from telethon.tl.functions.channels import EditBannedRequest
@@ -17,7 +17,7 @@ async def testing(event):
     if not admin and not creator:
         await event.edit("𝗬𝗢𝗨 𝗗𝗜𝗗𝗡𝗧 𝗛𝗔𝗩𝗘 𝗦𝗨𝗙𝗙𝗜𝗖𝗜𝗘𝗡𝗧 𝗥𝗜𝗚𝗛𝗧𝗦")
         return
-    await event.edit("Doing Nothing 🙃🙂")#Kang with Credits
+    await event.edit("Doing Nothing 🙃🙂")# Kang with Credits
 # for Dark_Cobra
     everyone = await event.client.get_participants(event.chat_id)
     for user in everyone:
