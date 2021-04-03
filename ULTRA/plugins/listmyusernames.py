@@ -3,7 +3,7 @@
 
 from telethon import events, functions, types
 from uniborg.util import admin_cmd
-from ULTRA import CMD_HELP
+from userbot import CMD_HELP
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 
 @borg.on(admin_cmd("listmyusernames"))

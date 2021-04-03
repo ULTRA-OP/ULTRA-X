@@ -8,7 +8,7 @@ from asyncio import sleep
 from os import remove
 from telethon.errors import BadRequestError, UserAdminInvalidError
 from telethon.errors.rpcerrorlist import UserIdInvalidError
-from ULTRA.utils import admin_cmd
+from userbot.utils import admin_cmd
 from telethon.tl.types import (PeerChannel, ChannelParticipantsAdmins,
                                ChatAdminRights, ChatBannedRights,
                                MessageEntityMentionName,

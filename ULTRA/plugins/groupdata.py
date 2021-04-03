@@ -16,12 +16,12 @@ from telethon.errors.rpcerrorlist import (UserIdInvalidError,
 from telethon.errors import (BadRequestError, ChatAdminRequiredError,
                              ImageProcessFailedError, PhotoCropSizeSmallError,
                              UserAdminInvalidError)
-from ULTRA import CMD_HELP
-from ULTRA.utils import  errors_handler, admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import  errors_handler, admin_cmd
 
 @borg.on(admin_cmd(pattern="leave$"))
 async def leave(e):
-        await e.edit("`I is leaving this chat.....!Goodbye aren't forever..` ")
+        await e.edit("`Legend is leaving this chat.....!Goodbye aren't forever..` ")
         time.sleep(3)
         if '-' in str(e.chat_id):
             await bot(LeaveChannelRequest(e.chat_id))
