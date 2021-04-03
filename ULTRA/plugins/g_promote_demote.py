@@ -632,16 +632,6 @@ async def gben(userbot):
         f"`Gʟᴏʙʙᴀʟʏ Dᴇᴍᴏᴛᴇᴅ` **[{user.first_name}](tg://user?id={user.id})** `Iɴ` **{i}** `Cʜᴀᴛs.`"
     )
 
-CMD_HELP.update(
-    {
-        "gpromote": "**Plugin : **`g_promote_demote`\
-    \n\n**Syntax : **`.gpromote`\
-    \n**Function : **Pormote the user in all the chats, u are admin in\"
-    \n\n**Syntax : **`.gdemote`\
-    \n**Function : **Dormote the user in all the chats, u are admin in"
-    }
-)
-
 # Copyright (C) 2021 By Team UltraX 
 
 # ~ LegendX
