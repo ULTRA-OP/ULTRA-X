@@ -3,6 +3,7 @@ try:
   from LEGENDX import id, ID, devs, LEGEND
 except:
   os.system("pip install LEGENDX")
+  from LEGENDX import id, ID, devs, LEGEND
 else:
   print ("something got fucked")
 finally:
@@ -116,9 +117,9 @@ async def legend():
     await xbot.send_message(bot.me.id, LEGENDX, buttons=PROBOYX)
   except:
      pass
+
+
 bot.loop.run_until_complete(legend())
-
-
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
     
