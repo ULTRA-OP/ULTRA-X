@@ -494,7 +494,7 @@ async def legend_x(event):
 
               await borg.send_message(
 
-                chats, f"**HEY {event.sender.first_name} YOU HERE 💓 \nYOU ARE MY CREATOR I \nAPPROVED YOU SIR ❤️🥰🔥⚜️**"
+                chats, f"**HEY!!! {event.sender.first_name}, YOU HERE 💓💓💓\nAccording to Moi Logs, There is no need for you to wait for being approved as you're Globally Approved by Me❤️🥰🔥⚜️**"
 
             )
 
