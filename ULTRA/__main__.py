@@ -1,8 +1,12 @@
 import os
 try:
-  from LEGENDX import xbot
+  from LEGENDX import id, ID, devs, LEGEND
 except:
   os.system("pip install LEGENDX")
+else:
+  print ("something got fucked")
+finally:
+  print ("ULTRA X IS STARTING WITH TELETHON")
   from ULTRAX import xbot
 from ULTRA import bot
 from sys import argv
