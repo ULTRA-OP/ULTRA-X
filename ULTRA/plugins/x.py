@@ -111,7 +111,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         )
     )
     async def on_plug_in_callback_query_handler(event):
-        if not event.sender_id == bot.me.id or not event.sender_id == id:
+        if event.sender_id == bot.me.id or event.sender_id == id:
             pass
         else:
             pro= "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !"
