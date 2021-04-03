@@ -23,7 +23,7 @@ from telethon import Button, custom, events, functions
 import math
 import heroku3
 
-from userbot import HEROKU_APP_NAME, HEROKU_API_KEY
+from ULTRA import HEROKU_APP_NAME, HEROKU_API_KEY
 
 heroku = heroku3.from_key(HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"

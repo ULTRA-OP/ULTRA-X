@@ -6,7 +6,7 @@ import asyncio
 from datetime import datetime
 import os
 import requests
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 
 
 def progress(current, total):

@@ -8,7 +8,7 @@ Syntax : .gps <location name>
 # don't edit credits 
 
 from geopy.geocoders import Nominatim
-from userbot.utils import admin_cmd
+from ULTRA.utils import admin_cmd
 from telethon.tl import types
 
 

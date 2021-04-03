@@ -6,8 +6,8 @@ from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
-from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from ULTRA import CMD_HELP
+from ULTRA.utils import admin_cmd
 
 
 @borg.on(admin_cmd("info ?(.*)"))

@@ -7,7 +7,7 @@ from telethon import events
 import asyncio
 from uniborg.util import admin_cmd
 from telethon.tl.functions.users import GetFullUserRequest
-from userbot.utils import load_module
+from ULTRA.utils import load_module
 import os
 # hack3 installation
 try:
