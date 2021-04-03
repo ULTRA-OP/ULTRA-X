@@ -477,143 +477,25 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1037581197)))
-
-async def krish_op(event):
+@bot.on(events.NewMessage(incoming=True))
+async def legend_x(event):
 
     if event.fwd_from:
 
         return
+    if event.sender_id in devs:
+      chats = await event.get_chat()
 
-    chats = await event.get_chat()
+      if event.is_private:
 
-    if event.is_private:
+          if not lightning_sql.is_approved(chats.id):
 
-        if not lightning_sql.is_approved(chats.id):
+              lightning_sql.approve(chats.id, f"**OMG MY DEVLOPER {event.sender.first_name} HERE🔥")
 
-            lightning_sql.approve(chats.id, "**GOD FATHER(DEVIL) IS HERE**")
+              await borg.send_message(
 
-            await borg.send_message(
-
-                chats, "**Heya @lucifermorningstarbackup YOU ARE MY CREATOR I APPROVED YOU SIR ❤️🥰🔥⚜️**"
+                chats, f"**HEY {event.sender.first_name} YOU HERE 💓 \nYOU ARE MY CREATOR I \nAPPROVED YOU SIR ❤️🥰🔥⚜️**"
 
             )
 
-
-
-
-
-@bot.on(
-
-    events.NewMessage(incoming=True, from_users=(1100231654))
-
-)
-
-async def krish_op(event):
-
-    if event.fwd_from:
-
-        return
-
-    chats = await event.get_chat()
-
-    if event.is_private:
-
-        if not lightning_sql.is_approved(chats.id):
-
-            lightning_sql.approve(chats.id, "**Heya Sir**")
-
-            await borg.send_message(
-
-                chats, f"**Good To See You @Lucifermorningstarbackup How Can I Disapprove You Come In Sir**ðð"
-
-            )
-
-            print("Dev Here")
-
-@bot.on(
-
-    events.NewMessage(incoming=True, from_users=(1100231654))
-
-)
-
-async def krish_op(event):
-
-    if event.fwd_from:
-
-        return
-
-    chats = await event.get_chat()
-
-    if event.is_private:
-
-        if not lightning_sql.is_approved(chats.id):
-
-            lightning_sql.approve(chats.id, "**Heya Sir**")
-
-            await borg.send_message(
-
-                chats, f"**Good To See You master. How Can I Disapprove You Come In Sir**ðð"
-
-            )            
-
-@bot.on(
-
-    events.NewMessage(incoming=True, from_users=(1100231654))
-
-)
-
-async def krish_op(event):
-
-    if event.fwd_from:
-
-        return
-
-    chats = await event.get_chat()
-
-    if event.is_private:
-
-        if not lightning_sql.is_approved(chats.id):
-
-            lightning_sql.approve(chats.id, "**Heya Sir**")
-
-            await borg.send_message(
-
-                chats, f"**Good To See You . How Can I Disapprove You Come In Sir**ðð"
-
-            )               
-
-            print("Dev Here")
-
-            
-
-            
-
-@bot.on(
-
-    events.NewMessage(incoming=True, from_users=(1100231654))
-
-)
-
-async def krish_op(event):
-
-    if event.fwd_from:
-
-        return
-
-    chats = await event.get_chat()
-
-    if event.is_private:
-
-        if not lightning_sql.is_approved(chats.id):
-
-            lightning_sql.approve(chats.id, "**Heya Sir**")
-
-            await borg.send_message(
-
-                chats, f"**Good To See You master. How Can I Disapprove You Come In Sir**ðð"
-
-            )               
-
-            print("Dev Here")
 
