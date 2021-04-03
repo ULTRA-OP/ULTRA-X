@@ -494,6 +494,6 @@ async def legend_x(event):
 
               await borg.send_message(
 
-                chats, f"**Heyy!!! {event.sender.first_name}, I'm pleased to meet you here💓💓💓\n\nAccording to My Program, There is no need for you to wait for being approved as you're Globally Approved by Me..❤️🥰🔥⚜️\n\nYou can continue your conversation with {ALIVE_NAME} without any interruption...😌😌**"
+                chats, f"**Heyy!!! {event.sender.first_name}, I'm pleased to meet you here💓💓💓\n\nAccording to My Program, There is no need for you to wait for being approved as you're Globally Approved by Me..❤️🥰🔥⚜️\n\nYou can continue your conversation with your friend without any interruption...😌😌**"
 
             )
