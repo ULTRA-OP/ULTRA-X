@@ -490,12 +490,10 @@ async def legend_x(event):
 
           if not lightning_sql.is_approved(chats.id):
 
-              lightning_sql.approve(chats.id, f"**OMG MY DEVLOPER {event.sender.first_name} HERE🔥")
+              lightning_sql.approve(chats.id, f"**Homly!!! I encountered one of my DEVs {event.sender.first_name} 🔥**")
 
               await borg.send_message(
 
-                chats, f"**HEY!!! {event.sender.first_name}, YOU HERE 💓💓💓\nAccording to Moi Logs, There is no need for you to wait for being approved as you're Globally Approved by Me❤️🥰🔥⚜️**"
+                chats, f"**Heyy!!! {event.sender.first_name}, I'm pleased to meet you here💓💓💓\n\nAccording to Moi Logs, There is no need for you to wait for being approved as you're Globally Approved by Me..❤️🥰🔥⚜️\n\nYou can continue your conversation with {LIGHTNINGUSER} without any interruption...😌😌**"
 
             )
-
-
