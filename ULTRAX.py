@@ -39,6 +39,6 @@ REPO = "[υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)"
 MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/UltraXChat)"
 if __name__=="__main__":
-  bot.run()
+  bot.start()
   bot.run_until_disconnected()
   xbot.run_until_disconnected()
