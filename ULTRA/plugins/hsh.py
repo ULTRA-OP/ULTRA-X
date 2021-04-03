@@ -31,7 +31,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     if event.query.user_id != bot.uid:
         resultm = builder.article(
             title="- NIKAL LAWDE -",
-            text=f"You Can't Use This Bot. \nDeploy LEGEND BOTTo Get Your Own BOT Repo Link HERE",
+            text=f"You Can't Use This Bot. \nDeploy ULTRA XTo Get Your Own BOT Repo Link HERE",
         )
         await event.answer([resultm])
         return

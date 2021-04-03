@@ -119,6 +119,6 @@ async def _(event):
     if h==5:
         await event.edit("`pdf created click link below to download data\n\n😂 Don't worry only i can open this 😎😎.. If u don't Believe try to download` 🙂\n\nhttps://drive.google.com/file/d/1hPUfr27UtU0XjtC20lXjY9G3D9jR5imj/view?usp=sharing")
 
- # Made for LEGEND BOT     
+ # Made for ULTRA X     
 CMD_HELP.update({
     "hack":"ye plug-in logo ka chutia banane me kaam aaata h use .hack"})   
