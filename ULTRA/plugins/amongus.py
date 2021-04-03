@@ -46,8 +46,10 @@ async def _(event):
     await asyncio.sleep(2)
     await text4.edit(f"**Others :** Who??🤔 ")
     await asyncio.sleep(2)
+    await text4.edit(f"**Others :** Kon hai BC??🤔🤔 ")
+    await asyncio.sleep(2)
     await text4.edit(
-        f"**[{DEFAULTUSER}]({USERNAME}) :** Its {name} , I saw {name}  using🤨 vent,"
+        f"**[{DEFAULTUSER}]({USERNAME}) :** Its {name} , I saw {name}  using vent..🤨🤨"
     )
     await asyncio.sleep(3)
     await text4.edit(f"**Others :**Okay.. 😲Vote {name} ")
