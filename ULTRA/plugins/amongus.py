@@ -59,42 +59,42 @@ async def _(event):
     stcr4 = await event.client.send_file(
         event.chat_id, "CAADAQADLwADnjOcH-wxu-ehy6NRAg"
     )
-    hellevent = await event.reply(f"{name} is ejected.......🤐")
+    okevent = await event.reply(f"{name} is ejected.......🤐")
     await asyncio.sleep(2)
-    await hellevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
+    await okevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
+    await okevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
+    await okevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
+    await okevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
+    await okevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
+    await okevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
+    await okevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
+    await okevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
+    await okevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
     await asyncio.sleep(0.5)
-    await hellevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
+    await okevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
     await asyncio.sleep(0.2)
     await stcr4.delete()
     if cmd == "":
-        await hellevent.edit(
+        await okevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
-        await hellevent.delete()
+        await okevent.delete()
         await event.client.send_file(event.chat_id, "CAADAQADLQADnjOcH39IqwyR6Q_0Ag")
     elif cmd == "n":
-        await hellevent.edit(
+        await okevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
-        await hellevent.delete()
+        await okevent.delete()
         await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
 
@@ -103,34 +103,34 @@ async def _(event):
 async def _(event):
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
-    hellevent = await edit_or_reply(event, f"{name} is ejected.......")
+    okevent = await edit_or_reply(event, f"{name} is ejected.......")
     await asyncio.sleep(2)
-    await hellevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
+    await okevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
+    await okevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
+    await okevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
+    await okevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
+    await okevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
+    await okevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
+    await okevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
+    await okevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
+    await okevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
     await asyncio.sleep(0.8)
-    await hellevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
+    await okevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
     await asyncio.sleep(0.2)
     if cmd == "":
-        await hellevent.edit(
+        await okevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
     elif cmd == "n":
-        await hellevent.edit(
+        await okevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
 
