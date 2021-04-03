@@ -9,7 +9,7 @@ import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 try:
-  import LEGENDX
+  from LEGENDX import devs, id, ID, LEGEND
 except:
   os.system("pip install LEGENDX")
 try:
