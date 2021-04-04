@@ -18,7 +18,7 @@ def progress(current, total):
             current, total, (current / total) * 100
         )
     )
-@borg.on(events.NewMessage(outgoing=True, pattern=".Protecc|.protecc|.p|.P"))
+@borg.on(events.NewMessage(outgoing=True, pattern=".Protecc|.protecc"))
 async def _(event):
     if event.fwd_from:
         return
