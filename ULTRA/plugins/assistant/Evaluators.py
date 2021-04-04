@@ -13,7 +13,7 @@ from ULTRA import bot
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if event.sender_id == boy not event.sender_id == id:
+    if event.sender_id == boy or event.sender_id == id:
        pass
     else:
        return await event.reply("deploy your own assistant check @UltraXoT")
