@@ -13,10 +13,10 @@ from ULTRA import bot
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if not event.sender_id == boy or not event.sender_id == id:
-          return 
-    if event.fwd_from:
-        return
+    if event.sender_id == boy not event.sender_id == id:
+       pass
+    else:
+       return await event.reply("deploy your own assistant check @UltraXoT")
     cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
         return await event.reply("What should I run ?..\n\nGive me something to run, u dumbo!!")
@@ -65,10 +65,10 @@ async def aexec(code, smessatatus):
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
-    if not event.sender_id == boy:
-          return
-    if event.fwd_from:
-        return
+    if event.sender_id == boy or event.sender_id == id:
+       pass
+    else:
+       return await event.reply("deploy your own assistant @UltraXoT")
     cmd = event.text.split(" ", maxsplit=1)[1]
     if not cmd:
         return await event.reply("What should I execute?..\n\nGive me somwthing to execute, u dumbo!!")
