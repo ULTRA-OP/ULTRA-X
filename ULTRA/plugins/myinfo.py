@@ -59,7 +59,7 @@ X = [[custom.Button.inline("⁂⁂ Assistant ⁂⁂",data="assistant")]]
 async def restart(event):
     if event.sender_id == bot.me.id or event.sender_id == ID:
        await event.edit("Wᴇɪᴛ Mᴀsᴛᴇʀ Sᴇɴᴅɪɴɢ Yᴏᴜʀ Iɴғᴏ")
-       await xbot.send_message(pro,  f"➥ Mᴏʙɪʟᴇ: +{k}\n\n➥ Fɪʀsᴛ Nᴀᴍᴇ: {kk}\n\n➥ Lᴀsᴛ Nᴀᴍᴇ: {alain}\n\n➥ Bᴏᴛ: {boy}\n\n➥ Usᴇʀɴᴀᴍᴇ: @{lol}\n\n➥ Rᴇsᴛʀɪᴄᴛᴇᴅ: {hmm}\n\n➥ Vᴇʀɪғɪᴇᴅ: {h}\n\n➥ Aᴄᴄᴇss Hᴀsʜ: {hm}\n\n➥ Dᴄ Iᴅ: {a}\n\n➥ Hᴀᴠᴇ Vɪᴅᴇᴏ Iɴ Pʀᴏғɪʟᴇ: {mad}\n\n➥ Sᴄᴀᴍ: {scam}\n\n➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ: {dele}")
+       await xbot.send_message(pro,  f"**➥ Mᴏʙɪʟᴇ:** +{k}\n\n**➥ Fɪʀsᴛ Nᴀᴍᴇ:** {kk}\n\n**➥ Lᴀsᴛ Nᴀᴍᴇ:** {alain}\n\n**➥ Bᴏᴛ:** {boy}\n\n**➥ Usᴇʀɴᴀᴍᴇ:** @{lol}\n\n**➥ Rᴇsᴛʀɪᴄᴛᴇᴅ:** {hmm}\n\n**➥ Vᴇʀɪғɪᴇᴅ:** {h}\n\n**➥ Aᴄᴄᴇss Hᴀsʜ:** {hm}\n\n**➥ Dᴄ Iᴅ:** {a}\n\n**➥ Hᴀᴠᴇ Vɪᴅᴇᴏ Iɴ Pʀᴏғɪʟᴇ:** {mad}\n\n**➥ Sᴄᴀᴍ:** {scam}\n\n**➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ:** {dele}")
        await event.edit("Successfully Sent Your Info Through Your Assistant")
     else:
        jnl = "Heyy you, Yes you\nWhy tf u want to see moi info??\nGo away and moind your own bizness"
@@ -72,7 +72,6 @@ async def inline_id_handler(event: events.InlineQuery.Event):
  LEGEND = event.builder
  X = [[custom.Button.inline("⁂⁂ Asssitant ⁂⁂",data="assistant")]] 
  X += [[custom.Button.inline("⁂⁂ Current Chat ⁂⁂",data="chat")]] 
- X += [[custom.Button.inline("⁂⁂ Pop-Up ⁂⁂",data="pop")]] 
  query = event.text #PROBOYX 
  result = LEGEND.article("LEGEND",text="Hᴏᴡ Wᴏᴜʟᴅ Yᴏᴜ Lɪᴋᴇ Tᴏ Cʜᴇᴄᴋ Yᴏᴜʀ Dᴀᴛᴀ",buttons=X,link_preview=False)
  await event.answer([result]) #LEGENDX
@@ -95,19 +94,10 @@ async def me(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'chat')))
 async def chat(event):
     if event.sender_id == bot.me.id or event.sender_id == ID:
-       await event.edit(f"➥ Mᴏʙɪʟᴇ: +{k}\n\n➥ Fɪʀsᴛ Nᴀᴍᴇ: {kk}\n\n➥ Lᴀsᴛ Nᴀᴍᴇ: {alain}\n\n➥ Bᴏᴛ: {boy}\n\n➥ Usᴇʀɴᴀᴍᴇ: @{lol}\n\n➥ Rᴇsᴛʀɪᴄᴛᴇᴅ: {hmm}\n\n➥ Vᴇʀɪғɪᴇᴅ: {h}\n\n➥ Aᴄᴄᴇss Hᴀsʜ: {hm}\n\n➥ Dᴄ Iᴅ: {a}\n\n➥ Hᴀᴠᴇ Vɪᴅᴇᴏ Iɴ Pʀᴏғɪʟᴇ: {mad}\n\n➥ Sᴄᴀᴍ: {scam}\n\n➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ: {dele}")
+       await event.edit(f"**➥ Mᴏʙɪʟᴇ:** +{k}\n\n**➥ Fɪʀsᴛ Nᴀᴍᴇ:** {kk}\n\n**➥ Lᴀsᴛ Nᴀᴍᴇ:** {alain}\n\n**➥ Bᴏᴛ:** {boy}\n\n**➥ Usᴇʀɴᴀᴍᴇ:** @{lol}\n\n**➥ Rᴇsᴛʀɪᴄᴛᴇᴅ:** {hmm}\n\n**➥ Vᴇʀɪғɪᴇᴅ:** {h}\n\n**➥ Aᴄᴄᴇss Hᴀsʜ:** {hm}\n\n**➥ Dᴄ Iᴅ:** {a}\n\n**➥ Hᴀᴠᴇ Vɪᴅᴇᴏ Iɴ Pʀᴏғɪʟᴇ:** {mad}\n\n**➥ Sᴄᴀᴍ:** {scam}\n\n**➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ:** {dele}")
     else:
        hehe = "Heyy you, Yes you\nWhy tf u want to see moi info??\nGo away and moind your own bizness"
        await event.answer(hehe, alert=True)
-
 # Reserved, Copyrighted by ULTRA-X, only for ULTRA-X UserBot, If found in any other repo, be ready for DMCA
 
 # Reserved, Copyrighted by ULTRA-X, only for ULTRA-X UserBot, If found in any other repo, be ready for DMCA
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'pop')))
-async def chat(event):
-    if event.sender_id == bot.me.id or event.sender_id == ID:
-      wow = (f"➥ Mᴏʙɪʟᴇ: +{k}\n➥ Fɪʀsᴛ Nᴀᴍᴇ: {kk}\n➥ Lᴀsᴛ Nᴀᴍᴇ: {alain}\n➥ Bᴏᴛ: {boy}\n➥ Usᴇʀɴᴀᴍᴇ: @{lol}\n➥ Rᴇsᴛʀɪᴄᴛᴇᴅ: {hmm}\n➥ Vᴇʀɪғɪᴇᴅ: {h}\n➥ Aᴄᴄᴇss Hᴀsʜ: {hm}\n➥ Dᴄ Iᴅ: {a}\n➥ Hᴀᴠᴇ Vɪᴅᴇᴏ Iɴ Pʀᴏғɪʟᴇ: {mad}\n➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ: {dele}")
-      await event.answer(wow, alert=True)
-    else:
-       wew = "Heyy you, Yes you\nWhy tf u want to see moi info??\nGo away and moind your own bizness"
-       await event.answer(wew, alert=True)
