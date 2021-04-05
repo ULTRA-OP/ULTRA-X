@@ -38,7 +38,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 
-import userbot.plugins.sql_helper.pmpermit_sql as lightning_sql
+import userbot.plugins.sql_helper.pmpermit_sql as ULTRA_X
 
 from ULTRA import ALIVE_NAME, bot
 
@@ -124,11 +124,11 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         if event.is_private:
 
-            if not lightning_sql.is_approved(chat.id):
+            if not ULTRA_X.is_approved(chat.id):
 
                 if not chat.id in LIGHTNING_WRN:
 
-                    lightning_sql.approve(chat.id, "outgoing")
+                    ULTRA_X.approve(chat.id, "outgoing")
 
                     bruh = "Auto-approved bcuz outgoing 😗😗👍"
 
@@ -156,7 +156,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         if event.is_private:
 
-            if not lightning_sql.is_approved(chats.id):
+            if not ULTRA_X.is_approved(chats.id):
 
                 if chats.id in LIGHTNING_WRN:
 
@@ -168,7 +168,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     del LIGHTNING_REVL_MSG[chats.id]
 
-                lightning_sql.approve(chats.id, f"Wow lucky You {LIGHTNINGUSER} Approved You")
+                ULTRA_X.approve(chats.id, f"Wow lucky You {LIGHTNINGUSER} Approved You")
 
                 await event.edit(
 
@@ -198,9 +198,9 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         if event.is_private:
 
-            if lightning_sql.is_approved(chat.id):
+            if ULTRA_X.is_approved(chat.id):
 
-                lightning_sql.disapprove(chat.id)
+                ULTRA_X.disapprove(chat.id)
 
             await event.edit("Blocked [{}](tg://user?id={})".format(firstname, chat.id))
 
@@ -240,9 +240,9 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         if event.is_private:
 
-            if lightning_sql.is_approved(chat.id):
+            if ULTRA_X.is_approved(chat.id):
 
-                lightning_sql.disapprove(chat.id)
+                ULTRA_X.disapprove(chat.id)
 
             await event.edit("Disapproved [{}](tg://user?id={})".format(firstname, chat.id))
 
@@ -282,7 +282,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             return
 
-        approved_users = lightning_sql.get_all_approved()
+        approved_users = ULTRA_X.get_all_approved()
 
         PM_VIA_LIGHT = f"â¥â¿â¥ {LIGHTNINGUSER} Approved PMs\n"
 
@@ -398,11 +398,11 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             return
 
-        if lightning_sql.is_approved(chat_ids):
+        if ULTRA_X.is_approved(chat_ids):
 
             return
 
-        if not lightning_sql.is_approved(chat_ids):
+        if not ULTRA_X.is_approved(chat_ids):
 
             # pm permit
 
@@ -514,9 +514,9 @@ async def krish_op(event):
 
     if event.is_private:
 
-        if not lightning_sql.is_approved(chats.id):
+        if not ULTRA_X.is_approved(chats.id):
 
-            lightning_sql.approve(chats.id, "**GOD FATHER IS HERE**")
+            ULTRA_X.approve(chats.id, "**GOD FATHER IS HERE**")
 
             await borg.send_message(
 
@@ -544,9 +544,9 @@ async def krish_op(event):
 
     if event.is_private:
 
-        if not lightning_sql.is_approved(chats.id):
+        if not ULTRA_X.is_approved(chats.id):
 
-            lightning_sql.approve(chats.id, "**Heya Sir**")
+            ULTRA_X.approve(chats.id, "**Heya Sir**")
 
             await borg.send_message(
 
@@ -572,9 +572,9 @@ async def krish_op(event):
 
     if event.is_private:
 
-        if not lightning_sql.is_approved(chats.id):
+        if not ULTRA_X.is_approved(chats.id):
 
-            lightning_sql.approve(chats.id, "**Heya Sir**")
+            ULTRA_X.approve(chats.id, "**Heya Sir**")
 
             await borg.send_message(
 
@@ -598,9 +598,9 @@ async def krish_op(event):
 
     if event.is_private:
 
-        if not lightning_sql.is_approved(chats.id):
+        if not ULTRA_X.is_approved(chats.id):
 
-            lightning_sql.approve(chats.id, "**Heya Sir**")
+            ULTRA_X.approve(chats.id, "**Heya Sir**")
 
             await borg.send_message(
 
@@ -630,9 +630,9 @@ async def krish_op(event):
 
     if event.is_private:
 
-        if not lightning_sql.is_approved(chats.id):
+        if not ULTRA_X.is_approved(chats.id):
 
-            lightning_sql.approve(chats.id, "**Heya Sir**")
+            ULTRA_X.approve(chats.id, "**Heya Sir**")
 
             await borg.send_message(
 
