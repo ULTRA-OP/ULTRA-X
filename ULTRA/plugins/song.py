@@ -30,13 +30,9 @@
 
 
 """Thanks To 
-
-Midhun_xD
-
-@LEGENDX
-
-@Shivam_Patel
-
+TEAMLEGEND
+TEAMULTRA
+KEINSHIN
 @LEGENDX22
 
 """
