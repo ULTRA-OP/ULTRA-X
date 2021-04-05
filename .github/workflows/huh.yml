@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "keinshin"
+          find: "krish"
 
-          replace: "LEGENDX"
+          replace: "LegendX"
 
       - name: Create Pull Request
 
