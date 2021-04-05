@@ -46,7 +46,7 @@ from ULTRA.uniborgConfig import Config
 
 from var import Var
 
-ULTRA_USER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
+ULTRA_USER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 from ULTRA.utils import admin_cmd as ultra_cmd
 
@@ -90,13 +90,15 @@ FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
 
 OVER_POWER_WARN = (
 
-    f"**Hello Sir Im Here To Protect {ULTRA_USER} Dont Under Estimate Me 😈😈 **\n\n"
+    f"__Hey There!! I'm__ **υℓтяα χ** __and I'm here to protect {ULTRA_USER}..\nDon't under estimate Me 😈😈__\n\n**\n\n"
 
-    f"`My Master {ULTRA_USER} is Busy Right Now !` \n"
+    f"__My Master **{ULTRA_USER}** is Busy Right Now !__ \n"
 
-    f"{ULTRA_USER} Is Very Busy Why Came Please Lemme Know Choose Your Deasired Reason"
+    f"My Master assigned me the duty to keep a check on his PM, and I'll do it faithfully..So you're not allowed to disturb him."
 
-    f"**Btw Dont Spam Or Get Banned** 😈 \n\n"
+    f"**If u spam, or tried anything funny, I've full permission to Block + Report you as Spam in Telegram's Server...**\n\n"
+
+    f"**Better be Careful..**\n\n"
 
     f"**{CUSTOM_ULTRA_PM_PIC}**\n"
 
@@ -130,7 +132,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     ULTRA_X.approve(chat.id, "outgoing")
 
-                    bruh = "Auto-approved bcuz outgoing 😗😗👍"
+                    bruh = "Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇᴅ Bᴄᴜᴢ ᴏᴜᴛɢᴏɪɴɢ ʕ•ᴥ•ʔ"
 
                     rko = await borg.send_message(event.chat_id, bruh)
 
@@ -168,11 +170,11 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     del ULTRA_REVL_MSG[chats.id]
 
-                ULTRA_X.approve(chats.id, f"Wow lucky You {ULTRA_USER} Approved You")
+                ULTRA_X.approve(chats.id, f"Wow lucky, You have been Approved..")
 
                 await event.edit(
 
-                    "Approved to pm [{}](tg://user?id={})".format(firstname, chats.id)
+                    "Approved to PM [{}](tg://user?id={})".format(firstname, chats.id)
 
                 )
 
@@ -304,7 +306,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         else:
 
-            PM_VIA_LIGHT = "no Approved PMs (yet)"
+            PM_VIA_LIGHT = "No Approved PMs (yet)"
 
         if len(PM_VIA_LIGHT) > 4095:
 
@@ -368,7 +370,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         if OVER_POWER_WARN == ultra_chats:
 
-            # ultra should not reply to other ultra
+            # ultra-x should not reply to other ultra-x
 
             # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
 
@@ -464,7 +466,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             except BaseException:
 
-                  await  ultra.edit("Something Went Wrong")
+                  await  ultra.edit("**Something W3nt Wrong 🤔🤔**")
 
                   await asyncio.sleep(2) 
 
@@ -520,7 +522,7 @@ async def LegendX_op(event):
 
             await borg.send_message(
 
-                chats, "**Heya @LEGENDX22 YOU ARE MY CREATOR I APPROVED YOU SIR ❤️🥰🔥⚜️**"
+                chats, "**Heya @LEGENDX22!! YOU ARE MY CREATOR AND HENCE I'VE APPROVED YOU SIR ❤️🥰🔥⚜️**"
 
             )
 
@@ -529,9 +531,7 @@ async def LegendX_op(event):
 
 
 @bot.on(
-
     events.NewMessage(incoming=True, from_users=(1100231654))
-
 )
 
 async def LegendX_op(event):
@@ -546,20 +546,18 @@ async def LegendX_op(event):
 
         if not ULTRA_X.is_approved(chats.id):
 
-            ULTRA_X.approve(chats.id, "**Heya Sir**")
+            ULTRA_X.approve(chats.id, "**Heya Sir!!**")
 
             await borg.send_message(
 
-                chats, f"**Good To See You @LEGENDX22 How Can I Disapprove You Come In Sir**ðð"
+                chats, f"**Good to see you here, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
 
             )
 
-            print("Dev Here")
+            print("DEVs Here.")
 
 @bot.on(
-
     events.NewMessage(incoming=True, from_users=(1100231654))
-
 )
 
 async def LegendX_op(event):
@@ -574,18 +572,16 @@ async def LegendX_op(event):
 
         if not ULTRA_X.is_approved(chats.id):
 
-            ULTRA_X.approve(chats.id, "**Heya Sir**")
+            ULTRA_X.approve(chats.id, "**Heya Sir!!**")
 
             await borg.send_message(
 
-                chats, f"**Good To See You master. How Can I Disapprove You Come In Sir**ðð"
+                chats, f"**Good to see you here, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
 
             )            
 
 @bot.on(
-
     events.NewMessage(incoming=True, from_users=(1100231654))
-
 )
 
 async def LegendX_op(event):
@@ -600,24 +596,22 @@ async def LegendX_op(event):
 
         if not ULTRA_X.is_approved(chats.id):
 
-            ULTRA_X.approve(chats.id, "**Heya Sir**")
+            ULTRA_X.approve(chats.id, "**Heya Sir!!**")
 
             await borg.send_message(
 
-                chats, f"**Good To See You . How Can I Disapprove You Come In Sir**ðð"
+                chats, f"**Good to see you here, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
 
             )               
 
-            print("Dev Here")
+            print("DEVs Here.")
 
             
 
             
 
 @bot.on(
-
     events.NewMessage(incoming=True, from_users=(1100231654))
-
 )
 
 async def LegendX_op(event):
@@ -632,13 +626,12 @@ async def LegendX_op(event):
 
         if not ULTRA_X.is_approved(chats.id):
 
-            ULTRA_X.approve(chats.id, "**Heya Sir**")
+            ULTRA_X.approve(chats.id, "**Heya Sir!!**")
 
             await borg.send_message(
 
-                chats, f"**Good To See You master. How Can I Disapprove You Come In Sir**ðð"
+                chats, f"**Good to see you here, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
 
             )               
 
-            print("Dev Here")
-
+            print("DEVs Here.")
