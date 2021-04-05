@@ -504,7 +504,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 @bot.on(events.NewMessage(incoming=True, from_users=(1100231654)))
 
-async def krish_op(event):
+async def LegendX_op(event):
 
     if event.fwd_from:
 
@@ -534,7 +534,7 @@ async def krish_op(event):
 
 )
 
-async def krish_op(event):
+async def LegendX_op(event):
 
     if event.fwd_from:
 
@@ -562,7 +562,7 @@ async def krish_op(event):
 
 )
 
-async def krish_op(event):
+async def LegendX_op(event):
 
     if event.fwd_from:
 
@@ -588,7 +588,7 @@ async def krish_op(event):
 
 )
 
-async def krish_op(event):
+async def LegendX_op(event):
 
     if event.fwd_from:
 
@@ -620,7 +620,7 @@ async def krish_op(event):
 
 )
 
-async def krish_op(event):
+async def LegendX_op(event):
 
     if event.fwd_from:
 

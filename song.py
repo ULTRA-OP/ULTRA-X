@@ -469,7 +469,7 @@ async def ultra_pugins_query_hndlr(ultra):
 
                buttons=[
 
-                [custom.Button.inline("😉", data="krish")],
+                [custom.Button.inline("😉", data="LegendX")],
 
                 [custom.Button.inline("BACK", data="lghtback")]],
 
@@ -483,7 +483,7 @@ async def ultra_pugins_query_hndlr(ultra):
 
             buttons=[
 
-                [custom.Button.inline("🙂", data="krish")],
+                [custom.Button.inline("🙂", data="LegendX")],
 
                 [custom.Button.inline("BACK", data="lghtback")],
 
@@ -887,7 +887,7 @@ async def hmm(ultra):
 
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"krish")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"LegendX")))
 
 async def hmm(ultra):
 
@@ -963,7 +963,7 @@ In Case Any Problem @teamishere \nTottal Plugs( 🧐): {len(CMD_LIST)}"""
 
     
 
-def ultras_menu_for_help(b_lac_krish, ultra_plugs, ultra_lol):
+def ultras_menu_for_help(b_lac_LegendX, ultra_plugs, ultra_lol):
 
     ultra_no_rows = 10
 
@@ -999,7 +999,7 @@ def ultras_menu_for_help(b_lac_krish, ultra_plugs, ultra_lol):
 
     max_fix = ceil(len(pairs) / ultra_no_rows)
 
-    ultra_plugins_pages = b_lac_krish % max_fix
+    ultra_plugins_pages = b_lac_LegendX % max_fix
 
     if len(pairs) > ultra_no_rows:
 
