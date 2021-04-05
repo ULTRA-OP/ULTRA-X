@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "lightning_sql"
+          find: "LIGHTNINGUSER"
 
-          replace: "ULTRA_X"
+          replace: "ULTRA_USER"
 
       - name: Create Pull Request
 
