@@ -46,7 +46,7 @@ from ULTRA.uniborgConfig import Config
 
 from var import Var
 
-LIGHTNINGUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
+ULTRA_USER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
 
 from ULTRA.utils import admin_cmd as lightning_cmd
 
@@ -78,7 +78,7 @@ LIGHTNING_PM = os.environ.get("PMPERMIT_PIC", None)
 
 CUSTOM_LIGHTNING_PM_PIC = LIGHTNING_PM
 
-FUCK_OFF_WARN = f"**Blocked You As You Spammed {LIGHTNINGUSER}'s DM\n\n **IDC**"
+FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
 
 
 
@@ -90,11 +90,11 @@ FUCK_OFF_WARN = f"**Blocked You As You Spammed {LIGHTNINGUSER}'s DM\n\n **IDC**"
 
 OVER_POWER_WARN = (
 
-    f"**Hello Sir Im Here To Protect {LIGHTNINGUSER} Dont Under Estimate Me 😈😈 **\n\n"
+    f"**Hello Sir Im Here To Protect {ULTRA_USER} Dont Under Estimate Me 😈😈 **\n\n"
 
-    f"`My Master {LIGHTNINGUSER} is Busy Right Now !` \n"
+    f"`My Master {ULTRA_USER} is Busy Right Now !` \n"
 
-    f"{LIGHTNINGUSER} Is Very Busy Why Came Please Lemme Know Choose Your Deasired Reason"
+    f"{ULTRA_USER} Is Very Busy Why Came Please Lemme Know Choose Your Deasired Reason"
 
     f"**Btw Dont Spam Or Get Banned** 😈 \n\n"
 
@@ -168,7 +168,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     del LIGHTNING_REVL_MSG[chats.id]
 
-                ULTRA_X.approve(chats.id, f"Wow lucky You {LIGHTNINGUSER} Approved You")
+                ULTRA_X.approve(chats.id, f"Wow lucky You {ULTRA_USER} Approved You")
 
                 await event.edit(
 
@@ -284,7 +284,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         approved_users = ULTRA_X.get_all_approved()
 
-        PM_VIA_LIGHT = f"â¥â¿â¥ {LIGHTNINGUSER} Approved PMs\n"
+        PM_VIA_LIGHT = f"â¥â¿â¥ {ULTRA_USER} Approved PMs\n"
 
         if len(approved_users) > 0:
 
@@ -478,7 +478,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         LIGHTNING_L = OVER_POWER_WARN.format(
 
-        LIGHTNINGUSER, LIGHTNING_STOP_EMOJI, LIGHTNING_WRN[chat_ids] + 1, HMM_LOL
+        ULTRA_USER, LIGHTNING_STOP_EMOJI, LIGHTNING_WRN[chat_ids] + 1, HMM_LOL
 
         )
 

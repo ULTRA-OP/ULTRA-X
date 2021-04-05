@@ -115,7 +115,7 @@ thumb_image_path = "./resources/541200.png"
 
 
 
-LIGHTNINGUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
+ULTRA_USER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
 
 LIGHTNINGBOT = Var.TG_BOT_TOKEN_BF_HER
 
@@ -136,7 +136,7 @@ BOT_MSG = os.environ.get("BOT_MSG", None)
 
 if BOT_MSG is None:
 
-    BOT_LIT = f"Hello Sir MySelf ULTRA X Here For  {LIGHTNINGUSER}'s Protection "
+    BOT_LIT = f"Hello Sir MySelf ULTRA X Here For  {ULTRA_USER}'s Protection "
 
 else:
 
@@ -154,11 +154,11 @@ if LIGHTNING_WARN is None:
 
     f"**{BOT_LIT}"
 
-    f"** Im Here To Protect {LIGHTNINGUSER} Dont Under Estimate Me 🔱🔱  **\n\n"
+    f"** Im Here To Protect {ULTRA_USER} Dont Under Estimate Me 🔱🔱  **\n\n"
 
-    f"**My Master {LIGHTNINGUSER} is Busy Right Now !** \n"
+    f"**My Master {ULTRA_USER} is Busy Right Now !** \n"
 
-    f"{LIGHTNINGUSER} Is Very Busy Why Came Please Lemme Know Choose Your Deasired Reason"
+    f"{ULTRA_USER} Is Very Busy Why Came Please Lemme Know Choose Your Deasired Reason"
 
     f"**Btw Dont Spam Or Get Banned** ⚡⚡ \n\n"
 
@@ -233,7 +233,7 @@ async def inline_handler(lightning):
 
             title="Cool",
 
-            text=f"**How If Face Problem \n{LIGHTNINGUSER}** \nChoose Your Problem For Help ",
+            text=f"**How If Face Problem \n{ULTRA_USER}** \nChoose Your Problem For Help ",
 
             buttons=[
 
@@ -535,13 +535,13 @@ async def what(lightning):
 
     if lightning.query.user_id == bot.uid or lightning.query.user_id == ID:
 
-        fck_bit = f"{LIGHTNINGUSER}  Use The Buttons Bellow "
+        fck_bit = f"{ULTRA_USER}  Use The Buttons Bellow "
 
         await lightning.answer(fck_bit, alert=True)
 
     else:
 
-        txt = f"Ohh  You Think That This Is For You?\n Ok I Will Complain To {LIGHTNINGUSER}⚜️⚜️"
+        txt = f"Ohh  You Think That This Is For You?\n Ok I Will Complain To {ULTRA_USER}⚜️⚜️"
 
         await lightning.answer(txt, alert=True)
 
@@ -555,7 +555,7 @@ async def lightning_is_better(lightning):
 
     if lightning.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! Master {LIGHTNINGUSER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+        fck_bit = f"Oh! Master {ULTRA_USER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
 
         await lightning.answer(fck_bit, cache_time=0, alert=True)
 
@@ -591,7 +591,7 @@ async def lightning_is_better(lightning):
 
     if lightning.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! C'mon Master {LIGHTNINGUSER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+        fck_bit = f"Oh! C'mon Master {ULTRA_USER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
 
         await lightning.answer(fck_bit, cache_time=0, alert=True)
 
@@ -633,7 +633,7 @@ async def lightning_is_better(lightning):
 
     if lightning.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! C'mon Master {LIGHTNINGUSER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+        fck_bit = f"Oh! C'mon Master {ULTRA_USER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
 
         await lightning.answer(fck_bit, cache_time=0, alert=True)
 
@@ -683,7 +683,7 @@ async def yeahbaba(lightning):
 
         if lightning.query.user_id == bot.uid:
 
-            fck_bit = f"Oh! C'mon Master {LIGHTNINGUSER} "
+            fck_bit = f"Oh! C'mon Master {ULTRA_USER} "
 
             await lightning.answer(fck_bit, cache_time=0, alert=True)
 
@@ -695,7 +695,7 @@ async def yeahbaba(lightning):
 
         await asyncio.sleep(2)
 
-        await lightning.edit(f"`Informing To Master {LIGHTNINGUSER}`")
+        await lightning.edit(f"`Informing To Master {ULTRA_USER}`")
 
         await asyncio.sleep(2)
 
@@ -719,7 +719,7 @@ async def yeahbaba(lightning):
 
         if lightning.query.user_id == bot.uid:
 
-            fck_bit = f"Oh! C'mon Master {LIGHTNINGUSER} "
+            fck_bit = f"Oh! C'mon Master {ULTRA_USER} "
 
             await lightning.answer(fck_bit, cache_time=0, alert=True)
 
@@ -731,7 +731,7 @@ async def yeahbaba(lightning):
 
         await asyncio.sleep(2)
 
-        await lightning.edit(f"`Informing To Master {LIGHTNINGUSER}`")
+        await lightning.edit(f"`Informing To Master {ULTRA_USER}`")
 
         await asyncio.sleep(2)
 
@@ -757,7 +757,7 @@ async def lightning_is_better(lightning):
 
     if lightning.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! C'mon Master {LIGHTNINGUSER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+        fck_bit = f"Oh! C'mon Master {ULTRA_USER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
 
         await lightning.answer(fck_bit, cache_time=0, alert=True)
 
@@ -877,7 +877,7 @@ async def hmm(lightning):
 
     else:
 
-        txt = f"Stats For {LIGHTNINGUSER} Not For You :)"
+        txt = f"Stats For {ULTRA_USER} Not For You :)"
 
         await lightning.answer(txt, alert=True)
 
@@ -899,7 +899,7 @@ async def hmm(lightning):
 
     else:
 
-        txt = f"For {LIGHTNINGUSER} Not For You :)"
+        txt = f"For {ULTRA_USER} Not For You :)"
 
         await lightning.answer(txt, alert=True)        
 
