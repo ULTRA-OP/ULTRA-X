@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "from userbot"
+          find: "import userbot"
 
-          replace: "from ULTRA"
+          replace: "import ULTRA"
 
       - name: Create Pull Request
 
