@@ -111,7 +111,7 @@ thumb_image_path = "./resources/541200.png"
 
 
 
-ULTRA_USER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
+ULTRA_USER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 ULTRAXBOT = Var.TG_BOT_TOKEN_BF_HER
 
@@ -132,7 +132,7 @@ BOT_MSG = os.environ.get("BOT_MSG", None)
 
 if BOT_MSG is None:
 
-    BOT_LIT = f"Hello Sir MySelf ULTRA X Here For  {ULTRA_USER}'s Protection "
+    BOT_LIT = f"Hello Sir MySelf ULTRA X Here For {ULTRA_USER}'s Protection "
 
 else:
 
@@ -150,15 +150,17 @@ if ULTRA_WARN is None:
 
     f"**{BOT_LIT}"
 
-    f"** Im Here To Protect {ULTRA_USER} Dont Under Estimate Me 🔱🔱  **\n\n"
+   f"__Hey There!! I'm__ **υℓтяα χ** __and I'm here to protect {ULTRA_USER}..\nDon't under estimate Me 😈😈__\n\n**\n\n"
 
-    f"**My Master {ULTRA_USER} is Busy Right Now !** \n"
+    f"__My Master **{ULTRA_USER}** is Busy Right Now !__ \n"
 
-    f"{ULTRA_USER} Is Very Busy Why Came Please Lemme Know Choose Your Deasired Reason"
+    f"My Master assigned me the duty to keep a check on his PM, and I'll do it faithfully..So you're not allowed to disturb him."
 
-    f"**Btw Dont Spam Or Get Banned** ⚡⚡ \n\n"
+    f"**If u spam, or tried anything funny, I've full permission to Block + Report you as Spam in Telegram's Server...**\n\n"
 
-    f"**Choose Any Reason Then Get Lost**\n"
+    f"**Better be Careful..**\n\n"
+
+    f"**Choose Any Reason & Then Get Lost**\n"
 
 )
 
@@ -215,9 +217,9 @@ async def inline_handler(ultra):
 
             buttons=[
 
-                [custom.Button.inline("Help", data="what?")],
+                [custom.Button.inline("Help ⚙️", data="what?")],
 
-                [Button.url("Commands Not Working🤔", "https://t.me/teamishere")],
+                [Button.url("Commands Not Working 🤔", "https://t.me/teamishere")],
 
                 [Button.url("Help Article 🤔", "https://app.gitbook.com/@poxsisofficial/s/help/")],
 
@@ -227,9 +229,9 @@ async def inline_handler(ultra):
 
                 
 
-                    "Want To Learn CMDS☺️☺️",
+                    "Want To Learn CMDS ☺️☺️",
 
-                    "https://t.me/teamishere" ,
+                    "https://t.me/UltraXchaT" ,
 
                     )
 
@@ -257,7 +259,7 @@ async def inline_handler(ultra):
 
                     custom.Button.inline(
 
-                        "My Friend🧐🧐",
+                        "My Friend 🧐🧐",
 
                         data="he_sucks",
 
@@ -265,13 +267,13 @@ async def inline_handler(ultra):
 
                 ],
 
-                [custom.Button.inline("Requesting⚜️⚜️", data="fck_ask")],
+                [custom.Button.inline("Requesting ⚜️⚜️", data="fck_ask")],
 
                 [
 
                     custom.Button.inline(
 
-                        "Lemme In :)", 
+                        "Lemme In ;)", 
 
                         data="lol_u_think_so",
 
@@ -305,13 +307,13 @@ async def what(ultra):
 
     if ultra.query.user_id == bot.uid or ultra.query.user_id == ID:
 
-        fck_bit = f"{ULTRA_USER}  Use The Buttons Bellow "
+        fck_bit = f"{ULTRA_USER}  Use The Buttons Below "
 
         await ultra.answer(fck_bit, alert=True)
 
     else:
 
-        txt = f"Ohh  You Think That This Is For You?\n Ok I Will Complain To {ULTRA_USER}⚜️⚜️"
+        txt = f"Ohh!! You Think That This Is For You?\nOk I'll Complain To {ULTRA_USER} ⚜️⚜️"
 
         await ultra.answer(txt, alert=True)
 
@@ -325,7 +327,7 @@ async def ultra_is_better(ultra):
 
     if ultra.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! Master {ULTRA_USER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+        fck_bit = f"Oh! Master {ULTRA_USER} I'm Trying To Get Rid Of This Nigga...Pls Dont Touch!!"
 
         await ultra.answer(fck_bit, cache_time=0, alert=True)
 
