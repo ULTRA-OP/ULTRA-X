@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "LIGHTNINGBOT"
+          find: "LIGHTNING"
 
-          replace: "ULTRAXBOT"
+          replace: "ULTRA"
 
       - name: Create Pull Request
 
