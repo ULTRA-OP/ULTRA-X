@@ -36,13 +36,13 @@ async def fastpurger(purg):
         await purg.client.delete_messages(chat, msgs)
     done = await purg.client.send_message(
         purg.chat_id,
-        "`Fast purge complete!\n`Purged " + str(count) + " messages.",
+        "**Fᴀsᴛ Pᴜʀɢᴇ Cᴏᴍᴘʟᴇᴛᴇ!✅**\n__Pᴜʀɢᴇᴅ " + str(count) + " ᴍᴇssᴀɢᴇs.__",
     )
 
     if BOTLOG:
         await purg.client.send_message(
             BOTLOG_CHATID,
-            "Purge of " + str(count) + " messages done successfully.")
+            "#ᑭᑌᖇᘜᗴ \n**Pᴜʀɢᴇ ᴏғ " + str(count) + " ᴍᴇssᴀɢᴇs ᴅᴏɴᴇ sᴜᴄᴄᴇssғᴜʟʟʏ.**")
     await sleep(2)
     await done.delete()
 
@@ -65,16 +65,15 @@ async def purgeme(delme):
 
     smsg = await delme.client.send_message(
         delme.chat_id,
-        "`Purge complete!` Purged " + str(count) + " messages.",
+        "**Fᴀsᴛ Pᴜʀɢᴇ Cᴏᴍᴘʟᴇᴛᴇ!✅**\n__Pᴜʀɢᴇᴅ " + str(count) + " ᴍᴇssᴀɢᴇs.__",
     )
     if BOTLOG:
         await delme.client.send_message(
             BOTLOG_CHATID,
-            "Purge of " + str(count) + " messages done successfully.")
+            "#ᑭᑌᖇᘜᗴ \n**Pᴜʀɢᴇ ᴏғ " + str(count) + " ᴍᴇssᴀɢᴇs ᴅᴏɴᴇ sᴜᴄᴄᴇssғᴜʟʟʏ.**")
     await sleep(2)
     i = 1
     await smsg.delete()
-
 
 #@register(outgoing=True, pattern="^.del$")
 @borg.on(admin_cmd(pattern=r"del"))
