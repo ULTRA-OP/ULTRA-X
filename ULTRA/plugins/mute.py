@@ -46,7 +46,7 @@ async def startmute(event):
         except Exception as e:
             await event.edit("Error occured!\nError is " + str(e))
         else:
-            await event.edit("Chup Reh Lawde.\n**｀-´)⊃━☆ﾟ.*･｡ﾟ **")
+            await event.edit("Now keep quiet you noob kiddo.\n**｀-´)⊃━☆ﾟ.*･｡ﾟ **")
 
 #@command(outgoing=True, pattern=r"^.unmute ?(\d+)?")
 @borg.on(admin_cmd(pattern="unmute ?(\d+)?"))
@@ -78,7 +78,7 @@ async def endmute(event):
         except Exception as e:
             await event.edit("Error occured!\nError is " + str(e))
         else:
-            await event.edit("Haa Abb Boll Gandu\n乁( ◔ ౪◔)「    ┑(￣Д ￣)┍")
+            await event.edit("Haa now say what you want to say\n乁( ◔ ౪◔)「    ┑(￣Д ￣)┍")
             
 
 @command(incoming=True)
