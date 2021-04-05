@@ -52,13 +52,13 @@ from ULTRA.utils import admin_cmd as lightning_cmd
 
 
 
-LIGHTNING_WRN = {}
+ULTRA_WRN = {}
 
-LIGHTNING_REVL_MSG = {}
+ULTRA_REVL_MSG = {}
 
 
 
-LIGHTNING_PROTECTION = os.environ.get("PM_PROTECT","yes")
+ULTRA_PROTECTION = os.environ.get("PM_PROTECT","yes")
 
 
 
@@ -74,9 +74,9 @@ else:
 
 
 
-LIGHTNING_PM = os.environ.get("PMPERMIT_PIC", None)
+ULTRA_PM = os.environ.get("PMPERMIT_PIC", None)
 
-CUSTOM_LIGHTNING_PM_PIC = LIGHTNING_PM
+CUSTOM_ULTRA_PM_PIC = ULTRA_PM
 
 FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
 
@@ -98,13 +98,13 @@ OVER_POWER_WARN = (
 
     f"**Btw Dont Spam Or Get Banned** 😈 \n\n"
 
-    f"**{CUSTOM_LIGHTNING_PM_PIC}**\n"
+    f"**{CUSTOM_ULTRA_PM_PIC}**\n"
 
 )
 
 
 
-LIGHTNING_STOP_EMOJI = (
+ULTRA_STOP_EMOJI = (
 
     "â"
 
@@ -126,7 +126,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             if not ULTRA_X.is_approved(chat.id):
 
-                if not chat.id in LIGHTNING_WRN:
+                if not chat.id in ULTRA_WRN:
 
                     ULTRA_X.approve(chat.id, "outgoing")
 
@@ -158,15 +158,15 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             if not ULTRA_X.is_approved(chats.id):
 
-                if chats.id in LIGHTNING_WRN:
+                if chats.id in ULTRA_WRN:
 
-                    del LIGHTNING_WRN[chats.id]
+                    del ULTRA_WRN[chats.id]
 
-                if chats.id in LIGHTNING_REVL_MSG:
+                if chats.id in ULTRA_REVL_MSG:
 
-                    await LIGHTNING_REVL_MSG[chats.id].delete()
+                    await ULTRA_REVL_MSG[chats.id].delete()
 
-                    del LIGHTNING_REVL_MSG[chats.id]
+                    del ULTRA_REVL_MSG[chats.id]
 
                 ULTRA_X.approve(chats.id, f"Wow lucky You {ULTRA_USER} Approved You")
 
@@ -394,7 +394,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             return
 
-        if LIGHTNING_PROTECTION == "NO":
+        if ULTRA_PROTECTION == "NO":
 
             return
 
@@ -412,11 +412,11 @@ if Var.PRIVATE_GROUP_ID is not None:
 
     async def lightning_goin_to_attack(chat_ids, lightning):
 
-        if chat_ids not in LIGHTNING_WRN:
+        if chat_ids not in ULTRA_WRN:
 
-            LIGHTNING_WRN.update({chat_ids: 0})
+            ULTRA_WRN.update({chat_ids: 0})
 
-        if LIGHTNING_WRN[chat_ids] == 3:
+        if ULTRA_WRN[chat_ids] == 3:
 
             lemme = await lightning.reply(FUCK_OFF_WARN)
 
@@ -424,11 +424,11 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             await lightning.client(functions.contacts.BlockRequest(chat_ids))
 
-            if chat_ids in LIGHTNING_REVL_MSG:
+            if chat_ids in ULTRA_REVL_MSG:
 
-                await LIGHTNING_REVL_MSG[chat_ids].delete()
+                await ULTRA_REVL_MSG[chat_ids].delete()
 
-            LIGHTNING_REVL_MSG[chat_ids] = lemme
+            ULTRA_REVL_MSG[chat_ids] = lemme
 
             lightn_msg = ""
 
@@ -436,7 +436,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             lightn_msg += f"[User](tg://user?id={chat_ids}): {chat_ids}\n"
 
-            lightn_msg += f"Message Counts: {LIGHTNING_WRN[chat_ids]}\n"
+            lightn_msg += f"Message Counts: {ULTRA_WRN[chat_ids]}\n"
 
             # lightn_msg += f"Media: {message_media}"
 
@@ -476,25 +476,25 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         lightningusername = Var.TG_BOT_USER_NAME_BF_HER
 
-        LIGHTNING_L = OVER_POWER_WARN.format(
+        ULTRA_L = OVER_POWER_WARN.format(
 
-        ULTRA_USER, LIGHTNING_STOP_EMOJI, LIGHTNING_WRN[chat_ids] + 1, HMM_LOL
+        ULTRA_USER, ULTRA_STOP_EMOJI, ULTRA_WRN[chat_ids] + 1, HMM_LOL
 
         )
 
-        lightning_hmm = await bot.inline_query(lightningusername, LIGHTNING_L)
+        lightning_hmm = await bot.inline_query(lightningusername, ULTRA_L)
 
         new_var = 0
 
         yas_ser = await lightning_hmm[new_var].click(lightning.chat_id)
 
-        LIGHTNING_WRN[chat_ids] += 1
+        ULTRA_WRN[chat_ids] += 1
 
-        if chat_ids in LIGHTNING_REVL_MSG:
+        if chat_ids in ULTRA_REVL_MSG:
 
-           await LIGHTNING_REVL_MSG[chat_ids].delete()
+           await ULTRA_REVL_MSG[chat_ids].delete()
 
-        LIGHTNING_REVL_MSG[chat_ids] = yas_ser
+        ULTRA_REVL_MSG[chat_ids] = yas_ser
 
 
 

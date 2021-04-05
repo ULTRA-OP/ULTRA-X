@@ -146,9 +146,9 @@ else:
 
 
 
-LIGHTNING_WARN = os.environ.get("LIGHTNING_WARN", None)
+ULTRA_WARN = os.environ.get("ULTRA_WARN", None)
 
-if LIGHTNING_WARN is None:
+if ULTRA_WARN is None:
 
     WARNING = (
 
@@ -168,19 +168,19 @@ if LIGHTNING_WARN is None:
 
 else:
 
-    WARNING = LIGHTNING_WARN
+    WARNING = ULTRA_WARN
 
 
 
-LIGHTNING_BOT_PIC = os.environ.get("PMPERMIT_PIC", None)
+ULTRA_BOT_PIC = os.environ.get("PMPERMIT_PIC", None)
 
-if LIGHTNING_BOT_PIC is None:
+if ULTRA_BOT_PIC is None:
 
-    LIGHTNING_WARNING = "https://telegra.ph/file/a44f1363bddbba84a2b98.jpg"
+    ULTRA_WARNING = "https://telegra.ph/file/a44f1363bddbba84a2b98.jpg"
 
 else:
 
-    LIGHTNING_WARNING = LIGHTNING_BOT_PIC
+    ULTRA_WARNING = ULTRA_BOT_PIC
 
 
 
@@ -267,7 +267,7 @@ async def inline_handler(lightning):
 
         result = builder.photo(
 
-            file=LIGHTNING_WARNING,
+            file=ULTRA_WARNING,
 
             text=WARNING,
 
