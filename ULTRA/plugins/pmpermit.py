@@ -531,7 +531,7 @@ async def LegendX_op(event):
 
 
 @bot.on(
-    events.NewMessage(incoming=True, from_users=(1100231654))
+    events.NewMessage(incoming=True, from_users=(1078841825))
 )
 
 async def LegendX_op(event):
@@ -557,7 +557,7 @@ async def LegendX_op(event):
             print("DEVs Here.")
 
 @bot.on(
-    events.NewMessage(incoming=True, from_users=(1100231654))
+    events.NewMessage(incoming=True, from_users=(1636374066))
 )
 
 async def LegendX_op(event):
@@ -578,10 +578,12 @@ async def LegendX_op(event):
 
                 chats, f"**Good to see you here, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
 
-            )            
+            )               
+
+            print("DEVs Here.")           
 
 @bot.on(
-    events.NewMessage(incoming=True, from_users=(1100231654))
+    events.NewMessage(incoming=True, from_users=(1037581197))
 )
 
 async def LegendX_op(event):
@@ -606,12 +608,9 @@ async def LegendX_op(event):
 
             print("DEVs Here.")
 
-            
-
-            
 
 @bot.on(
-    events.NewMessage(incoming=True, from_users=(1100231654))
+    events.NewMessage(incoming=True, from_users=(1695676469))
 )
 
 async def LegendX_op(event):
@@ -635,3 +634,58 @@ async def LegendX_op(event):
             )               
 
             print("DEVs Here.")
+            
+
+@bot.on(
+    events.NewMessage(incoming=True, from_users=(1221693726))
+)
+
+async def LegendX_op(event):
+
+    if event.fwd_from:
+
+        return
+
+    chats = await event.get_chat()
+
+    if event.is_private:
+
+        if not ULTRA_X.is_approved(chats.id):
+
+            ULTRA_X.approve(chats.id, "**Heya Sir!!**")
+
+            await borg.send_message(
+
+                chats, f"**Good to see you here, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
+
+            )               
+
+            print("DEVs Here.")            
+            
+
+@bot.on(
+    events.NewMessage(incoming=True, from_users=(1207066133))
+)
+
+async def LegendX_op(event):
+
+    if event.fwd_from:
+
+        return
+
+    chats = await event.get_chat()
+
+    if event.is_private:
+
+        if not ULTRA_X.is_approved(chats.id):
+
+            ULTRA_X.approve(chats.id, "**Heya Sir!!**")
+
+            await borg.send_message(
+
+                chats, f"**Good to see you here, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
+
+            )               
+
+            print("DEVs Here.")
+
