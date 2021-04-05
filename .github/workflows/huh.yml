@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "from userbot"
+          find: "lightning_sql"
 
-          replace: "from ULTRA"
+          replace: "ULTRA_X"
 
       - name: Create Pull Request
 
