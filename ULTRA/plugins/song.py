@@ -1,4 +1,4 @@
-#    Copyright (C) 2020 LEGENDBOT
+#    Copyright (C) 2020 LEGENDX22
 
 ######### made by LEGENDX22 🔥🔥🔥###################
 
@@ -9,7 +9,6 @@
 #    the Free Software Foundation, either version 3 of the License, or
 
 #    made by LEGEND X by shivam help 
-#    thanks LEGENDX
 
 #    This program is distributed in the hope that it will be useful,
 
@@ -30,56 +29,70 @@
 
 
 
-"""Thanks To 
+"""
+Thanks To :-
+
 TEAMLEGEND
+
 TEAMULTRA
+
 KEINSHIN
+
 @LEGENDX22
 
+MadBoy482
 """
 
 
 
 
 
-"""Only ULTRA X and LEGEND-BOT (Can Use Without Credits) Can Use This Inline WithOut Copyright (Just Give The Credits Pls)
+""" Only ULTRA X and LEGEND-BOT Can Use This Inline WithOut Credits/Copyright Info..
+Rest all need to give The Credits, else DMCA.
 
-Thanks"""
+Thanks
+"""
 
-
-
-
-
-
-
-
-
-
-
-
+# made by legendx22 
+# modify by madboy482
 import os
 import re
-
+# made by legendx22 
+# modify by madboy482
 import json
-
+# made by legendx22 
+# modify by madboy482
 from math import ceil
-
+# made by legendx22 
+# modify by madboy482
 from ULTRA.uniborgConfig import Config
-
-
-
+# made by legendx22 
+# modify by madboy482
+# made by legendx22 
+# modify by madboy482
+# made by legendx22 
+# modify by madboy482
 from telethon import Button, custom, events, functions
-
-
-
+# made by legendx22 
+# modify by madboy482
+# made by legendx22 
+# modify by madboy482
+# made by legendx22 
+# modify by madboy482
 from ULTRA import ALIVE_NAME, CMD_HELP, CMD_LIST, bot
-
-
-
+# made by legendx22 
+# modify by madboy482
+# made by legendx22 
+# modify by madboy482
+# made by legendx22 
+# modify by madboy482
 from var import Var
-
-
-
+# made by legendx22 
+# modify by madboy482
+# made by legendx22 
+# modify by madboy482
+# made by legendx22 
+# modify by madboy482
 
 
 LIGHT_LOGS = Config.PM_LOGGR_BOT_API_ID 
@@ -95,7 +108,8 @@ from datetime import datetime
 from pathlib import Path
 
 
-
+# made by legendx22 
+# modify by madboy482
 
 
 from ULTRA.utils import load_module, remove_plugin,admin_cmd as ultra_cmd
@@ -105,7 +119,8 @@ from ULTRA.utils import load_module, remove_plugin,admin_cmd as ultra_cmd
 DELETE_TIMEOUT = 5
 
 
-
+# made by legendx22 
+# modify by madboy482
 
 
 thumb_image_path = "./resources/541200.png"
@@ -116,14 +131,15 @@ ULTRA_USER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 ULTRAXBOT = Var.TG_BOT_TOKEN_BF_HER
 
+# made by legendx22 
+# modify by madboy482
+
+# made by legendx22 
+# modify by madboy482
 
 
-
-
-
-
-
-
+# made by legendx22 
+# modify by madboy482
  
 
 from LEGENDX import ID
@@ -140,33 +156,47 @@ else:
     BOT_LIT = BOT_MSG   
 
 
-
+# made by legendx22 
+# modify by madboy482
 
 
 ULTRA_WARN = os.environ.get("ULTRA_WARN", None)
 
 if ULTRA_WARN is None:
+# made by legendx22 
+# modify by madboy482
 
+# made by legendx22 
+# modify by madboy482
     WARNING = (
 
     f"**{BOT_LIT}"
 
    f"__Hᴇʏ ᴛʜᴇʀᴇ!! I'ᴍ__ **υℓтяα χ** __ᴀɴᴅ I'ᴍ ʜᴇʀᴇ ᴛᴏ Pʀᴏᴛᴇᴄᴛ {ULTRA_USER}..\nDᴏɴ'ᴛ ᴜɴᴅᴇʀ Esᴛɪᴍᴀᴛᴇ ᴍᴇ 😈😈__\n\n**\n\n"
-
+# made by legendx22 
+# modify by madboy482
     f"__Mʏ Mᴀsᴛᴇʀ **{ULTRA_USER}**  ɪs ʙᴜsʏ ʀɪɢʜᴛ ɴᴏᴡ !!__ \n"
-
+# made by legendx22 
+# modify by madboy482
     f"Mʏ Mᴀsᴛᴇʀ ʜᴀs ᴀssɪɢɴᴇᴅ ᴍᴇ ᴛʜᴇ ᴅᴜᴛʏ ᴛᴏ ᴋᴇᴇᴘ ᴀ ᴄʜᴇᴄᴋ ᴏɴ ʜɪs PM, Aɴᴅ ɪ'ʟʟ ᴅᴏ ɪᴛ ғᴀɪᴛʜғᴜʟʟʏ..Sᴏ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅɪsᴛᴜʀʙ ʜɪᴍ..\n"
-
+# made by legendx22 
+# modify by madboy482
     f"**Iғ ᴜ Sᴘᴀᴍ, ᴏʀ ᴛʀɪᴇᴅ ᴀɴʏᴛʜɪɴɢ ғᴜɴɴʏ, I'ᴠᴇ ғᴜʟʟ ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ Bʟᴏᴄᴋ + Rᴇᴘᴏʀᴛ ʏᴏᴜ ᴀs Sᴘᴀᴍ ɪɴ Tᴇʟᴇɢʀᴀᴍ's sᴇʀᴠᴇʀ...**\n\n"
-
+# made by legendx22 
+# modify by madboy482
     f"**Bᴇᴛᴛᴇʀ ʙᴇ ᴄᴀʀᴇғᴜʟ..**\n\n"
-
+# made by legendx22 
+# modify by madboy482
     f"**Cʜᴏᴏsᴇ ᴀɴʏ Rᴇᴀsᴏɴ & GTFO**\n"
 
 )
 
 else:
+# made by legendx22 
+# modify by madboy482
 
+# made by legendx22 
+# modify by madboy482
     WARNING = ULTRA_WARN
 
 
@@ -184,13 +214,17 @@ else:
 
 
 
+# made by legendx22 
+# modify by madboy482
 
+# made by legendx22 
+# modify by madboy482
 
+# made by legendx22 
+# modify by madboy482
 
-
-
-
-
+# made by legendx22 
+# modify by madboy482
 
 
 
@@ -209,13 +243,15 @@ async def inline_handler(ultra):
     if ultra.query.user_id == bot.uid and query.startswith("**help") or query.startswith("help"):
         print (False)
     elif ultra.query.user_id == bot.uid and query == "**Cool":
-
+# made by legendx22 
+# modify by madboy482
         result = builder.article(
 
             title="Cool",
 
             text=f"**Wʜᴀᴛ ɪғ ʏᴏᴜ ғᴀᴄᴇ sᴏᴍᴇ ᴘʀᴏʙʟᴇᴍ\n{ULTRA_USER}** \nCʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ ғᴏʀ ʜᴇʟᴘ",
-
+# made by legendx22 
+# modify by madboy482
             buttons=[
 
                 [custom.Button.inline("Hᴇʟᴘ ⚙️", data="what?")],
@@ -237,7 +273,8 @@ async def inline_handler(ultra):
                     )
 
                 ], 
-
+# made by legendx22 
+# modify by madboy482
             ],
 
         )
@@ -277,16 +314,22 @@ async def inline_handler(ultra):
                         "Lᴇᴍᴍᴇ Iɴ ;)", 
 
                         data="lol_u_think_so",
-
+# made by legendx22 
+# modify by madboy482
                         
 
                     )
 
-                        
+# made by legendx22 
+# modify by madboy482                       
 
                 ],
 
-
+# made by legendx22 
+# modify by madboy482
+             
+# made by legendx22 
+# modify by madboy482
 
             ],
 
@@ -318,9 +361,11 @@ async def what(ultra):
 
         await ultra.answer(txt, alert=True)
 
+# made by legendx22 
+# modify by madboy482
 
-
-
+# made by legendx22 
+# modify by madboy482
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ultra_is_here_cant_spam")))
 
@@ -328,19 +373,32 @@ async def ultra_is_better(ultra):
 
     if ultra.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! Master {ULTRA_USER} I'm Trying To Get Rid Of This Nigga...Pls Dont Touch!!"
+        fck_bit = f"Oʜ!! Mᴀsᴛᴇʀ, {ULTRA_USER}...I'ᴍ Tʀʏɪɴɢ Tᴏ Gᴇᴛ Rɪᴅ Oғ Tʜɪs Nɪɢɢᴀ...Pʟs Dᴏɴᴛ Tᴏᴜᴄʜ!!"
 
         await ultra.answer(fck_bit, cache_time=0, alert=True)
 
         return
 
     await ultra.get_chat()
+# made by legendx22 
+# modify by madboy482
 
+# made by legendx22 
+# modify by madboy482
+
+# made by legendx22 
+# modify by madboy482
     ultra_id = ultra.query.user_id
 
-    text1 = f"LOL **You Think So You Can**😂\n\n**[Nibba](tg://user?id={ultra_id}) Bye Goin To Block You Gay**😈😈"
+    text1 = f'''
+██╗░░░░░░█████╗░██╗░░░░░
+██║░░░░░██╔══██╗██║░░░░░
+██║░░░░░██║░░██║██║░░░░░
+██║░░░░░██║░░██║██║░░░░░
+███████╗╚█████╔╝███████╗
+╚══════╝░╚════╝░╚══════╝\n\n**Yᴏᴜ Tʜɪɴᴋ Sᴏ Yᴏᴜ Cᴀɴ**😂\n\n**[Nibba](tg://user?id={ultra_id})\nBʏᴇ Gᴏɪɴ Tᴏ Bʟᴏᴄᴋ Yᴏᴜ Gᴀʏ**😈😈'''
 
-    await ultra.edit("Off Course Go To Hell Dude")
+    await ultra.edit("Oғғ Cᴏᴜʀsᴇ Gᴏ Tᴏ Hᴇʟʟ Dᴜᴅᴇ")
 
     await bot.send_message(ultra.query.user_id, text1)
 
@@ -352,10 +410,12 @@ async def ultra_is_better(ultra):
 
         LIGHT_LOGS,
 
-        f"Hey Master Sorry Disturb You, [Noob](tg://user?id={ultra_id}) Tryin To Spam 🥺\n\n**So Blocked**.",
-
+        f"Hᴇʏ Mᴀsᴛᴇʀ Sᴏʀʀʏ Tᴏ Dɪsᴛᴜʀʙ Yᴏᴜ, [Noob](tg://user?id={ultra_id}) Tʀʏɪɴ Tᴏ Sᴘᴀᴍ 🥺\n\n**Sᴏ Bʟᴏᴄᴋᴇᴅ**.",
+# made by legendx22 
+# modify by madboy482
     )
-
+# made by legendx22 
+# modify by madboy482
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lol_u_think_so")))
@@ -364,7 +424,7 @@ async def ultra_is_better(ultra):
 
     if ultra.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! C'mon Master {ULTRA_USER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+        fck_bit = f"Oʜ C'ᴍᴏɴ Mᴀsᴛᴇʀ!!, {ULTRA_USER}...I'ᴍ Tʀʏɪɴɢ Tᴏ Gᴇᴛ Rɪᴅ Oғ Tʜɪs Nɪɢɢᴀ...Pʟs Dᴏɴᴛ Tᴏᴜᴄʜ!!"
 
         await ultra.answer(fck_bit, cache_time=0, alert=True)
 
@@ -374,9 +434,15 @@ async def ultra_is_better(ultra):
 
     ultra_id = ultra.query.user_id
 
-    text1 = f"LOL You Think So You Can😂😂\nGo and wait🥴🥴"
+    text1 = f'''
+██╗░░░░░░█████╗░██╗░░░░░
+██║░░░░░██╔══██╗██║░░░░░
+██║░░░░░██║░░██║██║░░░░░
+██║░░░░░██║░░██║██║░░░░░
+███████╗╚█████╔╝███████╗
+╚══════╝░╚════╝░╚══════╝\n\n**Yᴏᴜ Tʜɪɴᴋ Sᴏ Yᴏᴜ Cᴀɴ**😂\n\nGo and wait 🥴🥴...'''
 
-    await ultra.edit("Off Course Go To Hell Dudeð😑")
+    await ultra.edit("Oғғ Cᴏᴜʀsᴇ Gᴏ Tᴏ Hᴇʟʟ Dᴜᴅᴇð😑")
 
     await bot.send_message(ultra.query.user_id, text1)
 
@@ -386,17 +452,20 @@ async def ultra_is_better(ultra):
 
         LIGHT_LOGS,
 
-        f"Hey Master Sorry Disturb You, [Noob](tg://user?id={ultra_id}) Tryin To Enter With Out approvalð \n.",
+        f"Hᴇʏ Mᴀsᴛᴇʀ Sᴏʀʀʏ Tᴏ Dɪsᴛᴜʀʙ Yᴏᴜ, [Noob](tg://user?id={ultra_id}) Tʀʏɪɴ Tᴏ Eɴᴛᴇʀ Wɪᴛʜ Oᴜᴛ ᴀᴘᴘʀᴏᴠᴀʟð \n.",
 
     )
 
 
 
+# made by legendx22 
+# modify by madboy482
 
+# made by legendx22 
+# modify by madboy482
 
-
-
-
+# made by legendx22 
+# modify by madboy482
 
 
 
@@ -406,7 +475,7 @@ async def ultra_is_better(ultra):
 
     if ultra.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! C'mon Master {ULTRA_USER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+        fck_bit = f"Oʜ C'ᴍᴏɴ Mᴀsᴛᴇʀ!!, {ULTRA_USER}...I'ᴍ Tʀʏɪɴɢ Tᴏ Gᴇᴛ Rɪᴅ Oғ Tʜɪs Nɪɢɢᴀ...Pʟs Dᴏɴᴛ Tᴏᴜᴄʜ!!"
 
         await ultra.answer(fck_bit, cache_time=0, alert=True)
 
@@ -416,23 +485,31 @@ async def ultra_is_better(ultra):
 
     ultra_id = ultra.query.user_id
 
-    await ultra.edit("Oh You Wanna Talk With My Master\n\nPls Wait Dear \n\n**Btw** **You Can Wait For My Master**")
+    await ultra.edit('''Oʜ Yᴏᴜ Wᴀɴɴᴀ Tᴀʟᴋ Wɪᴛʜ Mʏ Mᴀsᴛᴇʀ\n\nPʟs Wᴀɪᴛ Dᴇᴀʀ\n\n
+░██╗░░░░░░░██╗░█████╗░██╗████████╗
+░██║░░██╗░░██║██╔══██╗██║╚══██╔══╝
+░╚██╗████╗██╔╝███████║██║░░░██║░░░
+░░████╔═████║░██╔══██║██║░░░██║░░░
+░░╚██╔╝░╚██╔╝░██║░░██║██║░░░██║░░░
+░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░░╚═╝░░░''')
 
     await asyncio.sleep(2)
 
     await ultra.edit(
 
-        "Name Which Type Of Friend?", buttons= [
+        "Wʜɪᴄʜ Tʏᴘᴇ Oғ Fʀɪᴇɴᴅ, Hᴜʜ?", buttons= [
 
-        [Button.inline("School", data="school")],
+        [Button.inline("Sᴄʜᴏᴏʟ Bᴜᴅᴅʏ", data="school")],
 
-        [Button.inline("Tg Causal Friend", data="tg_okay")],
+        [Button.inline("TG Cᴀᴜsᴀʟ Fʀɪᴇɴᴅ", data="tg_okay")],
 
         ], 
 
     )
 
-    light_text = "`Warning`- 😈😈Dont Try Anything Stupid  Wait Kindly!!!😈😈"
+    light_text = '''
+█░█░█ ▄▀█ █▀█ █▄░█ █ █▄░█ █▀▀
+▀▄▀▄▀ █▀█ █▀▄ █░▀█ █ █░▀█ █▄█\n\n😈😈Dᴏɴ'ᴛ Tʀʏ Aɴʏᴛʜɪɴɢ Sᴛᴜᴘɪᴅ, Wᴀɪᴛ Pᴀᴛɪᴇɴᴛʟʏ!!!😈😈'''
 
     await bot.send_message(ultra.query.user_id, light_text)
 
@@ -456,23 +533,23 @@ async def yeahbaba(ultra):
 
         if ultra.query.user_id == bot.uid:
 
-            fck_bit = f"Oh! C'mon Master {ULTRA_USER} "
+            fck_bit = f"Oʜ! C'ᴍᴏɴ Mᴀsᴛᴇʀ {ULTRA_USER} "
 
             await ultra.answer(fck_bit, cache_time=0, alert=True)
 
             return
 
-        light_text = "**So You  Are TG Friend** Okay wait"
+        light_text = "**Hᴜᴍᴍ!! I C, Yᴏᴜ'ʀᴇ ᴀ TG Fʀɪᴇɴᴅ** Oᴋᴀʏ Wᴀɪᴛ"
 
         ultra_id = ultra.query.user_id
 
         await asyncio.sleep(2)
 
-        await ultra.edit(f"`Informing To Master {ULTRA_USER}`")
+        await ultra.edit(f"`Iɴғᴏʀᴍɪɴɢ Tᴏ Mᴀsᴛᴇʀ {ULTRA_USER}`")
 
         await asyncio.sleep(2)
 
-        await ultra.edit("`Done Informed`")
+        await ultra.edit("`Dᴏɴᴇ Iɴғᴏʀᴍᴇᴅ`")
 
         await bot.send_message(ultra.query.user_id, light_text)
 
@@ -480,7 +557,7 @@ async def yeahbaba(ultra):
 
         LIGHT_LOGS,
 
-        message=f"Hello, Master  [Friend](tg://user?id={ultra_id}). Your Casual Telegram Friend His Here To Chat pls See The Message [Tg Friend](tg://user?id={ultra_id}) Is Waiting.",
+        message=f"Hᴇʟʟᴏ, Mᴀsᴛᴇʀ. Yᴏᴜʀ Cᴀsᴜᴀʟ Tᴇʟᴇɢʀᴀᴍ Fʀɪᴇɴᴅ ɪs Hᴇʀᴇ Tᴏ Cʜᴀᴛ ᴡɪᴛʜ ᴜ.\nPʟs Sᴇᴇ Tʜᴇ Mᴇssᴀɢᴇ, [Tg Friend](tg://user?id={ultra_id}) Is Wᴀɪᴛɪɴɢ.",
 
     
 
@@ -492,23 +569,23 @@ async def yeahbaba(ultra):
 
         if ultra.query.user_id == bot.uid:
 
-            fck_bit = f"Oh! C'mon Master {ULTRA_USER} "
+            fck_bit = f"Oʜ! C'ᴍᴏɴ Mᴀsᴛᴇʀ {ULTRA_USER} "
 
             await ultra.answer(fck_bit, cache_time=0, alert=True)
 
             return
 
-        light_text = "**So You  Are  Friend** Okay wait"
+        light_text = "**Hᴜᴍᴍ!! I C, Yᴏᴜ'ʀᴇ ᴀ Fʀɪᴇɴᴅ** Oᴋᴀʏ Wᴀɪᴛ"
 
         ultra_id = ultra.query.user_id
 
         await asyncio.sleep(2)
 
-        await ultra.edit(f"`Informing To Master {ULTRA_USER}`")
+        await ultra.edit(f"`Iɴғᴏʀᴍɪɴɢ Tᴏ Mᴀsᴛᴇʀ {ULTRA_USER}`")
 
         await asyncio.sleep(2)
 
-        await ultra.edit("`Done Informed`")
+        await ultra.edit("`Dᴏɴᴇ Iɴғᴏʀᴍᴇᴅ`")
 
         await bot.send_message(ultra.query.user_id, light_text)
 
@@ -516,7 +593,7 @@ async def yeahbaba(ultra):
 
         LIGHT_LOGS,
 
-        message=f"Hello, Master  [Friend](tg://user?id={ultra_id}). Your Casual Telegram Friend His Here To Chat pls See The Message [Tg Friend](tg://user?id={ultra_id}) Is Waiting.",
+        message=f"Hᴇʟʟᴏ, Mᴀsᴛᴇʀ. Oɴᴇ ᴏғ ʏᴏᴜʀ Fʀɪᴇɴᴅs' ɪs Hᴇʀᴇ Tᴏ Cʜᴀᴛ ᴡɪᴛʜ ᴜ.\nPʟs Sᴇᴇ Tʜᴇ Mᴇssᴀɢᴇ, [Friend](tg://user?id={ultra_id}) Is Wᴀɪᴛɪɴɢ.",
 
         )
 
@@ -530,31 +607,33 @@ async def ultra_is_better(ultra):
 
     if ultra.query.user_id == bot.uid:
 
-        fck_bit = f"Oh! C'mon Master {ULTRA_USER} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+        fck_bit = f"Oʜ C'ᴍᴏɴ Mᴀsᴛᴇʀ!!, {ULTRA_USER}...I'ᴍ Tʀʏɪɴɢ Tᴏ Gᴇᴛ Rɪᴅ Oғ Tʜɪs Nɪɢɢᴀ...Pʟs Dᴏɴᴛ Tᴏᴜᴄʜ!!"
 
         await ultra.answer(fck_bit, cache_time=0, alert=True)
 
         return
+# made by legendx22 
+# modify by madboy482
 
     await ultra.get_chat()
 
     ultra_id = ultra.query.user_id
 
-    await ultra.edit("Okay let Me Think🤔🤔«")
+    await ultra.edit("Oᴋᴀʏ ʟᴇᴛ Mᴇ Tʜɪɴᴋ🤔🤔«")
 
     await asyncio.sleep(2)
 
-    await ultra.edit("Okay Giving You A Chance🧐¨")
+    await ultra.edit("Oᴋᴀʏ Gɪᴠɪɴɢ Yᴏᴜ A Cʜᴀɴᴄᴇ🧐¨")
 
     await asyncio.sleep(2)
 
     await ultra.edit(
 
-        "You Will Spam?", buttons= [
+        "Wɪʟʟ ʏᴏᴜ Sᴘᴀᴍ?", buttons= [
 
-        [Button.inline("Yes", data="lemme_ban")],
+        [Button.inline("Yᴇs", data="lemme_ban")],
 
-        [Button.inline("No", data="hmm")],
+        [Button.inline("Nᴏ", data="hmm")],
 
         ],
 
@@ -564,7 +643,9 @@ async def ultra_is_better(ultra):
 
     
 
-    reqws = "`Warning`- 😈😈Dont Try Anything Stupid  Wait Kindly!!!😈😈"
+    reqws = '''
+█░█░█ ▄▀█ █▀█ █▄░█ █ █▄░█ █▀▀
+▀▄▀▄▀ █▀█ █▀▄ █░▀█ █ █░▀█ █▄█\n\n😈😈Dᴏɴ'ᴛ Tʀʏ Aɴʏᴛʜɪɴɢ Sᴛᴜᴘɪᴅ, Wᴀɪᴛ Pᴀᴛɪᴇɴᴛʟʏ!!!😈😈'''
 
 
 
@@ -576,9 +657,9 @@ async def ultra_is_better(ultra):
 
         LIGHT_LOGS,
 
-        message=f"Hello, Master  [Nibba](tg://user?id={ultra_id}). Wants To Request Something.",
+        message=f"Hᴇʟʟᴏ, Mᴀsᴛᴇʀ [Nibba](tg://user?id={ultra_id}), Wᴀɴᴛs Tᴏ Rᴇᴏ̨ᴜᴇsᴛ Sᴏᴍᴇᴛʜɪɴɢ.",
 
-        buttons=[Button.url("Contact Him", f"tg://user?id={ultra_id}")],
+        buttons=[Button.url("Cᴏɴᴛᴀᴄᴛ Hɪᴍ", f"tg://user?id={ultra_id}")],
 
     )
 
@@ -590,7 +671,13 @@ async def yes_ucan(ultra):
 
     if ultra.query.user_id == bot.uid:
 
-           lmaoo = "You Are Not Requesting , Lol."
+           lmaoo = '''Yᴏᴜ Aʀᴇ'ɴᴛ Rᴇᴏ̨ᴜᴇsᴛɪɴɢ..\n\n
+██╗░░░░░░█████╗░██╗░░░░░
+██║░░░░░██╔══██╗██║░░░░░
+██║░░░░░██║░░██║██║░░░░░
+██║░░░░░██║░░██║██║░░░░░
+███████╗╚█████╔╝███████╗
+╚══════╝░╚════╝░╚══════╝'''
 
            await ultra.answer(lmaoo, cache_time=0, alert=True)
 
@@ -600,9 +687,9 @@ async def yes_ucan(ultra):
 
     await asyncio.sleep(2)
 
-    await ultra.edit("Okay You Can Wait Till Wait")
+    await ultra.edit("Oᴋᴀʏ Yᴏᴜ Cᴀɴ Wᴀɪᴛ..")
 
-    hmmmmm = "Okay Kindly wait  i will inform you"
+    hmmmmm = "Okay Kindly wait, I'll inform you..."
 
     await bot.send_message(
 
@@ -616,19 +703,37 @@ async def yes_ucan(ultra):
 
     if ultra.query.user_id == bot.uid:
 
-           lmaoo = "You Are Not Requesting , Lol."
+           lmaoo = '''Yᴏᴜ Aʀᴇ'ɴᴛ Rᴇᴏ̨ᴜᴇsᴛɪɴɢ..\n\n
+██╗░░░░░░█████╗░██╗░░░░░
+██║░░░░░██╔══██╗██║░░░░░
+██║░░░░░██║░░██║██║░░░░░
+██║░░░░░██║░░██║██║░░░░░
+███████╗╚█████╔╝███████╗
+╚══════╝░╚════╝░╚══════╝'''
 
            await ultra.answer(lmaoo, cache_time=0, alert=True)
 
            return    
 
     await ultra.get_chat()
-
+# made by legendx22 
+# modify by madboy482
     await asyncio.sleep(2)
 
-    await ultra.edit("Get Lost Retard")
+    await ultra.edit("Gᴇᴛ Lᴏsᴛ Rᴇᴛᴀʀᴅ")
+    
+    await asyncio.sleep(2)
+# made by legendx22 
+# modify by madboy482
+    await ultra.edit('''
+███╗░░██╗██╗██████╗░██████╗░░█████╗░░██████╗
+████╗░██║██║██╔══██╗██╔══██╗██╔══██╗██╔════╝
+██╔██╗██║██║██████╦╝██████╦╝███████║╚█████╗░
+██║╚████║██║██╔══██╗██╔══██╗██╔══██║░╚═══██╗
+██║░╚███║██║██████╦╝██████╦╝██║░░██║██████╔╝
+╚═╝░░╚══╝╚═╝╚═════╝░╚═════╝░╚═╝░░╚═╝╚═════╝░''')
 
-    ban = "Get Lost Goin To Block You" 
+    ban = "Gᴇᴛ Lᴏsᴛ, Gᴏɪɴ Tᴏ Bʟᴏᴄᴋ Yᴏᴜ" 
 
     await bot.send_message(
 
@@ -639,16 +744,16 @@ async def yes_ucan(ultra):
 
 
 
+# made by legendx22 
+# modify by madboy482
 
-
-
+# made by legendx22 
+# modify by madboy482
 
 
 
 """
 
-Thanks To LEGEND BOT and @LEGENDX22 For This idea
-
-
+Thanks To LEGEND BOT, @LEGENDX22 and @NubBoy_007
 
 """
