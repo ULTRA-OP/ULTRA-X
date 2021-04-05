@@ -1,6 +1,6 @@
 #    Copyright (C) 2020 LEGENDBOT
 
-######### maked by LEGENDX22 🔥🔥🔥###################
+######### made by LEGENDX22 🔥🔥🔥###################
 
 #    This program is free software: you can redistribute it and/or modify
 
@@ -8,7 +8,8 @@
 
 #    the Free Software Foundation, either version 3 of the License, or
 
-#    maked by LEGEND X by shivam help thanks LEGENDX
+#    made by LEGEND X by shivam help 
+#    thanks LEGENDX
 
 #    This program is distributed in the hope that it will be useful,
 
@@ -132,7 +133,7 @@ BOT_MSG = os.environ.get("BOT_MSG", None)
 
 if BOT_MSG is None:
 
-    BOT_LIT = f"Hello Sir MySelf ULTRA X Here For {ULTRA_USER}'s Protection "
+    BOT_LIT = f"Hᴇʟʟᴏ sɪʀ ᴍʏsᴇʟғ UʟᴛʀᴀX, ғᴏʀ {ULTRA_USER}'s Pʀᴏᴛᴇᴄᴛɪᴏɴ "
 
 else:
 
@@ -150,17 +151,17 @@ if ULTRA_WARN is None:
 
     f"**{BOT_LIT}"
 
-   f"__Hey There!! I'm__ **υℓтяα χ** __and I'm here to protect {ULTRA_USER}..\nDon't under estimate Me 😈😈__\n\n**\n\n"
+   f"__Hᴇʏ ᴛʜᴇʀᴇ!! I'ᴍ__ **υℓтяα χ** __ᴀɴᴅ I'ᴍ ʜᴇʀᴇ ᴛᴏ Pʀᴏᴛᴇᴄᴛ {ULTRA_USER}..\nDᴏɴ'ᴛ ᴜɴᴅᴇʀ Esᴛɪᴍᴀᴛᴇ ᴍᴇ 😈😈__\n\n**\n\n"
 
-    f"__My Master **{ULTRA_USER}** is Busy Right Now !__ \n"
+    f"__Mʏ Mᴀsᴛᴇʀ **{ULTRA_USER}**  ɪs ʙᴜsʏ ʀɪɢʜᴛ ɴᴏᴡ !!__ \n"
 
-    f"My Master assigned me the duty to keep a check on his PM, and I'll do it faithfully..So you're not allowed to disturb him."
+    f"Mʏ Mᴀsᴛᴇʀ ʜᴀs ᴀssɪɢɴᴇᴅ ᴍᴇ ᴛʜᴇ ᴅᴜᴛʏ ᴛᴏ ᴋᴇᴇᴘ ᴀ ᴄʜᴇᴄᴋ ᴏɴ ʜɪs PM, Aɴᴅ ɪ'ʟʟ ᴅᴏ ɪᴛ ғᴀɪᴛʜғᴜʟʟʏ..Sᴏ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅɪsᴛᴜʀʙ ʜɪᴍ..\n"
 
-    f"**If u spam, or tried anything funny, I've full permission to Block + Report you as Spam in Telegram's Server...**\n\n"
+    f"**Iғ ᴜ Sᴘᴀᴍ, ᴏʀ ᴛʀɪᴇᴅ ᴀɴʏᴛʜɪɴɢ ғᴜɴɴʏ, I'ᴠᴇ ғᴜʟʟ ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ Bʟᴏᴄᴋ + Rᴇᴘᴏʀᴛ ʏᴏᴜ ᴀs Sᴘᴀᴍ ɪɴ Tᴇʟᴇɢʀᴀᴍ's sᴇʀᴠᴇʀ...**\n\n"
 
-    f"**Better be Careful..**\n\n"
+    f"**Bᴇᴛᴛᴇʀ ʙᴇ ᴄᴀʀᴇғᴜʟ..**\n\n"
 
-    f"**Choose Any Reason & Then Get Lost**\n"
+    f"**Cʜᴏᴏsᴇ ᴀɴʏ Rᴇᴀsᴏɴ & GTFO**\n"
 
 )
 
@@ -213,15 +214,15 @@ async def inline_handler(ultra):
 
             title="Cool",
 
-            text=f"**How If Face Problem \n{ULTRA_USER}** \nChoose Your Problem For Help ",
+            text=f"**Wʜᴀᴛ ɪғ ʏᴏᴜ ғᴀᴄᴇ sᴏᴍᴇ ᴘʀᴏʙʟᴇᴍ\n{ULTRA_USER}** \nCʜᴏᴏsᴇ ʏᴏᴜʀ ᴘʀᴏʙʟᴇᴍ ғᴏʀ ʜᴇʟᴘ",
 
             buttons=[
 
-                [custom.Button.inline("Help ⚙️", data="what?")],
+                [custom.Button.inline("Hᴇʟᴘ ⚙️", data="what?")],
 
-                [Button.url("Commands Not Working 🤔", "https://t.me/teamishere")],
+                [Button.url("Cᴏᴍᴍᴀɴᴅs ɴᴏᴛ ᴡᴏʀᴋɪɴɢ 🤔", "https://t.me/teamishere")],
 
-                [Button.url("Help Article 🤔", "https://app.gitbook.com/@poxsisofficial/s/help/")],
+                [Button.url("Hᴇʟᴘ Aʀᴛɪᴄʟᴇ 🤔", "https://app.gitbook.com/@poxsisofficial/s/help/")],
 
                 [
 
@@ -229,7 +230,7 @@ async def inline_handler(ultra):
 
                 
 
-                    "Want To Learn CMDS ☺️☺️",
+                    "Wᴀɴᴛ ᴛᴏ ʟᴇᴀʀɴ Cᴍᴅs ☺️☺️",
 
                     "https://t.me/UltraXchaT" ,
 
@@ -243,7 +244,7 @@ async def inline_handler(ultra):
 
         await ultra.answer([result])
 
-    elif ultra.query.user_id == bot.uid and query.startswith("**Hello Sir"):
+    elif ultra.query.user_id == bot.uid and query.startswith("**Hᴇʟʟᴏ sɪʀ**"):
 
         result = builder.photo(
 
@@ -253,13 +254,13 @@ async def inline_handler(ultra):
 
             buttons=[
 
-                [custom.Button.inline("Wanna Spam Something?🥺🥺", data="ultra_is_here_cant_spam")],
+                [custom.Button.inline("Wᴀɴɴᴀ Sᴘᴀᴍ Sᴏᴍᴇᴛʜɪɴɢ?🥺🥺", data="ultra_is_here_cant_spam")],
 
                 [
 
                     custom.Button.inline(
 
-                        "My Friend 🧐🧐",
+                        "Mʏ Fʀɪᴇɴᴅ🧐🧐",
 
                         data="he_sucks",
 
@@ -267,13 +268,13 @@ async def inline_handler(ultra):
 
                 ],
 
-                [custom.Button.inline("Requesting ⚜️⚜️", data="fck_ask")],
+                [custom.Button.inline("Rᴇǫᴜᴇsᴛɪɴɢ⚜️⚜️", data="fck_ask")],
 
                 [
 
                     custom.Button.inline(
 
-                        "Lemme In ;)", 
+                        "Lᴇᴍᴍᴇ Iɴ ;)", 
 
                         data="lol_u_think_so",
 
@@ -307,13 +308,13 @@ async def what(ultra):
 
     if ultra.query.user_id == bot.uid or ultra.query.user_id == ID:
 
-        fck_bit = f"{ULTRA_USER}  Use The Buttons Below "
+        fck_bit = f"{ULTRA_USER} Usᴇ ᴛʜᴇ Bᴜᴛᴛᴏɴs Bᴇʟᴏᴡ"
 
         await ultra.answer(fck_bit, alert=True)
 
     else:
 
-        txt = f"Ohh!! You Think That This Is For You?\nOk I'll Complain To {ULTRA_USER} ⚜️⚜️"
+        txt = f"Oʜʜ!! Yᴏᴜ ᴛʜɪɴᴋ ᴛʜᴀᴛ ᴛʜɪs ɪs ғᴏʀ ʏᴏᴜ??\nOᴋ I'ʟʟ ᴄᴏᴍᴘʟᴀɪɴ ᴛᴏ {ULTRA_USER} ⚜️⚜️"
 
         await ultra.answer(txt, alert=True)
 
