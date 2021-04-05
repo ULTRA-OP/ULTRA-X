@@ -1,4 +1,4 @@
-#    @keinshin a.k.a KeinShin
+#    @LEGENDX a.k.a KeinShin
 
 #    Copyright (C) 2020 KeinShin
 

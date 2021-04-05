@@ -8,7 +8,7 @@
 
 #    the Free Software Foundation, either version 3 of the License, or
 
-#    maked by LEGEND X by shivam help thanks keinshin
+#    maked by LEGEND X by shivam help thanks LEGENDX
 
 #    This program is distributed in the hope that it will be useful,
 
@@ -33,7 +33,7 @@
 
 Midhun_xD
 
-@keinshin
+@LEGENDX
 
 @Shivam_Patel
 
@@ -449,9 +449,9 @@ async def ultra_pugins_query_hndlr(ultra):
 
     if len(ultra_is_best) >= 4096:
 
-          keinshin = "` Wait. (🔥🔥🔥🔥) `"
+          LEGENDX = "` Wait. (🔥🔥🔥🔥) `"
 
-          await ultra.answer(keinshin, cache_time=0, alert=True)
+          await ultra.answer(LEGENDX, cache_time=0, alert=True)
 
           out_file = ultra_is_best
 
