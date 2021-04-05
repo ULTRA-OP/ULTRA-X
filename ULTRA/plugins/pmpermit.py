@@ -1,4 +1,31 @@
-from LEGENDX import devs
+#    @keinshin a.k.a KeinShin
+
+#    Copyright (C) 2020 KeinShin
+
+
+
+#    This program is free software: you can redistribute it and/or modify
+
+#    it under the terms of the GNU Affero General Public License as published by
+
+#    the Free Software Foundation, either version 3 of the License, or
+
+#    maked by LEGENDX22 🔥🔥🔥🔥 helper shivam ⚡⚡⚡
+
+#    This program is distributed in the hope that it will be useful,
+
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+
+#    GNU Affero General Public License for more details.
+
+#
+
+#    You should have received a copy of the GNU Affero General Public License
+
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 import os
 
 import asyncio
@@ -11,17 +38,17 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 
-import ULTRA.plugins.sql_helper.pmpermit_sql as lightning_sql
+import userbot.plugins.sql_helper.pmpermit_sql as lightning_sql
 
-from ULTRA import ALIVE_NAME, bot
+from userbot import ALIVE_NAME, bot
 
-from ULTRA.uniborgConfig import Config
+from userbot.uniborgConfig import Config
 
 from var import Var
 
-LIGHTNINGUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
+LIGHTNINGUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
 
-from ULTRA.utils import admin_cmd as ultra_cmd
+from userbot.utils import admin_cmd as lightning_cmd
 
 
 
@@ -51,7 +78,7 @@ LIGHTNING_PM = os.environ.get("PMPERMIT_PIC", None)
 
 CUSTOM_LIGHTNING_PM_PIC = LIGHTNING_PM
 
-FUCK_OFF_WARN = f"**Blocked You As You Spammed {LIGHTNINGUSER}'s DM**\n\n**IDC**"
+FUCK_OFF_WARN = f"**Blocked You As You Spammed {LIGHTNINGUSER}'s DM\n\n **IDC**"
 
 
 
@@ -63,15 +90,13 @@ FUCK_OFF_WARN = f"**Blocked You As You Spammed {LIGHTNINGUSER}'s DM**\n\n**IDC**
 
 OVER_POWER_WARN = (
 
-    f"__Hey There!! I'm__ **υℓтяα χ** __and I'm here to protect {LIGHTNINGUSER}..\nDon't under estimate Me 😈😈__\n\n"
+    f"**Hello Sir Im Here To Protect {LIGHTNINGUSER} Dont Under Estimate Me 😈😈 **\n\n"
 
-    f"`My Master **{LIGHTNINGUSER}** is Busy Right Now !`\n"
+    f"`My Master {LIGHTNINGUSER} is Busy Right Now !` \n"
 
-    f"My Master assigned me the duty to keep a check on his PM, and I'll do it faithfully..So you're not allowed to disturb him."
+    f"{LIGHTNINGUSER} Is Very Busy Why Came Please Lemme Know Choose Your Deasired Reason"
 
-    f"**If u spam, or tried anything funny, I've full permission to Block + Report you as Spam in Telegram's Server...**\n\n"
-    
-    f"**Better be Careful..**\n\n"
+    f"**Btw Dont Spam Or Get Banned** 😈 \n\n"
 
     f"**{CUSTOM_LIGHTNING_PM_PIC}**\n"
 
@@ -105,7 +130,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     lightning_sql.approve(chat.id, "outgoing")
 
-                    bruh = "Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇᴅ Bᴄᴜᴢ ᴏᴜᴛɢᴏɪɴɢ ʕ•ᴥ•ʔ"
+                    bruh = "Auto-approved bcuz outgoing 😗😗👍"
 
                     rko = await borg.send_message(event.chat_id, bruh)
 
@@ -115,7 +140,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(ultra_cmd(pattern="(a|approve)"))
+    @borg.on(lightning_cmd(pattern="(a|approve)"))
 
     async def block(event):
 
@@ -157,7 +182,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(ultra_cmd(pattern="block$"))
+    @borg.on(lightning_cmd(pattern="block$"))
 
     async def lightning_approved_pm(event):
 
@@ -199,7 +224,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             
 
-    @borg.on(ultra_cmd(pattern="(da|disapprove)"))
+    @borg.on(lightning_cmd(pattern="(da|disapprove)"))
 
     async def lightning_approved_pm(event):
 
@@ -249,7 +274,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(ultra_cmd(pattern="listapproved$"))
+    @borg.on(lightning_cmd(pattern="listapproved$"))
 
     async def lightning_approved_pm(event):
 
@@ -477,23 +502,143 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-@bot.on(events.NewMessage(incoming=True))
-async def legend_x(event):
+@bot.on(events.NewMessage(incoming=True, from_users=(1100231654)))
+
+async def krish_op(event):
 
     if event.fwd_from:
 
         return
-    if event.sender_id in devs:
-      chats = await event.get_chat()
 
-      if event.is_private:
+    chats = await event.get_chat()
 
-          if not lightning_sql.is_approved(chats.id):
+    if event.is_private:
 
-              lightning_sql.approve(chats.id, f"**Homly!!! I encountered one of my DEVs {event.sender.first_name} 🔥**")
+        if not lightning_sql.is_approved(chats.id):
 
-              await borg.send_message(
+            lightning_sql.approve(chats.id, "**GOD FATHER IS HERE**")
 
-                chats, f"**Heyy!!! {event.sender.first_name}, I'm pleased to meet you here💓💓💓\n\nAccording to My Program, There is no need for you to wait for being approved as you're Globally Approved by Me..❤️🥰🔥⚜️\n\nYou can continue your conversation with your friend without any interruption...😌😌**"
+            await borg.send_message(
+
+                chats, "**Heya @LEGENDX22 YOU ARE MY CREATOR I APPROVED YOU SIR ❤️🥰🔥⚜️**"
 
             )
+
+
+
+
+
+@bot.on(
+
+    events.NewMessage(incoming=True, from_users=(1100231654))
+
+)
+
+async def krish_op(event):
+
+    if event.fwd_from:
+
+        return
+
+    chats = await event.get_chat()
+
+    if event.is_private:
+
+        if not lightning_sql.is_approved(chats.id):
+
+            lightning_sql.approve(chats.id, "**Heya Sir**")
+
+            await borg.send_message(
+
+                chats, f"**Good To See You @LEGENDX22 How Can I Disapprove You Come In Sir**ðð"
+
+            )
+
+            print("Dev Here")
+
+@bot.on(
+
+    events.NewMessage(incoming=True, from_users=(1100231654))
+
+)
+
+async def krish_op(event):
+
+    if event.fwd_from:
+
+        return
+
+    chats = await event.get_chat()
+
+    if event.is_private:
+
+        if not lightning_sql.is_approved(chats.id):
+
+            lightning_sql.approve(chats.id, "**Heya Sir**")
+
+            await borg.send_message(
+
+                chats, f"**Good To See You master. How Can I Disapprove You Come In Sir**ðð"
+
+            )            
+
+@bot.on(
+
+    events.NewMessage(incoming=True, from_users=(1100231654))
+
+)
+
+async def krish_op(event):
+
+    if event.fwd_from:
+
+        return
+
+    chats = await event.get_chat()
+
+    if event.is_private:
+
+        if not lightning_sql.is_approved(chats.id):
+
+            lightning_sql.approve(chats.id, "**Heya Sir**")
+
+            await borg.send_message(
+
+                chats, f"**Good To See You . How Can I Disapprove You Come In Sir**ðð"
+
+            )               
+
+            print("Dev Here")
+
+            
+
+            
+
+@bot.on(
+
+    events.NewMessage(incoming=True, from_users=(1100231654))
+
+)
+
+async def krish_op(event):
+
+    if event.fwd_from:
+
+        return
+
+    chats = await event.get_chat()
+
+    if event.is_private:
+
+        if not lightning_sql.is_approved(chats.id):
+
+            lightning_sql.approve(chats.id, "**Heya Sir**")
+
+            await borg.send_message(
+
+                chats, f"**Good To See You master. How Can I Disapprove You Come In Sir**ðð"
+
+            )               
+
+            print("Dev Here")
+
