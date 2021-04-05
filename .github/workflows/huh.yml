@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "LIGHTNING"
+          find: "lightning"
 
-          replace: "ULTRA"
+          replace: "ultra"
 
       - name: Create Pull Request
 
