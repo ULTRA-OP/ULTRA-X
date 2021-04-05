@@ -48,7 +48,7 @@ from var import Var
 
 ULTRA_USER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND BOY"
 
-from ULTRA.utils import admin_cmd as lightning_cmd
+from ULTRA.utils import admin_cmd as ultra_cmd
 
 
 
@@ -114,7 +114,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
     @bot.on(events.NewMessage(outgoing=True))
 
-    async def lightning_dm_niqq(event):
+    async def ultra_dm_niqq(event):
 
         if event.fwd_from:
 
@@ -140,7 +140,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(lightning_cmd(pattern="(a|approve)"))
+    @borg.on(ultra_cmd(pattern="(a|approve)"))
 
     async def block(event):
 
@@ -182,9 +182,9 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(lightning_cmd(pattern="block$"))
+    @borg.on(ultra_cmd(pattern="block$"))
 
-    async def lightning_approved_pm(event):
+    async def ultra_approved_pm(event):
 
         if event.fwd_from:
 
@@ -224,9 +224,9 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             
 
-    @borg.on(lightning_cmd(pattern="(da|disapprove)"))
+    @borg.on(ultra_cmd(pattern="(da|disapprove)"))
 
-    async def lightning_approved_pm(event):
+    async def ultra_approved_pm(event):
 
         if event.fwd_from:
 
@@ -274,9 +274,9 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-    @borg.on(lightning_cmd(pattern="listapproved$"))
+    @borg.on(ultra_cmd(pattern="listapproved$"))
 
-    async def lightning_approved_pm(event):
+    async def ultra_approved_pm(event):
 
         if event.fwd_from:
 
@@ -338,9 +338,9 @@ if Var.PRIVATE_GROUP_ID is not None:
 
     @bot.on(events.NewMessage(incoming=True))
 
-    async def lightning_new_msg(lightning):
+    async def ultra_new_msg(ultra):
 
-        if lightning.sender_id == bot.uid:
+        if ultra.sender_id == bot.uid:
 
             return
 
@@ -352,29 +352,29 @@ if Var.PRIVATE_GROUP_ID is not None:
 
 
 
-        if not lightning.is_private:
+        if not ultra.is_private:
 
             return
 
 
 
-        lightning_chats = lightning.message.message
+        ultra_chats = ultra.message.message
 
-        chat_ids = lightning.sender_id
+        chat_ids = ultra.sender_id
 
 
 
-        lightning_chats.lower()
+        ultra_chats.lower()
 
-        if OVER_POWER_WARN == lightning_chats:
+        if OVER_POWER_WARN == ultra_chats:
 
-            # lightning should not reply to other lightning
+            # ultra should not reply to other ultra
 
             # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
 
             return
 
-        sender = await bot.get_entity(lightning.sender_id)
+        sender = await bot.get_entity(ultra.sender_id)
 
         if chat_ids == bot.uid:
 
@@ -406,11 +406,11 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             # pm permit
 
-            await lightning_goin_to_attack(chat_ids, lightning)
+            await ultra_goin_to_attack(chat_ids, ultra)
 
 
 
-    async def lightning_goin_to_attack(chat_ids, lightning):
+    async def ultra_goin_to_attack(chat_ids, ultra):
 
         if chat_ids not in ULTRA_WRN:
 
@@ -418,11 +418,11 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         if ULTRA_WRN[chat_ids] == 3:
 
-            lemme = await lightning.reply(FUCK_OFF_WARN)
+            lemme = await ultra.reply(FUCK_OFF_WARN)
 
             await asyncio.sleep(3)
 
-            await lightning.client(functions.contacts.BlockRequest(chat_ids))
+            await ultra.client(functions.contacts.BlockRequest(chat_ids))
 
             if chat_ids in ULTRA_REVL_MSG:
 
@@ -442,7 +442,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             try:
 
-                await lightning.client.send_message(
+                await ultra.client.send_message(
 
                     entity=Var.PRIVATE_GROUP_ID,
 
@@ -464,7 +464,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             except BaseException:
 
-                  await  lightning.edit("Something Went Wrong")
+                  await  ultra.edit("Something Went Wrong")
 
                   await asyncio.sleep(2) 
 
@@ -474,7 +474,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         # Inline
 
-        lightningusername = Var.TG_BOT_USER_NAME_BF_HER
+        ultrausername = Var.TG_BOT_USER_NAME_BF_HER
 
         ULTRA_L = OVER_POWER_WARN.format(
 
@@ -482,11 +482,11 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         )
 
-        lightning_hmm = await bot.inline_query(lightningusername, ULTRA_L)
+        ultra_hmm = await bot.inline_query(ultrausername, ULTRA_L)
 
         new_var = 0
 
-        yas_ser = await lightning_hmm[new_var].click(lightning.chat_id)
+        yas_ser = await ultra_hmm[new_var].click(ultra.chat_id)
 
         ULTRA_WRN[chat_ids] += 1
 
