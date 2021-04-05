@@ -1,4 +1,4 @@
-#    Copyright (C) 2020 KeinShin
+#    Copyright (C) 2020 LEGENDBOT
 
 ######### maked by LEGENDX22 🔥🔥🔥###################
 
@@ -45,7 +45,7 @@ Midhun_xD
 
 
 
-"""Only ULTRA X and DC (Can Use Without Credits) Can Use This Inline WithOut Copyright (Just Give The Credits Pls)
+"""Only ULTRA X and LEGEND-BOT (Can Use Without Credits) Can Use This Inline WithOut Copyright (Just Give The Credits Pls)
 
 Thanks"""
 
@@ -208,25 +208,7 @@ async def inline_handler(ultra):
     query = ultra.text
 
     if ultra.query.user_id == bot.uid and query.startswith("**help") or query.startswith("help"):
-
-        rev_text = query[::-1]
-
-        buttons = ultras_menu_for_help(0, CMD_LIST, "helpmepro")
-
-        result = builder.article(
-
-            f"Help Menu",
-
-            text="\n{}\n`Plugins`: {}".format(query, len(CMD_LIST)),
-
-            buttons=buttons,
-
-            link_preview=False,
-
-        )
-
-        await ultra.answer([result])
-
+        print (False)
     elif ultra.query.user_id == bot.uid and query == "**Cool":
 
         result = builder.article(
@@ -318,214 +300,6 @@ async def inline_handler(ultra):
         return
 
     
-
-
-
-
-
-@tgbot.on(
-
-    events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-
-        data=re.compile(b"helpmenext\((.+?)\)")
-
-    )
-
-)
-
-async def ultra_pugins_query_hndlr(ultra):
-
-    if ultra.query.user_id == bot.uid or ultra.query.user_id == ID:  # pylint:disable=E0602
-
-        ultra_page = int(ultra.data_match.group(1).decode("UTF-8"))
-
-        buttons = ultras_menu_for_help(
-
-            ultra_page + 1, CMD_LIST, "helpmepro"  # pylint:disable=E0602
-
-        )
-
-        # https://t.me/TelethonChat/115200
-
-        await ultra.edit(buttons=buttons)
-
-    else:
-
-        ultra_is_best = "Oh C'mon You Think You Can Touch This? 😂😂 !"
-
-        await ultra.answer(ultra_is_best, cache_time=0, alert=True)
-
-
-
-
-
-@tgbot.on(
-
-        events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-
-            data=re.compile(b"_ultra_plugins_(.*)")
-
-   )
-
-) # Thanks To Friday Userbot
-
-async def ultra_pugins_query_hndlr(ultra):
-
-    if not ultra.query.user_id == bot.uid:
-
-        how = "Not For  Bitch.😂😂( 😈😈😈😈😈😈)"
-
-        await ultra.answer(how, cache_time=0, alert=True)
-
-        return
-
-    light_pulu_name = ultra.data_match.group(1).decode("UTF-8")
-
-   
-
-    try:
-
-        if light_pulu_name in CMD_HELP:
-
-           
-
-           ultra_help_strin  = f"**🔱🔱 NAME 🔱🔱 :** `{light_pulu_name}` \n\n{CMD_HELP[light_pulu_name]}"
-
-           ultra_is_best = ultra_help_strin 
-
-           ultra_is_best += "\n\n**In Case Any Problem @teamishere** ".format(light_pulu_name)
-
-        
-
-        else:
-
-            ultra_help_strin = "Commands found in {}:\n".format(light_pulu_name)
-
-            for i in CMD_HELP:
-
-                ultra_help_strin += "🔥🔥 " + i + "\n"
-
-                for iter_list in CMD_HELP[i]:
-
-                    ultra_help_strin += "    `" + str(iter_list) + "`"
-
-                    ultra_help_strin += "\n"
-
-                    ultra_help_strin += "\n"
-
-    except BaseException:
-
-         pass
-
-   
-
-    if light_pulu_name in CMD_LIST:
-
-                ultra_help_strin = "Commands found in {}:\n".format(light_pulu_name)
-
-                for i in CMD_LIST[light_pulu_name]:
-
-                    ultra_help_strin  = f"**🔱🔱 NAME 🔱🔱 :** `{light_pulu_name}` \n\n `{CMD_LIST[light_pulu_name]}\n`**Details**- Not Yetðð\n\n**Ask at @teamishere"
-
-                    ultra_help_strin += "\n    " + i
-
-                    ultra_help_strin += "\n"
-
-                
-
-    else:
-
-           ultra_help_strin  = f"**🔱🔱 NAME 🔱🔱 :** `{light_pulu_name}` \n\n`{CMD_LIST[light_pulu_name]}`\n**Details** - Not Yetðð\n\n**Ask at @teamishere"
-
-           ultra_is_best = ultra_help_strin 
-
-           ultra_is_best += "\n\n**In Case Any Problem @teamishere** ".format(light_pulu_name)
-
-    ultra_help_strin = f"**🔱🔱 NAME 🔱🔱 :** `{light_pulu_name}` \n\n`{CMD_LIST[light_pulu_name]}`\n**Details** - Not Set for this Plugin 😑\n\n**Ask at @teamishere"
-
-    ultra_is_best = ultra_help_strin 
-
-    ultra_is_best += "\n\n**In Case Any Problem @teamishere** ".format(light_pulu_name)    
-
-    if len(ultra_is_best) >= 4096:
-
-          LEGENDX = "` Wait. (🔥🔥🔥🔥) `"
-
-          await ultra.answer(LEGENDX, cache_time=0, alert=True)
-
-          out_file = ultra_is_best
-
-          lig_url = "https://del.dog/documents"
-
-          r = requests.post(lig_url, data=out_file.encode("UTF-8")).json()
-
-          lig_url = f"https://del.dog/{r['key']}"
-
-          await ultra.edit(
-
-               f"Pasted {light_pulu_name} to {lig_url}",
-
-               link_preview=False,
-
-               buttons=[
-
-                [custom.Button.inline("😉", data="LegendX")],
-
-                [custom.Button.inline("BACK", data="lghtback")]],
-
-         )
-
-    else:
-
-           await ultra.edit(
-
-            message=ultra_is_best,
-
-            buttons=[
-
-                [custom.Button.inline("🙂", data="LegendX")],
-
-                [custom.Button.inline("BACK", data="lghtback")],
-
-            ],
-
-        )
-
-
-
-
-
-@tgbot.on(
-
-    events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-
-        data=re.compile(rb"helpmeprev\((.+?)\)")
-
-    )
-
-)
-
-async def ultra_pugins_query_hndlr(ultra):
-
-    if ultra.query.user_id == bot.uid or ultra.query.user_id == ID:  # pylint:disable=E0602
-
-        ultra_page = int(ultra.data_match.group(1).decode("UTF-8"))
-
-        buttons = ultras_menu_for_help(
-
-            ultra_page - 1, CMD_LIST, "helpmepro"  # pylint:disable=E0602
-
-        )
-
-        # https://t.me/TelethonChat/115200
-
-        await ultra.edit(buttons=buttons)
-
-    else:
-
-        ultra_is_best = "Oh C'mon You Think You Can Touch This? 😂😂😂 !"
-
-        await ultra.answer(ultra_is_best, cache_time=0, alert=True)
 
 
 
@@ -865,43 +639,8 @@ async def yes_ucan(ultra):
 
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"stta")))
-
-async def hmm(ultra):
-
-    if ultra.query.user_id == bot.uid:
-
-        text = "-- All Good â ???? \ heroku  - Connected  \ all good- Looks Good: \nTottal Plugs: {} ". Format (len (CMD_LIST))
-
-        await ultra.answer(text, alert=True)
-
-    else:
-
-        txt = f"Stats For {ULTRA_USER} Not For You :)"
-
-        await ultra.answer(txt, alert=True)
 
 
-
-
-
-
-
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"LegendX")))
-
-async def hmm(ultra):
-
-    if ultra.query.user_id == bot.uid:
-
-        text = ".xnxx\n.picx\n.les\n please use in private 😂"
-
-        await ultra.answer(text, alert=True)
-
-    else:
-
-        txt = f"For {ULTRA_USER} Not For You :)"
-
-        await ultra.answer(txt, alert=True)        
 
 
 
@@ -909,131 +648,8 @@ async def hmm(ultra):
 
 """
 
-Thanks To Friday Userbot and @Midhun_xD For This idea
+Thanks To LEGEND BOT and @LEGENDX22 For This idea
 
 
 
 """
-
-import requests
-
-
-
-
-
-
-
-
-
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lghtback")))
-
-async def ho(event):
-
-    if event.query.user_id != bot.uid or event.query.user_id == ID: 
-
-        how = "Not For You Idiot ( fuck )."
-
-        await event.answer(how, cache_time=0, alert=True)
-
-        return
-
-    await event.answer ("(DONE)", cache_time = 0, alert = False)
-
-    # This Is Copy of Above Code. (C) @SpEcHiDe
-
-    buttons = ultras_menu_for_help(0, CMD_LIST, "helpmepro")
-
-    ho = f"""LEGENDBOT Is Here With Stunning Help !\n
-
-In Case Any Problem @teamishere \nTottal Plugs( 🧐): {len(CMD_LIST)}"""
-
-    await event.edit(message=ho, buttons=buttons)
-
-
-
-
-
-
-
-        
-
-
-
-
-
-    
-
-def ultras_menu_for_help(b_lac_LegendX, ultra_plugs, ultra_lol):
-
-    ultra_no_rows = 10
-
-    ultra_no_coulmns = 3
-
-    ultra_plugins = []
-
-    for p in ultra_plugs:
-
-        if not p.startswith("_"):
-
-            ultra_plugins.append(p)
-
-    ultra_plugins = sorted(ultra_plugins)
-
-    plugins = [
-
-        custom.Button.inline(
-
-            "{} {} {}".format("🙂", x, "🙂"), data="_ultra_plugins_{}".format(x)
-
-        )
-
-        for x in ultra_plugins
-
-    ]
-
-    pairs = list(zip(plugins[::ultra_no_coulmns], plugins[1::ultra_no_coulmns]))
-
-    if len(plugins) % ultra_no_coulmns == 1:
-
-        pairs.append((plugins[-1],))
-
-    max_fix = ceil(len(pairs) / ultra_no_rows)
-
-    ultra_plugins_pages = b_lac_LegendX % max_fix
-
-    if len(pairs) > ultra_no_rows:
-
-        pairs = pairs[
-
-            ultra_plugins_pages * ultra_no_rows : ultra_no_rows * (ultra_plugins_pages + 1)
-
-        ] + [
-
-            (
-
-                custom.Button.inline(
-
-                    "BACK 🔥", data="{}_prev({})".format(ultra_lol, ultra_plugins_pages)
-
-                ),
-
-               # Thanks To DC for this idea
-
-               custom.Button.inline("CLOSE🤨", data="close"
-
-               ),
-
-               custom.Button.inline(
-
-                    "NEXT⚡ ", data="{}_next({})".format(ultra_lol, ultra_plugins_pages)
-
-                ),
-
-                
-
-            )
-
-        ]
-
-    return pairs
-
