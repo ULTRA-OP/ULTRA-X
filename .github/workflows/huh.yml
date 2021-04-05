@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "lightning"
+          find: "keinshin"
 
-          replace: "ultra"
+          replace: "LEGENDX"
 
       - name: Create Pull Request
 
