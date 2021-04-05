@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "krish"
+          find: "from userbot"
 
-          replace: "LegendX"
+          replace: "from ULTRA"
 
       - name: Create Pull Request
 
