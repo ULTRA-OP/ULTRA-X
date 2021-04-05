@@ -38,7 +38,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 
-import userbot.plugins.sql_helper.pmpermit_sql as ULTRA_X
+import ULTRA.plugins.sql_helper.pmpermit_sql as ULTRA_X
 
 from ULTRA import ALIVE_NAME, bot
 
