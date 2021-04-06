@@ -72,18 +72,21 @@ async def _(event):
         data = None
     if data:
         if data["ok"]:
-            cas = "**Antispam(CAS) Banned :** `True`"
+            cas = "**AɴᴛɪSᴘᴀᴍ (CAS) Bᴀɴɴᴇᴅ**: `Tʀᴜᴇ`"
         else:
-            cas = "**Antispam(CAS) Banned :** `False`"
+            cas = "**AɴᴛɪSᴘᴀᴍ (CAS) Bᴀɴɴᴇᴅ**: `Fᴀʟsᴇ`"
     else:
-        cas = "**Antispam(CAS) Banned :** `Couldn't Fetch`"
-    caption = """**Info of [{}](tg://user?id={}):
-   -🔖ID : **`{}`
-   **-**👥**Groups in Common : **`{}`
-   **-**🌏**Data Centre Number : **`{}`
-   **-**🔏**Restricted by telegram : **`{}`
-   **-**🦅{}
-   **-**👮‍♂️{}
+        cas = "**AɴᴛɪSᴘᴀᴍ (CAS) Bᴀɴɴᴇᴅ**: `Cᴏᴜʟᴅɴ'ᴛ Fᴇᴛᴄʜ`"
+    caption = """**Exᴛʀᴀᴄᴛᴇᴅ Usᴇʀ Iɴғᴏ Bʏ UʟᴛʀᴀX**\n
+   **┏━━━━━━━━━━━━━━━━━━━━━**
+   **┣ Lɪɴᴋ Tᴏ Pʀᴏғɪʟᴇ**: [{}](tg://user?id={})
+   **┣ Usᴇʀ Iᴅ**: `{}`
+   **┣ Gʀᴏᴜᴘs Iɴ Cᴏᴍᴍᴏɴ**: `{}`
+   **┣ Dᴄ Iᴅ**: `{}`
+   **┣ Rᴇsᴛʀɪᴄᴛᴇᴅ**: `{}`
+   **┣** {}
+   **┣** {}
+   **┗━━━━━━━━━━━━━━━━━━━━━**
 """.format(
         first_name,
         user_id,
@@ -224,26 +227,28 @@ async def fetch_info(replied_user, event):
     first_name = (
         first_name.replace("\u2060", "")
         if first_name
-        else ("This User has no First Name")
+        else ("Fɪʀsᴛ Nᴀᴍᴇ Nᴏᴛ Fᴏᴜɴᴅ")
     )
     last_name = (
-        last_name.replace("\u2060", "") if last_name else ("This User has no Last Name")
+        last_name.replace("\u2060", "") if last_name else ("Lᴀsᴛ Nᴀᴍᴇ Nᴏᴛ Fᴏᴜɴᴅ")
     )
-    username = "@{}".format(username) if username else ("This User has no Username")
-    user_bio = "This User has no About" if not user_bio else user_bio
-    caption = "<b>USER INFO from ULTRA X's database :</b>\n\n"
-    caption += f"👤First Name: {first_name} {last_name}\n"
-    caption += f"🤵Username: {username}\n"
-    caption += f"🔖ID: <code>{user_id}</code>\n"
-    caption += f"🌏Data Centre ID: {dc_id}\n"
-    caption += f"🖼Number of Profile Pics: {replied_user_profile_photos_count}\n"
-    caption += f"🤖Is Bot: {is_bot}\n"
-    caption += f"🔏Is Restricted: {restricted}\n"
-    caption += f"🌐Is Verified by Telegram: {verified}\n\n"
-    caption += f"✍️Bio: \n<code>{user_bio}</code>\n\n"
-    caption += f"👥Common Chats with this user: {common_chat}\n"
-    caption += f"🔗Permanent Link To Profile: "
-    caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
+    username = "@{}".format(username) if username else ("Nᴏ Usᴇʀɴᴀᴍᴇ Fᴏᴜɴᴅ")
+    user_bio = "Nᴏ Aʙᴏᴜᴛ/Bɪᴏ Fᴏᴜɴᴅ" if not user_bio else user_bio
+    caption = "<b>Exᴛʀᴀᴄᴛᴇᴅ Usᴇʀ Iɴғᴏ Bʏ UʟᴛʀᴀX</b>\n\n"
+    caption += f"<b>┏━━━━━━━━━━━━━━━━━━━━━</b>\n"
+    caption += f"<b>┣ Fɪʀsᴛ Nᴀᴍᴇ</b>: <code>{first_name}</code>\n"
+    caption += f"<b>┣ Sᴇᴄᴏɴᴅ Nᴀᴍᴇ</b>: <code>{last_name}</code>\n"
+    caption += f"<b>┣ Usᴇʀɴᴀᴍᴇ</b>: <i>{username}</i>\n"
+    caption += f"<b>┣ Usᴇʀ Iᴅ</b>: <code>{user_id}</code>\n"
+    caption += f"<b>┣ Dᴄ Iᴅ</b>: <code>{dc_id}</code>\n"
+    caption += f"<b>┣ Nᴏ Oғ PғP</b>: <code>{replied_user_profile_photos_count}</code>\n"
+    caption += f"<b>┣ Bᴏᴛ</b>: <code>{is_bot}</code>\n"
+    caption += f"<b>┣ Rᴇsᴛʀɪᴄᴛᴇᴅ</b>: <code>{restricted}</code>\n"
+    caption += f"<b>┣ Vᴇʀɪғɪᴇᴅ</b>: <code>{verified}</code>\n"
+    caption += f"<b>┣ Bɪᴏ</b>: <code>{user_bio}</code>\n"
+    caption += f"<b>┣ Gʀᴏᴜᴘs Iɴ Cᴏᴍᴍᴏɴ</b>: <code>{common_chat}</code>\n"
+    caption += f"<b>┣ Lɪɴᴋ Tᴏ Pʀᴏғɪʟᴇ</b>: <i><a href='tg://user?id={user_id}'>Perma Link 🚪</a></i>\n"
+    caption += f"<b>┗━━━━━━━━━━━━━━━━━━━━━</b>"
     return photo, caption
 
 
