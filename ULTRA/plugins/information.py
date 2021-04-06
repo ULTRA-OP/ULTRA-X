@@ -57,7 +57,7 @@ async def _(event):
 <b>┣ Rᴇsᴛʀɪᴄᴛᴇᴅ</b>: <code>{}</code>
 <b>┣ Vᴇʀɪғɪᴇᴅ</b>: <code>{}</code>
 <b>┣ Bᴏᴛ</b>: <code>{}</code>
-<b>┣ Gʀᴏᴜᴘs Iɴ Cᴏᴍᴍᴀɴ</b>: <code>{}</code>
+<b>┣ Gʀᴏᴜᴘs Iɴ Cᴏᴍᴍᴏɴ</b>: <code>{}</code>
 <b>┗━━━━━━━━━━━━━━━━━━━━━</b>
 """.format(
         user_id,
