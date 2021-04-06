@@ -53,7 +53,7 @@ async def _(event):
 <b>┣ Sᴇᴄᴏɴᴅ Nᴀᴍᴇ</b>: <code>{}</code>
 <b>┣ Bɪᴏ</b>: <code>{}</code>
 <b>┣ Dᴄ Iᴅ</b>: <code>{}</code>
-<b>┣ Nᴏ Oғ Pғᴘ</b> : <code>{}</code>
+<b>┣ Nᴏ Oғ PғP</b>: <code>{}</code>
 <b>┣ Rᴇsᴛʀɪᴄᴛᴇᴅ</b>: <code>{}</code>
 <b>┣ Vᴇʀɪғɪᴇᴅ</b>: <code>{}</code>
 <b>┣ Bᴏᴛ</b>: <code>{}</code>
