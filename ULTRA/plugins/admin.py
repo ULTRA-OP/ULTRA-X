@@ -38,7 +38,7 @@ CHAT_PP_ERROR = "`Some issue with updating the pic,`" \
                 "`maybe coz I'm not an admin,`" \
                 "`or don't have enough rights.`"
 INVALID_MEDIA = "`Invalid Extension`"
-
+ALAIN = event.chat.title
 BANNED_RIGHTS = ChatBannedRights(
     until_date=None,
     view_messages=True,
@@ -143,7 +143,7 @@ async def promote(promt):
     try:
         await promt.client(
             EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await promt.edit(f"📌 **This user was successfully promoted by {BOT} in ")
+        await promt.edit(f"📌 **This user was successfully promoted by {BOT} in {ALAIN}")
 
     # If Telethon spit BadRequestError, assume
     # we don't have Promote permission
