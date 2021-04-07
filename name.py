@@ -1,15 +1,27 @@
 from ULTRA import bot
 from ULTRA.utils import admin_cmd
-from ULTRA.helper.legend import is_admin
 import ULTRA.modules.sql_helper.fsub_sql as sql
 from telethon import events, functions, Button
 import telethon
+from telethon.tl import functions
+from telethon.tl import types
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 from telethon.tl import types
 from telethon.tl.functions.channels import GetFullChannelRequest
 LEGENDX = bot.me.id
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
+
+async def is_admin(event, user):
+    try:
+        sed = await event.client.get_permissions(event.chat_id, user)
+        if sed.is_admin:
+            is_mod = True
+        else:
+            is_mod = False
+    except:
+        is_mod = False
+    return is_mod
 
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
