@@ -68,7 +68,7 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).seconds
         OUTPUT_STR = """
-        <b>┏━━━━━━━━━━━━━━━━━━━━━</b>\n<b>┣➥ {img_size}\n<b>┣➥ Possible Related Search:</b> <a href="{prs_url}">{prs_text}</a> \n<b>┣➥ More Info:</b> Open this <a href="{the_location}">Link</a> \n<b>┣</b><i>Fetched in {ms} seconds</i>\n<b>┗━━━━━━━━━━━━━━━━━━━━━</b>""".format(
+        <b>┏━━━━━━━━━━━━━━━━━━━━━</b>\n<b>┣ {img_size}\n<b>┣ Possible Related Search:</b> <a href="{prs_url}">{prs_text}</a> \n<b>┣ More Info:</b> Open this <a href="{the_location}">Link</a> \n<b>┣ </b><i>Fetched in {ms} seconds</i>\n<b>┗━━━━━━━━━━━━━━━━━━━━━</b>""".format(
             **locals()
  )
     await madboyevent.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
