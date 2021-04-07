@@ -47,7 +47,7 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"__**✦҈͜͡➳ Lessun!__**\n★Immunity: {ms}\n★ __**Mere**__ **Master ka loda {uptime}, se khada h aur mere {DEFAULTUSER} ke pass abhi bht immunity h,\n\nkisi ko bhi chod skte h, check krna h kya??\n\nabhi bhi khada h, {uptime} hogaye\n\n\n** [{DEFAULTUSER}](tg://user?id={ghanta})"
+        f"__**✦҈͜͡➳ Lessun!__**\n★Immunity: {ms}\n★ __**Mere**__ **Master ka loda {uptime}, se khada h aur mere {DEFAULTUSER} ke pass abhi bht immunity h,\nkisi ko bhi chod skte h, check krna h kya??\nabhi bhi khada h, {uptime} hogaye\n\n**[{DEFAULTUSER}](tg://user?id={ghanta})"
     )
 
 
