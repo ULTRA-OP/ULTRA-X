@@ -177,7 +177,7 @@ async def sedlyfsir(event):
     if msgtobroadcast == None:
         await event.reply("`Wait. What? Broadcast None?`")
         return
-    elif msgtobroadcast == " ":
+    elif msgtobroadcast == "":
         await event.reply("`Give Something to Broadcast ☺️`")
         return
     for uzers in userstobc:
