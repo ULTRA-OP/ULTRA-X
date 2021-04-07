@@ -122,12 +122,15 @@ async def PROBOY(event):
 
 
 
-     
-@xbot.on(events.callbackquery.CallbackQuery(pattern=r"LeGeNdX"))
+import re     
+@xbot.on(events.callbackquery.CallbackQuery(re.compile(b"LeGeNdX")))
 async def start_again(event):
- tata = event.pattern_match.group(1)
- data = tata.decode()
- user = data.split("_", 1)[1]
+ try:
+   tata = event.pattern_match.group(1)
+   data = tata.decode()
+   user = data.split("_", 1)[1]
+ except:
+  pass
  if not event.sender_id == int(user):
   return await event.answer("You are not the muted user!")
  chat_id = event.chat_id
