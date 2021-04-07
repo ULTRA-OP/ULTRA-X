@@ -492,12 +492,67 @@ T = (
 )
 
 
+A = (
+    "╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╮\n"
+    "┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╭╯\n"
+    "┃┃╱┃┣━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳╯╰╮\n"
+    "┃┃╱┃┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┃╭╮┣╮╭╯\n"
+    "┃╰━╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃╰╯┃┃┃\n"
+    "╰━━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╯╰╯\n"
+)
+
+B = (
+    "╭━━━╮╱╱╱╱╱╭╮╱╭╮╱╭╮╱╭╮╱╭╮╱╭╮\n"
+    "┃╭━━╯╱╱╱╱╱┃┃╱┃┃╱┃┃╱┃┃╱┃┃╱┃┃\n"
+    "┃╰━━┳╮╭┳━━┫┃╭┫┃╭┫┃╭┫┃╭┫┃╭┫┃╭╮\n"
+    "┃╭━━┫┃┃┃╭━┫╰╯┫╰╯┫╰╯┫╰╯┫╰╯┫╰╯╯\n"
+    "┃┃╱╱┃╰╯┃╰━┫╭╮┫╭╮┫╭╮┫╭╮┫╭╮┫╭╮╮\n"
+    "╰╯╱╱╰━━┻━━┻╯╰┻╯╰┻╯╰┻╯╰┻╯╰┻╯╰╯\n"
+)
+
+C = (
+    "╭╮╭╮╭┳╮╱╱╱╱╱╭━━━╮╭━━━╮╱╱╭╮╱╭╮\n"
+    "┃┃┃┃┃┃┃╱╱╱╱╱╰╮╭╮┃┃╭━━╯╱╱┃┃╱┃┃\n"
+    "┃┃┃┃┃┃╰━┳━━╮╱┃┃┃┃┃╰━━┳╮╭┫┃╭┫┃╭╮\n"
+    "┃╰╯╰╯┃╭╮┃╭╮┃╱┃┃┃┃┃╭━━┫┃┃┃╰╯┫╰╯╯\n"
+    "╰╮╭╮╭┫┃┃┃╭╮┃╭╯╰╯┃┃┃╱╱┃╰╯┃╭╮┫╭╮╮\n"
+    "╱╰╯╰╯╰╯╰┻╯╰╯╰━━━╯╰╯╱╱╰━━┻╯╰┻╯╰╯\n"
+)
+
+D = (
+    "╭╮╭╮╭┳╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╭━━━╮\n"
+    "┃┃┃┃┃┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╯╰┫╭━╮┃\n"
+    "┃┃┃┃┃┃╰━┳━━╮╭╮╭╮╭┳━━┳━╋╮╭┻╯╭╯┃\n"
+    "┃╰╯╰╯┃╭╮┃╭╮┃┃╰╯╰╯┃╭╮┃╭╮┫┃╱╱┃╭╯\n"
+    "╰╮╭╮╭┫┃┃┃╭╮┃╰╮╭╮╭┫╭╮┃┃┃┃╰╮╱╭╮\n"
+    "╱╰╯╰╯╰╯╰┻╯╰╯╱╰╯╰╯╰╯╰┻╯╰┻━╯╱╰╯\n"
+)
+    
 @bot.on(admin_cmd(pattern=r"monster$"))
 @bot.on(sudo_cmd(pattern="monster$", allow_sudo=True))
 async def bluedevilmonster(monster):
     await edit_or_reply(monster, G)
 
+@bot.on(admin_cmd(pattern=r"ooof$"))
+@bot.on(sudo_cmd(pattern="ooof$", allow_sudo=True))
+async def bluedevilbigoof(bigoof):
+    await edit_or_reply(bigoof, A)
 
+@bot.on(admin_cmd(pattern=r"fook$"))
+@bot.on(sudo_cmd(pattern="fook$", allow_sudo=True))
+async def bluedevilfook(fook):
+    await edit_or_reply(fook, B)
+
+@bot.on(admin_cmd(pattern=r"wdf$"))
+@bot.on(sudo_cmd(pattern="wdf$", allow_sudo=True))
+async def bluedevilwhadfuk(whadfuk):
+    await edit_or_reply(whadfuk, C)
+    
+@bot.on(admin_cmd(pattern=r"wdyw$"))
+@bot.on(sudo_cmd(pattern="wdyw$", allow_sudo=True))
+async def bluedevilwhadayawant(whadayawant):
+    await edit_or_reply(whadayawant, D)
+    
 @bot.on(admin_cmd(pattern=r"pig$"))
 @bot.on(sudo_cmd(pattern="pig$", allow_sudo=True))
 async def bluedevilpig(pig):
@@ -600,6 +655,14 @@ CMD_HELP.update(
       \n**USAGE   ~>  **Send your text with china's art.\
       \n\n** CMD ~>** `.sshit` \
       \n**USAGE   ~>  **Ahhh shit...here we go again..\
+      \n\n** CMD ~>** `.ooof` \
+      \n**USAGE   ~>  **Big oooooooooooooooooooooooooooooooooof..\
+      \n\n** CMD ~>** `.fook` \
+      \n**USAGE   ~>  **Wtf kiddo?..\
+      \n\n** CMD ~>** `.wdf` \
+      \n**USAGE   ~>  **Wha D Fuk??..\
+      \n\n** CMD ~>** `.wdyw` \
+      \n**USAGE   ~>  **Wha du ya want Kiddo??..\
 "
     }
 )
