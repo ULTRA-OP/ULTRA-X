@@ -5,7 +5,7 @@ from datetime import datetime
 from .. import ALIVE_NAME, StartTime, CMD_HELP
 from ..utils import admin_cmd, sudo_cmd, edit_or_reply
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND USER"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "UltraX"
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
@@ -47,7 +47,7 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"__**✦҈͜͡➳ Lessun!__**\n★ immunity {ms}\n★ __**Mere**__ **Master ka loda {uptime}  se khada h aur mere {DEFAULTUSER} ke pass abhi bht immunity h kisi ko bhi chod skte h check krna h kya abhi bhi khada h {uptime} hogaye  ** [{DEFAULTUSER}](tg://user?id={ghanta})"
+        f"__**✦҈͜͡➳ Lessun!__**\n★Immunity: {ms}\n★ __**Mere**__ **Master ka loda {uptime}, se khada h aur mere {DEFAULTUSER} ke pass abhi bht immunity h,\n\nkisi ko bhi chod skte h, check krna h kya??\n\nabhi bhi khada h, {uptime} hogaye\n\n\n** [{DEFAULTUSER}](tg://user?id={ghanta})"
     )
 
 
