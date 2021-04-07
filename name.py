@@ -114,6 +114,7 @@ except:
 @xbot.on(events.InlineQuery(pattern='LEGENDX'))
 async def PROBOY(event):
    global rk
+   LEGENDX = event.builder
    legendx = [[Button.inline("Unmute Me 😊", data="fs_{}".format(rk))]]
    PROBOYX = LEGENDX.article(title='FORCE SUBSCRIBE', text='fsub', buttons=legendx)
    await event.answer([PROBOYX])
