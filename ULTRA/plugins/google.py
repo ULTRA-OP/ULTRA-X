@@ -1,8 +1,8 @@
 """ Powered by @Google
 Available Commands:
-.google search <query>
-.google image <query>
-.google reverse search"""
+.gs <query>
+.gi >query>
+.grs <query>"""
 
 import asyncio
 import os
@@ -17,7 +17,7 @@ def progress(current, total):
     logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
 
 
-@borg.on(admin_cmd(pattern="google search (.*)"))
+@borg.on(admin_cmd(pattern="gs (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -42,7 +42,7 @@ async def _(event):
     await event.edit("Google: {}\n{}".format(input_str, output_str), link_preview=False)
 
 
-@borg.on(admin_cmd(pattern="google image (.*)"))
+@borg.on(admin_cmd(pattern="gi (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -83,7 +83,7 @@ async def _(event):
     await event.delete()
 
 
-@borg.on(admin_cmd(pattern="google reverse search"))
+@borg.on(admin_cmd(pattern="grs (.*)"))
 async def _(event):
     if event.fwd_from:
         return
