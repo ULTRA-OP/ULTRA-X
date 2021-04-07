@@ -1,4 +1,4 @@
-  """ Powered by @Google
+""" Powered by @Google
 Available Commands:
 .grs <query> """
 
