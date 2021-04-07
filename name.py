@@ -115,7 +115,7 @@ except:
 async def PROBOY(event):
    global rk
    LEGENDX = event.builder
-   legendx = [[Button.inline("Unmute Me 😊", data="fs_legend")]]
+   legendx = [[Button.inline("Unmute Me 😊", data="fsubb")]]
    PROBOYX = LEGENDX.article(title='FORCE SUBSCRIBE', text='fsub', buttons=legendx)
    await event.answer([PROBOYX])
   
@@ -123,7 +123,7 @@ async def PROBOY(event):
 
 
      
-@bot.on(events.CallbackQuery(pattern=r"fs_legend"))
+@xbot.on(events.callbackquery.CallbackQuery(pattern=r"fsub"))
 async def start_again(event):
  tata = event.pattern_match.group(1)
  data = tata.decode()
