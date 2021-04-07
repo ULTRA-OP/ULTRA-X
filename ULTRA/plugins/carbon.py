@@ -3,45 +3,11 @@
 
 # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 
 # fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-
-# fixed by madboy482
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 
 # bc kang mat kr dena bsdk, 2 ghnte baad jake fix hua hai
 # mar dalunga kang kia to bsdk
-
-
-# fixed by madboy482
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-
-
-# fixed by madboy482
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-
-
-# fixed by madboy482
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 
 
 # fixed by madboy482
@@ -59,12 +25,7 @@ from selenium.webdriver.chrome.options import Options
 from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
 from ULTRA import ALIVE_NAME, CMD_HELP
 from ULTRA.helpers.functions import deEmojify
-
 # fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 
 # Google Drive ()
@@ -96,12 +57,6 @@ async def carbon_api(e):
     chrome_options.add_argument("--headless")
     chrome_options.binary_location = CHROME_BIN
     # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -171,12 +126,6 @@ async def carbon_api(e):
     chrome_options.add_argument("--headless")
     chrome_options.binary_location = CHROME_BIN
     # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -255,12 +204,6 @@ async def carbon_api(e):
     chrome_options.add_argument("--headless")
     chrome_options.binary_location = CHROME_BIN
     # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -322,12 +265,6 @@ async def carbon_api(e):
     chrome_options.add_argument("--headless")
     chrome_options.binary_location = CHROME_BIN
     # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -389,12 +326,6 @@ async def carbon_api(e):
     chrome_options.add_argument("--headless")
     chrome_options.binary_location = CHROME_BIN
     # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -460,12 +391,6 @@ async def carbon_api(e):
     chrome_options.add_argument("--headless")
     chrome_options.binary_location = CHROME_BIN
     # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -534,12 +459,6 @@ async def carbon_api(e):
     chrome_options.add_argument("--headless")
     chrome_options.binary_location = CHROME_BIN
     # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -641,12 +560,6 @@ async def carbon_api(e):
     chrome_options.add_argument("--headless")
     chrome_options.binary_location = CHROME_BIN
     # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # fixed by madboy482
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-    # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
     chrome_options.add_argument("--window-size=1920x1080")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -712,31 +625,7 @@ CMD_HELP.update(
 
 # fixed by madboy482  
 # fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
-# fixed by madboy482
 
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
-# SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 # SAY NO TO KANGS, ELSE GEND FAD DI JAYEGI
 
@@ -744,7 +633,3 @@ CMD_HELP.update(
 # ek bhi credit mat htana
 
 # ULTRA-X
-
-# .
-# .
-# .
