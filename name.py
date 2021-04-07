@@ -88,8 +88,13 @@ async def f(event):
  if chat_db:
   try:
     channel = chat_db.channel
+    chat_id = event.chat_id
+    chat_db = sql.fs_settings(chat_id)
+    channel = chat_db.channel
+    grp = f"t.me/{channel}"
     rip = await check_him(channel, event.sender_id)
     if rip is False:
+       await bot.send_message(event.chat_id, f"join [group]({grp})")
        LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
        await bot(EditBannedRequest(event.chat_id, event.sender_id, MUTE_RIGHTS))
        response = await bot.inline_query(LEGENDX, "LEGENDX")
@@ -100,19 +105,17 @@ async def f(event):
       await bot.send_message(event.chat_id, "❗**I am not an admin here.**\nMake me admin with ban user permission")
 
 
-
+try:
+      global rk
+      rk = rk
+except:
+      rk = 'chutia'
 
 @xbot.on(events.InlineQuery(pattern='LEGENDX'))
 async def PROBOY(event):
-   LEGENDX = event.builder
-   chat_id = event.chat_id
-   chat_db = sql.fs_settings(chat_id)
-   channel = chat_db.channel
-   grp = f"t.me/{channel}"
-   legendx = [[Button.url("Join Channel", grp)]]
-   legendx += [[Button.inline("Unmute Me 😊", data="fs_{}".format(rk))]]
-   proboyx= "HELLO you have **not subscribed** to our [channel](https://t.me/{}) yet❗.Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(channel, channel)
-   PROBOYX = LEGENDX.article(title='FORCE SUBSCRIBE', text=proboyx, buttons=legendx)
+   global rk
+   legendx = [[Button.inline("Unmute Me 😊", data="fs_{}".format(rk))]]
+   PROBOYX = LEGENDX.article(title='FORCE SUBSCRIBE', text='fsub', buttons=legendx)
    await event.answer([PROBOYX])
   
 
