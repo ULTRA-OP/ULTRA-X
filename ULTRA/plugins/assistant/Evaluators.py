@@ -78,7 +78,7 @@ async def _(event):
     )
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
-    curruser = pro.username or "UltraX"
+    curruser = pro.username or "Ultra.on"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"`{curruser}:~#` `{cmd}`\n`{result}`"
