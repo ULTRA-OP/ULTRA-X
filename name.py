@@ -105,7 +105,11 @@ async def f(event):
 @xbot.on(events.InlineQuery(pattern='LEGENDX'))
 async def PROBOY(event):
   LEGENDX = event.builder
+  chat_id = event.chat_id
+  chat_db = sql.fs_settings(chat_id)
+  user_id = event.sender_id
   rk = f"{event.sender_id}"
+  channel = chat_db.channel
   fname = event.sender.first_name
   grp = f"t.me/{channel}"
   legendx = [[Button.url("Join Channel", grp)]]
