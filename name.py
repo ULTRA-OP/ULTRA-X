@@ -90,17 +90,33 @@ async def f(event):
     channel = chat_db.channel
     rip = await check_him(channel, event.sender_id)
     if rip is False:
-      rk = f"{event.sender_id}"
-      fname = event.sender.first_name
-      grp = f"t.me/{channel}"
-      buttons = [[Button.url("Join Channel", grp)],
-               [Button.inline("Unmute Me", data="fs_{}".format(rk))],]
-      text = "{}, you have **not subscribed** to our [channel](https://t.me/{}) yet❗.Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(fname, channel, channel)
-      await bot(EditBannedRequest(event.chat_id, event.sender_id, MUTE_RIGHTS))
-      await bot.send_message(event.chat_id, text, buttons=buttons, link_preview=False)
+       LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
+       await bot(EditBannedRequest(event.chat_id, event.sender_id, MUTE_RIGHTS))
+       response = await bot.inline_query(LEGENDX, "LEGENDX")
+       await response[0].click(event.chat_id)
+       await event.delete()
   except:
     if not await rights(event):
-       await bot.send_message(event.chat_id, "❗**I am not an admin here.**\nMake me admin with ban user permission")
+      await bot.send_message(event.chat_id, "❗**I am not an admin here.**\nMake me admin with ban user permission")
+
+
+
+
+@xbot.on(events.InlineQuery(pattern='LEGENDX'))
+async def PROBOY(event):
+  LEGENDX = event.builder
+  rk = f"{event.sender_id}"
+  fname = event.sender.first_name
+  grp = f"t.me/{channel}"
+  legendx = [[Button.url("Join Channel", grp)]]
+  legendx += [[Button.inline("Unmute Me 😊", data="fs_{}".format(rk))]]
+  proboyx= "{}, you have **not subscribed** to our [channel](https://t.me/{}) yet❗.Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(fname, channel, channel)
+  PROBOYX = LEGENDX.article(title='FORCE SUBSCRIBE', text=proboyx, buttons=legendx)
+  await event.answer([PROBOYX])
+  
+
+
+
      
 @bot.on(events.CallbackQuery(pattern=r"fs(\_(.*))"))
 async def start_again(event):
