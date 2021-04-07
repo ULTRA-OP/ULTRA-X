@@ -1,6 +1,6 @@
 from ULTRA import bot
 from ULTRA.utils import admin_cmd
-import ULTRA.modules.sql_helper.fsub_sql as sql
+import ULTRA.plugins.sql_helper.fsub_sql as sql
 from telethon import events, functions, Button
 import telethon
 from telethon.tl import functions
