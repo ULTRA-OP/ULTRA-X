@@ -94,7 +94,7 @@ async def f(event):
     grp = f"t.me/{channel}"
     rip = await check_him(channel, event.sender_id)
     if rip is False:
-       await bot.send_message(event.chat_id, f"join [group]({grp})")
+       await bot.send_message(event.chat_id, f"join [group]({grp})", link_preview=False)
        LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
        await bot(EditBannedRequest(event.chat_id, event.sender_id, MUTE_RIGHTS))
        response = await bot.inline_query(LEGENDX, "LEGENDX")
@@ -115,7 +115,7 @@ except:
 async def PROBOY(event):
    global rk
    LEGENDX = event.builder
-   legendx = [[Button.inline("Unmute Me 😊", data="fs_{}".format(rk))]]
+   legendx = [[Button.inline("Unmute Me 😊", data="fs_legend")]]
    PROBOYX = LEGENDX.article(title='FORCE SUBSCRIBE', text='fsub', buttons=legendx)
    await event.answer([PROBOYX])
   
@@ -123,7 +123,7 @@ async def PROBOY(event):
 
 
      
-@bot.on(events.CallbackQuery(pattern=r"fs(\_(.*))"))
+@bot.on(events.CallbackQuery(pattern=r"fs_legend"))
 async def start_again(event):
  tata = event.pattern_match.group(1)
  data = tata.decode()
