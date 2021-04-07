@@ -200,7 +200,7 @@ async def demote(dmod):
     except BadRequestError:
         await dmod.edit(NO_PERM)
         return
-    await dmod.edit(f"THIS USER SUCCESSFULLY DEMOTED BY {BOT} ⚡⚡\n MY MASTER IS {MASTER} 🔥")
+    await dmod.edit(f"📌 **This user was successfully demoted by {BOT} !!!** 📌")
 
     # Announce to the logging group if we have demoted successfully
     if BOTLOG:
