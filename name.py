@@ -104,17 +104,16 @@ async def f(event):
 
 @xbot.on(events.InlineQuery(pattern='LEGENDX'))
 async def PROBOY(event):
- LEGENDX = event.builder
- chat_id = event.chat_id
- chat_db = sql.fs_settings(chat_id)
-   try:
-     channel = chat_db.channel
-     grp = f"t.me/{channel}"
-     legendx = [[Button.url("Join Channel", grp)]]
-     legendx += [[Button.inline("Unmute Me 😊", data="fs_{}".format(rk))]]
-     proboyx= "HELLO you have **not subscribed** to our [channel](https://t.me/{}) yet❗.Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(channel, channel)
-     PROBOYX = LEGENDX.article(title='FORCE SUBSCRIBE', text=proboyx, buttons=legendx)
-     await event.answer([PROBOYX])
+   LEGENDX = event.builder
+   chat_id = event.chat_id
+   chat_db = sql.fs_settings(chat_id)
+   channel = chat_db.channel
+   grp = f"t.me/{channel}"
+   legendx = [[Button.url("Join Channel", grp)]]
+   legendx += [[Button.inline("Unmute Me 😊", data="fs_{}".format(rk))]]
+   proboyx= "HELLO you have **not subscribed** to our [channel](https://t.me/{}) yet❗.Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(channel, channel)
+   PROBOYX = LEGENDX.article(title='FORCE SUBSCRIBE', text=proboyx, buttons=legendx)
+   await event.answer([PROBOYX])
   
 
 
