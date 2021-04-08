@@ -33,7 +33,7 @@ async def _(event):
                 await conv.send_message("/start")
                 await conv.get_response()
                 await conv.send_message("/fedstat " + sysarg)
-                await asyncio.sleep(4)
+                await asyncio.sleep(2)
                 audio = await conv.get_response()
                 if "Looks like" in audio.text:
                     await audio.click(0)
@@ -65,7 +65,7 @@ async def _(event):
             await conv.send_message("/start")
             await conv.get_response()
             await conv.send_message("/fedinfo " + sysarg)
-            await asyncio.sleep(4)
+            await asyncio.sleep(2)
             audio = await conv.get_response()
             await ok.edit(audio.text + "\n\nƒє∂ ιηƒσ єχтяα¢тє∂ ву υℓтяα χ вσт")
         except YouBlockedUserError:
