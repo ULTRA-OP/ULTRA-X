@@ -1,5 +1,5 @@
 import asyncio
-# made by LEGENDBOT
+# made by LEGENDBOT & UltraX
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from ULTRA.legend import NAME
 from ULTRA import CMD_HELP
@@ -43,14 +43,14 @@ async def _(event):
                     await borg.send_file(
                         event.chat_id,
                         audio,
-                        caption=f"List of feds {user} has been banned in.\n\nƒѕтαт ¢нє¢к ву {DEVIL} 🔥\n\n¢σℓℓє¢тє∂ ву υℓтяα χ вσт.",
+                        caption=f"**List of feds {user} has been banned in.\n\nƒѕтαт ¢нє¢к ву {DEVIL} 🔥\n\n¢σℓℓє¢тє∂ ву υℓтяα χ вσт.**",
                     )
                    
                 else:
                     await ok.edit(audio.text + "\n\n CHECKED BY ULTRA X ")
                 
             except YouBlockedUserError:
-                await ok.edit("**Error**\n `Unblock` @MissRose_Bot `and try again!`")
+                await ok.edit("**Error**\n `Unblock` **@MissRose_Bot** `and try again!`")
 
 
 
@@ -69,12 +69,12 @@ async def _(event):
             audio = await conv.get_response()
             await ok.edit(audio.text + "\n\nƒє∂ ιηƒσ єχтяα¢тє∂ ву υℓтяα χ вσт")
         except YouBlockedUserError:
-            await ok.edit("**Error**\n `Unblock` @MissRose_Bot `and try again!")
+            await ok.edit("**Error**\n `Unblock` **@MissRose_Bot** `and try again!")
 
 
 @borg.on(admin_cmd(pattern="myfeds"))
 async def myfeds(event):
-  LEGENDX = await event.edit("WEIT MASTER")
+  LEGENDX = await event.edit("`Weit master`")
   async with borg.conversation(bot) as rose:
     await rose.send_message("/start")
     await rose.get_response()
@@ -84,9 +84,9 @@ async def myfeds(event):
       await pro.click(0)
       await asyncio.sleep(2)
       pro = await rose.get_response()
-      await borg.send_file(event.chat_id, pro, caption='BY ULTRA X')
+      await borg.send_file(event.chat_id, pro, caption='**Bʏ UʟᴛʀᴀX**')
     else:
-      await LEGENDX.edit(pro.text + "\n\nCHECKED BY ULTRA X")
+      await LEGENDX.edit(pro.text + "\n\n**Cʜᴇᴄᴋᴇᴅ ʙʏ UʟᴛʀᴀX ฅ^•ﻌ•^ฅ**")
 CMD_HELP.update(
     {
         "fedstuff": ".fstat <username/userid/reply to user>\nUse - To check the persons fedban stat in @MissRose_Bot.\
