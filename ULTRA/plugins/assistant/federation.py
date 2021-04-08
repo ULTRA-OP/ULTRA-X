@@ -999,4 +999,4 @@ Federation owner commands:
 **Note:** Plugin not yet finished writing.
 """
 
-CMD_HELP.update({file_helpo: [file_helpo, __help__]})
+# done
