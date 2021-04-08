@@ -47,7 +47,7 @@ async def _(event):
                     )
                    
                 else:
-                    await ok.edit(audio.text + "\n\n CHECKED BY ULTRA X ")
+                    await ok.edit(audio.text + "\n\n **Cʜᴇᴄᴋᴇᴅ ʙʏ UʟᴛʀᴀX...**")
                 
             except YouBlockedUserError:
                 await ok.edit("**Error**\n `Unblock` **@MissRose_Bot** `and try again!`")
@@ -74,7 +74,7 @@ async def _(event):
 
 @borg.on(admin_cmd(pattern="myfeds"))
 async def myfeds(event):
-  LEGENDX = await event.edit("`Weit master`")
+  LEGENDX = await event.edit("`Wᴇɪᴛ ᴍᴀsᴛᴇʀ ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ ᴀʟʟ ғᴇᴅs...``")
   async with borg.conversation(bot) as rose:
     await rose.send_message("/start")
     await rose.get_response()
@@ -82,9 +82,9 @@ async def myfeds(event):
     pro = await rose.get_response()
     if "Looks like" in pro.text:
       await pro.click(0)
-      await asyncio.sleep(2)
+      await asyncio.sleep(1.5)
       pro = await rose.get_response()
-      await borg.send_file(event.chat_id, pro, caption='**Bʏ UʟᴛʀᴀX**')
+      await borg.send_file(event.chat_id, pro, caption='**Cʜᴇᴄᴋᴇᴅ ʙʏ UʟᴛʀᴀX ฅ^•ﻌ•^ฅ**')
     else:
       await LEGENDX.edit(pro.text + "\n\n**Cʜᴇᴄᴋᴇᴅ ʙʏ UʟᴛʀᴀX ฅ^•ﻌ•^ฅ**")
 CMD_HELP.update(
