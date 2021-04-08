@@ -922,7 +922,7 @@ async def fd(event):
  sql.user_demote_fed(fed_id, user_id)
  await event.reply(f"You are no longer a fed admin in '{name}'")
 
-@register(pattern="^/myfeds")
+@xbot.on(events.NewMessage(pattern="^/myfeds"))
 async def sk(event):
  if not event.is_private:
   return await event.reply("This command is made to be used in PM.")
