@@ -781,9 +781,9 @@ async def _(event):
         
 CMD_HELP.update(
     {
-        "animation1": """**Plugin : **`animation`
+        "anim_madboy": """**Plugin : **`anim_madboy`
         
-**Commands in animation are **
+**Commands in anim_madboy are **
   •  `.stupid`
   •  `.bombs`
   •  `.call`
