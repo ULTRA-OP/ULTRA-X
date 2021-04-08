@@ -70,7 +70,7 @@ async def _(event):
             await ok.edit("**Error**\n `Unblock` @MissRose_Bot `and try again!")
 
 
-@borg.on(admin_cmd(pattern="myfeds")
+@borg.on(admin_cmd(pattern="myfeds"))
 async def myfeds(event):
   LEGENDX = await event.edit("WEIT MASTER")
   async with borg.conversation(bot) as rose:
