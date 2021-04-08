@@ -933,7 +933,7 @@ async def _(event):
         
 CMD_HELP.update(
     {
-        "animation1": """**Plugin : **`animation1`
+        "animation": """**Plugin : **`animation`
         
 **Commands in animation are **
   •  `.eye`
