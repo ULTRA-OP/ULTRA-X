@@ -204,8 +204,8 @@ async def _(event):
         await event.edit(animation_chars[i % 32])
 
 
-  CMD_HELP.update(
-      {
+CMD_HELP.update(
+    {
         "animation2": """**Plugin : **`animation2`
         
 **Commands in animation2 are **
