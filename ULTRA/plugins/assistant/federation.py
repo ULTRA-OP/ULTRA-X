@@ -7,7 +7,6 @@ Fully Written by LEGENDX22
 from ULTRAX import xbot
 import os, re, csv, json, time, uuid, pytz
 from datetime import datetime
-# id_admin
 from io import BytesIO
 import ULTRA.plugins.sql_helper.feds_sql as sql
 from telethon import *
@@ -17,6 +16,16 @@ from telethon.tl.types import User
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageMediaDocument, DocumentAttributeFilename
 
+async def is_admin(event, user):
+    try:
+        sed = await event.client.get_permissions(event.chat_id, user)
+        if sed.is_admin:
+            is_mod = True
+        else:
+            is_mod = False
+    except:
+        is_mod = False
+    return is_mod
 
 """
 Fully Written by LEGENDX22
