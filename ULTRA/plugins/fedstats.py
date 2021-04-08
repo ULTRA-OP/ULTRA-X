@@ -45,7 +45,7 @@ async def _(event):
                         caption=f"List of feds {user} has been banned in.\n\nƒѕтαт ¢нє¢к ву {DEVIL} 🔥\n\n¢σℓℓє¢тє∂ ву υℓтяα χ вσт.",
                     )
                 else:
-                    await ok.edit(audio.text + "\n\n CHECKED BY ULTRA X )
+                    await ok.edit(audio.text + "\n\n CHECKED BY ULTRA X ")
                 await event.delete()
             except YouBlockedUserError:
                 await ok.edit("**Error**\n `Unblock` @MissRose_Bot `and try again!`")
@@ -70,6 +70,21 @@ async def _(event):
             await ok.edit("**Error**\n `Unblock` @MissRose_Bot `and try again!")
 
 
+@borg.on(admin_cmd(pattern="myfeds")
+async def myfeds(event):
+  LEGENDX = await event.edit("WEIT MASTER")
+  async with borg.conversation(bot) as rose:
+    await rose.send_message("/start")
+    await rose.get_response()
+    await rose.send_message("/myfeds")
+    pro = await rose.get_response()
+    if "Looks like" in pro.text:
+      await pro.click(0)
+      await asyncio.sleep(2)
+      pro = await rose.get_response()
+      await borg.send_file(event.chat_id, pro, caption='BY ULTRA X')
+    else:
+      await LEGENDX.edit(pro.text + "\n\nCHECKED BY ULTRA X")
 CMD_HELP.update(
     {
         "fedstuff": ".fstat <username/userid/reply to user>\nUse - To check the persons fedban stat in @MissRose_Bot.\
