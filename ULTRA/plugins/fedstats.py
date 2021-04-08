@@ -1,5 +1,5 @@
 import asyncio
-# made by telebot
+# made by LEGENDBOT
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from ULTRA.legend import NAME
 from ULTRA import CMD_HELP
@@ -45,7 +45,7 @@ async def _(event):
                         caption=f"List of feds {user} has been banned in.\n\nƒѕтαт ¢нє¢к ву {DEVIL} 🔥\n\n¢σℓℓє¢тє∂ ву υℓтяα χ вσт.",
                     )
                 else:
-                    await borg.send_message(event.chat_id, audio.text)
+                    await ok.edit(audio.text + "\n\n CHECKED BY ULTRA X )
                 await event.delete()
             except YouBlockedUserError:
                 await ok.edit("**Error**\n `Unblock` @MissRose_Bot `and try again!`")
