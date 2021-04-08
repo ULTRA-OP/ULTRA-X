@@ -39,12 +39,13 @@ async def _(event):
                     await audio.click(0)
                     await asyncio.sleep(2)
                     audio = await conv.get_response()
+                    await event.delete()
                     await borg.send_file(
                         event.chat_id,
                         audio,
                         caption=f"List of feds {user} has been banned in.\n\nƒѕтαт ¢нє¢к ву {DEVIL} 🔥\n\n¢σℓℓє¢тє∂ ву υℓтяα χ вσт.",
                     )
-                   await event.delete()
+                   
                 else:
                     await ok.edit(audio.text + "\n\n CHECKED BY ULTRA X ")
                 
