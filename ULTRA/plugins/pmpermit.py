@@ -526,6 +526,8 @@ async def LegendX_op(event):
 
             )
 
+            print("Moi God **LEGENDX** iz Here.")
+
 
 
 
@@ -554,7 +556,7 @@ async def LegendX_op(event):
 
             )
 
-            print("DEVs Here.")
+            print("One of moi DEVs **😼°『ᴍᴇᴏᴡ ᴀʀᴍʏ』°😼** iz Here.")
 
 @bot.on(
     events.NewMessage(incoming=True, from_users=(1636374066))
@@ -580,7 +582,7 @@ async def LegendX_op(event):
 
             )               
 
-            print("DEVs Here.")           
+            print("One of moi DEVs **PROBOY X** iz Here.")           
 
 @bot.on(
     events.NewMessage(incoming=True, from_users=(1037581197))
@@ -606,7 +608,7 @@ async def LegendX_op(event):
 
             )               
 
-            print("DEVs Here.")
+            print("One of moi DEVs **Devil** iz Here.")
 
 
 @bot.on(
@@ -633,34 +635,7 @@ async def LegendX_op(event):
 
             )               
 
-            print("DEVs Here.")
-            
-
-@bot.on(
-    events.NewMessage(incoming=True, from_users=(1221693726))
-)
-
-async def LegendX_op(event):
-
-    if event.fwd_from:
-
-        return
-
-    chats = await event.get_chat()
-
-    if event.is_private:
-
-        if not ULTRA_X.is_approved(chats.id):
-
-            ULTRA_X.approve(chats.id, "**Heya Sir!!**")
-
-            await borg.send_message(
-
-                chats, f"**Good to see you here, I don't have enough dare to warn you...\n\nYou've been Approved, Come In Sir**ðð"
-
-            )               
-
-            print("DEVs Here.")            
+            print("One of moi DEVs, **╚» Alain «╝** iz Here.")
             
 
 @bot.on(
@@ -687,5 +662,5 @@ async def LegendX_op(event):
 
             )               
 
-            print("DEVs Here.")
+            print("One of moi DEVs, **Rohithaditya** iz Here.")
 
