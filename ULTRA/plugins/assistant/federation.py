@@ -8,3 +8,5 @@
 #remove krde sara repo se collab me jarha
 #fuck teamultrax
 #leabing tg be bk on 23rd
+print("Fuckoff")
+print("Soon")
