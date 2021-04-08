@@ -764,15 +764,15 @@ async def _(event):
     animation_chars = [
         "`Downloading File..`",
         "`File Downloaded....`",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nFile Scanned... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nFile Scanned... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nFile Scanned... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nFile Scanned... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nFile Scanned... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nFile Scanned... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nFile Scanned... 84%\n█████████████████████▒▒▒▒ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nFile Scanned... 100%\n█████████████████████████ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription: Pru User\nValid Until: 31/12/2099\n\nTask: 01 of 01 Files Scanned...\n\nResult: No Virus Found...`",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 84%\n█████████████████████▒▒▒▒ `",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 100%\n█████████████████████████ `",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nTask: 01 of 01 Files Scanned...\n\nResult: No Virus Found...`",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -784,9 +784,9 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    animation_interval = 5
+    animation_interval = 3
     animation_ttl = range(11)
-    event = await edit_or_reply(event, "V QuickHeaml")
+    event = await edit_or_reply(event, "Injecting Vimrus")
     animation_chars = [
         "`Downloading File..`",
         "`File Downloaded....`",
@@ -798,7 +798,7 @@ async def _(event):
         "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
         "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 84%\n█████████████████████▒▒▒▒ `",
         "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nFile Scanned... 100%\n█████████████████████████ `",
-        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nTask: 01 of 01 Files Scanned...\n\nResult:⚠️Virus Found⚠️\nMore Info: Torzan, Spyware, Adware`",
+        "`Quick Heal Total Security Checkup\n\n\nSubscription:` {DEFAULTUSER} `\nValid Until: 31/12/2099\n\nTask: 01 of 01 Files Scanned...\n\nResult: ⚠️Virus Found⚠️\nMore Info: Torzan, Spyware, Adware`",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -924,7 +924,7 @@ async def _(event):
         "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n☑️ `.windows`\n☑️ `.linux`\n☑️ `.stock`",
         "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n✅ `.windows`\n☑️ `.linux`\n☑️ `.stock`",
         "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n✅ `.windows`\n✅ `.linux`\n☑️ `.stock`",
-        "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n✅ `.windows`\n✅ `.linux`\n✅ `.stock`\n\nDeveloped By: @catuserbot17",
+        "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n✅ `.windows`\n✅ `.linux`\n✅ `.stock`\n\nDeveloped By: @Warning_MadBoy_is_Here",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
