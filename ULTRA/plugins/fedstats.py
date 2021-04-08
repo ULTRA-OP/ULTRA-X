@@ -44,9 +44,10 @@ async def _(event):
                         audio,
                         caption=f"List of feds {user} has been banned in.\n\nƒѕтαт ¢нє¢к ву {DEVIL} 🔥\n\n¢σℓℓє¢тє∂ ву υℓтяα χ вσт.",
                     )
+                   await event.delete()
                 else:
                     await ok.edit(audio.text + "\n\n CHECKED BY ULTRA X ")
-                await event.delete()
+                
             except YouBlockedUserError:
                 await ok.edit("**Error**\n `Unblock` @MissRose_Bot `and try again!`")
 
