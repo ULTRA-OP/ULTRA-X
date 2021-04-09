@@ -10,7 +10,7 @@ from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from ULTRA import CMD_HELP
 from ULTRA.utils import admin_cmd, sudo_cmd
 import html
-from ULTRAX import POSThn
+from ULTRAX import POST
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
