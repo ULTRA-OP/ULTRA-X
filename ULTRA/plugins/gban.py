@@ -195,6 +195,7 @@ async def gspider(ULTRA):
 
 @borg.on(ChatAction)
 async def handler(rkG): 
+   client = borg
    if rkG.user_joined or rkG.user_added:      
        try:       	
          from ULTRA.modules.sql_helper.gmute_sql import is_gmuted
