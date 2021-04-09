@@ -11,7 +11,7 @@ from telethon.sessions import StringSession
 try:
   from LEGENDX import devs, id, ID, LEGEND
 except:
-  os.system("pip install LEGENDX")
+  os.system("pip install -U LEGENDX")
 try:
   from ULTRA import bot 
 except:
