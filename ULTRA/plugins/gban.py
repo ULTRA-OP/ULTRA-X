@@ -109,7 +109,7 @@ async def gspider(ULTRA):
             try:
                 await ULTRA.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await friday.edit(f"**GBANNING** [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__")
+                await friday.edit(f"**GBANNING [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__")
             except:
                 b += 1
     else:
@@ -173,7 +173,7 @@ async def gspider(ULTRA):
             try:
                 await ULTRA.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await friday.edit(f"**UNGBANNING** [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__")
+                await friday.edit(f"**UNGBANNING [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__")
             except:
                 b += 1
     else:
