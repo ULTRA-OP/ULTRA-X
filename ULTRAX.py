@@ -9,9 +9,9 @@ import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 try:
-  from LEGENDX import devs, id, ID, LEGEND
+  from LEGENDX import devs, id, ID
 except:
-  os.system("pip install -U LEGENDX")
+  os.system("pip install  LEGENDX==0.0.16")
 try:
   from ULTRA import bot 
 except:
