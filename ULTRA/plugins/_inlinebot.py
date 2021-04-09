@@ -1,35 +1,30 @@
-from ULTRA import CMD_LIST
-
-from ULTRA import ALIVE_NAME
-
-from ULTRA.utils import admin_cmd, sudo_cmd
-
-from platform import uname
-
+import io
+import json
+import math
+import os
+import re
+import time
 import sys
 
-from telethon import events, functions, version
+from telethon import Button, custom, events, functions, version
 
-
+from ULTRA import CMD_LIST
+from ULTRA import ALIVE_NAME
+from ULTRAX import PHOTO
+from ULTRA.utils import admin_cmd, sudo_cmd
+from platform import uname
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
-
 
 
 #@command(pattern="^.help ?(.*)")
 
 @borg.on(admin_cmd(pattern=r"ihelp ?(.*)", outgoing=True))
-
 @borg.on(sudo_cmd(pattern=r"ihelp ?(.*)", outgoing=True, allow_sudo=True))
-
 async def cmd_list(event):
-
     if not event.text[0].isalpha() and event.text[0] not in ("/" , "#", "-", "_", "@"):
-
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
-
         input_str = event.pattern_match.group(1)
-
         if tgbotusername is None or input_str == "text":
 
             string = ""
