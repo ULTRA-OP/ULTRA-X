@@ -3,7 +3,8 @@
 
 """Create Private Groups
 Available Commands:
-.create (b|g) GroupName"""
+.create (b|g|c) GroupName"""
+
 from telethon.tl import functions
 from ULTRA import CMD_HELP
 from ULTRA.utils import admin_cmd, edit_or_reply, sudo_cmd
@@ -16,7 +17,7 @@ async def _(event):
         return
     type_of_group = event.pattern_match.group(1)
     group_name = event.pattern_match.group(2)
-    event = await edit_or_reply(event, "Creating wait sar.....")
+    event = await edit_or_reply(event, "Creating weit sur.....")
     if type_of_group == "b":
         try:
             result = await event.client(
@@ -39,7 +40,7 @@ async def _(event):
                 )
             )
             await event.edit(
-                "Group `{}` created successfully. Join {}".format(
+                "Group `{}` created successfully.\nJoin {}".format(
                     group_name, result.link
                 )
             )
@@ -50,7 +51,7 @@ async def _(event):
             r = await event.client(
                 functions.channels.CreateChannelRequest(
                     title=group_name,
-                    about="Created By ULTRA X",
+                    about="𝑪𝒓𝒆𝒂𝒕𝒆𝒅 𝑩𝒚 υℓтяα χ",
                     megagroup=type_of_group != "c",
                 )
             )
@@ -62,7 +63,7 @@ async def _(event):
                 )
             )
             await event.edit(
-                "Channel `{}` created successfully. Join {}".format(
+                "Channel `{}` created successfully.\nJoin {}".format(
                     group_name, result.link
                 )
             )
