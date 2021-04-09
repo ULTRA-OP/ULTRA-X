@@ -109,7 +109,7 @@ async def gspider(ULTRA):
             try:
                 await ULTRA.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await friday.edit(f"**GBANNING** [{user.first_name}](tg://user?id={user.id})")
+                await friday.edit(f"**GBANNING** [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__")
             except:
                 b += 1
     else:
@@ -120,7 +120,7 @@ async def gspider(ULTRA):
     except:
         pass
     return await friday.edit(
-        f"**Successfully GBanned [{user.first_name}](tg://user?id={user.id}) // Total Affected Chats : {a} **"
+        f"**Successfully GBanned [{user.first_name}](tg://user?id={user.id}) // Total Affected Chats :** `{a}` "
     )
 
 
@@ -173,7 +173,7 @@ async def gspider(ULTRA):
             try:
                 await ULTRA.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await friday.edit(f"**UNGBANNING** [{user.first_name}](tg://user?id={user.id})**")
+                await friday.edit(f"**UNGBANNING** [{user.first_name}](tg://user?id={user.id})**\n\n__Please be Patient..This process takes time.__")
             except:
                 b += 1
     else:
@@ -184,7 +184,7 @@ async def gspider(ULTRA):
     except:
         pass
     return await friday.edit(
-        f"**Successfully UnGBanned // USER - [{user.first_name}](tg://user?id={user.id}) IN CHATS : {a} **"
+        f"**Successfully UnGBanned // USER - [{user.first_name}](tg://user?id={user.id}) IN CHATS :** `{a}`"
     )
 
 
