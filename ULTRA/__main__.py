@@ -1,9 +1,9 @@
 import os
 try:
-  from LEGENDX import id, ID, devs, POST
+  from LEGENDX import id, ID, devs
 except:
-  os.system("pip install LEGENDX==0.0.16")
-  from LEGENDX import id, ID, devs, POST
+  os.system("pip install -U LEGENDX")
+  from LEGENDX import id, ID, devs
 finally:
   print ("ULTRA X IS STARTING WITH TELETHON")
 from ULTRAX import xbot
