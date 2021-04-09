@@ -2,7 +2,7 @@
 FOR ALL DEVS I EDITED IT 
 (C) @ROHTIHADITYA
 (C) @PROBOYX
-(C) @ROSELOVERX
+(C) @ROSELOVERX SCAMMER NOT IN TEAMULTRA OR TEAMLEGEND
 (C) @LEGENDX22
 (C) @NubBoy_007
 """
@@ -10,6 +10,7 @@ from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from ULTRA import CMD_HELP
 from ULTRA.utils import admin_cmd, sudo_cmd
 import html
+from ULTRAX import POSThn
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
@@ -119,9 +120,11 @@ async def gspider(ULTRA):
             return await friday.edit(f"**Error! User probably already gbanned.**")
     except:
         pass
-    return await friday.edit(
+    POST(user=user.id, msg=event.text[5:])
+    await friday.edit(
         f"**Successfully GBanned [{user.first_name}](tg://user?id={user.id}) // Total Affected Chats :** `{a}` "
     )
+    return
 
 
 @borg.on(admin_cmd(pattern="ungban ?(.*)"))
