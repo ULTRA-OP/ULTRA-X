@@ -4,6 +4,7 @@ FOR ALL DEVS I EDITED IT
 (C) @PROBOYX
 (C) @ROSELOVERX
 (C) @LEGENDX22
+(C) @NubBoy_007
 """
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from ULTRA import CMD_HELP
@@ -42,7 +43,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("Something Went Wrong", str(err))           
+            return await event.edit("**SOMETHING W3NT WRONG 🤔**", str(err))           
     return user_obj, extra
 
 
@@ -63,7 +64,7 @@ async def gspider(ULTRA):
     sender = await lol.get_sender()
     me = await lol.client.get_me()
     if not sender.id == me.id:
-        friday = await lol.reply("Gbanning This Retard DumbAss😁😁")
+        friday = await lol.reply("GBanning This Retard DumbAss😁😁")
     else:
         friday = await lol.edit("Wait Processing.....")
     me = await ULTRA.client.get_me()
@@ -89,7 +90,7 @@ async def gspider(ULTRA):
     if user:
         if user.id in devs:
             return await friday.edit(
-                f"**Didn't , Your Father Teach You ? That You Cant Gban your creator😑😑🖕**"
+                f"**Didn't, Your Father Teach You ? That You Can't Gban My Creator😑😑🖕**"
             )
         try:
             from ULTRA.modules.sql_helper.gmute_sql import gmute
@@ -108,7 +109,7 @@ async def gspider(ULTRA):
             try:
                 await ULTRA.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await friday.edit(f"**GBANNED // Total Affected Chats **: `{a}`")
+                await friday.edit(f"**GBANNING** [{user.first_name}](tg://user?id={user.id})")
             except:
                 b += 1
     else:
@@ -119,7 +120,7 @@ async def gspider(ULTRA):
     except:
         pass
     return await friday.edit(
-        f"**Gbanned [{user.first_name}](tg://user?id={user.id}) Affected Chats : {a} **"
+        f"**Successfully GBanned [{user.first_name}](tg://user?id={user.id}) // Total Affected Chats : {a} **"
     )
 
 
@@ -151,7 +152,7 @@ async def gspider(ULTRA):
         if not reason:
             reason = "Private"
     except:
-        return await friday.edit("Someting Went Wrong 🤔")
+        return await friday.edit("**SOMETHING W3NT WRONG 🤔**")
     if user:
         if user.id in devs:
             return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
@@ -172,7 +173,7 @@ async def gspider(ULTRA):
             try:
                 await ULTRA.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await friday.edit(f"**UNGBANNING // AFFECTED CHATS - {a} **")
+                await friday.edit(f"**UNGBANNING** [{user.first_name}](tg://user?id={user.id})**")
             except:
                 b += 1
     else:
@@ -183,7 +184,7 @@ async def gspider(ULTRA):
     except:
         pass
     return await friday.edit(
-        f"**UNGBANNED // USER - [{user.first_name}](tg://user?id={user.id}) CHATS : {a} **"
+        f"**Successfully UnGBanned // USER - [{user.first_name}](tg://user?id={user.id}) IN CHATS : {a} **"
     )
 
 
@@ -209,8 +210,8 @@ async def handler(rkG):
                     await client.edit_permissions(rkG.chat_id, guser.id, view_messages=False)                              
                     await rkG.reply(
                      f"**Gbanned User Joined!!** \n"                      
-                     f"**Victim Id**: [{guser.id}](tg://user?id={guser.id})\n"                   
-                     f"**Action **  : `Banned`")                                                
+                     f"**➥ Victim Id**: [{guser.id}](tg://user?id={guser.id})\n"                   
+                     f"**➥ Action **  : `Banned`")                                                
                  except:       
                     rkG.reply("`No Permission To Ban`")                   
                     return 
