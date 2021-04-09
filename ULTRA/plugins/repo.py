@@ -21,7 +21,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
  # updated by madboy482
  # updated by madboy482
  # updated by madboy482
- result = LEGENDX.article("UʟᴛʀᴀX",text="**UltraX's Rᴇᴘᴏ ᴀɴᴅ Sᴜᴘᴘᴏʀᴛ\n\n© @UltraXOT**",buttons=X,link_preview=False)
+ result = LEGENDX.article("UʟᴛʀᴀX",text="**UltraX's Rᴇᴘᴏ, Dᴇᴘʟᴏʏ ᴀɴᴅ Sᴜᴘᴘᴏʀᴛ\n\n© @UltraXOT**",buttons=X,link_preview=False)
  # updated by madboy482
  # updated by madboy482
  # updated by madboy482
@@ -32,7 +32,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
 # updated by madboy482
 async def callback_query_handler(event):
 # inline by TEAMLEGEND, TEAMULTRAX
-  await event.edit(text=f"**UʟᴛʀᴀX's Rᴇᴘᴏ ᴀɴᴅ Gʀᴏᴜᴘ Lɪɴᴋ\n\n© @UltraXOT**",buttons=[
+  await event.edit(text=f"**UʟᴛʀᴀX's Rᴇᴘᴏ, Dᴇᴘʟᴏʏ ᴀɴᴅ Gʀᴏᴜᴘ Lɪɴᴋ\n\n© @UltraXOT**",buttons=[
    # updated by madboy482
    # updated by madboy482
    # updated by madboy482
