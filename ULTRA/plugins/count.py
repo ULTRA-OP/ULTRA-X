@@ -61,11 +61,11 @@ async def stats(
         unread += dialog.unread_count
     stop_time = time.time() - start_time
     full_name = inline_mention(await event.client.get_me())
-    response = f'🔰**Stats for {full_name}**🔰\n\n'
-    response += f'🔱 **Private Chats:** {private_chats} \n'
-    response += f'🔸   `Users: {private_chats - bots}` \n'
-    response += f'🔹   `Bots: {bots}` \n'
-    response += f'🔱 **Groups:** {groups} \n'
+    response = f'**📌 Sᴛᴀᴛs ᴏғ {full_name} 📌**\n┏━━━━━━━━━━━━━━━━━━━━━\n'
+    response += f'┣ **᪥ Pʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs:** `{private_chats}` ᪥\n'
+    response += f'┣ **᪥ Usᴇʀs:** `{private_chat - bots}` ᪥\n'
+    response += f'┣ **᪥ Bᴏᴛs:** `{bots}` ᪥\n┗━━━━━━━━━━━━━━━━━━━━━\n┏━━━━━━━━━━━━━━━━━━━━━\n'
+    response += f'┣ **᪥ Gʀᴏᴜᴘs:** `{groups}` ᪥\n'
     response += f'🔱 **Channels:** {broadcast_channels} \n'
     response += f'☣️  **Admin in Groups:** {admin_in_groups} \n'
     response += f'🔹   `Creator: {creator_in_groups}` \n'
