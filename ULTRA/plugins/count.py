@@ -63,7 +63,7 @@ async def stats(
     full_name = inline_mention(await event.client.get_me())
     response = f'**📌 Sᴛᴀᴛs ᴏғ {full_name} 📌**\n┏━━━━━━━━━━━━━━━━━━━━━\n'
     response += f'┣ **᪥ Pʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs:** `{private_chats}` ᪥\n'
-    response += f'┣ **᪥ Usᴇʀs:** `{private_chat - bots}` ᪥\n'
+    response += f'┣ **᪥ Usᴇʀs:** `{private_chats - bots}` ᪥\n'
     response += f'┣ **᪥ Bᴏᴛs:** `{bots}` ᪥\n┗━━━━━━━━━━━━━━━━━━━━━\n┏━━━━━━━━━━━━━━━━━━━━━\n'
     response += f'┣ **᪥ Gʀᴏᴜᴘs:** `{groups}` ᪥\n'
     response += f'🔱 **Channels:** {broadcast_channels} \n'
