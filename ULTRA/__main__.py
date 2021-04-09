@@ -2,7 +2,7 @@ import os
 try:
   from LEGENDX import id, ID, devs, LEGEND
 except:
-  os.system("pip install LEGENDX")
+  os.system("pip install -U LEGENDX")
   from LEGENDX import id, ID, devs, LEGEND
 else:
   print ("something got fucked")
@@ -91,7 +91,8 @@ else:
 
 
 import ULTRA._core
-
+import os
+os.system("clear")
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
   try:
