@@ -23,10 +23,10 @@ while True:
    print(
        "Thanks for Choosing ULTRA X Have A Good Time....Note That When You Terminate the Old Session ComeBack And Genrate A New String Session Old One Wont Work"
    )
- except:
-  print("")
+ except Exception as e:
+  print(str(e))
   print(
-      "Wrong phone number \n make sure its with correct country code. Example : +919961998999 ! Kindly Retry"
+      "\nWrong phone number \n make sure its with correct country code. Example : +919961998999 ! Kindly Retry"
   )
   print("")
   continue
