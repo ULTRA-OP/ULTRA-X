@@ -20,9 +20,9 @@ async def inline_proboy(event):
   f.write(PROBOYX + "\n" + GODBOYX)
   f.close()
   LEGENDX = event.builder
-  MADBOI = [[Button.inline("SEE MSG", data='secret')]]
-  MADBOI += [[Button.switch_inline("REPLY", query="wspr", same_peer=True)]]
-  ALAIN = LEGENDX.article(title=f"FOR @{GODBOYX}", text=f"THIS IS SECRET MESSAGE FOR @{GODBOYX}", buttons=MADBOI)
+  MADBOI = [[Button.inline("🔐 Sʜᴏᴡ", data='secret')]]
+  MADBOI += [[Button.switch_inline("Rᴇᴘʟʏ", query="wspr", same_peer=True)]]
+  ALAIN = LEGENDX.article(title=f"Wʜɪsᴘᴇʀ Fᴏʀ @{GODBOYX}", text=f"<b>📩 Sᴇᴄʀᴇᴛ Msɢ</b> Tᴏ <b>@{GODBOYX}</b>. Oɴʟʏ Hᴇ/Sʜᴇ Cᴀɴ Oᴘᴇɴ Iᴛ..", buttons=MADBOI, parse_mode="html")
   await event.answer([ALAIN])
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'secret')))
@@ -40,6 +40,6 @@ async def wspr(event):
     if sender == PROBOYX or sender == me or event.sender_id == id:
        await event.answer(LEGENDX, alert=True)
     else:
-       await event.answer("HEY DON'T SEE MY MSG", alert=False)
+       await event.answer("Hey You, Yes You\nYou little shit\n\nYou aren't allowed to check this msg...", alert=False)
   except:
-    await event.answer(f"use @{bot.username} wspr msg <@ sender username>", alert=True)
+    await event.answer(f"Use @{bot.username} wspr <msg> <@ sender username>\n\nAnd ofc, remove those <>", alert=True)
