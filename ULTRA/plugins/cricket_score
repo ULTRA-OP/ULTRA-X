@@ -9,18 +9,18 @@ async def _(event):
     page = urllib.request.urlopen(score_page)
     soup = BeautifulSoup(page, "html.parser")
     result = soup.find_all("description")
-    alain = ""
+    Sed = ""
     for match in result:
-        alain += match.get_text() + "\n\n"
+        Sed += match.get_text() + "\n\n"
     await event.edit(
-        f"<b><u>Match information gathered successful</b></u>\n\n\n<code>{alain}</code>",
+        f"<b><u>Match information gathered successful</b></u>\n\n\n<code>{Sed}</code>",
         parse_mode="HTML",
     )
 
 
 CMD_HELP.update(
     {
-        "cricket_score": "**Cricket Score**\
+        "cricket_score": "**cricket_score**\
 \n\n**Syntax : **`.cs`\
 \n**Usage :** Gets Live cricket score automatically."
     }
