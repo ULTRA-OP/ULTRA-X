@@ -37,6 +37,6 @@ async def _(event):
 CMD_HELP.update(
     {
         "coin": "**Plugin :** `coin`\
-        \n**Syntax : **`.coin`\"
+        \n**Syntax : **`.coin`"
     }
 )
