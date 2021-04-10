@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from ULTRA import CMD_HELP
 from ULTRA.utils import admin_cmd
 
-@borg.on(admin(pattern="cs"))
+@borg.on(admin_cmd(pattern="cs"))
 async def _(event):
     score_page = "http://static.cricinfo.com/rss/livescores.xml"
     page = urllib.request.urlopen(score_page)
