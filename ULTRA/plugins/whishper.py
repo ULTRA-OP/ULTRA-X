@@ -40,6 +40,6 @@ async def wspr(event):
     if sender == PROBOYX or sender == me or event.sender_id == id:
        await event.answer(LEGENDX, alert=True)
     else:
-       await event.answer("Hey You, Yes You\nYou little shit\n\nYou aren't allowed to check this msg...", alert=False)
+       await event.answer("Yes You, Little Shit, Why're u seeing my msg??", alert=False)
   except:
     await event.answer(f"Use @{bot.username} wspr <msg> <@ sender username>\n\nAnd ofc, remove those <>", alert=True)
