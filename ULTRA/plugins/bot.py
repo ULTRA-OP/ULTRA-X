@@ -115,8 +115,9 @@ from ..utils import admin_cmd
 async def wisper(event):
     if event.fwd_from:
         return
+    await event.delete()
     PROBOYX = event.text[5:]
     LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
     response = await bot.inline_query(LEGENDX, "wspr " + PROBOYX)
     await response[0].click(event.chat_id)
-    await event.delete()
+    
