@@ -110,3 +110,13 @@ async def repo(event):
     await response[0].click(event.chat_id)
     await event.delete()
 
+from ..utils import admin_cmd
+@bot.on(admin_cmd(pattern="wspr"))
+async def wisper(event):
+    if event.fwd_from:
+        return
+    PROBOYX = event.text[5:]
+    LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
+    response = await bot.inline_query(LEGENDX, "wspr " + PROBOYX)
+    await response[0].click(event.chat_id)
+    await event.delete()
