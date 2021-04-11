@@ -30,9 +30,9 @@ KANGING_STR = [
     "Dill Chori sada ho gaya.... Sticker chori tera hoo gya🤣😁",
     "Aree bc upar dekh!!! UFO ",
 ]
+from ..utils import admin_cmd
 
-
-@register(outgoing=True, pattern="^.kang")
+@bot.on(admin_cmd(pattern='kang')
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
