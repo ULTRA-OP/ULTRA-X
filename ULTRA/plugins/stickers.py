@@ -32,7 +32,7 @@ KANGING_STR = [
 ]
 from ..utils import admin_cmd
 
-@bot.on(admin_cmd(pattern='kang')
+@bot.on(admin_cmd(pattern='kang'))
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
