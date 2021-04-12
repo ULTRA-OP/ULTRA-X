@@ -5,7 +5,7 @@
 
 import asyncio
 import os
-from ULTRAX import BOT, PHOTO, VERSION, ALIVE_USERNAME, ALIVE_BOT_USERNAME
+from ULTRAX import BOT, PHOTO, VERSION, MSG
 import requests
 import time
 from PIL import Image
@@ -27,7 +27,7 @@ from io import BytesIO
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
 
-pro_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➥ **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** : 1.19.5\n\n➥ **Mʏ ᴍᴀsᴛᴇʀ** : [{DEFAULTUSER}](tg://user?id={ok})\n")
+pro_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n{MSG}\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➥ **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** : 1.19.5\n\n➥ **Mʏ ᴍᴀsᴛᴇʀ** : [{DEFAULTUSER}](tg://user?id={ok})\n")
 TG_BOT_USER_NAME_BF_HER = os.environ.get("ALIVE_PHOTTO", None)
 if TG_BOT_USER_NAME_BF_HER is not None:
     @tgbot.on(events.InlineQuery)
