@@ -23,7 +23,7 @@ async def _(event):
                 f"`Oᴜᴛᴘᴜᴛ ғɪʟᴇ ᴡᴀs ᴛᴏᴏ ʟᴀʀɢᴇ ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ ʙʏ ᴛᴇʟᴇɢʀᴀᴍ !!!\nSᴏ ᴘᴀsᴛᴇᴅ ᴛᴏ:` **[Dᴏɢ Bɪɴ]({url})**", link_preview=False)            
             await a.delete()
     else:
-        await event.client.send_message(event.chat_id, f"{c}")
+        await event.client.send_message(event.chat_id, f"`{c}`")
         await a.delete()
     os.remove(b)
 
