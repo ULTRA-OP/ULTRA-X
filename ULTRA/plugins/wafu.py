@@ -115,7 +115,7 @@ op = omk.read()
 omk.close()
 
 from ..utils import admin_cmd
-@bot.on(admin_cmd(pattern='waifu'))
+@bot.on(admin_cmd(pattern='wafu'))
 async def wafu(event):
   oo = open("wafu.txt", "w")
   Pro = oo.write("ON")
