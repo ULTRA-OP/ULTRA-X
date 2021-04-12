@@ -29,7 +29,7 @@ async def add_bot(bot_token):
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
 
-
+ONLINE_ALERT = os.environ.get("ONLINE_ALERT", False)
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
@@ -90,14 +90,14 @@ else:
 
 import ULTRA._core
 import os
-os.system("clear")
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
-  try:
-    pro = await xbot.get_me()
-    legend = await bot.get_me()
-    PROBOYX = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data='ass_back')]]
-    LEGENDX = f"""
+  if ONLINE_ALERT == True:
+    try:
+      pro = await xbot.get_me()
+      legend = await bot.get_me()
+      PROBOYX = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data='ass_back')]]
+      LEGENDX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
 
 `☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎`
@@ -113,9 +113,9 @@ async def legend():
 
 **Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
 """
-    await xbot.send_message(bot.me.id, LEGENDX, buttons=PROBOYX)
-  except:
-     pass
+      await xbot.send_message(bot.me.id, LEGENDX, buttons=PROBOYX)
+    except:
+       pass
 
 
 bot.loop.run_until_complete(legend())
