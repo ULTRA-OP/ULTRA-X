@@ -27,7 +27,7 @@ from io import BytesIO
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
 
-pro_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➥ **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** : 1.19.5\n➥ **Lɪᴄᴇɴꜱᴇ** : [UʟᴛʀᴀX](https://github.com/ULTRA-OP)\n➥ **Cᴏᴘʏʀɪɢʜᴛ ʙʏ** : [UʟᴛʀᴀX Usᴇʀʙᴏᴛ](https://github.com/ULTRA-OP/ULTRA-X)\n\n➥ **Mʏ ᴍᴀsᴛᴇʀ** : [{DEFAULTUSER}](tg://user?id={ok})\n")
+pro_text=(f"**{BOT} ιѕ ση ƒιяє**\n\n🔥 αвσυт му ѕуѕтєм 🔥\n\n➥ **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** : 1.19.5\n\n➥ **Mʏ ᴍᴀsᴛᴇʀ** : [{DEFAULTUSER}](tg://user?id={ok})\n")
 TG_BOT_USER_NAME_BF_HER = os.environ.get("ALIVE_PHOTTO", None)
 if TG_BOT_USER_NAME_BF_HER is not None:
     @tgbot.on(events.InlineQuery)
