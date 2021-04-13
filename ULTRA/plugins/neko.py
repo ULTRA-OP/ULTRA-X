@@ -24,7 +24,7 @@ from ULTRA.utils import admin_cmd, sudo_cmd
 async def _(event):
     if event.fwd_from:
         return
-    catevent = await edit_or_reply(event, "Pasting to neko bin.....`")
+    catevent = await edit_or_reply(event, "`Pasting to neko bin.....`")
     input_str = "".join(event.text.split(maxsplit=1)[1:])
     if input_str:
         message = input_str
@@ -73,7 +73,7 @@ async def _(event):
             .get("key")
         )
         url = f"https://nekobin.com/{key}"
-    reply_text = f"**Pasted to Nekobin : **[Neko]({url})\n**Raw url : **[Raw](https://nekobin.com/raw/{key})"
+    reply_text = f"**Pasted to Nekobin :** [Neko]({url})\n**Raw url :** [Raw](https://nekobin.com/raw/{key})\n\n**𝑷𝒂𝒔𝒕𝒆𝒅 𝒂𝒏𝒅 𝑼𝒑𝒍𝒐𝒂𝒅𝒆𝒅 𝒕𝒐 𝑵𝒆𝒌𝒐𝑩𝒊𝒏 𝒃𝒚 υℓтяα χ**"
     await catevent.edit(reply_text)
 
 @bot.on(admin_cmd(pattern="pcode(?: |$)(.*)"))
@@ -82,7 +82,7 @@ async def code_print(event):
     if event.fwd_from:
         return
     reply_to = await reply_id(event)
-    catevent = await edit_or_reply(event, "`printing the text on blank page`")
+    catevent = await edit_or_reply(event, "`Printing the text on blank page...`")
     input_str = event.pattern_match.group(1)
     reply = await event.get_reply_message()
     text_to_print = ""
