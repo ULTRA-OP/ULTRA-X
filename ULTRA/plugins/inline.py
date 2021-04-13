@@ -26,5 +26,5 @@ async def restart(event):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit ()#OP
   else:
-    pro = "ρℓєαѕє ∂єρℓσу уσυ σωη υℓтяα χ υѕєявσт"
+    pro = "Eeh, go and get your own UltraX you noob kiddo"
     await event.answer(pro, alert=True)
