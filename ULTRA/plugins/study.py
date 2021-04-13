@@ -39,7 +39,7 @@ async def set_not_night(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Var.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                "Mᴏɪ Oᴡɴᴇʀ Iᴢ Sᴛᴜᴅʏɪɴɢ\n\n`Pᴜʀᴇ Dɪɴ Bᴀᴋᴄʜᴏᴅɪ Mᴀʀᴛᴀ Hᴀɪ, Aᴜʀ Aʙ Pᴀᴅʜ Rʜᴀ Hᴀɪ`",
+                "Aʀʀᴇ BSDK Pᴀᴅʜ Lᴇ\n\n`Fᴇʀ Sᴇ Aᴀ Gʏᴀ Mᴜᴛʜ Mᴀʀɴᴇ`😂😂😂",
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
@@ -87,7 +87,7 @@ async def _(event):
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Var.PLUGIN_CHANNEL, f"Mᴏɪ Bᴏss Wᴀɴᴛs Tᴏ Sᴛᴜᴅʏ"  # pylint:disable=E0602
+                Var.PLUGIN_CHANNEL, f"Mᴏɪ Oᴡɴᴇʀ Iᴢ Sᴛᴜᴅʏɪɴɢ\n\n`Pᴜʀᴇ Dɪɴ Bᴀᴋᴄʜᴏᴅɪ Mᴀʀᴛᴀ Hᴀɪ, Aᴜʀ Aʙ Pᴀᴅʜ Rʜᴀ Hᴀɪ`"  # pylint:disable=E0602
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
