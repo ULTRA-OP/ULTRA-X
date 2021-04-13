@@ -1,6 +1,9 @@
-"""night Plugin for Sensible_userbot
+"""night Plugin for UltraX_userbot
 Syntax: .study REASON"""
 
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
 import asyncio
 import datetime
 
@@ -14,6 +17,9 @@ global USER_night  # pylint:disable=E0602
 global night_time  # pylint:disable=E0602
 global last_night_message  # pylint:disable=E0602
 USER_night = {}
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
 night_time = None
 last_night_message = {}
 
@@ -26,6 +32,9 @@ async def set_not_night(event):
     global night_time  # pylint:disable=E0602
     global last_night_message  # pylint:disable=E0602
     current_message = event.message.message
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
     if ".night" not in current_message and "yes" in USER_night:  # pylint:disable=E0602
         try:
             await borg.send_message(  # pylint:disable=E0602
@@ -54,6 +63,9 @@ async def _(event):
     global last_night_message  # pylint:disable=E0602
     global reason
     USER_night = {}
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
     night_time = None
     last_night_message = {}
     reason = event.pattern_match.group(1)
@@ -69,6 +81,9 @@ async def _(event):
         else:
             await event.edit(f"Mᴏɪ Bᴏss Iᴢ Gᴏɪɴɢ Tᴏ Sᴛᴜᴅʏ")
         await asyncio.sleep(5)
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
@@ -90,6 +105,9 @@ async def on_night(event):
     global night_time  # pylint:disable=E0602
     global last_night_message  # pylint:disable=E0602
     night_since = "**A while Ago**"
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
     current_message_text = event.message.message.lower()
     if "night" in current_message_text:
         # userbot's should not reply to other userbot's
@@ -111,6 +129,9 @@ async def on_night(event):
                 night_since = "**Yesterday**"
             elif days > 1:
                 if days > 6:
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
                     date = now + datetime.timedelta(
                         days=-days, hours=-hours, minutes=-minutes
                     )
@@ -123,6 +144,9 @@ async def on_night(event):
             elif minutes > 0:
                 night_since = f"`{int(minutes)}m {int(seconds)}s` **ago**"
             else:
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
                 night_since = f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = (
@@ -136,3 +160,7 @@ async def on_night(event):
         if event.chat_id in last_night_message:  # pylint:disable=E0602
             await last_night_message[event.chat_id].delete()  # pylint:disable=E0602
         last_night_message[event.chat_id] = msg  # pylint:disable=E0602
+
+# ported from madboy482
+
+# kang mat kr lawde, muh tod dunga
