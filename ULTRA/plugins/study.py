@@ -153,7 +153,7 @@ async def on_night(event):
             f"Mᴏɪ Bᴏss Hᴀs Bᴇᴇɴ Gᴏɴᴇ Fᴏʀ {night_since}\nWʜᴇʀᴇ Hᴇ Is: **Sᴛᴜᴅʏɪɴɢ** "
             + f"\n\n__I'ʟʟ Bᴀᴄᴋ Iɴ A Fᴇᴡ Lɪɢʜᴛ Yᴇᴀʀs__\n**"
             if reason
-            else f"**::~~:: 𝑰𝒎𝒑𝒐𝒓𝒕𝒂𝒏𝒕 𝑵𝒐𝒕𝒊𝒄𝒆 ::~~::**\n\n[**{DEFAULTUSER}** Is Sᴛᴜᴅʏɪɴɢ, Aɴᴅ Tᴜᴍ Bʜɪ Pᴀᴅʜᴀɪɪ Lɪᴋʜᴀɪɪ Kʀᴏ, IAS-YAS Bᴀɴᴏ...](https://telegra.ph/file/c5e851b88b539a04727aa.mp4) "
+            else f"**::~~:: 𝑰𝒎𝒑𝒐𝒓𝒕𝒂𝒏𝒕 𝑵𝒐𝒕𝒊𝒄𝒆 ::~~::**\n\n**[{DEFAULTUSER} Is Sᴛᴜᴅʏɪɴɢ, Aɴᴅ Tᴜᴍ Bʜɪ Pᴀᴅʜᴀɪɪ Lɪᴋʜᴀɪɪ Kʀᴏ, IAS-YAS Bᴀɴᴏ...](https://telegra.ph/file/c5e851b88b539a04727aa.mp4)**"
         )
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
