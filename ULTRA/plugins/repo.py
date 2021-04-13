@@ -46,6 +46,7 @@ async def callback_query_handler(event):
    # updated by madboy482
    # updated by madboy482
                     [Button.url(f"🔰 Dᴇᴘʟᴏʏ 🔰", url="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU&template=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU"),
+                     Button.url(f"💠 Sᴛʀɪɴɢ 💠", url="https://replit.com/@legendx22/ULTRA-X#main.py"),
                 ]
             ]
                    # updated by madboy482
