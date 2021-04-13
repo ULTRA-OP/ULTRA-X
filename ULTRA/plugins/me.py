@@ -58,3 +58,12 @@ async def chat(event):
     else:
        hehe = "Heyy you, Yes you\nWhy u kiddo want to see moi info??\nGo away and mind your own bizness"
        await event.answer(hehe, alert=True)
+        
+CMD_HELP.update(
+    {
+        "me": """**Plugin : **`me`
+`.me`
+**Function :**  **Get your info through your assistant or current chat!**"""
+    }
+)
+        
