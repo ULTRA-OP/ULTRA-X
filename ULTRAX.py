@@ -6,11 +6,6 @@
 import asyncio
 import os
 import asyncio
-import requests
-import time
-import random
-from ULTRA.utils import admin_cmd
-
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 try:
@@ -22,13 +17,12 @@ try:
 except:
   pass
 from LEGENDX import devs, id, ID
-
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 import time
-MSG = os.environ.getMSG = os.environ.get("ALIVE_MSG", "ULTRA X IS BEST")
+MSG = os.environ.get("ALIVE_MSG", "ULTRA X IS BEST")
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "υℓтяα χ"
