@@ -14,8 +14,8 @@ async def gbun(event):
     gbunVar = event.text
     gbunVar = gbunVar[6:]
     mentions = "`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n`"
-    no_reason = "__Reason: Madarchod Saala"
-    await event.edit("** Nikal Lawde❗️⚜️☠️**")
+    no_reason = "**Reason:** Idiot kiddo"
+    await event.edit("** Go away noobda❗️⚜️☠️**")
     asyncio.sleep(3.5)
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
@@ -28,8 +28,8 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.sender_id
         # make meself invulnerable cuz why not xD
-        if idd == 1100231654:
-            await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ [LEGEND X](https://t.me/LEGENDX22) __to release your account__😏")
+        if idd == 1695676469:
+            await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ [Alain](https://t.me/ALAIN_CHAMPION) __to release your account__😏")
         else:
             jnl=("`Warning!! `"
                   "[{}](tg://user?id={})"
