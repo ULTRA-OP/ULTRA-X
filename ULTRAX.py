@@ -17,12 +17,20 @@ try:
 except:
   pass
 from LEGENDX import devs, id, ID
+
+from ULTRA import ALIVE_NAME
+from ULTRA import bot as ultra
+global ok
+ok = ultra.uid
+
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
+
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 import time
-MSG = os.environ.get("ALIVE_MSG", "ULTRA X IS BEST")
+MSG = os.environ.get("ALIVE_MSG", f"Hey there, ULTRA-X this side, servant of master [{DEFAULTUSER}](tg://user?id={ok}).\nI am here to help my master, till my last breath.😄😁\nThx for making me master.😘😘")
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "υℓтяα χ"
