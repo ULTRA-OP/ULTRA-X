@@ -8,24 +8,9 @@ import os
 import asyncio
 import requests
 import time
-from PIL import Image
-from io import BytesIO
-from datetime import datetime
 import random
-from telethon import events, Button, custom
 from ULTRA.utils import admin_cmd
-from ULTRA import ALIVE_NAME
-from ULTRA import bot as ultra
-from telethon import Button, custom
-from telethon.tl.types import ChannelParticipantsAdmins
-from ULTRA.utils import admin_cmd
-from PIL import Image
-import requests
-from io import BytesIO
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
-ALIVE_PHOTTO = PHOTO
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 try:
@@ -38,14 +23,12 @@ except:
   pass
 from LEGENDX import devs, id, ID
 
-global ok
-ok = ultra.uid
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 import time
-MSG = os.environ.get("ALIVE_MSG", f"Hey there, ULTRA-X this side, servant of master [{DEFAULTUSER}](tg://user?id={ok}).\nI am here to help my master, till my last breath.😄😁\nThx for making me master.😘😘")
+MSG = os.environ.getMSG = os.environ.get("ALIVE_MSG", "ULTRA X IS BEST")
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "υℓтяα χ"
