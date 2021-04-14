@@ -6,6 +6,31 @@
 import asyncio
 import os
 import asyncio
+import requests
+import time
+from PIL import Image
+from io import BytesIO
+from datetime import datetime
+import random
+from telethon import events, Button, custom
+from ULTRA.utils import admin_cmd
+from ULTRA import ALIVE_NAME
+from ULTRA import bot as ultra
+from telethon import Button, custom
+from telethon.tl.types import ChannelParticipantsAdmins
+global ok
+ok = ultra.uid
+from ULTRA.utils import admin_cmd
+from PIL import Image
+import requests
+from io import BytesIO
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
+ALIVE_PHOTTO = PHOTO
+from ULTRA import ALIVE_NAME
+global ok
+ok = bot.uid
+
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 try:
@@ -17,13 +42,6 @@ try:
 except:
   pass
 from LEGENDX import devs, id, ID
-
-from ULTRA import ALIVE_NAME
-from ULTRA import bot as ultra
-global ok
-ok = ultra.uid
-
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
