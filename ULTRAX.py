@@ -22,8 +22,7 @@ API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 import time
-myid = bot.uid
-MSG = os.environ.get("ALIVE_MSG", f"Hey there, ULTRA-X this side, servant of master [{myid}](tg://user?id={ALAIN}).\nI am here to help my master, till my last breath.😄😁\nThx for making me master.😘😘")
+MSG = os.environ.get("ALIVE_MSG", f"Hey there, ULTRA-X this side, servant of master {MASTER}.\nI am here to help my master, till my last breath.😄😁\nThx for making me master.😘😘")
 botnickname = os.environ.get("BOT_NICK_NAME")
 ALIVE_NAME = os.environ.get("ALIVE_NAME")
 BOT = str(botnickname) if botnickname else "υℓтяα χ"
