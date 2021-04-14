@@ -133,9 +133,9 @@ async def _(event):
             exCount += 1
             continue
         await bot.send_message(chat, f"/joinfed {fed}")
-        await asyncio.sleep(2)
+        await asyncio.sleep(3)
         await bot.send_message(chat, f"/fban {FBAN} {REASON}")
-        await asyncio.sleep(2)
+        await asyncio.sleep(3)
     await event.edit(
         f"Sᴜᴘᴇʀғʙᴀɴ Cᴏᴍᴘʟᴇᴛᴇᴅ, Aғғᴇᴄᴛᴇᴅ Iɴ **{len(fedList) - exCount}** Fᴇᴅs.\n\n#UltraX Userbot"
     )
