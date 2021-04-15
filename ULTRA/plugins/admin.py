@@ -674,7 +674,7 @@ async def pin(msg):
         await msg.edit(NO_PERM)
         return
 
-    await msg.edit(f"**{MASTER}** `Pinned Successfully!`")
+    await msg.edit(f"**{MASTER}:** `Pinned Successfully! 📌`")
 
     user = await get_user_sender_id(msg.sender_id, msg)
 
