@@ -1,5 +1,5 @@
 # back button click kr madarchod
-WARN = ''
+WARN = 'add later'
 import os,re
 from telethon import Button, events
 from telethon.tl.functions.contacts import BlockRequest as block
@@ -12,7 +12,7 @@ async def inline_legend(event):
     LEGENDX = event.builder
     LEGEND = [[Button.inline("Freind", data='frnd_bsdk'),Button.inline("Spam", data='chutia')]]
     LEGEND += [[Button.inline("What is this??",data='noobda')]]
-    PROBOYX = LEGENDX.article(title='pmpermit of ULTRA X', text=WARN)
+    PROBOYX = LEGENDX.article(title='pmpermit of ULTRA X', text=WARN, buttons=LEGEND)
     await event.answer([PROBOYX])
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'chutia')))
 async def chutia_aayaa(event):
@@ -22,7 +22,7 @@ async def chutia_aayaa(event):
      CONFIRM += back
      await event.edit("please confirm you are spammer ?", buttons=CONFIRM)
   else:
-     No = "NO MASTER YOU ARE NOT SPAMMER")
+     No = "NO MASTER YOU ARE NOT SPAMMER"
      await event.answer(No, alert=False)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'confirm_chutia')))
@@ -33,7 +33,7 @@ async def confirmed(event):
     await event.edit("oh go to hell bsdk\ni blocked you")
     await bot(block(pro))
   else:
-     No = "NO MASTER YOU ARE NOT SPAMMER")
+     No = "NO MASTER YOU ARE NOT SPAMMER"
      await event.answer(No, alert=False)
 
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'frnd_bsdk')))
