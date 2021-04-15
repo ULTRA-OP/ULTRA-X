@@ -36,3 +36,23 @@ async def confirmed(event):
      No = "NO MASTER YOU ARE NOT SPAMMER")
      await event.answer(No, alert=False)
 
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'frnd_bsdk')))
+async def Inline_legendx(event):
+  piro = event.sender_id
+  global back
+  if piro != bot.me.id or piro != id:
+    await event.edit("OKAY SIR PLEASE WAIT MY MASTER IS COMING SOON", buttons=back)
+  else:
+    await event.answer("MASTER USE .approve for approve this user")
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'noobda')))
+async def noobda (event):
+  global back
+  Piro = [[Button.url("Support", "https://t.me/UltraXchaT"), Button.url("Channel", "https://t.me/UltraXoT")]]
+  Piro += [[Button.url("Repo", "https://github.com/ULTRA-OP/ULTRA-X")]]
+  Piro += back
+  await event.edit("check-ing this links", buttons=Piro)
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'pm_back')))
+async def inline_legend(event):
+  LEGENDX = [[Button.inline("Freind", data='frnd_bsdk'),Button.inline("Spam", data='chutia')]]
+  LEGENDX += [[Button.inline("What is this??",data='noobda')]]
+  await event.edit(buttons=LEGENDX)
