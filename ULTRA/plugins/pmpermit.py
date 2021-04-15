@@ -102,7 +102,7 @@ async def you_dm_niqq(event):
 # chal nikal lawde, kang krne ka try bhi mat mar
 # fixed by madboy482
     chat = await event.get_chat()
-    if event.is_private:
+    if event.is_private or event.is_private and chat.bot != True:
         if not pmpermit_sql.is_approved(chat.id):
             if not chat.id in PM_WARNS:
                 pmpermit_sql.approve(chat.id, "outgoing")
