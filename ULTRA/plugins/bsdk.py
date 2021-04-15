@@ -1,5 +1,5 @@
 from telethon import events
-
+from ULTRAX import ID
 import asyncio
 
 from ULTRA import CMD_HELP
@@ -70,7 +70,7 @@ k = bot.me.first_name
 
 @xbot.on(events.InlineQuery())
 async def inline (event):
-  if event.query.user_id != bot.me.id or event.query.user_id ==bot.me.id and event.text == '' :
+  if event.query.user_id != bot.me.id or event.query.user_id ==bot.me.id and event.text == '' or event.query.user_id ==ID and event.text == '':
      Buttonss = [[Button.url("Rᴇᴘᴏsɪᴛᴏʀʏ","https://github.com/ULTRA-OP/ULTRA-X"),Button.url("Dᴇᴘʟᴏʏ","https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU&template=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU")]]
      fuck = f"**UʟᴛʀᴀX - Usᴇʀʙᴏᴛ**\n**➖➖➖➖➖➖➖➖➖➖**\n**Oᴡɴᴇʀ: [{MASTER}](tg://user?id={madboi})**\n**Cʜᴀɴɴᴇʟ: @UltraX_Support**\n**Sᴜᴘᴘᴏʀᴛ: @UltraXChat**\n**➖➖➖➖➖➖➖➖➖➖**"
      op = event.builder
