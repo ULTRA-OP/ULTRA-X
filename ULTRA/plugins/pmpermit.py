@@ -18,9 +18,12 @@ if SPAM is None:
     HMM_LOL = "5"
 else:
     HMM_LOL = SPAM
-
+from ..import bot
+from ULTRAX import xbot
 FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
-async def LEGENDX(bot, msg, event):
+async def LEGENDX(event, msg):
+  global bot
+  global xbot
   omk = await xbot.get_me()
   username = omk.username
   LEGENDX = await bot.inline_query(username, msg)
@@ -291,7 +294,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if ULTRA_X.is_approved(chat_ids):
             return
         if not ULTRA_X.is_approved(chat_ids):
-            await LEGENDX (bot, "pmsecurity", event)
+            await LEGENDX (event, "pmsecurity")
 
     
 
