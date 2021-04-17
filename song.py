@@ -43,7 +43,16 @@ Mʏ Mᴀsᴛᴇʀ ʜᴀs ᴀssɪɢɴᴇᴅ ᴍᴇ ᴛʜᴇ ᴅᴜᴛʏ ᴛᴏ �
 **Bᴇᴛᴛᴇʀ ʙᴇ ᴄᴀʀᴇғᴜʟ..**
 **Cʜᴏᴏsᴇ ᴀɴʏ Rᴇᴀsᴏɴ & GTFO**
 ''')
- 
+ ULTRA_BOT_PIC = os.environ.get("PMPERMIT_PIC", None)
+
+if ULTRA_BOT_PIC is None:
+
+    ULTRA_PIC = "https://telegra.ph/file/91d427a6873d44ca21c78.jpg"
+
+else:
+
+    ULTRA_PIC = ULTRA_BOT_PIC
+
 back = [[Button.inline("«« Bᴀᴄᴋ", data="pm_back")]]
 @xbot.on(events.InlineQuery())
 async def inline_legend(event):
@@ -52,7 +61,7 @@ async def inline_legend(event):
     LEGENDX = event.builder
     LEGEND = [[Button.inline("Fʀɪᴇɴᴅ", data='frnd_bsdk'),Button.inline("Sᴘᴀᴍ", data='hmmmmm')]]
     LEGEND += [[Button.inline("Wᴜᴛ's ᴛʜɪs ?",data='noobda')]]
-    PROBOYX = LEGENDX.article(title='Pᴍ ᴘᴇʀᴍɪᴛ ᴏғ UʟᴛʀᴀX', text=WARN, buttons=LEGEND)
+    PROBOYX = LEGENDX.photo(file=ULTRA_PIC, text=WARN, buttons=LEGEND)
     await event.answer([PROBOYX])
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'chutia')))
 async def chutia_aayaa(event):
@@ -101,7 +110,8 @@ async def inline_legend(event):
   
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'nino')))
 async def _(event):
-  await event.edit("**Oᴋɪᴇ ᴡᴇɪᴛ ᴛɪʟʟ ᴍʏ ᴍᴀsᴛᴇʀ ʀᴇᴘʟʏ ʏᴏᴜ, Hᴇ ᴡɪʟʟ ʀᴇᴘʟʏ ʏᴏᴜ sᴏᴏɴ ᴀsᴀᴘ !!**")
+  global back
+  await event.edit("**Oᴋɪᴇ ᴡᴇɪᴛ ᴛɪʟʟ ᴍʏ ᴍᴀsᴛᴇʀ ʀᴇᴘʟʏ ʏᴏᴜ, Hᴇ ᴡɪʟʟ ʀᴇᴘʟʏ ʏᴏᴜ sᴏᴏɴ ᴀsᴀᴘ !!**", buttons=back)
   
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'hmmmmm')))
 async def _(event):
