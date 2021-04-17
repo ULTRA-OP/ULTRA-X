@@ -2,9 +2,8 @@
 
 # ~ LegendX
 # ~ ProBoyX
-# ~ Alain
 # ~ MadBoy
-# ~ RoseLoverX
+# ~ Alain
 
 # Global Promote and Demote Plugin by Team UltraX for UltraX UserBot
 # credit bahut ho gya, yaar as bahut mehnat se bna hai, kang mat krna....
