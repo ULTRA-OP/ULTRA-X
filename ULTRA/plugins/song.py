@@ -101,7 +101,7 @@ async def noobda (event):
 async def inline_legend(event):
   acha = event.sender.first_name
   jnl = bot.me.first_name
-  LEGENDX = [[Button.inline("Fʀɪᴇɴᴅ", data='frnd_bsdk'),Button.inline("Sᴘᴀᴍ", data='chutia')]]
+  LEGENDX = [[Button.inline("Fʀɪᴇɴᴅ", data='frnd_bsdk'),Button.inline("Sᴘᴀᴍ", data='hmmmmm')]]
   LEGENDX += [[Button.inline("Wᴜᴛ's ᴛʜɪs ?",data='noobda')]]
   await event.edit(f"Hᴇʟʟᴏ **{acha}**, ᴍʏ sᴇʟғ UʟᴛʀᴀX, ʜᴇʀᴇ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ **{jnl}**!", buttons=LEGENDX)
   
