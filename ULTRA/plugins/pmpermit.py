@@ -61,7 +61,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     ULTRA_X.approve(chat.id, "outgoing")
 
-                    bruh = "Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇᴅ Bᴄᴜᴢ ᴏᴜᴛɢᴏɪɴɢ ʕ•ᴥ•ʔ"
+                    bruh = "Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇᴅ Bᴄᴜᴢ ᴏᴜᴛɢᴏɪɴɢ 😁😁"
 
                     rko = await borg.send_message(event.chat_id, bruh)
 
