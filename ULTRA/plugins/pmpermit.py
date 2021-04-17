@@ -31,7 +31,7 @@ async def LEGENDX(event, msg):
   await LEGENDX[0].click(event.chat_id)
   ULTRA_WRN[event.chat_id] += 1
   if ULTRA_WRN[event.chat_id] == 4:
-    await event.reply("hey this is your last chance go to hell")
+    await event.reply("**Hᴇʏ ɴᴏᴏʙ ᴛʜɪs ɪs ʏᴏᴜʀ ʟᴀsᴛ ᴄʜᴀɴᴄᴇ, sᴘᴀᴍ = ʙʟᴏᴄᴋ**")
   
 
 
