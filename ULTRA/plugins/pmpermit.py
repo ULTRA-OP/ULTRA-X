@@ -22,12 +22,17 @@ from ..import bot
 from ULTRAX import xbot
 FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
 async def LEGENDX(event, msg):
+  ULTRA_WRN.update({event.chat_id: 0})
   global bot
   global xbot
   omk = await xbot.get_me()
   username = omk.username
   LEGENDX = await bot.inline_query(username, msg)
   await LEGENDX[0].click(event.chat_id)
+  ULTRA_WRN[event.chat_id] += 1
+  if ULTRA_WRN[event.chat_id] == 4:
+    await event.reply("hey this is your last chance go to hell")
+  
 
 
 ULTRA_STOP_EMOJI = (
