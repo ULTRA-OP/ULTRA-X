@@ -43,14 +43,11 @@ Mʏ Mᴀsᴛᴇʀ ʜᴀs ᴀssɪɢɴᴇᴅ ᴍᴇ ᴛʜᴇ ᴅᴜᴛʏ ᴛᴏ �
 **Bᴇᴛᴛᴇʀ ʙᴇ ᴄᴀʀᴇғᴜʟ..**
 **Cʜᴏᴏsᴇ ᴀɴʏ Rᴇᴀsᴏɴ & GTFO**
 ''')
- ULTRA_BOT_PIC = os.environ.get("PMPERMIT_PIC", None)
 
+ULTRA_BOT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if ULTRA_BOT_PIC is None:
-
     ULTRA_PIC = "https://telegra.ph/file/91d427a6873d44ca21c78.jpg"
-
 else:
-
     ULTRA_PIC = ULTRA_BOT_PIC
 
 back = [[Button.inline("«« Bᴀᴄᴋ", data="pm_back")]]
