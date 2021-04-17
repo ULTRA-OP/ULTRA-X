@@ -276,10 +276,6 @@ if Var.PRIVATE_GROUP_ID is not None:
         ultra_chats = ultra.message.message
         chat_ids = ultra.sender_id
         ultra_chats.lower()
-        if OVER_POWER_WARN == ultra_chats:
-            # ultra-x should not reply to other ultra-x
-            # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
-            return
         sender = await bot.get_entity(ultra.sender_id)
         if chat_ids == bot.uid:
             # don't log Saved Messages
