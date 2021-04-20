@@ -30,7 +30,7 @@ async def LEGENDX(event, msg):
   LEGENDX = await bot.inline_query(username, msg)
   await LEGENDX[0].click(event.chat_id)
   ULTRA_WRN[event.chat_id] += 1
-  if ULTRA_WRN[event.chat_id] == 4:
+  if ULTRA_WRN[event.chat_id] == 3:
     await event.reply("**Hᴇʏ ɴᴏᴏʙ ᴛʜɪs ɪs ʏᴏᴜʀ ʟᴀsᴛ ᴄʜᴀɴᴄᴇ, sᴘᴀᴍ = ʙʟᴏᴄᴋ**")
   
 
