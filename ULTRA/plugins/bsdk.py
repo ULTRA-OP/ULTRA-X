@@ -44,6 +44,8 @@ from ULTRAX import kangers
 from telethon import events
 @bot.on(events.NewMessage(incoming=True))
 async def hehe (event):
+  if event.is_private:
+      return
   if event.sender_id in kangers:
     for kanger in kangers:
       try:
