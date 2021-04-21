@@ -3,6 +3,7 @@ import os
 import asyncio
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
+from telethon.tl.functions.contacts import BlockRequest as block
 import ULTRA.plugins.sql_helper.pmpermit_sql as ULTRA_X
 from ULTRA import ALIVE_NAME, bot
 from ULTRA.uniborgConfig import Config
@@ -15,7 +16,7 @@ ULTRA_REVL_MSG = {}
 ULTRA_PROTECTION = os.environ.get("PM_PROTECT","yes")
 SPAM = os.environ.get("PM_WARN", None)
 if SPAM is None:
-    HMM_LOL = 5
+    HMM_LOL = 3
 else:
     HMM_LOL = SPAM
 from ..import bot
@@ -33,6 +34,8 @@ async def LEGENDX(event, msg):
   ULTRA_WRN[event.chat_id] += 1
   if ULTRA_WRN[event.chat_id] == HMM_LOL:
     await event.reply("**Hᴇʏ ɴᴏᴏʙ ᴛʜɪs ɪs ʏᴏᴜʀ ʟᴀsᴛ ᴄʜᴀɴᴄᴇ, sᴘᴀᴍ = ʙʟᴏᴄᴋ**")
+    await bot (block (event.sender_id))
+    del ULTRA_WRN
   
 
 
