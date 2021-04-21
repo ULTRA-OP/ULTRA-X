@@ -23,6 +23,7 @@ from ..import bot
 from ULTRAX import xbot
 FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
 async def LEGENDX(event, msg):
+  global ULTRA_WRN
   if not event.sender_id in ULTRA_WRN:
     ULTRA_WRN.update({event.chat_id: 0})
   global bot
@@ -274,7 +275,7 @@ if Var.PRIVATE_GROUP_ID is not None:
     @bot.on(events.NewMessage(incoming=True))
 
     async def ultra_new_msg(ultra):
-
+        global ULTRA_WRN
         if ultra.sender_id == bot.uid:
 
             return
