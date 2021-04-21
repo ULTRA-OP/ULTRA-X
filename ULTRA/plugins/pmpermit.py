@@ -1,5 +1,6 @@
 # COPYRIGHT (C) 2021-22 BY LEGENDX22
 import os
+os.system("pip install LEGENDX==0.0.19")
 import asyncio
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
