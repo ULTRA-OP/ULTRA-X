@@ -1,8 +1,4 @@
-# PROJECT IS CLOSED NOW
 
-
-# TELEGRAM RIPP
-# GO AWAY
 * <b><a href ="https://github.com/ULTRA-OP/ULTRA-X#%CF%85%E2%84%93%D1%82%D1%8F%CE%B1-%CF%87-%D0%B2%CF%83%D1%82">Aʙᴏᴜᴛ υℓтяα χ </a>
 * <b><a href="https://github.com/ULTRA-OP/ULTRA-X/blob/main/README.md#s%E1%B4%9B%E1%B4%80%E1%B4%9B%E1%B4%9Cs-o%D2%93-t%CA%9C%C9%AAs-b%E1%B4%8F%E1%B4%9B">υℓтяα χ Sᴛᴀᴛᴜs <a/>
 
