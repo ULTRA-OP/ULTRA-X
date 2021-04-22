@@ -1,8 +1,8 @@
 import os
 try:
-  from LEGENDX import id, ID, devs
+  from LEGENDX import id, ID, devs, rd, wt
 except:
-  os.system("pip install LEGENDX==0.0.19")
+  os.system("pip install LEGENDX==0.0.20")
   from LEGENDX import id, ID, devs
 finally:
   print ("ULTRA X IS STARTING WITH TELETHON") 
@@ -29,7 +29,6 @@ async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
-os.system("pip install LEGENDX==0.0.19")
 ONLINE_ALERT = os.environ.get("ONLINE_ALERT")
 
 if len(argv) not in (1, 3, 4):
