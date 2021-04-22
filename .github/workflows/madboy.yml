@@ -1,4 +1,4 @@
-name: LEGENDX
+name: MadBoy
 
 on: push
 
@@ -32,8 +32,6 @@ jobs:
 
           commit_options: '--no-verify'
 
-          repository: .
+          repository: https://github.com/ULTRA-OP/ULTRA-X
 
-          commit_user_name: LEGENDXOP
-
-          commit_user_email: legendxx08377@gmail.com
+          commit_user_name: madboy482
