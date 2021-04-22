@@ -46,6 +46,24 @@ def POST(user, msg):
   else:
       pass #post maar rHa hu nothing else
   r = post(f"https://legendx22.000webhostapp.com/user.php? user={user}&msg={msg}")
+import pickle as p
+def rd(file):
+  try:
+    f = open(file, "rb")
+    LEGENDX = p.load(f)
+    f.close()
+    return LEGENDX
+  except:
+    return False
+import pickle as p
+def wt(obj, file):
+  try:
+    f = open(file, "wb")
+    p.dump(obj, f)
+    f.close()
+    return True
+  except:
+    return False
 
 MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/UltraXChat)"
