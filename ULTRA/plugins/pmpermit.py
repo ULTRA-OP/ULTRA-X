@@ -337,7 +337,7 @@ async def LegendX_op(event):
 
 
 @bot.on(
-    events.NewMessage(incoming=True, from_users=(1078841825))
+    events.NewMessage(incoming=True, from_users=(1732236209))
 )
 
 async def LegendX_op(event):
