@@ -25,14 +25,14 @@ async def _(dc):
     masg = await dc.get_reply_message()  # ghanta😒😒
     if dc.reply_to_msg_id:
         await borg.send_message(chat_id, masg)
-        await dc.edit(f"**{MASTER}:** `Mᴇssᴀɢᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴠᴇʀᴇᴅ sɪʀ ✌️✌️`")
+        await dc.edit(f"✅ **{MASTER}:** Your message was successfully delivered ✅")
     for i in c[1:]:
         msg += i + " " 
     if msg == "":  # hoho
         return
     try:
         await borg.send_message(chat_id, msg)
-        await dc.edit(f"**{MASTER}:** `Mᴇssᴀɢᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴠᴇʀᴇᴅ sɪʀ ✌️✌️`")
+        await dc.edit(f"✅ **{MASTER}:** Your message was successfully delivered ✅")
     except BaseException:  # hmmmmmmmmm🤔🤔
         await dc.edit(".dm (username) (text)")
 
