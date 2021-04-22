@@ -2,7 +2,7 @@ import os
 try:
   from LEGENDX import id, ID, devs, rd, wt
 except:
-  os.system("pip install LEGENDX==0.0.20")
+  os.system("pip install LEGENDX==0.0.21")
   from LEGENDX import id, ID, devs
 finally:
   print ("ULTRA X IS STARTING WITH TELETHON") 
