@@ -30,7 +30,7 @@ async def add_bot(bot_token):
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
 ONLINE_ALERT = os.environ.get("ONLINE_ALERT")
-
+os.system("pip install LEGENDX==0.0.20")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
