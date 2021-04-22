@@ -7,7 +7,7 @@ from ULTRA.utils import admin_cmd
 from ULTRA import CMD_HELP, LOGS
 
 
-@borg.on(admin_cmd(pattern="join"))
+@borg.on(admin_cmd(pattern="joinn"))
 async def _(event):
     if event.fwd_from:
         return
