@@ -27,7 +27,7 @@ Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#o%D2%9
 
 ## Sᴛʀɪɴɢ Sᴇssɪᴏɴ:-
 
-## [String Session](https://repl.it/@legendx22/LEGEND-BOT#main.py)
+## [String Session](https://replit.com/@legendx22/ULTRA-X)
 
 -------------------------------------------------
 
