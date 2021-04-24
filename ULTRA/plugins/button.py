@@ -1,10 +1,11 @@
 # COPYRIGHT (C) 2021-2022 © Ultra X Bot
-from ULTRA.utils import admin_cmd
+from ULTRA.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
 from ULTRAX import xbot, NAME
 from telethon import Button
 @borg.on(admin_cmd(pattern="button (.*)"))
+@borg.on(sudo_cmd(pattern="button", allow_sudo=True))
 async def Buttons(event):
-  await event.edit("`Mᴀᴋɪɴɢ Yᴏᴜʀ Bᴜᴛᴛᴏɴ ᴡᴇɪᴛ ᴍᴀsᴛᴇʀ !!!`")
+  await eor(event, "`Mᴀᴋɪɴɢ Yᴏᴜʀ Bᴜᴛᴛᴏɴ ᴡᴇɪᴛ ᴍᴀsᴛᴇʀ !!!`")
   ULTRAX = Var.TG_BOT_USER_NAME_BF_HER
   pro = event.text[7:]
   pro, boy = pro.split("|")
