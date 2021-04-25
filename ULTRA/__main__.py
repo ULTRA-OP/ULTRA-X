@@ -25,24 +25,6 @@ import asyncio
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
 import telethon.utils
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
-CMD_HELP = {}
-def HELP(**LEGENDX):
-	see = LEGENDX.get("NAME", None)
-	helper = LEGENDX.get("HELP", None)
-	if see is None:
-		LEGENDX["NAME"] = __name__
-		CMD_HELP.update({see: helper})
-	elif helper is None:
-		LEGENDX[
-		    "HELP"] = "🥺🥺NOT COMMAND HELP🥺🥺\nADDED HERE\nIF YOU WANT TO KNOW ABOUT THIS PLUG-IN\nJOIN @ULTRAXCHAT"
-	else:
-	  CMD_HELP.update({see: helper})
-	CMD_HELP.update({see: helper})
-
-
-HELP(NAME="help", HELP='TRUE')
-print(CMD_HELP)
-
 async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me() 
