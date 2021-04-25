@@ -27,6 +27,19 @@ LOAD_PLUG = {}
 #xbot = xbot 
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
+def HELP(**LEGENDX):
+	see = LEGENDX.get("NAME", None)
+	helper = LEGENDX.get("HELP", None)
+	if see is None:
+		LEGENDX["NAME"] = __name__
+		CMD_HELP.update({see: helper})
+	elif helper is None:
+		LEGENDX[
+		    "HELP"] = "🥺🥺NOT COMMAND HELP🥺🥺\nADDED HERE\nIF YOU WANT TO KNOW ABOUT THIS PLUG-IN\nJOIN @ULTRAXCHAT"
+	else:
+	  CMD_HELP.update({see: helper})
+	CMD_HELP.update({see: helper})
+
 
 LEGEND_ID = ["1100231654"]
 
