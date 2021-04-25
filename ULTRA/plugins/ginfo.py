@@ -65,5 +65,6 @@ async def _(event):
                 await event.delete()
             except YouBlockedUserError:
                 await event.edit("Error: unblock  @tgscanrobot `and try again!")
-CMD_HELP.update({
-    "ginfo ":"type .ginfo <@username> or tag a user type .ginfo 🔥"})
+from .. import HELP
+HELP(NAME = "ginfo", HELP = ".ginfo <tag or username>", FUCK=True, debug=False, amazing = None)
+# try
