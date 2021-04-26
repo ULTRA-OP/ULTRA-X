@@ -32,7 +32,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
         query = event.text
         me = await bot.get_me()
         x = await xbot.get_me()
-        if query.startswith("alive") and event.query.user_id == me.id:
+        if query.startswith("brand") and event.query.user_id == me.id:
             buttons = [
                 [
                     Button.url("Mᴀsᴛᴇʀ", f"https://t.me/{me.username}"),
