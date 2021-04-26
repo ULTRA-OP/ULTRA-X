@@ -5,6 +5,7 @@ import inspect
 import logging
 import math
 import os
+from . import SUDO_USERS
 import re
 import sys
 import time
@@ -166,6 +167,7 @@ def remove_plugin(shortname):
 def admin_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
+    global SUDO_USERS
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
     file_test = file_test.stem.replace(".py", "")
@@ -204,7 +206,7 @@ def admin_cmd(pattern=None, command=None, **args):
     args["outgoing"] = True
     # should this command be available for other users?
     if allow_sudo:
-        args["from_users"] = list(Config.SUDO_USERS)
+        args["from_users"] = list(SUDO_USERS)
         # Mutually exclusive with outgoing (can only set one of either).
         args["incoming"] = True
         del args["allow_sudo"]
@@ -232,6 +234,7 @@ def admin_cmd(pattern=None, command=None, **args):
 def sudo_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
+    global SUDO_USERS
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
     file_test = file_test.stem.replace(".py", "")
@@ -269,7 +272,7 @@ def sudo_cmd(pattern=None, command=None, **args):
     args["outgoing"] = True
     # should this command be available for other users?
     if allow_sudo:
-        args["from_users"] = list(Config.SUDO_USERS)
+        args["from_users"] = list(SUDO_USERS)
         # Mutually exclusive with outgoing (can only set one of either).
         args["incoming"] = True
         del args["allow_sudo"]
@@ -295,6 +298,19 @@ async def edit_or_reply(event, text, parse_mode=None, link_preview=None):
     link_preview = link_preview or False
     parse_mode = parse_mode or "md"
     if event.sender_id in Config.SUDO_USERS:
+        reply_to = await event.get_reply_message()
+        if reply_to:
+            return await reply_to.reply(
+                text, parse_mode=parse_mode, link_preview=link_preview
+            )
+        return await event.reply(text, parse_mode=parse_mode, link_preview=link_preview)
+    return await event.edit(text, parse_mode=parse_mode, link_preview=link_preview)
+
+async def eor(event, text, parse_mode=None, link_preview=None):
+    link_preview = link_preview or False
+    global SUDO_USERS
+    parse_mode = parse_mode or "md"
+    if event.sender_id in SUDO_USERS:
         reply_to = await event.get_reply_message()
         if reply_to:
             return await reply_to.reply(
