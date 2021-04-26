@@ -48,7 +48,7 @@ LEGEND_ID = ["1100231654"]
 from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
 import asyncio
-
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
 import pylast
 from pySmartDL import SmartDL
 from requests import get
