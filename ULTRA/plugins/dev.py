@@ -3,5 +3,5 @@ from ..utils import admin_cmd
 @bot.on(admin_cmd(pattern='rmsudo'))
 async def remove(event):
   ok = event.text[8:]
-  sudo.clear(ok)
+  sudo.discard(ok)
   await event.edit("Done")
