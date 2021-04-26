@@ -47,7 +47,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
                     buttons=buttons,
                     link_preview=False
                 )
-            elif ALIVE_PHOTTO and ALIVE_PHOTTO.endswith(("gif", "mp4"))::
+            elif ALIVE_PHOTTO and ALIVE_PHOTTO.endswith(("gif", "mp4")):
                 result = builder.video(
                     ALIVE_PHOTTO,
                     text=pro_text,
