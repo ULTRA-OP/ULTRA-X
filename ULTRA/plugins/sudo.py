@@ -8,8 +8,7 @@ async def add_sudo(event):
   Heroku = heroku3.from_key(PROBOYX)
   app = Heroku.app(LEGENDX)
   heroku_var = app.config()
-  text = event.text.split(" ", maxsplit=1)[1]
-  if text == "" or event.is_reply:
+  if event.is_reply:
     id = (await event.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
     if id in heroku_var:
@@ -24,6 +23,7 @@ async def add_sudo(event):
        await event.edit(f"OK {name}IS ADDED AND {var} REMOVED IF YOU ADD 2 USERS ON SUDO GO TO HEROKU ADD MANUALLY I AM RESTARTING")
        heroku_var["SUDO_USERS"] = id
   else:
+    text = event.text.split(" ", maxsplit=1)[1]
     if text in heroku_var:
       await event.edit(f"THE {name} IS ALREADY ON SUDO LIST")
     else:
@@ -42,8 +42,7 @@ async def remove_sudo(event):
   Heroku = heroku3.from_key(PROBOYX)
   app = Heroku.app(LEGENDX)
   heroku_var = app.config()
-  text = event.text.split(" ", maxsplit=1)[1]
-  if text == "" or event.is_reply:
+  if event.is_reply:
     id = (await event.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
     if id in heroku_var:
