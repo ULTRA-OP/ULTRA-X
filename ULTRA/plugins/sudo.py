@@ -20,7 +20,7 @@ async def add_sudo(event):
        heroku_var["SUDO_USERS"] = id
     else:
        var = heroku_var["SUDO_USERS"]
-       await event.edit(f"OK {name}IS ADDED AND {var} REMOVED IF YOU ADD 2 USERS ON SUDO GO TO HEROKU ADD MANUALLY I AM RESTARTING")
+       await event.edit(f"OK {name} IS ADDED AND OLD USERS REMOVED IF YOU ADD 2 OR MORE THAN 2 USERS ON SUDO GO TO HEROKU ADD MANUALLY I AM RESTARTING")
        heroku_var["SUDO_USERS"] = id
   else:
     text = event.text.split(" ", maxsplit=1)[1]
