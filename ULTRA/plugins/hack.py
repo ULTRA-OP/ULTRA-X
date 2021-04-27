@@ -125,3 +125,4 @@ async def _(event):
  # Made for ULTRA X     
 CMD_HELP.update({
     "hack":"ye plug-in logo ka chutia banane me kaam aaata h use .hack"})   
+# hmm
