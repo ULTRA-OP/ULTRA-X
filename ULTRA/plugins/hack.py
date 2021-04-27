@@ -1,8 +1,6 @@
 # credits @legendx22
 # Kang with credits else gay..
 import os
-os.system("pip install all-plugins")
-import plugins
 """
 Userbot module ye kisi ka bhi chutia bana ne me kaam aata h
 """
