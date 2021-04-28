@@ -11,10 +11,11 @@ import asyncio
 import sys
 import io
 from ULTRA import CMD_HELP, eor
-from uniborg.util import admin_cmd
+from uniborg.util import admin_cmd, sudo_cmd
 
 
 @borg.on(admin_cmd("eval"))
+@borg.on(sudo_cmd(pattern="eval", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
