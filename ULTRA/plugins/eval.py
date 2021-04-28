@@ -10,7 +10,7 @@ import traceback
 import asyncio
 import sys
 import io
-from ULTRA import CMD_HELP
+from ULTRA import CMD_HELP, eor
 from uniborg.util import admin_cmd
 
 
@@ -18,7 +18,7 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("Processing ...")
+    await eor(event, "Processing ...")
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -65,7 +65,7 @@ async def _(event):
             )
             await event.delete()
     else:
-        await event.edit(final_output)
+        await eor(event, final_output)
 
 
 async def aexec(code, event):
