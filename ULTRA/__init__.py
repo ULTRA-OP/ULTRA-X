@@ -53,6 +53,12 @@ import pylast
 from pySmartDL import SmartDL
 from requests import get
 # Bot Logs setup:
+async def eor(event, msg):
+  try:
+      await event.edit(msg)
+  except:
+       await event.reply(msg)
+
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
