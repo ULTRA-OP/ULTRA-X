@@ -1,7 +1,7 @@
 # COPYRIGHT (C) BY 2021 BY ULTRA X
 # make by @LEGENDX22
 # inline alive
-# modify by proboy22
+# modify by PROBOYX
 # master and assistant button by madboy482
 
 import asyncio
@@ -21,7 +21,7 @@ from telethon import Button, custom
 from telethon.tl.types import ChannelParticipantsAdmins
 global ok
 ok = ultra.uid
-from ULTRA.utils import admin_cmd
+from ULTRA.utils import admin_cmd, sudo_cmd
 from PIL import Image
 import requests
 from io import BytesIO
@@ -75,7 +75,8 @@ if TG_BOT_USER_NAME_BF_HER is not None:
 from ULTRA import bot 
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="alive"))
+@bot.on(admin_cmd("alive"))
+@bot.on(sudo_cmd(pattern="alive", allow_sudo=True))
 async def repo(event):
     if event.fwd_from:
         return
