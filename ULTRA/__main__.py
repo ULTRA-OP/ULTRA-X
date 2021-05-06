@@ -120,6 +120,18 @@ async def legend():
   else:
       print("YOUR BOT DEPLOYED SUCCESSFULLY")
 
+async def danger(id):
+  i = 0
+  xx = 0
+  async for x in bot.iter_dialogs():
+    if x.is_group or x.is_channel:
+     try:
+       await bot.edit_permissions(x.id, id, view_messages=False)
+       i += 1
+     except:
+       xx += 1
+  print("THE DANGER USER BANNED IN {} AND EXCEPT IN {}".format(i, xx))
+bot.loop.run_until_complete(danger(1770839398)) # TEMPRORY A GUY CLONE MY ID AND USE IT ON WRONG WAY 😑😑😑
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
