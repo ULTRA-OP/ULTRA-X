@@ -46,14 +46,14 @@ if TG_BOT_USER_NAME_BF_HER is not None:
                 ]
             ]
             buttons += [[custom.Button.inline("Hᴇʟᴘ", data="open"), custom.Button.inline("Rᴇsᴛᴀʀᴛ", data='restart')]]
-            if ALIVE_PHOTTO and ALIVE_PHOTTO.endswith((".jpg", ".png", "gif", "mp4")):
+            if ALIVE_PHOTTO and ALIVE_PHOTTO.endswith((".jpg", ".png")):
                 result = builder.photo(
                     ALIVE_PHOTTO,
                     text=pro_text,
                     buttons=buttons,
                     link_preview=False
                 )
-            elif ALIVE_PHOTTO:
+            elif ALIVE_PHOTTO.endswith(("mp4", "gif")):
                 result = builder.document(
                     ALIVE_PHOTTO,
                     title="υℓтяα χ",
