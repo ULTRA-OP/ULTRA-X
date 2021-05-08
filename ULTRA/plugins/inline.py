@@ -87,7 +87,7 @@ async def repo(event):
     await response[0].click(event.chat_id)
     await event.delete()
 from ULTRA.utils import admin_cmd
-@bot.on(events.NewMessage(outgoing=True, pattern=None))
+@bot.on(admin_cmd(pattern=None))
 async def repo(event):
     if not event.text.startswith(".help"):
         return
