@@ -40,6 +40,11 @@ def HELP(**LEGENDX):
 	  CMD_HELP.update({see: helper})
 	CMD_HELP.update({see: helper})
 
+def LEGENDX22(**LEGENDX):
+	see = LEGENDX.get("NAME", None)
+	helper = LEGENDX.get("HELP", None)
+	CMD_HELP.update({see: helper})
+
 
 LEGEND_ID = ["1100231654"]
 
