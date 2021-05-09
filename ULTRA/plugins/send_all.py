@@ -1,12 +1,13 @@
+# COPYRIGHT (C) 21-22 BY LEGENDX22
+"""
+**PLUG-IN**: **sendall**
+**USAGE**: .sendall to send all plugins in current chat
+**USAGE**: .sendast to send all assistant modules
+"""
 import glob
 from pathlib import Path
 from ..import HELP, eor
 from ..utils import admin_cmd, sudo_cmd
-"""
-**PLUG-IN**: **sendall**
-**USAGE**: .sendall to send all plugins in current chat
-**USAGE**+: .sendast to send all assistant modules
-"""
 
 @bot.on(admin_cmd('sendall'))
 @bot.on(sudo_cmd(pattern='sendall', allow_sudo=True))
