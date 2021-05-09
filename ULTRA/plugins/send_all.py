@@ -1,8 +1,8 @@
 # COPYRIGHT (C) 21-22 BY LEGENDX22
 """
 **PLUG-IN**: **sendall**
-**USAGE**: .sendall to send all plugins in current chat
-**USAGE**: .sendast to send all assistant modules
+**USAGE**: `.sendall` to send all plugins in current chat
+**USAGE**: `.sendast` to send all assistant modules
 """
 import glob
 from pathlib import Path
