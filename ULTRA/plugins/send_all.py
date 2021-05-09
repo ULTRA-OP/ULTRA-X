@@ -6,7 +6,7 @@
 """
 import glob
 from pathlib import Path
-from ..import HELP, eor
+from ..import HELP, eor, LEGENDX22
 from ..utils import admin_cmd, sudo_cmd
 
 @bot.on(admin_cmd('sendall'))
@@ -37,4 +37,4 @@ async def send_all(event):
         await bot.send_file(event.chat_id, X)
      
 
-HELP(NAME='sendall', HELP=__doc__, PRO=True, HACKEBLE=False, MADE_BY='LEGENDX|PROBOYX')
+LEGENDX22(NAME='sendall', HELP = __doc__, PRO=True, HACKEBLE=False, MADE_BY='LEGENDX|PROBOYX')
