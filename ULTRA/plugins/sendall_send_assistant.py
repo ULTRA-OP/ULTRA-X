@@ -1,0 +1,39 @@
+import glob
+from pathlib import Path
+from ..import HELP, eor
+from ..utils import admin_cmd, sudo_cmd
+"""
+**PLUG-IN**: **sendall**
+**USAGE**: .sendall to send all plugins in current chat
+**USAGE**+: .sendast to send all assistant modules
+"""
+
+@bot.on(admin_cmd('sendall'))
+@bot.on(sudo_cmd(pattern='sendall', allow_sudo=True))
+async def send_all(event):
+  if event.chat_id == -1001492929359:
+     await eor(event, 'DONT USE HERE')
+  else:
+    PROBOYX = 'ULTRA/plugins/*.py'
+    files = glob.glob(PROBOYX)
+    for LEGENDX in files:
+      with open(LEGENDX) as f:
+        X = Path(f.name)
+       await bot.send_file(event.chat_id, X)
+
+@bot.on(admin_cmd('sendast'))
+@bot.on(sudo_cmd(pattern='sendast', allow_sudo=True))
+async def send_all(event):
+  if event.chat_id == -1001492929359:
+     await eor(event, 'DONT USE HERE')
+  else:
+    ok = await event.edit("sending all files")
+    PROBOYX = 'ULTRA/plugins/assistant/*.py'
+    files = glob.glob(PROBOYX)
+    for LEGENDX in files:
+      with open(LEGENDX) as f:
+        X = Path(f.name)
+       await bot.send_file(event.chat_id, X)
+     
+
+HELP(NAME='sendall', HELP=__doc__, PRO=True, HACKEBLE=False, MADE_BY='LEGENDX|PROBOYX')
