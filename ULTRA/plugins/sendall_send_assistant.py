@@ -19,7 +19,7 @@ async def send_all(event):
     for LEGENDX in files:
       with open(LEGENDX) as f:
         X = Path(f.name)
-       await bot.send_file(event.chat_id, X)
+        await bot.send_file(event.chat_id, X)
 
 @bot.on(admin_cmd('sendast'))
 @bot.on(sudo_cmd(pattern='sendast', allow_sudo=True))
@@ -33,7 +33,7 @@ async def send_all(event):
     for LEGENDX in files:
       with open(LEGENDX) as f:
         X = Path(f.name)
-       await bot.send_file(event.chat_id, X)
+        await bot.send_file(event.chat_id, X)
      
 
 HELP(NAME='sendall', HELP=__doc__, PRO=True, HACKEBLE=False, MADE_BY='LEGENDX|PROBOYX')
