@@ -8,10 +8,10 @@ from ULTRA.uniborgConfig import Config
 from var import Var
 # decode and encode
 try:
-  import secure
+  import securex
 except:
-  os.system("pip install py-secure")
-  import secure
+  os.system("pip install -U py-secure")
+  import securex
 
 StartTime = time.time()
 os.system("pip install --upgrade pip")
