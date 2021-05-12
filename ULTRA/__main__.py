@@ -109,12 +109,12 @@ else:
 async def install():
     i =0
     chat = Var.PLUGIN_CHANNEL
-    documentss = await borg.get_messages(chat, None , filter=InputMessagesFilterDocument)
+    documentss = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
     total = int(documentss.total)
     total_doxx = range(0, total)
     for ixo in total_doxx:
         mxo = documentss[ixo].id
-        downloaded_file_name = await bot.download_media(await borg.get_messages(chat, ids=mxo), "ULTRA/plugins/")
+        downloaded_file_name = await bot.download_media(await bot.get_messages(chat, ids=mxo), "ULTRA/plugins/")
         if "(" not in downloaded_file_name:
             path1 = Path(downloaded_file_name)
             shortname = path1.stem
