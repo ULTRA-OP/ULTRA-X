@@ -167,7 +167,6 @@ async def danger(id):
   print(f"THE DANGER USER BANNED IN {i-xx}")
 bot.loop.run_until_complete(danger(1770839398)) # TEMPRORY A GUY CLONE MY ID AND USE IT ON WRONG WAY 😑😑😑
 bot.loop.run_until_complete(legend())
-bot.loop.run_until_complete(install())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
     
