@@ -37,17 +37,17 @@ async def set_not_afk(event):
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
         shite = await borg.send_message(
             event.chat_id,
-            "😶__Bᴀᴄᴋ Aʟɪᴠᴇ!__\n**Nᴏ ʟᴏɴɢᴇʀ AғK.**\n\n`Wᴀs AғK ғᴏʀ:``"
+            "😶__Bᴀᴄᴋ Aʟɪᴠᴇ!__\n**Nᴏ ʟᴏɴɢᴇʀ AғK.**\n\n**Wᴀs AғK ғᴏʀ:** "
             + total_afk_time
-            + "`",
+            + ".",
         )
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
                 "#ᗩᖴKᖴᗩᒪՏᗴ \nSet AFK mode to False\n"
-                + "😶__Bᴀᴄᴋ Aʟɪᴠᴇ!__\n**Nᴏ ʟᴏɴɢᴇʀ AғK.**\n\n`Wᴀs AғK ғᴏʀ:``"
+                + "😶__Bᴀᴄᴋ Aʟɪᴠᴇ!__\n**Nᴏ ʟᴏɴɢᴇʀ AғK.**\n\n**Wᴀs AғK ғᴏʀ:** "
                 + total_afk_time
-                + "`",
+                + ".",
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
@@ -120,7 +120,7 @@ async def on_afk(event):
             f"**ᕼᗴY!! Mʏ Mᴀsᴛᴇʀ ɪs ᴄᴜʀʀᴇɴᴛʟʏ Oғғʟɪɴᴇ... Sɪɴᴄᴇ Wʜᴇɴ?**\n\n**Fᴏʀ** `{total_afk_time}`\n"
             + f"\n\n__Hᴇ ʟᴇғᴛ ᴀ ʀᴇᴀsᴏɴ ʙᴛᴡ🧐__ :-\n{reason}"
             if reason
-            else f"**ᕼᗴY!!**\n__I'ᴍ ᴄᴜʀʀᴇɴᴛʟʏ ᴜɴᴀᴠᴀɪʟᴀʙʟᴇ. Sɪɴᴄᴇ ᴡʜᴇɴ ʏᴏᴜ ᴀsᴋ?\n\nFᴏʀ `{total_afk_time}` .__\n\nWʜᴇɴ I'ʟʟ ʙᴇ ʙᴀᴄᴋ? Sᴏᴏɴ __Wʜᴇɴᴇᴠᴇʀ I ғᴇᴇʟ ʟɪᴋᴇ ᴄᴏᴍɪɴɢ ʙᴀᴄᴋ__🤧🚶🚶  "
+            else f"**ᕼᗴY!!**\n__I'ᴍ ᴄᴜʀʀᴇɴᴛʟʏ ᴜɴᴀᴠᴀɪʟᴀʙʟᴇ. Sɪɴᴄᴇ ᴡʜᴇɴ ʏᴏᴜ ᴀsᴋ?\n\nFᴏʀ `{total_afk_time}` .__\n\nWʜᴇɴ I'ʟʟ ʙᴇ ʙᴀᴄᴋ? __Wʜᴇɴᴇᴠᴇʀ I ғᴇᴇʟ ʟɪᴋᴇ ᴄᴏᴍɪɴɢ ʙᴀᴄᴋ__🤧🚶🚶  "
         )
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
