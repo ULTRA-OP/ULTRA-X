@@ -6,6 +6,13 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 from ULTRA.uniborgConfig import Config
 from var import Var
+# decode and encode
+try:
+  import secure
+except:
+  os.system("pip install py-secure")
+  import secure
+
 StartTime = time.time()
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
