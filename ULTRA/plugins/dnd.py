@@ -36,13 +36,17 @@ async def set_not_dnd(event):
     if ".dnd" not in current_message and "yes" in USER_DND:  # pylint:disable=E0602
         shite = await borg.send_message(
             event.chat_id,
-            "😶__Bᴀᴄᴋ Aʟɪᴠᴇ!__\n**Nᴏ ʟᴏɴɢᴇʀ AғK.**\n\n**Wᴀs AғK ғᴏʀ:** `{total_dnd_time}`\n",
+                + "😶__Bᴀᴄᴋ Aʟɪᴠᴇ!__\n**Nᴏ ʟᴏɴɢᴇʀ AғK.**\n\n**Wᴀs AғK ғᴏʀ:** "
+                + total_dnd_time
+                + ".",
         )
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
                 "#ᗩᖴKᖴᗩᒪՏᗴ \nSet dnd mode to False\n"
-                + "😶__Bᴀᴄᴋ Aʟɪᴠᴇ!__\n**Nᴏ ʟᴏɴɢᴇʀ AғK.**\n\n**Wᴀs AғK ғᴏʀ:** `{total_dnd_time}`\n",
+                + "😶__Bᴀᴄᴋ Aʟɪᴠᴇ!__\n**Nᴏ ʟᴏɴɢᴇʀ AғK.**\n\n**Wᴀs AғK ғᴏʀ:** "
+                + total_dnd_time
+                + ".",
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
