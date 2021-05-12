@@ -24,6 +24,10 @@ from pathlib import Path
 import asyncio
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
 import telethon.utils
+try:
+  from securex import en, de, ef, df
+except:
+  pass
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 async def add_bot(bot_token):
     await bot.start(bot_token)
