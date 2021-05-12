@@ -12,6 +12,20 @@ from sys import argv
 os.system("pip install telethon==1.19.0")
 import sys
 import os
+from ULTRA import bot
+from telethon import events
+from telethon import functions, types
+from telethon.tl.types import InputMessagesFilterDocument
+from ULTRA.utils import command, remove_plugin, load_module
+from var import Var
+from pathlib import Path
+from ULTRA import LOAD_PLUG
+import sys
+import asyncio
+import traceback
+import os
+import ULTRA.utils
+
 os.system("pip install google_trans_new")
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -92,6 +106,22 @@ else:
           load_module(shortname.replace(".py", ""))
 
 
+async def install():
+    i =0
+    chat = Var.PLUGIN_CHANNEL
+    documentss = await borg.get_messages(chat, None , filter=InputMessagesFilterDocument)
+    total = int(documentss.total)
+    total_doxx = range(0, total)
+    for ixo in total_doxx:
+        mxo = documentss[ixo].id
+        downloaded_file_name = await bot.download_media(await borg.get_messages(chat, ids=mxo), "ULTRA/plugins/")
+        if "(" not in downloaded_file_name:
+            path1 = Path(downloaded_file_name)
+            shortname = path1.stem
+            load_module(shortname.replace(".py", ""))
+            print(f'{i} plugin install')
+        else:
+            print ("Failed")
 import ULTRA._core
 import os
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
@@ -137,6 +167,7 @@ async def danger(id):
   print(f"THE DANGER USER BANNED IN {i-xx}")
 bot.loop.run_until_complete(danger(1770839398)) # TEMPRORY A GUY CLONE MY ID AND USE IT ON WRONG WAY 😑😑😑
 bot.loop.run_until_complete(legend())
+bot.loop.run_until_complete(install())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
     
