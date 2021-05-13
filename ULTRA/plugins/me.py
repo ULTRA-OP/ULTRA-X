@@ -11,6 +11,7 @@ from ULTRA import CMD_HELP
 kk = bot.me.first_name
 last = bot.me.last_name
 pro = bot.uid
+mad = bot.me.photo.has_video
 boy = bot.me.bot
 lol = bot.me.username
 hmm = bot.me.restricted
@@ -24,7 +25,7 @@ bc = bot.me.id
 async def restart(event):
     if event.sender_id == bot.me.id or event.sender_id == ID:
        await event.edit("Wᴇɪᴛ Mᴀsᴛᴇʀ Sᴇɴᴅɪɴɢ Yᴏᴜʀ Iɴғᴏ")
-       await xbot.send_message(pro,  f"**👤 Your details By υℓтяα χ 👤**\n\n**➥ Fɪʀsᴛ Nᴀᴍᴇ**: `{kk}`\n\n**➥ Lᴀsᴛ Nᴀᴍᴇ:** `{last}`\n\n**➥ Usᴇʀ Iᴅ:** `{bc}`\n\n**➥ Bᴏᴛ:** `{boy}`\n\n**➥ Usᴇʀɴᴀᴍᴇ:** @{lol}\n\n**➥ Rᴇsᴛʀɪᴄᴛᴇᴅ:** `{hmm}`\n\n**➥ Vᴇʀɪғɪᴇᴅ:** `{h}`\n\n**➥ Aᴄᴄᴇss Hᴀsʜ:** `{hm}`\n\n**➥ Sᴄᴀᴍ:** `{scam}`\n\n**➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ:** `{dele}`")
+       await xbot.send_message(pro,  f"**👤 Your details By υℓтяα χ 👤**\n\n**➥ Fɪʀsᴛ Nᴀᴍᴇ**: `{kk}`\n\n**➥ Lᴀsᴛ Nᴀᴍᴇ:** `{last}`\n\n**➥ Usᴇʀ Iᴅ:** `{bc}`\n\n**➥ Bᴏᴛ:** `{boy}`\n\n**➥ Usᴇʀɴᴀᴍᴇ:** @{lol}\n\n**➥ Rᴇsᴛʀɪᴄᴛᴇᴅ:** `{hmm}`\n\n**➥ Vᴇʀɪғɪᴇᴅ:** `{h}`\n\n**➥ Aᴄᴄᴇss Hᴀsʜ:** `{hm}`\n\n**➥ Hᴀᴠᴇ Vɪᴅᴇᴏ Iɴ Pʀᴏғɪʟᴇ:** `{mad}`\n\n**➥ Sᴄᴀᴍ:** `{scam}`\n\n**➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ:** `{dele}`")
        await event.edit("Successfully Sent Your Info Through Your Assistant")
     else:
        jnl = "Heyy you, Yes you\nWhy u kiddo want to see moi info??\nGo away and mind your own bizness"
@@ -53,7 +54,7 @@ async def me(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'ass_chat')))
 async def chat(event):
     if event.sender_id == bot.me.id or event.sender_id == ID:
-       await event.edit(f"**👤 Your details By υℓтяα χ 👤**\n\n**➥ Fɪʀsᴛ Nᴀᴍᴇ**: `{kk}`\n\n**➥ Lᴀsᴛ Nᴀᴍᴇ:** `{last}`\n\n**➥ Usᴇʀ Iᴅ:** `{bc}`\n\n**➥ Bᴏᴛ:** `{boy}`\n\n**➥ Usᴇʀɴᴀᴍᴇ:** @{lol}\n\n**➥ Rᴇsᴛʀɪᴄᴛᴇᴅ:** `{hmm}`\n\n**➥ Vᴇʀɪғɪᴇᴅ:** `{h}`\n\n**➥ Aᴄᴄᴇss Hᴀsʜ:** `{hm}`\n\n**➥ Sᴄᴀᴍ:** `{scam}`\n\n**➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ:** `{dele}`")
+       await event.edit(f"**👤 Your details By υℓтяα χ 👤**\n\n**➥ Fɪʀsᴛ Nᴀᴍᴇ**: `{kk}`\n\n**➥ Lᴀsᴛ Nᴀᴍᴇ:** `{last}`\n\n**➥ Usᴇʀ Iᴅ:** `{bc}`\n\n**➥ Bᴏᴛ:** `{boy}`\n\n**➥ Usᴇʀɴᴀᴍᴇ:** @{lol}\n\n**➥ Rᴇsᴛʀɪᴄᴛᴇᴅ:** `{hmm}`\n\n**➥ Vᴇʀɪғɪᴇᴅ:** `{h}`\n\n**➥ Aᴄᴄᴇss Hᴀsʜ:** `{hm}`\n\n**➥ Hᴀᴠᴇ Vɪᴅᴇᴏ Iɴ Pʀᴏғɪʟᴇ:** `{mad}`\n\n**➥ Sᴄᴀᴍ:** `{scam}`\n\n**➥ Dᴇʟᴇᴛᴇᴅ Aᴄᴄᴏᴜɴᴛ:** `{dele}`")
     else:
        hehe = "Heyy you, Yes you\nWhy u kiddo want to see moi info??\nGo away and mind your own bizness"
        await event.answer(hehe, alert=True)
