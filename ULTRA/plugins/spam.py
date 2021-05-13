@@ -9,7 +9,7 @@ from ULTRA import CMD_HELP
 
 
 from ULTRA.events import register
-
+from ..utils import sudo_cmd
 @register(outgoing=True, pattern="^.tspam")
 async def tmeme(e):
     tspam = str(e.text[7:])
@@ -19,6 +19,7 @@ async def tmeme(e):
     await e.delete()
 
 @register(outgoing=True, pattern="^.spam")
+@bot.on(sudo_cmd(pattern="spam", allow_sudo=True))
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         message = e.text
@@ -34,6 +35,7 @@ async def spammer(e):
                 )
                                
 @register(outgoing=True, pattern="^.bigspam")
+@bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
 async def bigspam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         message = e.text
