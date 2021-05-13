@@ -1,10 +1,8 @@
 """ 
 FOR ALL DEVS I EDITED IT 
-(C) @ROHTIHADITYA
 (C) @PROBOYX
-(C) @ROSELOVERX SCAMMER NOT IN TEAMULTRA OR TEAMLEGEND
 (C) @LEGENDX22
-(C) @NubBoy_007
+(C) @Disheartened_007
 """
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from ULTRA import CMD_HELP
