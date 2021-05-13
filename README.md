@@ -55,8 +55,8 @@ Also join [support channel and group](https://github.com/ULTRA-OP/ULTRA-X#o%D2%9
 
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/legendx22/LEGEND-BOT
-cd LEGEND-BOT
+git clone https://github.com/ULTRA-OP/ULTRA-X
+cd ULTRA
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
