@@ -96,7 +96,7 @@ async def noobda (event):
   Piro = [[Button.url("Sᴜᴘᴘᴏʀᴛ", "https://t.me/UltraXchaT"), Button.url("Cʜᴀɴɴᴇʟ", "https://t.me/UltraXoT")]]
   Piro += [[Button.url("Rᴇᴘᴏ", "https://github.com/ULTRA-OP/ULTRA-X")]]
   Piro += back
-  await event.edit("**Cʜᴇᴄᴋɪɴɢ ᴛʜᴇsᴇ ʟɪɴᴋs**", buttons=Piro)
+  await event.edit("**CʜᴇᴄᴋOᴜᴛ ᴛʜᴇsᴇ ʟɪɴᴋs**", buttons=Piro)
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'pm_back')))
 async def inline_legend(event):
   acha = event.sender.first_name
