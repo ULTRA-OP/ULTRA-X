@@ -1,7 +1,8 @@
 # make by LEGENDX22 🔥🔥
 # MAKE BY LEGEND X
-#make for ULTRA X
+# make for ULTRA X
 # KANG KRNA H TO CREDITS DEDENA 
+
 '''
 from datetime import datetime
 from random import randint
@@ -67,9 +68,9 @@ HEROKU_APIKEY = os.environ.get("HEROKU_APIKEY", None)
 
 
 Heroku = heroku3.from_key(HEROKU_API_KEY)
-GIT_REPO_NAME = "LEGEND-BOT"
+GIT_REPO_NAME = "ULTRA-X"
 heroku_api = "https://api.heroku.com"
-UPSTREAM_REPO_URL="https://github.com/legendx22/LEGEND-BOT"
+UPSTREAM_REPO_URL="https://github.com/ULTRA-OP/ULTRA-X"
 
 # ================= CONSTANT =================
 JAVES_NNAME = str(HEROKU_APPNAME)
@@ -91,21 +92,6 @@ async def subprocess_run(cmd, heroku):
             f'stderr: {stderr.decode().strip()}```')
         return exitCode
     return stdout.decode().strip(), stderr.decode().strip(), exitCode
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), 'requirements.txt')
 
@@ -129,20 +115,11 @@ async def update_requirements():
         return process.returncode
     except Exception as e:
         return repr(e)
-
-
-
-
-
-
-
-
-    
-
+	
 from telethon.events import *
 @javes.on(admin_cmd(pattern=f"update(?: |$)(.*)"))
 async def upstream(ups):
-    "For .update command, check if the bot is up to date, update if specified"
+    "For .update command, check if the bot is up to date, run the updater if specified."
     await ups.edit("`Checking for updates, please wait....`")
     conf = ups.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
@@ -281,8 +258,14 @@ async def upstream(ups):
         return
 
 '''
+
 from ULTRA.utils import admin_cmd
 @borg.on(admin_cmd(pattern="update|update now"))
 async def hehe (event):
-  await event.edit("want to update your bot ?\nnow not use update now use \n`.restart` only")
-#maked by LEGENDX22 🔥🔥🔥⚡⚡⚡⚡
+  await event.edit("Want to update your bot ?\n**Then use** `.restart` **only, due to some bug with .update**\n👍😕")
+
+from ULTRA.utils import admin_cmd
+@borg.on(admin_cmd(pattern="updates|updater"))
+async def hehe (event):
+  await event.edit("Want to update your bot ?\n**Then use** `.restart` **only, due to some bug with .update**\n👍😕")
+
