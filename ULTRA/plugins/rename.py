@@ -19,7 +19,7 @@ async def _(event):
     if os.path.exists(thumb_image_path):
         thumb = thumb_image_path
     dcevent = await event.edit(
-        "Rename & Upload in process 🙄🙇‍♂️🙇‍♂️🙇‍♀️ It might take some time if file size is big",
+        "**Renaming & Upload in process !.!.!.!**\n__It might take some time, if file size is big.__",
     )
     input_str = event.pattern_match.group(1)
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -35,7 +35,7 @@ async def _(event):
             reply_message,
             downloaded_file_name,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, dcevent, c_time, "trying to download", file_name)
+                progress(d, t, dcevent, c_time, "Trying to Download...", file_name)
             ),
         )
         end = datetime.now()
@@ -56,7 +56,7 @@ async def _(event):
                 thumb=thumb,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
                     progress(
-                        d, t, event, c_time, "trying to upload", downloaded_file_name
+                        d, t, event, c_time, "Trying to Upload...", downloaded_file_name
                     )
                 ),
             )
@@ -71,7 +71,7 @@ async def _(event):
         else:
             await dcevent.edit("File Not Found {}".format(input_str))
     else:
-        await dcevent.edit(".rename file.name as reply to a Telegram media/file")
+        await dcevent.edit("Reply .ren file.extension to a Telegram media/file\n\nFor example:- Reply .ren rename.py to a Telegram media named rename.txt")
 
 
 @borg.on(admin_cmd(pattern="tf ?(.*)"))
@@ -86,7 +86,7 @@ async def get(event):
 
 CMD_HELP.update(
     {
-        "rename": ".rename filename."
-        "\nReply to media with above command to rename and upload the file with given name__"
+        "rename": ".ren filename.extension"
+        "\n__Reply to media with above command to rename and upload the file with given name__"
     }
 )
