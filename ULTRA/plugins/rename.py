@@ -71,7 +71,7 @@ async def _(event):
         else:
             await dcevent.edit("File Not Found {}".format(input_str))
     else:
-        await dcevent.edit("Reply .ren file.extension to a Telegram media/file\n\nFor example:- Reply .ren rename.py to a Telegram media named rename.txt")
+        await dcevent.edit("Reply .ren file.extension to a Telegram media/file\n\n**__For example:-__ Reply** `.ren rename.py` **to a Telegram file** `rename.txt` **or** `.ren happy.gif` **to a Telegram media (video)**")
 
 
 @borg.on(admin_cmd(pattern="tf ?(.*)"))
