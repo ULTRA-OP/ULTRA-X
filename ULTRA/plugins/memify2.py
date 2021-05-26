@@ -12,7 +12,7 @@ from ULTRA.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"mmf ?(.*)"))
+@borg.on(admin_cmd(pattern=r"mmf2 ?(.*)"))
 
 async def handler(event):
 
