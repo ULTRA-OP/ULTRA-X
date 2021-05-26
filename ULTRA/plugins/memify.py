@@ -10,7 +10,7 @@ from ULTRA.utils import admin_cmd, sudo_cmd
 from var import Var
 # how a lazy guy ports.
 client = borg
-@borg.on(admin_cmd("memify ?(.*)"))
+@borg.on(admin_cmd("mmf ?(.*)"))
 async def handler(event):
     if event.fwd_from:
         return
@@ -97,7 +97,7 @@ async def drawText(image_path, text):
     return webp_file
 CMD_HELP.update(
     {
-        "memify": ".memify (text)\
+        "memify": ".mmf (text)\
 \nUsage: print your text on photo or sticker.\
 "
     }
