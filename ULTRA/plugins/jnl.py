@@ -18,7 +18,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
  await event.answer([result])
 
 from telethon import Button, custom, events
-import os, re, sys, asyncio
+import os, re, asyncio
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'jnl'))) 
 async def restart(event):
   await event.edit("**Jᴀᴀ Nᴀ Lᴀᴡᴅᴇ, Aᴘɴᴀ Kᴀᴀᴍ Kᴀʀ**")
@@ -26,7 +26,6 @@ async def restart(event):
   await event.edit("**!.! Bʜᴏsᴅɪᴋᴇ, Mᴅᴄ, Mᴀᴄᴄʜᴀʀ ᴋɪ Jʜᴀɴᴛ, Mᴀ ᴋᴀ Bʜᴀʀᴏsᴀ Cʜᴀᴅᴀʀᴍᴏᴅ, Kᴜᴛᴛᴇ ᴋᴇ Mᴜᴛʜ, Bsᴅᴋ !.!**")
   await asyncio.sleep(2)
   await event.edit("**Tᴜ Sᴀʟʟᴀ Aᴠɪ Bʜɪ Yᴀʜᴀɴ Dᴇᴋʜ Rʜᴀ Hᴀɪ, Nɪᴋᴀʟ Nᴀ Cʜᴀᴅᴀʀᴍᴏᴅ**\n\n**JNL**")
-  os.execl(sys.executable, sys.executable, *sys.argv)
   
 # kang mat kr lawde
 # UltraX
