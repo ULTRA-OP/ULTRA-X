@@ -24,7 +24,7 @@ async def restart(event):
   await event.edit("**Jᴀᴀ Nᴀ Lᴀᴡᴅᴇ, Aᴘɴᴀ Kᴀᴀᴍ Kᴀʀ**")
   await asyncio.sleep(2)
   await event.edit("**!.! Bʜᴏsᴅɪᴋᴇ, Mᴅᴄ, Mᴀᴄᴄʜᴀʀ ᴋɪ Jʜᴀɴᴛ, Mᴀ ᴋᴀ Bʜᴀʀᴏsᴀ Cʜᴀᴅᴀʀᴍᴏᴅ, Kᴜᴛᴛᴇ ᴋᴇ Mᴜᴛʜ, Bsᴅᴋ !.!**")
-  await asyncio.sleep(2)
+  await asyncio.sleep(3)
   await event.edit("**Tᴜ Sᴀʟʟᴀ Aᴠɪ Bʜɪ Yᴀʜᴀɴ Dᴇᴋʜ Rʜᴀ Hᴀɪ, Nɪᴋᴀʟ Nᴀ Cʜᴀᴅᴀʀᴍᴏᴅ**\n\n**JNL**")
   
 # kang mat kr lawde
