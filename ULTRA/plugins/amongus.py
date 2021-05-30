@@ -31,7 +31,7 @@ async def _(event):
         event.chat_id, "CAADAQADRwADnjOcH98isYD5RJTwAg"
     )
     text2 = await event.reply(
-        f"**[{DEFAULTUSER}]({USERNAME}) :**\n𝑰❜𝒍𝒍 𝒉𝒂𝒗𝒆 𝒕𝒐 𝒄𝒂𝒍𝒍 𝒅𝒊𝒔𝒄𝒖𝒔𝒔𝒊𝒐𝒏 😯"
+        f"**[{DEFAULTUSER}]({USERNAME})** :\n𝑰❜𝒍𝒍 𝒉𝒂𝒗𝒆 𝒕𝒐 𝒄𝒂𝒍𝒍 𝒅𝒊𝒔𝒄𝒖𝒔𝒔𝒊𝒐𝒏 😯"
     )
     await asyncio.sleep(3)
     await stcr1.delete()
@@ -40,7 +40,7 @@ async def _(event):
         event.chat_id, "CAADAQADRgADnjOcH9odHIXtfgmvAg"
     )
     text3 = await event.reply(
-        f"**[{DEFAULTUSER}]({USERNAME}) :**\n𝑾𝒆 𝒉𝒂𝒗𝒆 𝒕𝒐 𝒆𝒋𝒆𝒄𝒕 𝒕𝒉𝒆 𝒊𝒎𝒑𝒐𝒔𝒕𝒆𝒓 𝒐𝒓 𝒘𝒆❜𝒍𝒍 𝒍𝒐𝒔𝒆 😥"
+        f"**[{DEFAULTUSER}]({USERNAME})** :\n𝑾𝒆 𝒉𝒂𝒗𝒆 𝒕𝒐 𝒆𝒋𝒆𝒄𝒕 𝒕𝒉𝒆 𝒊𝒎𝒑𝒐𝒔𝒕𝒆𝒓 𝒐𝒓 𝒘𝒆❜𝒍𝒍 𝒍𝒐𝒔𝒆 😥"
     )
     await asyncio.sleep(3)
     await stcr2.delete()
@@ -48,17 +48,17 @@ async def _(event):
     stcr3 = await event.client.send_file(
         event.chat_id, "CAADAQADOwADnjOcH77v3Ap51R7gAg"
     )
-    text4 = await event.reply(f"**[{MASTER_USER}]({MASTER_USERNAME}) :**\n𝙒𝙝𝙚𝙧𝙚 ❓❓❓❓ 🤨 ")
+    text4 = await event.reply(f"**[{MASTER_USER}]({MASTER_USERNAME})** :\n𝙒𝙝𝙚𝙧𝙚 ❓❓❓❓ 🤨 ")
     await asyncio.sleep(3)
-    await text4.edit(f"**[{MADBOY_USER}]({MADBOY_USERNAME}) :**\n𝙒𝙝𝙤 ❓❓❓ 🧐 ")
+    await text4.edit(f"**[{MADBOY_USER}]({MADBOY_USERNAME})** :\n𝙒𝙝𝙤 ❓❓❓ 🧐 ")
     await asyncio.sleep(3)
-    await text4.edit(f"**[{LEGEND_USER}]({LEGEND_USERNAME}) :**\n𝙆𝙤𝙣 𝙝𝙖𝙞 𝘽𝘾 ❓❓ 🖕🤔 ")
+    await text4.edit(f"**[{LEGEND_USER}]({LEGEND_USERNAME})** :\n𝙆𝙤𝙣 𝙝𝙖𝙞 𝘽𝘾 ❓❓ 🖕🤔 ")
     await asyncio.sleep(3)
     await text4.edit(
-        f"**[{DEFAULTUSER}]({USERNAME}) :**\n𝙄𝙩𝙨 {name}, 𝙄 𝙨𝙖𝙬 {name} 𝙪𝙨𝙞𝙣𝙜 𝙩𝙝𝙚 𝙫𝙚𝙣𝙩...🤨🤨"
+        f"**[{DEFAULTUSER}]({USERNAME})** :\n𝙄𝙩𝙨 {name}, 𝙄 𝙨𝙖𝙬 {name} 𝙪𝙨𝙞𝙣𝙜 𝙩𝙝𝙚 𝙫𝙚𝙣𝙩...🤨🤨"
     )
     await asyncio.sleep(3)
-    await text4.edit(f"**Others :**\n𝙊𝙠𝙖𝙮.. 😲 𝙑𝙤𝙩𝙚 {name} ")
+    await text4.edit(f"**Others** :\n𝙊𝙠𝙖𝙮.. 😲 𝙑𝙤𝙩𝙚 {name} ")
     await asyncio.sleep(2)
     await stcr3.delete()
     await text4.delete()
