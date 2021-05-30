@@ -18,7 +18,7 @@ async def testing(event):
         await event.edit("𝗬𝗢𝗨 𝗗𝗜𝗗𝗡𝗧 𝗛𝗔𝗩𝗘 𝗦𝗨𝗙𝗙𝗜𝗖𝗜𝗘𝗡𝗧 𝗥𝗜𝗚𝗛𝗧𝗦")
         return
     await event.edit("Doing Nothing 🙃🙂")# Kang with Credits
-# for Dark_Cobra
+# for ULTRA X
     everyone = await event.client.get_participants(event.chat_id)
     for user in everyone:
         if user.id == chutiya.id:
@@ -26,8 +26,7 @@ async def testing(event):
         try:
             await event.client(EditBannedRequest(event.chat_id, int(user.id), ChatBannedRights(until_date=None,view_messages=True)))
         except Exception as e:
-            await event.edit(str(e))
-        await sleep(.5)
+            pass
     await event.edit("Nothing Happend here🙃🙂")
 
 CMD_HELP.update(
