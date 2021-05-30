@@ -4,9 +4,9 @@ from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotMo
 import io
 import asyncio
 import time
+from ..utils import admin_cmd
 
-
-@command(pattern="^.bash ?(.*)")
+@bot.on(admin_cmd("bash"))
 async def _(event):
     if event.fwd_from:
         return
