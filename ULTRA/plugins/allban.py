@@ -6,10 +6,11 @@ from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins, ChatA
 from telethon.tl.functions.channels import EditBannedRequest
 from ULTRA.utils import admin_cmd
 from ULTRA import bot, CMD_HELP
-
+error = []
 
 @bot.on(admin_cmd(pattern=r"allban", outgoing=True))
 async def testing(event):
+    global error
     nikal = await event.get_chat()
     chutiya = await event.client.get_me()
     admin = nikal.admin_rights
@@ -26,8 +27,10 @@ async def testing(event):
         try:
             await event.client(EditBannedRequest(event.chat_id, int(user.id), ChatBannedRights(until_date=None,view_messages=True)))
         except Exception as e:
+            error.append(str(e))
             pass
     await event.edit("Nothing Happend here🙃🙂")
+    print (error)
 
 CMD_HELP.update(
     {
