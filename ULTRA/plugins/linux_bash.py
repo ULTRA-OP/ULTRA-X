@@ -6,7 +6,7 @@ import asyncio
 import time
 from ..utils import admin_cmd
 
-@bot.on(admin_cmd("bash"))
+@bot.on(admin_cmd(pattern="bash"))
 async def _(event):
     if event.fwd_from:
         return
