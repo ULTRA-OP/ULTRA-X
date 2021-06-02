@@ -101,8 +101,8 @@ async def get_users(event):
     return await hell.edit(f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people")
 
 
-@bot.on(admin_cmd(pattern="add ?(.*)"))
-@bot.on(sudo_cmd(pattern="add ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="edd ?(.*)"))
+@bot.on(sudo_cmd(pattern="edd ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
