@@ -1,3 +1,7 @@
+# made for ULTRA-X
+
+# ULTRA X
+
 from ..utils import admin_cmd
 @bot.on(admin_cmd(pattern='broadcast'))
 async def broadcast(event):
