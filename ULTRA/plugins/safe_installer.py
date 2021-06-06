@@ -57,5 +57,5 @@ async def safety(event):
     load_module(shortname.replace(".py", ""))
     await event.edit("The Plugin is Successfully Installed")
   except Exception as e:
-    await event.edit("Some Error Found Please check \n{str(e)}")
+    await event.edit(f"Some Error Found Please check \n{str(e)}")
     
