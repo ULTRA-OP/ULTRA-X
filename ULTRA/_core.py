@@ -45,8 +45,8 @@ async def send(event):
         await eor(event, "𝚂𝙾𝚁𝚁𝚈 : ғɪʟᴇ ɴᴏᴛ ғᴏᴜɴᴅ")
 
 
-@bot.on(admin_cmd(pattern="install"))
-@bot.on(sudo_cmd(pattern="install", allow_sudo=True))
+@bot.on(admin_cmd(pattern="install -true"))
+@bot.on(sudo_cmd(pattern="install -true", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
         return
