@@ -26,9 +26,9 @@ from . import *
 from telethon.tl.functions.channels import JoinChannelRequest as join
 @bot.on(admin_cmd(None))
 async def safety(event):
-  text = event.text.split(" ", maxsplit=1)
+  text = event.text
   x = handler()
-  if re.search(f"^{x}install$", text[0]):
+  if text != f"{x}install":
     return
   if not event.is_reply:
     return await event.edit('please tag a file')
