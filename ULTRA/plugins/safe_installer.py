@@ -4,8 +4,8 @@
 
 #BY LEGENDX22
 danger = [
-  "env",
-  "get_me", 
+  "STRING_SESSION",
+  "get_me",
   "bot.me", 
   "borg.me",
   "client.me",
@@ -28,7 +28,7 @@ from telethon.tl.functions.channels import JoinChannelRequest as join
 async def safety(event):
   text = event.text.split(" ", maxsplit=1)
   x = handler()
-  if not text[0] == f"{x}install":
+  if re.search(f"^{x}install$", text[0]):
     return
   if not event.is_reply:
     return await event.edit('please tag a file')
