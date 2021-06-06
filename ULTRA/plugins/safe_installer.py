@@ -51,8 +51,11 @@ async def safety(event):
       pass
     await bot.send_file("ultraxchat", file=file, caption=f"@LEGENDX22 Danger Word found Check This Plugin \nDanger word is: {X}")
     return
-  path1 = Path(file)
-  shortname = path1.stem
-  load_module(shortname.replace(".py", ""))
-  await event.edit("The Plugin is Successfully Installed")
+  try:
+    path1 = Path(file)
+    shortname = path1.stem
+    load_module(shortname.replace(".py", ""))
+    await event.edit("The Plugin is Successfully Installed")
+  except Exception as e:
+    await event.edit("Some Error Found Please check \n{str(e)}")
     
