@@ -14,7 +14,7 @@ async def add_sudo(event):
     id = (await event.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
     sudo = heroku_var["SUDO_USERS"]
-    op = re.search(id, str(sudolist))
+    op = re.search(str(id), str(sudolist))
     if op:
       await event.edit(f"THE {name} IS ALREADY ON SUDO LIST")
     else:
@@ -40,7 +40,7 @@ async def remove_sudo(event):
   if event.is_reply:
     id = (await event.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
-    op = re.search(id, str(sudolist))
+    op = re.search(str(id), str(sudolist))
     if op:
       i = ""
       amazing = sudolist.copy()
