@@ -62,7 +62,7 @@ async def sudolists(event):
   Heroku = heroku3.from_key(PROBOYX)
   app = Heroku.app(LEGENDX)
   heroku_var = app.config()
-  if not sudousers:
+  if not sudolist:
     return await event.edit("sᴜᴅᴏ ʟɪsᴛ ɪs ᴇᴍᴘᴛʏ")
   sudos = sudolist.split(" ")
   sudoz = "**»sᴜᴅᴏ ʟɪsᴛ«**"
