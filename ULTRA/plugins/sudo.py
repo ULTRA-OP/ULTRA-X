@@ -46,9 +46,9 @@ async def remove_sudo(event):
       amazing = sudolist.split(" ")
       amazing.remove(str(id))
       i += str(amazing)
-      x = i.split("[", "")
-      xx = x.split("]", "")
-      xxx = xx.split(",", "")
+      x = i.replace("[", "")
+      xx = x.replace("]", "")
+      xxx = xx.replace(",", "")
       heroku_var["SUDO_USERS"] = xxx
       await event.edit(f"Tʜᴇ **{name}** ɪs ʀᴇᴍᴏᴠᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ (ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ɪ ᴀᴍ ʀᴇsᴛᴀʀᴛɪɴɢ)")
     else:
