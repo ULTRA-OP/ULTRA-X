@@ -49,7 +49,8 @@ async def remove_sudo(event):
       x = i.replace("[", "")
       xx = x.replace("]", "")
       xxx = xx.replace(",", "")
-      heroku_var["SUDO_USERS"] = xxx
+      done = xxx.replace("'", "")
+      heroku_var["SUDO_USERS"] = done
       await event.edit(f"Tʜᴇ **{name}** ɪs ʀᴇᴍᴏᴠᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ (ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ɪ ᴀᴍ ʀᴇsᴛᴀʀᴛɪɴɢ)")
     else:
       await event.edit(f"ᴛʜᴇ {name} ɪs ɴᴏᴛ ɪɴ sᴜᴅᴏ 😑😑")
