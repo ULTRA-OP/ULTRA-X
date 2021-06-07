@@ -34,6 +34,14 @@ LOAD_PLUG = {}
 #xbot = xbot 
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
+def env(var, default=None):
+  k = os.environ.get(var, default)
+  return k
+
+mongo = env("MONGO_URI")
+if not mongo:
+  print("Mongo DB Not Found I am Getting Exit")
+  sys.exit()
 def HELP(**LEGENDX):
 	see = LEGENDX.get("NAME", None)
 	helper = LEGENDX.get("HELP", None)
