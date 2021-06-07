@@ -43,7 +43,7 @@ async def remove_sudo(event):
     op = re.search(str(id), str(sudolist))
     if op:
       i = ""
-      amazing = sudolist.copy()
+      amazing = sudolist.split(" ")
       pro = amazing.remove(id)
       i += str(pro)
       x = i.split("[", "")
