@@ -17,6 +17,7 @@ async def add_sudo(event):
     op = re.search(str(id), str(sudolist))
     if op:
       await event.edit(f"THE {name} IS ALREADY ON SUDO LIST")
+      return
     else:
       pass
     if not sudolist:
@@ -55,8 +56,13 @@ async def remove_sudo(event):
       await event.edit(f"ᴛʜᴇ {name} ɪs ɴᴏᴛ ɪɴ sᴜᴅᴏ 😑😑")
     if heroku_var["SUDO_USERS"] == None:
        await event.edit(f"ᴛʜᴇ sᴜᴅᴏ ʟɪsᴛ ɪs ᴇᴍᴘʏᴛʏ 😑😑")
-    
-@bot.on(admin_cmd("listsudo"))
+@bot.on(admin_cmd("sudo"))
+async def sudos(event):
+  if sudolist:
+    await event.edit("sᴜᴅᴏ ɪs ᴇɴᴇᴀʙʟᴇᴅ ᴛʏᴘᴇ `.listsudo` ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ")
+  else:
+     await event.edit("sᴜᴅᴏ ɪs ᴏғғ")            
+@bot.on(admin_cmd("listsudo|sudolist"))
 async def sudolists(event):
   op = await event.edit('ᴄʜᴇᴄᴋɪɴɢ ᴀʟʟ sᴜᴅᴏs ᴡᴀɪᴛ')
   Heroku = heroku3.from_key(PROBOYX)
@@ -68,6 +74,6 @@ async def sudolists(event):
   sudoz = "**»sᴜᴅᴏ ʟɪsᴛ«**"
   for sudo in sudos:
     k = await bot.get_entity(int(sudo))
-    pro = f'\n**[ɴᴀᴍᴇ: {k.first_name} \nᴜsᴇʀɴᴀᴍᴇ: @{k.username or None}]**'
+    pro = f'\n**[ɴᴀᴍᴇ: {k.first_name} \nᴜsᴇʀɴᴀᴍᴇ: @{k.username or None}]**\n'
     sudoz += pro
   await op.edit(sudoz)
