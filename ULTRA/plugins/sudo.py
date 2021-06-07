@@ -31,7 +31,6 @@ async def add_sudo(event):
 
 
 
-
 @bot.on(admin_cmd(pattern='rmsudo'))
 async def remove_sudo(event):
   Heroku = heroku3.from_key(PROBOYX)
@@ -57,3 +56,18 @@ async def remove_sudo(event):
     if heroku_var["SUDO_USERS"] == None:
        await event.edit(f"ᴛʜᴇ sᴜᴅᴏ ʟɪsᴛ ɪs ᴇᴍᴘʏᴛʏ 😑😑")
     
+@bot.on(admin_cmd("listsudo"))
+async def sudolists(event):
+  op = await event.edit('ᴄʜᴇᴄᴋɪɴɢ ᴀʟʟ sᴜᴅᴏs ᴡᴀɪᴛ')
+  Heroku = heroku3.from_key(PROBOYX)
+  app = Heroku.app(LEGENDX)
+  heroku_var = app.config()
+  if not sudousers:
+    return await event.edit("sᴜᴅᴏ ʟɪsᴛ ɪs ᴇᴍᴘᴛʏ")
+  sudos = sudolist.split(" ")
+  sudoz = "**»sᴜᴅᴏ ʟɪsᴛ«**"
+  for sudo in sudos:
+    k = await bot.get_entity(int(sudo))
+    pro = f'\n**[ɴᴀᴍᴇ: {k.first_name} \nᴜsᴇʀɴᴀᴍᴇ: {k.username or None}]**')
+    sudoz += pro
+  await op.edit(sudoz)
