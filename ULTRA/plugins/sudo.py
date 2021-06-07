@@ -1,8 +1,10 @@
 import heroku3
+import re, os
 from var import Var
 from ..utils import admin_cmd
 LEGENDX = Var.HEROKU_APP_NAME
 PROBOYX = Var.HEROKU_API_KEY
+sudolist = os.environ.get("SUDO_USERS", None)
 @bot.on(admin_cmd(pattern='addsudo'))
 async def add_sudo(event):
   Heroku = heroku3.from_key(PROBOYX)
@@ -11,30 +13,23 @@ async def add_sudo(event):
   if event.is_reply:
     id = (await event.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
-    if id in heroku_var:
+    sudo = heroku_var["SUDO_USERS"]
+    op = re.search(id, str(sudolist))
+    if op:
       await event.edit(f"THE {name} IS ALREADY ON SUDO LIST")
     else:
       pass
-    if heroku_var["SUDO_USERS"] == None:
-       await event.edit(f"OK {name} IS ADDED ON SUDO I AM RESTARTING")
+    if not sudolist:
+       await event.edit(f"Oᴋᴀʏ **{name}** ɪs Aᴅᴅᴇᴅ Oɴ sᴜᴅᴏ ʟɪsᴛ (ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ɪ ᴀᴍ ʀᴇsᴛᴀʀᴛɪɴɢ)")
        heroku_var["SUDO_USERS"] = id
     else:
-       var = heroku_var["SUDO_USERS"]
-       await event.edit(f"OK {name} IS ADDED AND OLD USERS REMOVED IF YOU ADD 2 OR MORE THAN 2 USERS ON SUDO GO TO HEROKU ADD MANUALLY I AM RESTARTING")
-       heroku_var["SUDO_USERS"] = id
+       sudousers = f'{sudolist} {id}'
+       await event.edit(f"Oᴋᴀʏ **{name}** ɪs ᴀᴅᴅᴇᴅ ᴏɴ sᴜᴅᴏ ᴜsᴇʀs (ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ɪ ᴀᴍ ʀᴇsᴛᴀʀᴛɪɴɢ)")
+       heroku_var["SUDO_USERS"] = sudousers
   else:
-    text = event.text.split(" ", maxsplit=1)[1]
-    if text in heroku_var:
-      await event.edit(f"THE {name} IS ALREADY ON SUDO LIST")
-    else:
-      pass
-    if heroku_var["SUDO_USERS"] == None:
-       await event.edit(f"OK {name} IS ADDED ON SUDO I AM RESTARTING")
-       heroku_var["SUDO_USERS"] = text
-    else:
-       var = heroku_var["SUDO_USERS"]
-       await event.edit(f"OK {name} IS ADDED AND {var} REMOVED ON SUDO I AM RESTARTING")
-       heroku_var["SUDO_USERS"] = text
+    await event.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴘʟᴇᴀsᴇ")                              
+
+
 
 
 @bot.on(admin_cmd(pattern='rmsudo'))
@@ -45,12 +40,19 @@ async def remove_sudo(event):
   if event.is_reply:
     id = (await event.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
-    if id in heroku_var:
-      await event.edit(f"THE {name} IS REMOVED ON SUDO LIST")
-      del heroku_var["SUDO_USERS"]
+    op = re.search(id, str(sudolist))
+    if op:
+      i = ""
+      amazing = sudolist.copy()
+      pro = amazing.remove(id)
+      i += str(pro)
+      x = i.split("[", "")
+      xx = x.split("]", "")
+      xxx = xx.split(",", "")
+      heroku_var["SUDO_USERS"] = xxx
+      await event.edit(f"Tʜᴇ **{name}** ɪs ʀᴇᴍᴏᴠᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ (ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ɪ ᴀᴍ ʀᴇsᴛᴀʀᴛɪɴɢ)")
     else:
-      pass
+      await event.edit(f"ᴛʜᴇ {name} ɪs ɴᴏᴛ ɪɴ sᴜᴅᴏ 😑😑")
     if heroku_var["SUDO_USERS"] == None:
-       await event.edit(f"SUDO LIST IS ALREADY IS Empty")
-       heroku_var["SUDO_USERS"] = id
+       await event.edit(f"ᴛʜᴇ sᴜᴅᴏ ʟɪsᴛ ɪs ᴇᴍᴘʏᴛʏ 😑😑")
     
