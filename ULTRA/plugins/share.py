@@ -5,8 +5,8 @@ from telethon import *
 def handler():
   k = os.environ.get("COMMAND_HAND_LER", ".")
   return k
-@bot.on(admin_cmd("share"))
-@bot.on(sudo_cmd(pattern='share'))
+@bot.on(admin_cmd(pattern="share"))
+#@bot.on(sudo_cmd(pattern='share', allow_sudo=True))
 async def amazing (event):
   text = event.text.split(" ", 1)
   #hndlr = handler()
