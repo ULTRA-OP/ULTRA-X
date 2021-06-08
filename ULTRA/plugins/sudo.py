@@ -1,3 +1,5 @@
+# COPYRIGHT © 2021-2022 BY LEGENDX22
+# COPY WITH CREDITS 
 import heroku3
 import re, os
 from var import Var
@@ -10,6 +12,8 @@ async def add_sudo(event):
   Heroku = heroku3.from_key(PROBOYX)
   app = Heroku.app(LEGENDX)
   heroku_var = app.config()
+  if not event.is_reply:
+    return await event.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴘʟᴇᴀsᴇ")                              
   if event.is_reply:
     id = (await event.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
@@ -62,7 +66,7 @@ async def sudos(event):
     await event.edit("sᴜᴅᴏ ɪs ᴇɴᴇᴀʙʟᴇᴅ ᴛʏᴘᴇ `.listsudo` ғᴏʀ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ")
   else:
      await event.edit("sᴜᴅᴏ ɪs ᴏғғ")            
-@bot.on(admin_cmd("listsudo|sudolist"))
+@bot.on(admin_cmd("listsudo"))
 async def sudolists(event):
   op = await event.edit('ᴄʜᴇᴄᴋɪɴɢ ᴀʟʟ sᴜᴅᴏs ᴡᴀɪᴛ')
   Heroku = heroku3.from_key(PROBOYX)
@@ -74,6 +78,6 @@ async def sudolists(event):
   sudoz = "**»sᴜᴅᴏ ʟɪsᴛ«**"
   for sudo in sudos:
     k = await bot.get_entity(int(sudo))
-    pro = f'\n**[ɴᴀᴍᴇ: {k.first_name} \nᴜsᴇʀɴᴀᴍᴇ: @{k.username or None}]**\n'
+    pro = f'\n[**ɴᴀᴍᴇ:** {k.first_name} \n**ᴜsᴇʀɴᴀᴍᴇ:** @{k.username or None}]\n'
     sudoz += pro
   await op.edit(sudoz)
