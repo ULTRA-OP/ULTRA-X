@@ -41,6 +41,8 @@ async def remove_sudo(event):
   Heroku = heroku3.from_key(PROBOYX)
   app = Heroku.app(LEGENDX)
   heroku_var = app.config()
+  if not event.is_reply:
+    return await event.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴘʟᴇᴀsᴇ")
   if event.is_reply:
     id = (await event.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
