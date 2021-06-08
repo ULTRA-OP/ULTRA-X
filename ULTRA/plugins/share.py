@@ -9,9 +9,9 @@ def handler():
 @bot.on(sudo_cmd(pattern='share'))
 async def amazing (event):
   text = event.text.split(" ", 1)
-  hndlr = handler()
-  if event.text == f'{hndlr}share':
-    return await event.edit("Please Give some text")
+  #hndlr = handler()
+  #if event.text == f'{hndlr}share':
+    #return await event.edit("Please Give some text")
   pro = text[1].replace(" ", "%20")
   inline = await bot.inline_query((await xbot.get_me()).username, f'share|{pro}')
   print ("share plug-in fired")
