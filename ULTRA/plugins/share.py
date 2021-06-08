@@ -14,6 +14,7 @@ async def amazing (event):
     return await event.edit("Please Give some text")
   pro = text[1].replace(" ", "%20")
   inline = await bot.inline_query((await xbot.get_me()).username, f'share|{pro}')
+  print ("share plug-in fired")
   await inline[0].click(event.chat_id)
   await event.delete()
 
