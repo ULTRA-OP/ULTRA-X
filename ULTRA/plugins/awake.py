@@ -15,7 +15,7 @@ import re
 from telethon import events, errors, custom
 import io
 from platform import python_version, uname
-
+from ..data.alive_db import add_img, get_img
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 
@@ -27,43 +27,24 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 @bot.on(sudo_cmd(pattern=r"awake", allow_sudo=True))
 async def amireallyalive(awake):
    """ For .awake command, check if the bot is running.  """
-   global PHOTO
-   if PHOTO:
      tag = borg.uid
-#     uptm = await legend.get_readable_time((time.time() - StartTime))
+     PHOTO = await get_img()
+#    uptm = await legend.get_readable_time((time.time() - StartTime))
      ALIVE_MESSAGE= f"**✧✧ {BOT} IS UP AND RUNNING SUCCESSFULLY ✧✧**"
      ALIVE_MESSAGE += "\n\n"
      ALIVE_MESSAGE += "**✥✥ 𝚂𝚈𝚂𝚃𝙴𝙼 𝚂𝚃𝙰𝚃𝚄𝚂 ✥✥**\n\n"
      ALIVE_MESSAGE += "✧ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `1.19.5`\n\n"
      ALIVE_MESSAGE += f"✧ 𝚄𝙻𝚃𝚁𝙰 𝚇 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `{VERSION}`\n\n"
-#     ALIVE_MESSAGE += f"✧ 𝚄𝙿𝚃𝙸𝙼𝙴 : {uptm}\n\n"
+#    ALIVE_MESSAGE += f"✧ 𝚄𝙿𝚃𝙸𝙼𝙴 : {uptm}\n\n"
      ALIVE_MESSAGE += f"✧ 𝙼𝚈 𝙱𝙾𝚂𝚂 : [{DEFAULTUSER}](tg://user?id={tag})\n\n"
      ALIVE_MESSAGE += "✧ 𝙶𝚁𝙾𝚄𝙿 : [SUPPORT](https://t.me/ULTRAXOT)\n\n"
      ALIVE_MESSAGE += f"✧ [𝙳𝙴𝙿𝙻𝙾𝚈](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU&template=https%3A%2F%2Fgithub.com%2FULTRA-OP%2HEROKU) 𝚈𝙾𝚄𝚁 𝙾𝚆𝙽 𝙾𝙿 [{BOT}](http://github.com/ULTRA-OP/ULTRA-X) ✧\n"   
      await awake.delete() 
      await borg.send_file(awake.chat_id, PHOTO,caption=ALIVE_MESSAGE)
-   elif PHOTO == None:
-     PHOTO = "https://telegra.ph/file/73d083850bd5f83c2f66e.jpg"
-     tag = borg.uid
-#     uptm = await legend.get_readable_time((time.time() - StartTime))
-     ALIVE_MESSAGE= f"**✧✧ {BOT} IS UP AND RUNNING SUCCESSFULLY ✧✧**"
-     ALIVE_MESSAGE += "\n\n"
-     ALIVE_MESSAGE += "**✥✥ 𝚂𝚈𝚂𝚃𝙴𝙼 𝚂𝚃𝙰𝚃𝚄𝚂 ✥✥**\n\n"
-     ALIVE_MESSAGE += "✧ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `1.19.5`\n\n"
-     ALIVE_MESSAGE += f"✧ 𝚄𝙻𝚃𝚁𝙰 𝚇 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `{VERSION}`\n\n"
-#     ALIVE_MESSAGE += f"✧ 𝚄𝙿𝚃𝙸𝙼𝙴 : {uptm}\n\n"
-     ALIVE_MESSAGE += f"✧ 𝙼𝚈 𝙱𝙾𝚂𝚂 : [{DEFAULTUSER}](tg://user?id={tag})\n\n"
-     ALIVE_MESSAGE += "✧ 𝙶𝚁𝙾𝚄𝙿 : [SUPPORT](https://t.me/UltraXOT)\n\n"
-     ALIVE_MESSAGE += f"✧ [𝙳𝙴𝙿𝙻𝙾𝚈](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU&template=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU) 𝚈𝙾𝚄𝚁 𝙾𝚆𝙽 𝙾𝙿 [{BOT}](http://github.com/ULTRA-OP/ULTRA-X) ✧\n"   
-     await awake.delete() 
-     await borg.send_file(awake.chat_id, PHOTO,caption=ALIVE_MESSAGE)
-   else:
-     await awake.edit("Please add right value in ALIVE_PHOTTO var..")
-
 CMD_HELP.update(
     {
         "awake": "Plugin : awake\
     \n\nSyntax : .awake\
-    \nFunction : you can set here costom alive pic .set var ALIVE_PHOTTO (Telegraph link)"
+    \nFunction : you can set here costom alive pic .setimg (Telegraph link)"
     }
 )
