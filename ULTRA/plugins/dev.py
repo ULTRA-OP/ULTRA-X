@@ -19,5 +19,5 @@ async def RmdeV(event):
     await event.edit("You Already not a dev")
   else:
     await rm_dev()
-    await event.edit('You Are succesfully Added on Dev in ULTRA X')
+    await event.edit('You Are succesfully Removed on Dev in ULTRA X')
 
