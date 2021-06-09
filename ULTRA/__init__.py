@@ -38,7 +38,7 @@ def env(var, default=None):
   k = os.environ.get(var, default)
   return k
 
-mongo = env("MONGO_URI")
+mongo = env("MONGO_URL")
 if not mongo:
   print("Mongo DB Not Found I am Getting Exit")
   sys.exit()
