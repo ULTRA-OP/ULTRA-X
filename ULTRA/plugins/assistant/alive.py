@@ -13,7 +13,7 @@ from telethon import events, Button, custom
 import re, os
 from ULTRAX import PHOTO, xbot, BOT, VERSION
 from ULTRA import bot
-from ..data.alive_db import add_img, get_img
+from ...data.alive_db import add_img, get_img
 @xbot.on(events.NewMessage(pattern=("/alive")))
 async def awake(event):
   PHOTO = await get_img()
