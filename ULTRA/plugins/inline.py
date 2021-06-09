@@ -25,6 +25,8 @@ from ULTRA.utils import admin_cmd, sudo_cmd
 from PIL import Image
 import requests
 from io import BytesIO
+from ..data.alive_db import add_img, get_img
+
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
 
@@ -34,6 +36,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
     @tgbot.on(events.InlineQuery)
     async def inline_handler(event):
         builder = event.builder
+        ALIVE_PHOTTO = await get_img()
         result = None
         query = event.text
         me = await bot.get_me()
@@ -74,6 +77,14 @@ if TG_BOT_USER_NAME_BF_HER is not None:
 
 from ULTRA import bot 
 
+@bot.on(admin_cmd('setimg'))
+async def setimgs(event):
+  try:
+    text = event.text.split(" ", 1)[1]
+    await add_img(text)
+    await event.edit(f'The Alive Image is updated now Alive image is {text} type `.alive` or `.awake`', link_preview=False)
+  except:
+    await event.edit("please give right link ex: `.setimg <img link>` (without brackets)")
 
 @bot.on(admin_cmd("alive"))
 @bot.on(sudo_cmd(pattern="alive", allow_sudo=True))
