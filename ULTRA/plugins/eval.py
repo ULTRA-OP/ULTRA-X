@@ -12,13 +12,15 @@ import sys
 import io
 from ULTRA import CMD_HELP, eor
 from uniborg.util import admin_cmd, sudo_cmd
-
+from ..data.dev_db import check_dev
 
 @borg.on(admin_cmd("eval"))
 @borg.on(sudo_cmd(pattern="eval", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
+    if not check_dev():
+      return await event.edit("This is restricted command if you know python then type `.devme` for removing dev `.rmdev`")
     await eor(event, "Processing ...")
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
