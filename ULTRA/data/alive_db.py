@@ -7,7 +7,7 @@ IMG = "https://telegra.ph/file/e033d3f7ebcf8ce554ae5.jpg"
 async def add_img(img=IMG):
   k = await x.find_one({'_id': "LEGENDX"})
   if k:
-    await x.update_one({"_id": "LEGENDX"}, {"$set": {"img": img}}
+    await x.update_one({"_id": "LEGENDX"}, {"$set": {"img": img}})
   else:
     await x.insert_one({"_id": "LEGENDX", "img": img})
 
