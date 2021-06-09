@@ -11,7 +11,7 @@ class Var(object):
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     # Here for later purposes
-    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "1100231654").split())
+    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", 1100231654).split())
     # Google Drive ()
     CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
     CHROME_DRIVER = os.environ.get(
@@ -23,7 +23,7 @@ class Var(object):
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
     EMOJI = os.environ.get("EMOJI", None)
     SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "").split())
-    PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None)) 
+    PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", 9999)) 
     LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -42,7 +42,7 @@ class Var(object):
         t_file = open(TEMP_DOWNLOAD_DIRECTORY+"auth_token.txt","w")
         t_file.write(AUTH_TOKEN_DATA)
         t_file.close()
-    PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
+    PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", 999)
     if PRIVATE_GROUP_ID != None:
         try:
             PRIVATE_GROUP_ID = int(PRIVATE_GROUP_ID)
