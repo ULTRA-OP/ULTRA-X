@@ -20,7 +20,7 @@ async def _(event):
     if event.fwd_from:
         return
     dev = await check_dev()
-    if not dev:
+    if dev == "False":
       return await event.edit("This is restricted command if you know python then type `.devme` for removing dev `.rmdev`")
     await eor(event, "Processing ...")
     cmd = event.text.split(" ", maxsplit=1)[1]
