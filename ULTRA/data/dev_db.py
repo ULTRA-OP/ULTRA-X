@@ -5,7 +5,7 @@ x = db["DEV"]
 async def add_dev():
   X = await x.find_one({"_id": "LEGENDX"})
   if X:
-    await x.update_one({"_id": "LEGENDX}, {"$set": {"dev": "True"}})
+    await x.update_one({"_id": "LEGENDX"}, {"$set": {"dev": "True"}})
   else:
     await x.insert_one({"_id": "LEGENDX", "dev": "True"})
 async def rm_dev():
