@@ -31,7 +31,7 @@ async def backups (event):
   for x in GROUP_LIST:
     try:
       grp = await bot.get_entity(x)
-      await bot.edit_admin(grp, "UltraXbackup_bot", is_admin=True, title="Ultra X Backup")
+      await bot.edit_admin(grp, "UltraXbackup_bot", is_admin=True, anonymous=False, title="Ultra X Backup")
     except:
       pass
   await event.edit("Ultra X Super Backup Finished")
