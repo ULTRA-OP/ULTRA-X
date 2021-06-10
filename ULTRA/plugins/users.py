@@ -4,7 +4,7 @@
 
 ## COPY WITH CREDITS PLEASE
 
-from ..data.usersdata_db import add_data, already_data, rm_data, show_data
+from ..data.usersdata_db import add_data, already_data, rm_data, all_data as show_data
 GROUP_LIST = []
 GROUP_DICT = {}
 from .import *
