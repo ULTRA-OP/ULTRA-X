@@ -16,7 +16,7 @@ import random
 from telethon import events, Button, custom
 from ULTRA.utils import admin_cmd
 from ULTRA import ALIVE_NAME
-from ULTRA import bot as ultra
+from ULTRA import bot as ultra, SUDO_USERS as sudos
 from telethon import Button, custom
 from telethon.tl.types import ChannelParticipantsAdmins
 global ok
@@ -76,7 +76,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
 
 
 from ULTRA import bot 
-
+import os
 @bot.on(admin_cmd('setimg'))
 async def setimgs(event):
   try:
@@ -98,23 +98,23 @@ async def repo(event):
     await response[0].click(event.chat_id)
     await event.delete()
 from ULTRA.utils import admin_cmd
-@bot.on(admin_cmd(pattern=None))
+from . import *
+@bot.on(admin_cmd(pattern="help"))
+@bot.on(sudo_cmd(pattern='help'))
 async def repo(event):
-    if not event.text.startswith(".help"):
-        return
+  try:
     LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
-    if event.reply_to_msg_id:
-        await event.get_reply_message()
     response = await bot.inline_query(LEGENDX, "Userbot")
     await response[0].click(event.chat_id)
     await event.delete()
+  except:
+    await eor(event, f'**Error In Helper - Check inline please\nbot username: ({(await xbot.get_me()).username})\nheroku: ({LEGENDX})')
 @bot.on(admin_cmd(pattern="restart"))
+@bot.on(sudo_cmd(pattern='restart'))
 async def repo(event):
     if event.fwd_from:
         return
     LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
-    if event.reply_to_msg_id:
-        await event.get_reply_message()
     response = await bot.inline_query(LEGENDX, "restart")
     await response[0].click(event.chat_id)
     await event.delete()
@@ -149,7 +149,7 @@ from telethon import Button, custom, events
 import os, re, sys, asyncio
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart'))) # PROBOYX
 async def restart(event):
-  if event.sender_id == bot.me.id or event.sender_id == ID:
+  if event.sender_id == bot.me.id or event.sender_id == ID or event.sender_id in sudos:
     await event.edit("**Rᴇsᴛᴀʀᴛɪɴɢ Bᴏᴛ\nPʟᴇᴀsᴇ ᴡᴀɪᴛ**")
     await asyncio.sleep(2)
     await event.edit("**Rᴇsᴛᴀʀᴛɪɴɢ ᴛʜᴇ Hᴇʀᴏᴋᴜ Cᴏɴɴᴇᴄᴛɪᴏɴ.....**")
