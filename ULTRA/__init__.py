@@ -73,12 +73,6 @@ import pylast
 from pySmartDL import SmartDL
 from requests import get
 # Bot Logs setup:
-async def eor(event, msg):
-  try:
-      await event.edit(msg)
-  except:
-       await event.reply(msg)
-
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
@@ -224,6 +218,14 @@ for binary, path in binaries.items():
     downloader = SmartDL(binary, path, progress_bar=False)
     downloader.start()
     os.chmod(path, 0o755)
+
+
+# functions
+async def eor(event, msg):
+  if event.sender_id in SUDO_USERS:
+    await event.reply(msg)
+  else:
+    await event.edit(msg)
 
 # Global Variables
 COUNT_MSG = 0
