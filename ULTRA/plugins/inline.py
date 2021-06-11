@@ -79,7 +79,7 @@ from ULTRA import bot
 import os
 from . import *
 @bot.on(admin_cmd('setimg'))
-@bot.on(sudo_cmd(pattern='setimg'))
+@bot.on(sudo_cmd(pattern='setimg', allow_sudo=True))
 async def setimgs(event):
   try:
     text = event.text.split(" ", 1)[1]
@@ -101,7 +101,7 @@ async def repo(event):
     await event.delete()
 from ULTRA.utils import admin_cmd
 @bot.on(admin_cmd(pattern="help"))
-@bot.on(sudo_cmd(pattern='help'))
+@bot.on(sudo_cmd(pattern='help',allow_sudo=True))
 async def repo(event):
   try:
     LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
@@ -111,7 +111,7 @@ async def repo(event):
   except:
     await eor(event, f'**Error In Helper - Check inline please\nbot username: ({(await xbot.get_me()).username})\nheroku: ({LEGENDX})')
 @bot.on(admin_cmd(pattern="restart"))
-@bot.on(sudo_cmd(pattern='restart'))
+@bot.on(sudo_cmd(pattern='restart', allow_sudo=True))
 async def repo(event):
     if event.fwd_from:
         return
