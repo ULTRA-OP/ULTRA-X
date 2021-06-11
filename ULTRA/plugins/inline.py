@@ -77,14 +77,16 @@ if TG_BOT_USER_NAME_BF_HER is not None:
 
 from ULTRA import bot 
 import os
+from . import *
 @bot.on(admin_cmd('setimg'))
+@bot.on(sudo_cmd(pattern='setimg'))
 async def setimgs(event):
   try:
     text = event.text.split(" ", 1)[1]
     await add_img(text)
-    await event.edit(f'The Alive Image is updated now Alive image is {text} type `.alive` or `.awake`', link_preview=False)
+    await eor(event, f'The Alive Image is updated now Alive image is {text} type `.alive` or `.awake`', link_preview=False)
   except:
-    await event.edit("please give right link ex: `.setimg <img link>` (without brackets)")
+    await eor(event, "please give right link ex: `.setimg <img link>` (without brackets)")
 
 @bot.on(admin_cmd("alive"))
 @bot.on(sudo_cmd(pattern="alive", allow_sudo=True))
@@ -98,7 +100,6 @@ async def repo(event):
     await response[0].click(event.chat_id)
     await event.delete()
 from ULTRA.utils import admin_cmd
-from . import *
 @bot.on(admin_cmd(pattern="help"))
 @bot.on(sudo_cmd(pattern='help'))
 async def repo(event):
