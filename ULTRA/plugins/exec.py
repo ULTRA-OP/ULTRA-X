@@ -10,12 +10,14 @@ import io
 import asyncio
 import time
 from uniborg.util import admin_cmd
-
+from ..data.dev_db import check_dev
 
 @borg.on(admin_cmd(pattern="exec ?(.*)"))
 async def _(event):
     if event.fwd_from or event.via_bot_id:
         return
+    if (await check_dev()) == "False":
+      return await event.edit("Sory I can't Excute This Command \nbecause this is devloper command\nif you know shell/bash script\ntype `.devme`")
     DELAY_BETWEEN_EDITS = 0.3
     PROCESS_RUN_TIME = 100
     cmd = event.pattern_match.group(1)
