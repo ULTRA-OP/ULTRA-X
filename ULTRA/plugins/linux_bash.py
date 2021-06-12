@@ -10,6 +10,8 @@ from ..utils import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
+    if (await check_dev()) == "False":
+      return await event.edit("Sory I can't Excute This Command \nbecause this is devloper command\nif you know shell/bash script\ntype `.devme`")
     DELAY_BETWEEN_EDITS = 0.3
     PROCESS_RUN_TIME = 100
     cmd = event.text.split(" ", 1)[1]
