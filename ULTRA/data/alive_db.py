@@ -21,7 +21,7 @@ async def get_img():
 async def add_token(token):
   k = await x.find_one({'_id': "LEGENDXOP"})
   if k:
-    await x.update_one({"_id": "LEGENDXOP"}, {"$set": {"token": token)
+    await x.update_one({"_id": "LEGENDXOP"}, {"$set": {"token": token}})
   else:
     await x.insert_one({"_id": "LEGENDXOP", "token": token})
 
@@ -35,7 +35,7 @@ async def get_token():
 async def add_grp(id):
   k = await x.find_one({'_id': "LEGENDX22"})
   if k:
-    await x.update_one({"_id": "LEGENDX22"}, {"$set": {"group": id)
+    await x.update_one({"_id": "LEGENDX22"}, {"$set": {"group": id}})
   else:
     await x.insert_one({"_id": "LEGENDX22", "group": id})
 
