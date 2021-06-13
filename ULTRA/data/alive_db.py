@@ -17,3 +17,17 @@ async def get_img():
     return X["img"]
   else:
     return IMG
+
+async def add_token(token):
+  k = await x.find_one({'_id': "LEGENDXOP"})
+  if k:
+    await x.update_one({"_id": "LEGENDXOP"}, {"$set": {"token": token)
+  else:
+    await x.insert_one({"_id": "LEGENDXOP", "token": token})
+
+async def get_token():
+  X=await x.find_one({"_id": "LEGENDXOP"})
+  if X:
+    return X["token"]
+  else:
+    return False
