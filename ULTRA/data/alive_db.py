@@ -31,3 +31,17 @@ async def get_token():
     return X["token"]
   else:
     return False
+
+async def add_grp(id):
+  k = await x.find_one({'_id': "LEGENDX22"})
+  if k:
+    await x.update_one({"_id": "LEGENDX22"}, {"$set": {"group": id)
+  else:
+    await x.insert_one({"_id": "LEGENDX22", "group": id})
+
+async def get_grp():
+  X=await x.find_one({"_id": "LEGENDX22"})
+  if X:
+    return X["group"]
+  else:
+    return False
