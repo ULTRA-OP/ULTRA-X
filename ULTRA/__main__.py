@@ -25,7 +25,7 @@ import asyncio
 import traceback
 import os
 import ULTRA.utils
-
+from .data.alive_db import add_token, give_token, add_grp, give_grp
 os.system("pip install google_trans_new")
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -165,6 +165,44 @@ async def danger(username):
      except:
        xx += 1
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
+i = 0
+async def start():
+  try:
+    k = await give_token()
+    if k:
+      return
+    async with bot.conversation("botfather") as af:
+      await af.send_message("/newbot")
+      await af.get_response()
+      await af.send_message(f'{(await bot.get_me()).username}_Super_Bot')
+      res = (await af.get_response()).text
+      if res.startswith("Sorry"):
+        for x in range(50):
+          await af.send_message(f'{(await bot.get_me()).username}_{i}_Bot')
+          i += 1
+          k = (await af.get_response()).text
+          if not k.startswith("Sorry"):
+            break
+          else:
+            continue
+        file = open("bot.txt", "w")
+        file.write(k)
+        file.close()
+      else:
+        file = open("bot.txt", "w")
+        file.write(res)
+        file.close()
+      f = open("bot.txt")
+      await add_token(f.readlines()[3])
+      f.close()
+  except:
+    pass
+
+
+
+
+
+
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
