@@ -159,13 +159,13 @@ async def botsetup():
     async with bot.conversation("botfather") as af:
       await af.send_message("/newbot")
       await af.get_response()
-      await af.send_message(f'{(await bot.get_me()).username}_bot')
+      await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_bot')
       await af.get_response()
-      await af.send_message(f'{(await bot.get_me()).username}_Super_Bot')
+      await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_Super_Bot')
       res = (await af.get_response()).text
       if res.startswith("Sorry"):
         for x in range(50):
-          await af.send_message(f'{(await bot.get_me()).username}_{i}_Bot')
+          await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_{i}_Bot')
           i += 1
           k = (await af.get_response()).text
           if not k.startswith("Sorry"):
