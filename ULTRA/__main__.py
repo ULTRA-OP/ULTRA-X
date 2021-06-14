@@ -107,11 +107,10 @@ else:
         print("Starting Userbot")
         bot.loop.run_until_complete(botsetup())
         bot.loop.run_until_complete(add_bot(give_token()))
-        xbot.start(give_token())
         print("Startup Completed")
     else:
         bot.start()
-
+xbot.start(give_token())
 import glob
 
 
