@@ -20,8 +20,8 @@ from platform import python_version, uname
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
-LEJHAND_USER = "LEGEND X"
-MADBOI_USER = "««¿»» ««¿»»"
+# LEJHAND_USER = "LEGEND X"
+# MADBOI_USER = "««¿»» ««¿»»"
 
 global ok
 ok = bot.uid
@@ -54,6 +54,8 @@ async def hmm(yes):
     ALIVE_MESSAGE += f"➥ **𝑺𝒖𝒑𝒑𝒐𝒓𝒕 𝑮𝒓𝒐𝒖𝒑 :** [𝐔𝐥𝐭𝐫𝐚𝐗 𝐂𝐡𝐚𝐭](https://t.me/ULTRAXCHAT)\n\n"
     ALIVE_MESSAGE += f"➥ **𝑫𝒆𝒑𝒍𝒐𝒚 :** [𝐅𝐫𝐨𝐦 𝐇𝐞𝐫𝐞](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU&template=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU)\n\n"
     ALIVE_MESSAGE += f"➥ **𝑴𝒐𝒊 𝑩𝒐𝒔𝒔 :** [{DEFAULTUSER}](tg://user?id={ok})\n"
+  # ALIVE_MESSAGE += f"➥ **𝑮𝒂𝒘𝒅 (𝑶𝒘𝒏𝒆𝒓) :** [{LEJHAND_USER}]({LEJHAND_UN})\n"
+  # ALIVE_MESSAGE += f"➥ **𝑩𝒆𝒔𝒕 𝑭𝒓𝒊𝒆𝒏𝒅 (𝑫𝑬𝑽𝒔) :** [{MADBOI_USER}]({MADBOI_UN})\n"
     ultra = await bot.send_file(yes.chat_id, file=pic1,caption=ALIVE_MESSAGE)
 
     await asyncio.sleep(edit_time)
