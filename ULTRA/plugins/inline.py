@@ -27,16 +27,30 @@ from PIL import Image
 import requests
 from io import BytesIO
 from ..data.alive_db import add_img, get_img
-
+from ..data.dev_db import check_dev
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
-
-pro_text=(f"**✘ {BOT} ιѕ ση ƒιяє✘**\n┏━━━━━━━━━━━━━━━━━━━━━\n{MSG}\n┗━━━━━━━━━━━━━━━━━━━━━\n\n🔥 ✘ αвσυт му ѕуѕтєм ✘ 🔥\n\n➥ **✘Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ✘** : {__version__}\n\n➥ **✘Mʏ ᴍᴀsᴛᴇʀ✘** : [{DEFAULTUSER}](tg://user?id={ok})\n")
 TG_BOT_USER_NAME_BF_HER = os.environ.get("ALIVE_PHOTTO", None)
 if TG_BOT_USER_NAME_BF_HER is not None:
     @tgbot.on(events.InlineQuery)
     async def inline_handler(event):
         builder = event.builder
+        if await check_dev == "True":
+          DEV = True
+        else:
+          DEV = False
+        pro_text = f"""
+**✘ {BOT} ιѕ ση ƒιяє✘**
+┏━━━━━━━━━━━━━━━━━━━━━
+
+{MSG}
+
+┗━━━━━━━━━━━━━━━━━━━━━
+🔥 ✘ αвσυт му ѕуѕтєм ✘ 🔥
+
+➥ **✘Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ✘** : {__version__}
+➥ **✘Mʏ ᴍᴀsᴛᴇʀ✘** : [{DEFAULTUSER}](tg://user?id={ok})")
+➥ **✘ɪ ᴀᴍ ᴅᴇᴠ✘**: {DEV}""""
         ALIVE_PHOTTO = await get_img()
         result = None
         query = event.text
