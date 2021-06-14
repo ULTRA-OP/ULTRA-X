@@ -197,9 +197,9 @@ from ULTRAX import xbot
 try:
   xbot.start(give_token())
 except:
-  while True:
-    os.execl(sys.executable, sys.executable, *sys.argv)
-
+  bot.loop.run_until_complete(botsetup())
+else:
+  print ('Error - on Bot setup')
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
