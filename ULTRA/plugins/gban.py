@@ -8,7 +8,6 @@ from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from ULTRA import CMD_HELP
 from ULTRA.utils import admin_cmd, sudo_cmd
 import html
-from ULTRAX import POST
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
@@ -118,7 +117,6 @@ async def gspider(ULTRA):
             return await friday.edit(f"**Error! User probably already gbanned.**")
     except:
         pass
-    POST(user=user.id, msg=ULTRA.text[5:])
     await friday.edit(
         f"**Successfully GBanned [{user.first_name}](tg://user?id={user.id}) // Total Affected Chats :** `{a}` "
     )
