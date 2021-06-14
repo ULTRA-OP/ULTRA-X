@@ -6,7 +6,6 @@ except:
   from LEGENDX import id, ID, devs
 finally:
   print ("ULTRA X IS STARTING WITH TELETHON") 
-from ULTRAX import xbot
 from ULTRA import bot, CMD_HELP
 from sys import argv
 os.system("pip install telethon==1.19.0")
@@ -203,6 +202,7 @@ async def botsetup():
 
 
 bot.loop.run_until_complete(botsetup())
+from ULTRAX import xbot
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
