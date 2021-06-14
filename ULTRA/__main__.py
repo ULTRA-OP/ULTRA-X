@@ -26,7 +26,7 @@ import asyncio
 import traceback
 import os
 import ULTRA.utils
-from telethon.tl.functions.messages import CreateChatRequest as ccr
+from telethon.tl.functions.messages import CreateChatRequest as ccr, EditChatPhotoRequest as af
 os.system("pip install google_trans_new")
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
