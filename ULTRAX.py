@@ -9,7 +9,6 @@ import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 os.system("pip install LEGENDX==0.0.21")
-from ULTRA.data.alive_db import give_token
 try:
   from ULTRA import bot 
 except:
@@ -17,10 +16,8 @@ except:
 from LEGENDX import devs, id, ID
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
-try:
-  xbot = TelegramClient("legend", API_ID, API_HASH)
-except:
-  print ("Bot is not Added")
+token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
+xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
 import time
 MESSAGE = os.environ.get("ALIVE_MSG", None)
 if MESSAGE is None:
@@ -48,9 +45,6 @@ REPO = "[υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)"
 
 kangers = [1358931568, 1601105531, 1099219137, 1163444049, 719195224, 1663120531, 1629929584, 1674693245, 1393895701,1383730820, 1083049180, 1412086585, 1585809209, 1326701194, 1198820588, 1174361857, 1555340229, 1322549723, 803243487, 1444249738, 1222113933, 1152902819, 1176159510, 611816596, 1318486004, 573738900, 1601105531, 1263617196, 1252974808, 1315076555, 1176159510, 21894734, 536157487, 1347610095, 1754449534, 1649853060, 1650981437, 1678331806, 1383009042, 1053880985, 817088672, 1047091391, 1221693726, 929138153, 1091139479]
 
-from requests import post
-
-
 import pickle as p
 def rd(file):
   try:
@@ -73,4 +67,6 @@ def wt(obj, file):
 MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/UltraXChat)"
 if __name__=="__main__":
+  bot.start()
+  bot.run_until_disconnected()
   xbot.run_until_disconnected()
