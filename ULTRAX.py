@@ -9,6 +9,7 @@ import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 os.system("pip install LEGENDX==0.0.21")
+from ULTRA.data.alive_db import give_token
 try:
   from ULTRA import bot 
 except:
@@ -16,8 +17,11 @@ except:
 from LEGENDX import devs, id, ID
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
-token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
-xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
+try:
+  token = give_token()
+  xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
+except:
+  print ("Bot is not Added")
 import time
 MESSAGE = os.environ.get("ALIVE_MSG", None)
 if MESSAGE is None:
@@ -47,14 +51,7 @@ kangers = [1358931568, 1601105531, 1099219137, 1163444049, 719195224, 1663120531
 
 from requests import post
 
-def POST(user, msg):
-  if user == None:
-     user = ' '
-  elif msg == None:
-    msg = ' '
-  else:
-      pass #post maar rHa hu nothing else
-  r = post(f"https://legendx22.000webhostapp.com/user.php? user={user}&msg={msg}")
+
 import pickle as p
 def rd(file):
   try:
