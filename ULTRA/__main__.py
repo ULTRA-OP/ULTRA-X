@@ -6,9 +6,10 @@ except:
   from LEGENDX import id, ID, devs
 finally:
   print ("ULTRA X IS STARTING WITH TELETHON") 
+from ULTRAX import xbot
 from ULTRA import bot, CMD_HELP
 from sys import argv
-os.system("pip install telethon==1.19.0")
+os.system("pip install telethon==1.20")
 import sys
 import os
 from ULTRA import bot
@@ -24,7 +25,7 @@ import asyncio
 import traceback
 import os
 import ULTRA.utils
-from .data.alive_db import add_token, give_token, add_grp, get_grp, get_token
+
 os.system("pip install google_trans_new")
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -35,55 +36,12 @@ from ULTRA.utils import load_module, load_pro
 from ULTRA import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
 import asyncio
-from ULTRAX import xbot
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
 import telethon.utils
 try:
   from securex import en, de, ef, df
 except:
   pass
-
-i = 0
-async def botsetup():
-  try:
-    k = await get_token()
-    if k:
-      return
-    async with bot.conversation("botfather") as af:
-      await af.send_message("/newbot")
-      await af.get_response()
-      await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_bot')
-      await af.get_response()
-      await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_Super_Bot')
-      res = (await af.get_response()).text
-      if res.startswith("Sorry"):
-        for x in range(50):
-          await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_{i}_Bot')
-          i += 1
-          k = (await af.get_response()).text
-          if not k.startswith("Sorry"):
-            break
-          else:
-            continue
-        file = open("bot.txt", "w")
-        file.write(k)
-        file.close()
-      else:
-        file = open("bot.txt", "w")
-        file.write(res)
-        file.close()
-      f = open("bot.txt")
-      await add_token(f.readlines()[3])
-      f.close()
-  except Exception as e:
-    print (str(e))
-
-
-
-
-
-
-
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 async def add_bot(bot_token):
     await bot.start(bot_token)
@@ -105,12 +63,11 @@ else:
         ).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
         print("Initialisation finished with no errors")
         print("Starting Userbot")
-        bot.loop.run_until_complete(botsetup())
-        bot.loop.run_until_complete(add_bot(give_token()))
+        bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
         print("Startup Completed")
     else:
         bot.start()
-xbot.start(give_token())
+
 import glob
 
 
@@ -124,15 +81,29 @@ for name in files:
         load_pro(shortname.replace(".py", ""))
 
 
+if  EXTRA_PLUGS == True:
+    os.system("git clone https://github.com/ULTRA-OP/ULTRA_PLUGS.git ./ULTRA/plugins/")
+    path = "ULTRA/plugins/*.py"
+    files = glob.glob(path)
+    for name in files:
+        with open(name) as a:
+            patt = Path(a.name)
+            plugin_name = patt.stem
+            try:
+                load_module(plugin_name.replace(".py", ""))
+                if not plugin_name.startswith("__") or plugin_name.startswith("_"):
+                    print ('INSTALLING ALL MODULES', plugin_name)
+            except:
+                pass
 
-
-path = 'ULTRA/plugins/*.py'
-files = glob.glob(path)
-for name in files:
-  with open(name) as f:
-      path1 = Path(f.name)
-      shortname = path1.stem
-      load_module(shortname.replace(".py", ""))
+else:
+  path = 'ULTRA/plugins/*.py'
+  files = glob.glob(path)
+  for name in files:
+      with open(name) as f:
+          path1 = Path(f.name)
+          shortname = path1.stem
+          load_module(shortname.replace(".py", ""))
 
 
 async def install():
@@ -194,16 +165,8 @@ async def danger(username):
      except:
        xx += 1
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
-bot.loop.run_until_complete(botsetup())
-from ULTRAX import xbot
-try:
-  xbot.start(give_token())
-except:
-  bot.loop.run_until_complete(botsetup())
-else:
-  print ('Error - on Bot setup')
 #bot.loop.run_until_complete(danger("")) # Temporary
-#bot.loop.run_until_complete(legend())
+bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
     
