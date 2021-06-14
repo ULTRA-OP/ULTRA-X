@@ -39,10 +39,10 @@ async def hmm(fuk):
     global ok
     ok = bot.uid
     await fuk.delete()
-    tele_ver = __version__
+    tele_version = __version__
     ALIVE_MESSAGE = f"** ~~ UʟᴛʀᴀX ɪs Uᴘ ᴀɴᴅ Rᴜɴɴɪɴɢ Sᴜᴄᴄᴇssғᴜʟʟʏ ~~ **\n\n"
     ALIVE_MESSAGE += f"✘ 𝘼𝙗𝙤𝙪𝙩 𝙈𝙤𝙞 𝙎𝙮𝙨𝙩𝙚𝙢 𝙖𝙣𝙙 𝙋𝙚𝙧𝙛𝙤𝙧𝙢𝙖𝙣𝙘𝙚 ✘\n\n"
-    ALIVE_MESSAGE += f"➥ **𝑻𝒆𝒍𝒆𝒕𝒉𝒐𝒏 𝑽𝒆𝒓𝒔𝒊𝒐𝒏 :** `{telethon_ver}`\n"
+    ALIVE_MESSAGE += f"➥ **𝑻𝒆𝒍𝒆𝒕𝒉𝒐𝒏 𝑽𝒆𝒓𝒔𝒊𝒐𝒏 :** `{tele_version}`\n"
     ALIVE_MESSAGE += f"➥ **𝑼𝒍𝒕𝒓𝒂𝑿 𝑽𝒆𝒓𝒔𝒊𝒐𝒏 :** `{VERSION}`\n"
     ALIVE_MESSAGE += f"➥ **𝑺𝒖𝒑𝒑𝒐𝒓𝒕 𝑮𝒓𝒐𝒖𝒑 :** [𝐔𝐥𝐭𝐫𝐚𝐗 𝐂𝐡𝐚𝐭](https://t.me/ULTRAXCHAT)\n\n"
     ALIVE_MESSAGE += f"➥ **𝑫𝒆𝒑𝒍𝒐𝒚 :** [𝐅𝐫𝐨𝐦 𝐇𝐞𝐫𝐞](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU&template=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU)\n\n"
