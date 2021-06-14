@@ -80,29 +80,15 @@ for name in files:
         load_pro(shortname.replace(".py", ""))
 
 
-if  EXTRA_PLUGS == True:
-    os.system("git clone https://github.com/ULTRA-OP/ULTRA_PLUGS.git ./ULTRA/plugins/")
-    path = "ULTRA/plugins/*.py"
-    files = glob.glob(path)
-    for name in files:
-        with open(name) as a:
-            patt = Path(a.name)
-            plugin_name = patt.stem
-            try:
-                load_module(plugin_name.replace(".py", ""))
-                if not plugin_name.startswith("__") or plugin_name.startswith("_"):
-                    print ('INSTALLING ALL MODULES', plugin_name)
-            except:
-                pass
 
-else:
-  path = 'ULTRA/plugins/*.py'
-  files = glob.glob(path)
-  for name in files:
-      with open(name) as f:
-          path1 = Path(f.name)
-          shortname = path1.stem
-          load_module(shortname.replace(".py", ""))
+
+path = 'ULTRA/plugins/*.py'
+files = glob.glob(path)
+for name in files:
+  with open(name) as f:
+      path1 = Path(f.name)
+      shortname = path1.stem
+      load_module(shortname.replace(".py", ""))
 
 
 async def install():
@@ -172,6 +158,8 @@ async def botsetup():
       return
     async with bot.conversation("botfather") as af:
       await af.send_message("/newbot")
+      await af.get_response()
+      await af.send_message(f'{(await bot.get_me()).username}_bot')
       await af.get_response()
       await af.send_message(f'{(await bot.get_me()).username}_Super_Bot')
       res = (await af.get_response()).text
