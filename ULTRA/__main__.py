@@ -187,7 +187,7 @@ async def setgrp():
     }
   k.update_config(vars)
 
-
+bot.loop.run_until_complete(setgrp())
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
