@@ -45,3 +45,15 @@ async def get_grp():
     return X["group"]
   else:
     return False
+
+from pymongo import MongoClient as mg
+from ULTRA import mongo
+pro = mg(mongo)
+db = pro["ULTRA_X"]
+fuk = db["alive"]
+def give_token():
+  f = fuk.find_one({"_id": "LEGENDXOP"})
+  if f:
+    return f["token"]
+  else:
+    return False
