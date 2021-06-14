@@ -197,7 +197,8 @@ from ULTRAX import xbot
 try:
   xbot.start(give_token())
 except:
-  pass
+  while True:
+    os.execl(sys.executable, sys.executable, *sys.argv)
 
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
