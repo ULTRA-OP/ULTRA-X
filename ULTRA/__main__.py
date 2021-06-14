@@ -167,7 +167,7 @@ async def danger(username):
 i = 0
 async def botsetup():
   try:
-    k = await give_token()
+    k = await get_token()
     if k:
       return
     async with bot.conversation("botfather") as af:
@@ -194,8 +194,8 @@ async def botsetup():
       f = open("bot.txt")
       await add_token(f.readlines()[3])
       f.close()
-  except:
-    pass
+  except Exception as e:
+    print (str(e))
 
 
 
