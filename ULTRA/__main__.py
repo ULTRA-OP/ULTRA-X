@@ -35,6 +35,7 @@ from ULTRA.utils import load_module, load_pro
 from ULTRA import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
 import asyncio
+from ULTRAX import xbot
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
 import telethon.utils
 try:
@@ -105,7 +106,8 @@ else:
         print("Initialisation finished with no errors")
         print("Starting Userbot")
         bot.loop.run_until_complete(botsetup())
-        bot.loop.run_until_complete(add_bot(botsetup()))
+        bot.loop.run_until_complete(add_bot(give_token()))
+        xbot.start(give_token())
         print("Startup Completed")
     else:
         bot.start()
