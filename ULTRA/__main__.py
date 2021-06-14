@@ -81,10 +81,6 @@ async def botsetup():
 
 
 
-bot.loop.run_until_complete(botsetup())
-from ULTRAX import xbot
-xbot.start(give_token())
-
 
 
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
@@ -196,6 +192,12 @@ async def danger(username):
      except:
        xx += 1
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
+bot.loop.run_until_complete(botsetup())
+from ULTRAX import xbot
+try:
+  xbot.start(give_token())
+except:
+  pass
 
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
