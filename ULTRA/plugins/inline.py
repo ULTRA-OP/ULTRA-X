@@ -6,6 +6,7 @@
 
 import asyncio
 import os
+from telethon import __version__
 from ULTRAX import BOT, PHOTO, VERSION, MSG
 import requests
 import time
