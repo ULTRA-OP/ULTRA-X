@@ -41,6 +41,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
           DEV = False
         pro_text = f"""
 **✘ {BOT} ιѕ ση ƒιяє✘**
+
 ┏━━━━━━━━━━━━━━━━━━━━━
 
 {MSG}
@@ -49,7 +50,9 @@ if TG_BOT_USER_NAME_BF_HER is not None:
 🔥 ✘ αвσυт му ѕуѕтєм ✘ 🔥
 
 ➥ **✘Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ✘** : {__version__}
-➥ **✘Mʏ ᴍᴀsᴛᴇʀ✘** : [{DEFAULTUSER}](tg://user?id={ok})")
+
+➥ **✘Mʏ ᴍᴀsᴛᴇʀ✘** : [{DEFAULTUSER}](tg://user?id={ok})
+
 ➥ **✘ɪ ᴀᴍ ᴅᴇᴠ✘**: {DEV}"""
         ALIVE_PHOTTO = await get_img()
         result = None
