@@ -47,7 +47,7 @@ async def hmm(fuk):
     ALIVE_MESSAGE += f"➥ **𝑺𝒖𝒑𝒑𝒐𝒓𝒕 𝑮𝒓𝒐𝒖𝒑 :** [𝐔𝐥𝐭𝐫𝐚𝐗 𝐂𝐡𝐚𝐭](https://t.me/ULTRAXCHAT)\n\n"
     ALIVE_MESSAGE += f"➥ **𝑫𝒆𝒑𝒍𝒐𝒚 :** [𝐅𝐫𝐨𝐦 𝐇𝐞𝐫𝐞](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU&template=https%3A%2F%2Fgithub.com%2FULTRA-OP%2FHEROKU)\n\n"
     ALIVE_MESSAGE += f"➥ **𝑴𝒐𝒊 𝑩𝒐𝒔𝒔 :** [{DEFAULTUSER}](tg://user?id={ok})\n"
-    ultra = await bot.send_file(fuk.chat_id, file=get_img(),caption=ALIVE_MESSAGE)
+    ultra = await bot.send_file(fuk.chat_id, file=await get_img(),caption=ALIVE_MESSAGE)
 
     await asyncio.sleep(edit_time)
     ultrax = await bot.edit_message(fuk.chat_id, ultra, file=pic2) 
@@ -70,7 +70,7 @@ async def hmm(fuk):
     await asyncio.sleep(edit_time)
     proboyx = await bot.edit_message(fuk.chat_id, proboy, file=pic4)
     await asyncio.speep(5)
-    LEGENDX = await bot.edit_message(fuk.chat_id, proboyx, file=get_img())
+    LEGENDX = await bot.edit_message(fuk.chat_id, proboyx, file=await get_img())
 
 
 # made by madboy482 for ULTRA-X
