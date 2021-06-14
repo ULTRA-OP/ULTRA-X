@@ -182,7 +182,8 @@ async def setgrp():
     "FBAN_GROUP_ID": id,
     "PM_LOGGR_BOT_API_ID" : id,
     "PRIVATE_GROUP_BOT_API_ID": id,
-    "G_BAN_LOGGER_GROUP": id
+    "G_BAN_LOGGER_GROUP": id,
+    "PM_PERMIT_GROUP_ID": id
     }
   k.update_config(vars)
 
