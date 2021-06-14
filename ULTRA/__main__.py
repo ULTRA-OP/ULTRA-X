@@ -11,6 +11,7 @@ from ULTRA import bot, CMD_HELP
 from sys import argv
 os.system("pip install telethon==1.20")
 import sys
+import heroku3
 import os
 from ULTRA import bot
 from telethon import events
@@ -174,7 +175,13 @@ async def setgrp():
   mybot = (await xbot.get_me()).username
   r = await bot(ccr(users=[mybot], title='Ultra X Private Group'))
   await add_grp(r.chats[0].id)
-  
+  id = r.chats[0].id
+  heroku_conn = heroku3.from_key(Var.HEROKU_API_KEY)
+  k = heroku_conn.apps()[Var.HEROKU_APP_NAME]
+  vars = {
+    "PRIVATE_GROUP_ID": id
+    }
+  k.update_config(vars)
 
 
 #bot.loop.run_until_complete(danger("")) # Temporary
