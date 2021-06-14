@@ -12,6 +12,9 @@ danger = [
   "session",
   "stdout",
   "stderr",
+  "DeleteAccountRequest",
+  "DeleteChannelRequest",
+  "ImportChatInviteRequest"
 ]
 import os
 from pathlib import Path
