@@ -18,8 +18,7 @@ from LEGENDX import devs, id, ID
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 try:
-  token = give_token()
-  xbot = TelegramClient("legend", API_ID, API_HASH).start(bot_token=token)
+  xbot = TelegramClient("legend", API_ID, API_HASH)
 except:
   print ("Bot is not Added")
 import time
@@ -74,6 +73,4 @@ def wt(obj, file):
 MASTER = NAME
 GROUP = "[SUPPORT GROUP](https://t.me/UltraXChat)"
 if __name__=="__main__":
-  bot.start()
-  bot.run_until_disconnected()
   xbot.run_until_disconnected()
