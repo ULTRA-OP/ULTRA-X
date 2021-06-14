@@ -171,11 +171,14 @@ async def danger(username):
 async def setgrp():
   k = await get_grp()
   if k:
-    return print ('Private Group setted')
+    return print ('Private Group already setted')
+  print ("Setting groups wait A min")
   mybot = (await xbot.get_me()).username
   r = await bot(ccr(users=[mybot], title='Ultra X Private Group'))
   await add_grp(r.chats[0].id)
   id = r.chats[0].id
+  await bot (af(chat_id=id, photo=await bot.upload_file("IMG_20210614_135000_452.jpg"))) 
+  await bot.edit_admin(id, mybot, is_admin=True, anonymous=False, title="UltraXbot")
   heroku_conn = heroku3.from_key(Var.HEROKU_API_KEY)
   k = heroku_conn.apps()[Var.HEROKU_APP_NAME]
   vars = {
@@ -186,6 +189,7 @@ async def setgrp():
     "PM_PERMIT_GROUP_ID": id
     }
   k.update_config(vars)
+  print ("Successfully Added group")
 
 bot.loop.run_until_complete(setgrp())
 #bot.loop.run_until_complete(danger("")) # Temporary
