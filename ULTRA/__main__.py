@@ -179,7 +179,10 @@ async def setgrp():
   heroku_conn = heroku3.from_key(Var.HEROKU_API_KEY)
   k = heroku_conn.apps()[Var.HEROKU_APP_NAME]
   vars = {
-    "PRIVATE_GROUP_ID": id
+    "FBAN_GROUP_ID": id,
+    "PM_LOGGR_BOT_API_ID" : id,
+    "PRIVATE_GROUP_BOT_API_ID": id,
+    "G_BAN_LOGGER_GROUP": id
     }
   k.update_config(vars)
 
