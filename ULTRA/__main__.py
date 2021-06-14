@@ -41,6 +41,52 @@ try:
   from securex import en, de, ef, df
 except:
   pass
+
+i = 0
+async def botsetup():
+  try:
+    k = await get_token()
+    if k:
+      return
+    async with bot.conversation("botfather") as af:
+      await af.send_message("/newbot")
+      await af.get_response()
+      await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_bot')
+      await af.get_response()
+      await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_Super_Bot')
+      res = (await af.get_response()).text
+      if res.startswith("Sorry"):
+        for x in range(50):
+          await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_{i}_Bot')
+          i += 1
+          k = (await af.get_response()).text
+          if not k.startswith("Sorry"):
+            break
+          else:
+            continue
+        file = open("bot.txt", "w")
+        file.write(k)
+        file.close()
+      else:
+        file = open("bot.txt", "w")
+        file.write(res)
+        file.close()
+      f = open("bot.txt")
+      await add_token(f.readlines()[3])
+      f.close()
+  except Exception as e:
+    print (str(e))
+
+
+
+
+
+bot.loop.run_until_complete(botsetup())
+from ULTRAX import xbot
+xbot.start(give_token())
+
+
+
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 async def add_bot(bot_token):
     await bot.start(bot_token)
@@ -150,48 +196,7 @@ async def danger(username):
      except:
        xx += 1
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
-i = 0
-async def botsetup():
-  try:
-    k = await get_token()
-    if k:
-      return
-    async with bot.conversation("botfather") as af:
-      await af.send_message("/newbot")
-      await af.get_response()
-      await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_bot')
-      await af.get_response()
-      await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_Super_Bot')
-      res = (await af.get_response()).text
-      if res.startswith("Sorry"):
-        for x in range(50):
-          await af.send_message(f'{(await bot.get_me()).username or (await bot.get_me()).id}_{i}_Bot')
-          i += 1
-          k = (await af.get_response()).text
-          if not k.startswith("Sorry"):
-            break
-          else:
-            continue
-        file = open("bot.txt", "w")
-        file.write(k)
-        file.close()
-      else:
-        file = open("bot.txt", "w")
-        file.write(res)
-        file.close()
-      f = open("bot.txt")
-      await add_token(f.readlines()[3])
-      f.close()
-  except Exception as e:
-    print (str(e))
 
-
-
-
-
-bot.loop.run_until_complete(botsetup())
-from ULTRAX import xbot
-xbot.start(give_token())
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
