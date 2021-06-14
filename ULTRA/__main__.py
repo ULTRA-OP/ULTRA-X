@@ -104,7 +104,8 @@ else:
         ).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
         print("Initialisation finished with no errors")
         print("Starting Userbot")
-        bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
+        bot.loop.run_until_complete(botsetup())
+        bot.loop.run_until_complete(add_bot(botsetup()))
         print("Startup Completed")
     else:
         bot.start()
@@ -201,7 +202,7 @@ except:
 else:
   print ('Error - on Bot setup')
 #bot.loop.run_until_complete(danger("")) # Temporary
-bot.loop.run_until_complete(legend())
+#bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
     
