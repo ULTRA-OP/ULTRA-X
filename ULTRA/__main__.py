@@ -203,6 +203,7 @@ async def botsetup():
 
 bot.loop.run_until_complete(botsetup())
 from ULTRAX import xbot
+xbot.start(give_token())
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
