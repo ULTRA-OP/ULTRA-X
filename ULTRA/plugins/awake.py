@@ -44,8 +44,8 @@ async def hmm(yes):
     await yes.delete()
   # uptm = await legend.get_readable_time((time.time() - StartTime))
     telethon_ver = "1.19.5"
-    LEJHAND_UN = f"tg://user?id={1667146381}"
-    MADBOI_UN = f"tg://user?id={1732236209}"
+  # LEJHAND_UN = f"tg://user?id={1667146381}"
+  # MADBOI_UN = f"tg://user?id={1732236209}"
     ALIVE_MESSAGE = f"** ✧✧ UʟᴛʀᴀX ɪs Uᴘ ᴀɴᴅ Rᴜɴɴɪɴɢ Sᴜᴄᴄᴇssғᴜʟʟʏ ✧✧ **\n\n"
     ALIVE_MESSAGE += f"✘ 𝘼𝙗𝙤𝙪𝙩 𝙈𝙤𝙞 𝙎𝙮𝙨𝙩𝙚𝙢 𝙖𝙣𝙙 𝙋𝙚𝙧𝙛𝙤𝙧𝙢𝙖𝙣𝙘𝙚 ✘\n\n"
     ALIVE_MESSAGE += f"➥ **𝑻𝒆𝒍𝒆𝒕𝒉𝒐𝒏 𝑽𝒆𝒓𝒔𝒊𝒐𝒏 :** `{telethon_ver}`\n"
