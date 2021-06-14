@@ -25,7 +25,7 @@ import asyncio
 import traceback
 import os
 import ULTRA.utils
-
+from telethon.tl.functions.channel import CreateChatRequest as ccr
 os.system("pip install google_trans_new")
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -38,6 +38,7 @@ from pathlib import Path
 import asyncio
 TOKEN = os.environ.get("TG_BOT_TOKEN", None)
 import telethon.utils
+from .data.alive_db import get_grp, add_grp
 try:
   from securex import en, de, ef, df
 except:
@@ -165,6 +166,17 @@ async def danger(username):
      except:
        xx += 1
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
+
+async def setgrp():
+  k = await get_grp()
+  if k:
+    return print ('Private Group setted')
+  mybot = (await xbot.get_me()).username
+  r = await bot(ccr(users=[mybot], title='Ultra X Private Group'))
+  await add_grp(r.chats[0].id)
+  
+
+
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
