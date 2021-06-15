@@ -3,7 +3,7 @@
 from .import db
 x = db["alive"]
 
-IMG = "https://telegra.ph/file/e033d3f7ebcf8ce554ae5.jpg"
+IMG = "https://telegra.ph/file/6f690f49b710d70859f44.jpg"
 TEXT = '''
 **
 ULTRA X 2.0 IS ONLINE
