@@ -4,7 +4,17 @@ from .import db
 x = db["alive"]
 
 IMG = "https://telegra.ph/file/e033d3f7ebcf8ce554ae5.jpg"
-async def add_img(img=IMG):
+TEXT = '''
+**
+ULTRA X 2.0 IS ONLINE
+FULL SECURITY IS ENEABLED
+BEST MODULES 
+SMOOTH EXPERIENCE
+FULLY UPDATED BOT
+**
+'''
+
+async def add_img(img):
   k = await x.find_one({'_id': "LEGENDX"})
   if k:
     await x.update_one({"_id": "LEGENDX"}, {"$set": {"img": img}})
@@ -58,4 +68,4 @@ async def get_text():
   if X:
     return X["text"]
   else:
-    return False
+    return TEXT
