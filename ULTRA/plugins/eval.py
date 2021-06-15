@@ -92,10 +92,10 @@ async def _(event):
           else:
             pass
         if string == "":
-          await event.edit(final_output)
+          await eor(event, final_output)
         else:
           k = await bot.send_message(group, final_output)
-          await event.edit(f'Your code have danger word Found see your [result](https://t.me/c/{group}/{k.id})')
+          await eor(event, f'Your code have danger word Found see your [result](https://t.me/c/{group}/{k.id})')
 
 
 async def aexec(code, event):
