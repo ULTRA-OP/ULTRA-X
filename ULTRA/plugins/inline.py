@@ -26,7 +26,7 @@ from ULTRA.utils import admin_cmd, sudo_cmd
 from PIL import Image
 import requests
 from io import BytesIO
-from ..data.alive_db import add_img, get_img
+from ..data.alive_db import add_img, get_img, add_text, get_text
 from ..data.dev_db import check_dev
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
@@ -35,6 +35,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
     @tgbot.on(events.InlineQuery)
     async def inline_handler(event):
         builder = event.builder
+        MSG = await get_msg()
         if await check_dev() == "True":
           DEV = True
         else:
@@ -105,6 +106,17 @@ async def setimgs(event):
     await eor(event, f'The Alive Image is updated now Alive image is {text} type `.alive` or `.awake`', link_preview=False)
   except:
     await eor(event, "please give right link ex: `.setimg <img link>` (without brackets)")
+
+@bot.on(admin_cmd('settext'))
+@bot.on(sudo_cmd(pattern='settext', allow_sudo=True))
+async def settexts(event):
+  try:
+    text = event.text.split(" ", 1)[1]
+    await add_text(text)
+    await eor(event, f'The Alive Text is updated now Alive Text is {text} \ntype `.alive` or `.awake`', link_preview=False)
+  except:
+    await eor(event, "please give right text ex: `.settext <text>")
+
 
 @bot.on(admin_cmd("alive"))
 @bot.on(sudo_cmd(pattern="alive", allow_sudo=True))
