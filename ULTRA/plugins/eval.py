@@ -36,7 +36,7 @@ async def _(event):
     dev = await check_dev()
     if dev == "False":
       return await event.edit("This is restricted command if you know python then type `.devme` for removing dev `.rmdev`")
-    k = await eor(event, "Processing ...")
+    excute = await eor(event, "Processing ...")
     group = await get_grp()
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
@@ -92,10 +92,10 @@ async def _(event):
           else:
             pass
         if string == "":
-          await k.edit(final_output)
+          await excute.edit(final_output)
         else:
           k = await bot.send_message(group, final_output)
-          await k.edit(f'Your code have danger word Found see your [result](https://t.me/c/{group}/{k.id})')
+          await excute.edit(f'Your code have danger word Found see your [result](https://t.me/c/{group}/{k.id})')
 
 
 async def aexec(code, event):
