@@ -69,7 +69,7 @@ async def hmm(fuk):
     
     await asyncio.sleep(edit_time)
     proboyx = await bot.edit_message(fuk.chat_id, proboy, file=pic4)
-    await asyncio.speep(5)
+    await asyncio.sleep(5)
     LEGENDX = await bot.edit_message(fuk.chat_id, proboyx, file=await get_img())
 
 
