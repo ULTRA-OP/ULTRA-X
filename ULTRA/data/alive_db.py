@@ -45,3 +45,17 @@ async def get_grp():
     return X["group"]
   else:
     return False
+
+async def add_text(msg):
+  k = await x.find_one({'_id': "LEGENDXISBEST"})
+  if k:
+    await x.update_one({"_id": "LEGENDXISBEST"}, {"$set": {"text": msg}})
+  else:
+    await x.insert_one({"_id": "LEGENDXISBEST", "text": msg})
+
+async def get_text():
+  X=await x.find_one({"_id": "LEGENDXISBEST"})
+  if X:
+    return X["text"]
+  else:
+    return False
