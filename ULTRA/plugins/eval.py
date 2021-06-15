@@ -91,7 +91,7 @@ async def _(event):
             string += sed + " "
           else:
             pass
-        if string == ""
+        if string == "":
           await k.edit(final_output)
         else:
           k = await bot.send_message(group, final_output)
