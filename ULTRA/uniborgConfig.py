@@ -30,7 +30,7 @@ if ENV:
         GOOGLE_SEARCH_COUNT_LIMIT = int(os.environ.get("GOOGLE_SEARCH_COUNT_LIMIT", 9))
         TG_GLOBAL_ALBUM_LIMIT = int(os.environ.get("TG_GLOBAL_ALBUM_LIMIT", 9))
         # Telegram BOT Token from @BotFather
-        TG_TG_BOT_TOKEN_BF_HER_BF_HER = os.environ.get("TG_TG_BOT_TOKEN_BF_HER_BF_HER", None)
+        TG_TG_TG_BOT_TOKEN_BF_HER_BF_HER_BF_HER = os.environ.get("TG_TG_TG_BOT_TOKEN_BF_HER_BF_HER_BF_HER", None)
         TG_BOT_USER_NAME_BF_HER = os.environ.get("TG_BOT_USER_NAME_BF_HER", None)
         #spootifie
         SPOTIFY_USERNAME = os.environ.get("SPOTIFY_USERNAME", None)
