@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "BOT_USERNAME"
+          find: "BOT_TOKEN"
 
-          replace: "TG_BOT_USER_NAME_BF_HER"
+          replace: "TG_BOT_TOKEN_BF_HER"
 
       - name: Create Pull Request
 
