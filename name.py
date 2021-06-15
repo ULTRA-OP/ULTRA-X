@@ -95,7 +95,7 @@ async def f(event):
     rip = await check_him(channel, event.sender_id)
     if rip is False:
        await bot.send_message(event.chat_id, f"join [group]({grp})", link_preview=False)
-       LEGENDX = Var.BOT_USERNAME
+       LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
        await bot(EditBannedRequest(event.chat_id, event.sender_id, MUTE_RIGHTS))
        response = await bot.inline_query(LEGENDX, "LEGENDX")
        await response[0].click(event.chat_id)

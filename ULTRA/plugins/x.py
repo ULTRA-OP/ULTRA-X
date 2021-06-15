@@ -25,7 +25,7 @@ from . import id
 # Back, Open, Close, Next, Previous button ka copyright hai, kang kia to lode lga dunga gend m😒😒, Fork kr le krna hai to, kang mat krna bhul ke bhi nhi to tu..
 # ..nhi janta legend kitna harami and chutiya hai !
 
-if Var.BOT_USERNAME is not None and tgbot is not None:
+if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 
 # 🇦 🇦 🇵     🇾 🇦 🇭 🇦    🇦 🇦 🇾 🇪    🇰 🇮 🇸     🇱 🇮 🇾 🇪 ??
 

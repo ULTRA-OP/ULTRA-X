@@ -90,7 +90,7 @@ async def _(event):
     if event.fwd_from:
         return
     ALIVE_NAME = DEFAULTUSER
-    TG_BOT_USER_NAME = Config.BOT_USERNAME
+    TG_BOT_USER_NAME = Config.TG_BOT_USER_NAME_BF_HER
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
@@ -108,10 +108,10 @@ async def _(event):
     event = await edit_or_reply(event, "<i><b>☞ Tong!</b></i>", "html")
     end = datetime.now()
     ALIVE_NAME = DEFAULTUSER
-    TG_BOT_USERNAME = Config.BOT_USERNAME
+    TG_TG_BOT_USER_NAME_BF_HER = Config.TG_BOT_USER_NAME_BF_HER
     ms = (end - start).microseconds / 1000
     await eor(event,
-        f"<i><b>☞ Tong !!</b></i>\n➥ {ms} ms\n➥ <i><b>Bot of: {ALIVE_NAME}</b></i>\n➥ <i><b>Assistant: {TG_BOT_USERNAME}</b></i>",
+        f"<i><b>☞ Tong !!</b></i>\n➥ {ms} ms\n➥ <i><b>Bot of: {ALIVE_NAME}</b></i>\n➥ <i><b>Assistant: {TG_TG_BOT_USER_NAME_BF_HER}</b></i>",
         parse_mode="html",
     )
     
