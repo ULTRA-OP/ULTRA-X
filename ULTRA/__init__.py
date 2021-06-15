@@ -13,6 +13,8 @@ except:
   os.system("pip install -U py-secure")
   import securex
 
+BOT_USERNAME = os.envrion["TG_BOT_USER_NAME_BF_HER"]
+BOT_TOKEN = os.environ["TG_BOT_TOKEN_BF_HER"]
 StartTime = time.time()
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
