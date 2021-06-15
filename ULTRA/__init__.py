@@ -13,7 +13,7 @@ except:
   os.system("pip install -U py-secure")
   import securex
 
-BOT_USERNAME = os.envrion["TG_BOT_USER_NAME_BF_HER"]
+BOT_USERNAME = os.environ["TG_BOT_USER_NAME_BF_HER"]
 TG_TG_BOT_TOKEN_BF_HER_BF_HER = os.environ["TG_TG_TG_BOT_TOKEN_BF_HER_BF_HER_BF_HER"]
 StartTime = time.time()
 os.system("pip install --upgrade pip")
