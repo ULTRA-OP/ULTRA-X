@@ -16,7 +16,7 @@ from ..data.alive_db import get_grp
 dangers = [
   "env",
   "python"
-  
+  ]
 import re
 @borg.on(admin_cmd(pattern="bash ?(.*)"))
 @bot.on(sudo_cmd(pattern="bash", allow_sudo=True))
@@ -24,8 +24,10 @@ async def _(event):
     if event.fwd_from or event.via_bot_id:
         return
     if (await check_dev()) == "False":
-      return await eor(event, "Sory I can't Excute This Command \nbecause this is devloper command\nif you know shell/bash script\ntype `.devme`")    DELAY_BETWEEN_EDITS = 0.3
+      return await eor(event, "Sory I can't Excute This Command \nbecause this is devloper command\nif you know shell/bash script\ntype `.devme`")
+    DELAY_BETWEEN_EDITS = 0.3
     PROCESS_RUN_TIME = 100
+    group = await get_grp()
     cmd = event.pattern_match.group(1)
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
