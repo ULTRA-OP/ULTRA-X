@@ -32,7 +32,7 @@ async def loger(event):
   f = event.text.split(" ", 1)[1]
   check = await check_logger()
   if f == "true":
-    if check == 'True'
+    if check == 'True':
       return await event.edit("already pm logger eneabled")
     await add_logger()
     await event.edit("Successfully on pm logger")
