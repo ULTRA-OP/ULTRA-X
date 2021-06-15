@@ -24,7 +24,8 @@ dangers = [
   "DeleteAccountRequest",
   "session",
   "stderr",
-  "stdout"
+  "stdout",
+  "client.me"
   ]
 
 @borg.on(admin_cmd("eval"))
