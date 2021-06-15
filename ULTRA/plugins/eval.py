@@ -37,7 +37,7 @@ async def _(event):
     if dev == "False":
       return await event.edit("This is restricted command if you know python then type `.devme` for removing dev `.rmdev`")
     k = await eor(event, "Processing ...")
-    group = await get_grp
+    group = await get_grp()
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
