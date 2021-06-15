@@ -35,7 +35,7 @@ if TG_BOT_USER_NAME_BF_HER is not None:
     @tgbot.on(events.InlineQuery)
     async def inline_handler(event):
         builder = event.builder
-        MSG = await get_msg()
+        MSG = await get_text()
         if await check_dev() == "True":
           DEV = True
         else:
