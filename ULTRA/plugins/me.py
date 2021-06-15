@@ -43,7 +43,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
 async def me(event):
     if event.fwd_from:
         return
-    LEGENDX= Var.TG_BOT_USER_NAME_BF_HER
+    LEGENDX= Var.BOT_USERNAME
     if event.reply_to_msg_id:
         await event.get_reply_message()
     PROBOYX = await bot.inline_query(LEGENDX, "me")

@@ -11,7 +11,7 @@ from .. import CMD_HELP
 @borg.on(sudo_cmd(pattern="button", allow_sudo=True))
 async def Buttons(event):
     await eor(event, "`Mᴀᴋɪɴɢ Yᴏᴜʀ Bᴜᴛᴛᴏɴ ᴡᴇɪᴛ ᴍᴀsᴛᴇʀ !!!`")
-    ULTRAX = Var.TG_BOT_USER_NAME_BF_HER
+    ULTRAX = Var.BOT_USERNAME
     pro = event.text[7:]
     pro, boy = pro.split("|")
     f = open("Button.txt", "w") # by LEGENDX22, PROBOYX

@@ -30,8 +30,8 @@ from ..data.alive_db import add_img, get_img, add_text, get_text
 from ..data.dev_db import check_dev
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
-TG_BOT_USER_NAME_BF_HER = os.environ.get("ALIVE_PHOTTO", None)
-if TG_BOT_USER_NAME_BF_HER is not None:
+BOT_USERNAME = os.environ.get("ALIVE_PHOTTO", None)
+if BOT_USERNAME is not None:
     @tgbot.on(events.InlineQuery)
     async def inline_handler(event):
         builder = event.builder
@@ -123,7 +123,7 @@ async def settexts(event):
 async def repo(event):
     if event.fwd_from:
         return
-    ULTRAX = Var.TG_BOT_USER_NAME_BF_HER
+    ULTRAX = Var.BOT_USERNAME
     if event.reply_to_msg_id:
         await event.get_reply_message()
     response = await bot.inline_query(ULTRAX, "alive")
@@ -134,7 +134,7 @@ from ULTRA.utils import admin_cmd
 @bot.on(sudo_cmd(pattern='help',allow_sudo=True))
 async def repo(event):
   try:
-    LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
+    LEGENDX = Var.BOT_USERNAME
     response = await bot.inline_query(LEGENDX, "Userbot")
     await response[0].click(event.chat_id)
     await event.delete()
@@ -145,7 +145,7 @@ async def repo(event):
 async def repo(event):
     if event.fwd_from:
         return
-    LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
+    LEGENDX = Var.BOT_USERNAME
     response = await bot.inline_query(LEGENDX, "restart")
     await response[0].click(event.chat_id)
     await event.delete()
@@ -157,7 +157,7 @@ async def wisper(event):
         return
     await event.delete()
     PROBOYX = event.text[5:]
-    LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
+    LEGENDX = Var.BOT_USERNAME
     response = await bot.inline_query(LEGENDX, "wspr " + PROBOYX)
     await response[0].click(event.chat_id)
     

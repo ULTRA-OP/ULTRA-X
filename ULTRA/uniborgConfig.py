@@ -31,7 +31,7 @@ if ENV:
         TG_GLOBAL_ALBUM_LIMIT = int(os.environ.get("TG_GLOBAL_ALBUM_LIMIT", 9))
         # Telegram BOT Token from @BotFather
         BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
-        TG_BOT_USER_NAME_BF_HER = os.environ.get("TG_BOT_USER_NAME_BF_HER", None)
+        BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
         #spootifie
         SPOTIFY_USERNAME = os.environ.get("SPOTIFY_USERNAME", None)
         SPOTIFY_PASS = os.environ.get("SPOTIFY_PASS", None)

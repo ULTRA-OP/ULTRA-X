@@ -7,7 +7,7 @@ from ULTRA import bot
 from ULTRAX import xbot
 from ULTRA import CMD_HELP
 
-BOT_USERNAME = Var.TG_BOT_USER_NAME_BF_HER
+BOT_USERNAME = Var.BOT_USERNAME
 
 # made by madboy
 # kang mat kr lawde
