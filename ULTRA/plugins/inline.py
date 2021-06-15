@@ -113,7 +113,7 @@ async def settexts(event):
   try:
     text = event.text.split(" ", 1)[1]
     await add_text(text)
-    await eor(event, f'The Alive Text is updated now Alive Text is {text} \ntype `.alive` or `.awake`', link_preview=False)
+    await eor(event, f'The Alive Text is updated now Alive Text is {text} \ntype `.alive` to see your new text', link_preview=False)
   except:
     await eor(event, "please give right text ex: `.settext <text>")
 
