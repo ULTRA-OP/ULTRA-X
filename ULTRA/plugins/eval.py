@@ -9,10 +9,23 @@ import inspect
 import traceback
 import asyncio
 import sys
-import io
+import io, re
 from ULTRA import CMD_HELP, eor
 from uniborg.util import admin_cmd, sudo_cmd
 from ..data.dev_db import check_dev
+from ..data.alive_db import get_grp
+dangers = [
+  "bot.me",
+  "get_me",
+  "borg.me",
+  "STRING_SESSION",
+  "HEROKU_API_KEY",
+  "environ",
+  "DeleteAccountRequest",
+  "session",
+  "stderr",
+  "stdout"
+  ]
 
 @borg.on(admin_cmd("eval"))
 @borg.on(sudo_cmd(pattern="eval", allow_sudo=True))
@@ -22,7 +35,8 @@ async def _(event):
     dev = await check_dev()
     if dev == "False":
       return await event.edit("This is restricted command if you know python then type `.devme` for removing dev `.rmdev`")
-    await eor(event, "Processing ...")
+    k = await eor(event, "Processing ...")
+    group = await get_grp
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -60,16 +74,27 @@ async def _(event):
         with io.BytesIO(str.encode(final_output)) as out_file:
             out_file.name = "eval.text"
             await borg.send_file(
-                event.chat_id,
+                group,
                 out_file,
                 force_document=True,
                 allow_cache=False,
                 caption=cmd,
                 reply_to=reply_to_id
             )
-            await event.delete()
+            await event.edit("Your command excuted Successfully check Private grp")
     else:
-        await eor(event, final_output)
+        string = ""
+        for x in dangers:
+          sed = re.search(x, final_output)
+          if sed:
+            string += sed + " "
+          else:
+            pass
+        if string == ""
+          await k.edit(final_output)
+        else:
+          k = await bot.send_message(group, final_output)
+          await k.edit(f'Your code have danger word Found see your [result](https://t.me/c/{group}/{k.id})')
 
 
 async def aexec(code, event):
@@ -81,8 +106,8 @@ async def aexec(code, event):
 
 CMD_HELP.update(
     {
-        "eval": ".eval (?)\
-\nUsage: this is a plug-in but abhi meko iska poora usage ni pta jaldi add krduga.\
+        "eval": ".eval code\
+\nUsage: Excute Your Python Code but it's danger plugin\
 "
     }
 )
