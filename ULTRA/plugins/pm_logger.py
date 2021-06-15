@@ -32,8 +32,10 @@ async def loger(event):
   f = event.text.split(" ", 1)[1]
   if f == "true":
     await add_logger()
+    await event.edit("Successfully on pm logger")
   elif f == "false":
     await rm_logger()
+    await event.edit("Successfully removed pm logger")
   else:
     await event.edit("It's Wrong Syntax ex: `.setlogger true or .setlogger false`")
 @register(outgoing=True, pattern=r"^.save(?: |$)([\s\S]*)")
@@ -60,7 +62,7 @@ async def log(log_text):
 @borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def monito_p_m_s(event):
     sender = await event.get_sender()
-    check = await check_logger
+    check = await check_logger()
     if check == "False":
       return
     if Config.NC_LOG_P_M_S and not sender.bot:
