@@ -88,7 +88,7 @@ async def _(event):
         for x in dangers:
           sed = re.search(x, final_output)
           if sed:
-            string += sed + " "
+            string += x + " "
           else:
             pass
         if string == "":
