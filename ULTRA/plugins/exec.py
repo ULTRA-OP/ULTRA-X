@@ -71,4 +71,4 @@ async def _(event):
         await event.edit(OUTPUT)
       else:
         pro = await bot.send_message(group, OUTPUT)
-        await event.edit(f'your command have danger word ~{string}~\nsee your [result](https://t.me/c/{group}/{pro.id})')
+        await event.edit(f'your command have danger word \nsee your [result](https://t.me/c/{group}/{pro.id})')
