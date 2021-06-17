@@ -16,6 +16,8 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from or event.via_bot_id:
         return
+    if "LEGENDX" == "LEGENDX":
+      return await event.edit("please update your bot into versio 2.0 go to @UltraXchaT for help")
     DELAY_BETWEEN_EDITS = 0.3
     PROCESS_RUN_TIME = 100
     cmd = event.pattern_match.group(1)
