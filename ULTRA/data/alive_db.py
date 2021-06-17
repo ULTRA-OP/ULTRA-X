@@ -28,6 +28,21 @@ async def get_img():
   else:
     return IMG
 
+
+async def pm_img(img):
+  k = await x.find_one({'_id': "UltraX"})
+  if k:
+    await x.update_one({"_id": "UltraX"}, {"$set": {"img": img}})
+  else:
+    await x.insert_one({"_id": "UltraX", "img": img})
+
+async def get_pm_img():
+  X=await x.find_one({"_id": "UltraX"})
+  if X:
+    return X["img"]
+  else:
+    return IMG
+
 async def add_token(token):
   k = await x.find_one({'_id': "LEGENDXOP"})
   if k:
@@ -57,13 +72,27 @@ async def get_grp():
     return False
 
 async def add_text(msg):
+  k = await x.find_one({'_id': "ULTRA"})
+  if k:
+    await x.update_one({"_id": "ULTRA"}, {"$set": {"text": msg}})
+  else:
+    await x.insert_one({"_id": "ULTRA", "text": msg})
+
+async def get_text():
+  X=await x.find_one({"_id": "ULTRA"})
+  if X:
+    return X["text"]
+  else:
+    return TEXT
+
+async def pm_text(msg):
   k = await x.find_one({'_id': "LEGENDXISBEST"})
   if k:
     await x.update_one({"_id": "LEGENDXISBEST"}, {"$set": {"text": msg}})
   else:
     await x.insert_one({"_id": "LEGENDXISBEST", "text": msg})
 
-async def get_text():
+async def get_pm_text():
   X=await x.find_one({"_id": "LEGENDXISBEST"})
   if X:
     return X["text"]
