@@ -48,7 +48,7 @@ async def inline_legend(event):
     WARN = pm_text
   else:
     pass
-  ULTRA_PIC = await pm_img()
+  ULTRA_PIC = await get_pm_img()
   if event.sender_id == bot.me.id and piro == 'pmsecurity' or event.sender_id==id and piro=='pmpermit':
     LEGENDX = event.builder
     LEGEND = [[Button.inline("Fʀɪᴇɴᴅ", data='frnd_bsdk'),Button.inline("Sᴘᴀᴍ", data='hmmmmm')]]
