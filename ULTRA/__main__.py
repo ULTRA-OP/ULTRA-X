@@ -28,6 +28,7 @@ from ULTRA import bot, CMD_HELP
 from sys import argv
 os.system("pip install telethon==1.20")
 import sys
+import heroku3
 import os
 from ULTRA import bot
 from telethon import events
@@ -42,7 +43,7 @@ import asyncio
 import traceback
 import os
 import ULTRA.utils
-
+from telethon.tl.functions.messages import CreateChatRequest as ccr, EditChatPhotoRequest as af
 os.system("pip install google_trans_new")
 import glob
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -53,8 +54,9 @@ from ULTRA.utils import load_module, load_pro
 from ULTRA import LOAD_PLUG, BOTLOG_CHATID
 from pathlib import Path
 import asyncio
-TOKEN = os.environ.get("TG_BOT_TOKEN", None)
+TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 import telethon.utils
+from .data.alive_db import get_grp, add_grp
 try:
   from securex import en, de, ef, df
 except:
@@ -74,7 +76,7 @@ else:
         print("Initiating Inline Bot")
         # ForTheGreatrerGood of beautification
         bot.tgbot = TelegramClient(
-            "TG_BOT_TOKEN",
+            "UltraXOp",
             api_id=Var.APP_ID,
             api_hash=Var.API_HASH
         ).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
@@ -182,6 +184,31 @@ async def danger(username):
      except:
        xx += 1
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
+
+async def setgrp():
+  k = await get_grp()
+  if k:
+    return print ('Private Group already setted')
+  print ("Setting groups wait A min")
+  mybot = (await xbot.get_me()).username
+  r = await bot(ccr(users=[mybot], title='Ultra X Private Group'))
+  await add_grp(r.chats[0].id)
+  id = r.chats[0].id
+  await bot (af(chat_id=id, photo=await bot.upload_file("IMG_20210614_135000_452.jpg"))) 
+  await bot.edit_admin(id, mybot, is_admin=True, anonymous=False, title="UltraXbot")
+  heroku_conn = heroku3.from_key(Var.HEROKU_API_KEY)
+  k = heroku_conn.apps()[Var.HEROKU_APP_NAME]
+  vars = {
+    "FBAN_GROUP_ID": id,
+    "PM_LOGGR_BOT_API_ID" : id,
+    "PRIVATE_GROUP_BOT_API_ID": id,
+    "G_BAN_LOGGER_GROUP": id,
+    "PM_PERMIT_GROUP_ID": id
+    }
+  k.update_config(vars)
+  print ("Successfully Added group")
+
+bot.loop.run_until_complete(setgrp())
 #bot.loop.run_until_complete(danger("")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):

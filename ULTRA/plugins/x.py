@@ -12,7 +12,7 @@ import os,re
 import urllib
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions
-from ULTRA import CMD_LIST, CMD_HELP
+from ULTRA import CMD_LIST, CMD_HELP, SUDO_USERS as sudos
 import io
 #ABEE O KANGER, BACK OPEN CLOSE BTN KANG KIYA TO YE CODE CHIPKA DENA AUR GLOBALS K BINA NAHI CHALAGA aur global 5 jgah diff name and manipulation se imported hai 
 #Making The Back Command Was The Toughest Work #by @Shivam_Patel,@The_Siddharth_Nigam,@danish_00,@ProgrammingError also v changed Pop up or inline help to text
@@ -36,7 +36,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"open")))
    
     async def opner(event):
-            if event.query.user_id == bot.uid or event.query.user_id == id:
+            if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudo:
                 current_page_number=0
                 dc = paginate_help(current_page_number, CMD_LIST, "helpme")
                 await event.edit("`>>>\n\nOᴘᴇɴᴇᴅ ᴛʜᴇ Mᴀɪɴ Mᴇɴᴜ ғᴏʀ \n© υℓтяα χ` ", buttons=dc)
@@ -63,7 +63,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         data=re.compile(b"helpme_next\((.+?)\)")
     ))#hehe
     async def on_plug_in_callback_query_handler(event):
-        if event.query.user_id == bot.uid or event.query.user_id == id:  # pylint:disable=E0602
+        if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudos:  # pylint:disable=E0602
             current_page_number = int(
                 event.data_match.group(1).decode("UTF-8"))
             
@@ -79,7 +79,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         data=re.compile(b"helpme_prev\((.+?)\)")
     ))
     async def on_plug_in_callback_query_handler(event):
-        if event.query.user_id == bot.uid or event.query.user_id == id:  # pylint:disable=E0602
+        if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudos:  # pylint:disable=E0602
             current_page_number = int(
                 event.data_match.group(1).decode("UTF-8"))
             
@@ -96,7 +96,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
  #hehehehehhehhehhehe   
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
-        if event.query.user_id == bot.uid or event.query.user_id == id:
+        if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudos:
             danish = custom.Button.inline("✞✞ 𝐎𝐩𝐞𝐧 𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮 ✞✞", data="open")
             await event.edit("**Mᴀɪɴ Mᴇɴᴜ ᴡᴀs ᴄʟᴏsᴇᴅ**", buttons=danish)
         else:
@@ -111,7 +111,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         )
     )
     async def on_plug_in_callback_query_handler(event):
-        if event.sender_id == bot.me.id or event.sender_id == id:
+        if event.sender_id == bot.me.id or event.sender_id == id or event.sender_id in sudos:
             pass
         else:
             pro= "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !"
@@ -138,14 +138,14 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             "\n\n__Cʟɪᴄᴋ Oɴ Tʜᴇ Bᴜᴛᴛᴏɴs Bᴇʟᴏᴡ Tᴏ Lᴏᴀᴅ Oʀ Uɴʟᴏᴀᴅ Pʟᴜɢɪɴs..Rᴇᴘᴏʀᴛ Us Iғ Yᴏᴜ Fɪɴᴅ Aɴʏ Bᴜɢ__\n\n**© @UltraXOT**".format(plugin_name)
         )
         try:
-            if event.query.user_id == bot.uid or event.query.user_id == id:
+            if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudos:
                 dc = [custom.Button.inline( " ⁂ ✪ 𝐁𝐚𝐜𝐤 ✪ ⁂ ",data="back({})".format(shivam)),custom.Button.inline(" ⁂ ✪ 𝐂𝐥𝐨𝐬𝐞 ✪ ⁂ ", data="close"),custom.Button.inline(" ⁂ ✪ 𝐔𝐧𝐥𝐨𝐚𝐝 ✪ ⁂ ",data="unload({})".format(shivam_sh1vam))]
                 await event.edit(reply_pop_up_alert, buttons=dc)
             else:
                 reply_pop_up_alert = "Pʟᴇᴀsᴇ Gᴇᴛ Yᴏᴜʀ Oᴡɴ Usᴇʀʙᴏᴛ (☞ ͡° ͜ʖ ͡°)☞ Fᴏʀ Mᴏʀᴇ ɪɴғᴏ Vɪsɪᴛ @UltraX_Support !!"
                 await event.answer(reply_pop_up_alert, alert=True)#hehe
         except: 
-            if event.query.user_id == bot.uid or event.query.user_id == id:
+            if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudos:
                 sh1vam = [custom.Button.inline("◤✞ ⁂ 𝐁𝐚𝐜𝐤 ⁂ ✞◥",data="back({})".format(shivam)),custom.Button.inline("◤✞ ⁂ 𝐂𝐥𝐨𝐬𝐞 ⁂ ✞◥", data="close")]
                 halps = "Do .help {} to get the list of commands.".format(plugin_name)
                 await event.edit(halps,buttons=sh1vam)
@@ -155,7 +155,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"load\((.+?)\)")))
    
     async def on_plug_in_callback_query_handler(event):
-              if event.query.user_id == bot.uid or event.query.user_id == id:
+              if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudos:
                     
 #  🇦 🇷 🇪      🇧 🇸 🇩 🇰      🇮 🇸 🇸 🇪    🇰 🇦 🇳 🇬  🇲 🇦 🇹   🇰 🇷    🇷 🇪   🇲 🇨 
                     
@@ -174,7 +174,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"unload\((.+?)\)")))
    
     async def on_plug_in_callback_query_handler(event):
-              if event.query.user_id == bot.uid or event.query.user_id == id:
+              if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudos:
                     
                     
                     try:
@@ -194,7 +194,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
    
     async def on_plug_in_callback_query_handler(event):
             
-            if event.query.user_id == bot.uid or event.query.user_id == id:
+            if event.query.user_id == bot.uid or event.query.user_id == id or event.sender_id in sudos:
                 try:
                     current_page_number = int(event.data_match.group(1).decode("UTF-8"))
                     buttons = paginate_help(current_page_number-2, CMD_HELP, "helpme")

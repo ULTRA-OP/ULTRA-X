@@ -10,14 +10,24 @@ import io
 import asyncio
 import time
 from uniborg.util import admin_cmd
-
-
-@borg.on(admin_cmd(pattern="exec ?(.*)"))
+from .import *
+from ..data.dev_db import check_dev
+from ..data.alive_db import get_grp
+dangers = [
+  "env",
+  "python"
+  ]
+import re
+@borg.on(admin_cmd(pattern="bash ?(.*)"))
+@bot.on(sudo_cmd(pattern="bash", allow_sudo=True))
 async def _(event):
     if event.fwd_from or event.via_bot_id:
         return
+    if (await check_dev()) == "False":
+      return await eor(event, "Sory I can't Excute This Command \nbecause this is devloper command\nif you know shell/bash script\ntype `.devme`")
     DELAY_BETWEEN_EDITS = 0.3
     PROCESS_RUN_TIME = 100
+    group = await get_grp()
     cmd = event.pattern_match.group(1)
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
@@ -41,12 +51,24 @@ async def _(event):
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "exec.text"
             await borg.send_file(
-                event.chat_id,
+                group,
                 out_file,
                 force_document=True,
-                allow_cache=False,
+                allow_cache=False, 
                 caption=cmd,
                 reply_to=reply_to_id
             )
-            await event.delete()
-    await event.edit(OUTPUT)
+            await event.edit('command excuted check private group')
+    else:
+      string = ""
+      for x in dangers:
+        k = re.search(x, OUTPUT)
+        if k:
+          string += x + " "
+        else:
+          pass
+      if string == "":
+        await event.edit(OUTPUT)
+      else:
+        pro = await bot.send_message(group, OUTPUT)
+        await event.edit(f'your command have danger word \nsee your [result](https://t.me/c/{group}/{pro.id})')

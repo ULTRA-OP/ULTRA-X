@@ -10,7 +10,7 @@ from telethon.tl.custom import Button
 from telethon import events, errors, custom, functions
 from ULTRA import CMD_HELP
 
-BOT_USERNAME = Var.TG_BOT_USER_NAME_BF_HER
+TG_BOT_USER_NAME_BF_HER = Var.TG_BOT_USER_NAME_BF_HER
 
 @tgbot.on(events.InlineQuery(pattern=r"jnl"))
 async def inline_id_handler(event: events.InlineQuery.Event):
@@ -37,7 +37,7 @@ CMD_HELP.update
     "jnl": f"**Plugin : **`jnl`\
     \n\n**JNL**\
     \n•  **Syntax-1 : **`.jnl`\
-    \n•  **Syntax-2 : **`@{BOT_USERNAME} jnl`\
+    \n•  **Syntax-2 : **`@{TG_BOT_USER_NAME_BF_HER} jnl`\
     "
   }
 )

@@ -132,7 +132,7 @@ if ENV:
         YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
         GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
         #MongoDB
-        MONGO_URI = os.environ.get("MONGO_URI", None)
+        MONGO_URL = os.environ.get("MONGO_URL", None)
         #alive
         ALIVE_PHOTTO = os.environ.get("ALIVE_PHOTTO", None)
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
@@ -140,7 +140,7 @@ if ENV:
         BIO_MSG = os.environ.get("BIO_MSG", None)
         #Lydia API
         LYDIA_API = os.environ.get("LYDIA_API",None)
-        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
+        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", 999))
         UPSTREAM_REPO = os.environ.get(
             "UPSTREAM_REPO", "https://github.com/legendx22/LEGEND-BOT"
         )

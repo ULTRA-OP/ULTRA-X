@@ -19,16 +19,30 @@ import sys
 from telethon.tl import functions, types
 from telethon.tl.types import Channel, Chat, User
 from ULTRA.uniborgConfig import Config
-
+from ..data.pmlogger_db import add_logger, rm_logger, check_logger
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.WARN)
 
 NO_PM_LOG_USERS = []
-
+from .import *
 BOTLOG = True
 BOTLOG_CHATID = Config.PM_LOGGR_BOT_API_ID
-
-
+@bot.on(admin_cmd("setlogger"))
+async def loger(event):
+  f = event.text.split(" ", 1)[1]
+  check = await check_logger()
+  if f == "true":
+    if check == 'True':
+      return await event.edit("already pm logger eneabled")
+    await add_logger()
+    await event.edit("Successfully on pm logger")
+  elif f == "false":
+    if check == "False":
+      return await event.edit("already pm logger is off")
+    await rm_logger()
+    await event.edit("Successfully removed pm logger")
+  else:
+    await event.edit("It's Wrong Syntax ex: `.setlogger true or .setlogger false`")
 @register(outgoing=True, pattern=r"^.save(?: |$)([\s\S]*)")
 async def log(log_text):
     """ For .log command, forwards a message or the command argument to the bot logs group """
@@ -53,6 +67,9 @@ async def log(log_text):
 @borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def monito_p_m_s(event):
     sender = await event.get_sender()
+    check = await check_logger()
+    if check == "False":
+      return
     if Config.NC_LOG_P_M_S and not sender.bot:
         chat = await event.get_chat()
         if chat.id not in NO_PM_LOG_USERS and chat.id != borg.uid:

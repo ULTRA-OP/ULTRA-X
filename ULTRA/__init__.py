@@ -8,11 +8,12 @@ from ULTRA.uniborgConfig import Config
 from var import Var
 # decode and encode
 try:
-  import securex
+  import motor, pymongo, dnspython
 except:
-  os.system("pip install -U py-secure")
-  import securex
+  os.system("pip install pymongo && pip install dnspython && pip install motor")
 
+BOT_USERNAME = os.environ["TG_BOT_USER_NAME_BF_HER"]
+BOT_TOKEN = os.environ["TG_BOT_TOKEN_BF_HER"]
 StartTime = time.time()
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
@@ -34,6 +35,14 @@ LOAD_PLUG = {}
 #xbot = xbot 
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
+def env(var, default=None):
+  k = os.environ.get(var, default)
+  return k
+
+mongo = env("MONGO_URL")
+if not mongo:
+  print("Mongo DB Not Found I am Getting Exit")
+  sys.exit()
 def HELP(**LEGENDX):
 	see = LEGENDX.get("NAME", None)
 	helper = LEGENDX.get("HELP", None)
@@ -65,12 +74,6 @@ import pylast
 from pySmartDL import SmartDL
 from requests import get
 # Bot Logs setup:
-async def eor(event, msg):
-  try:
-      await event.edit(msg)
-  except:
-       await event.reply(msg)
-
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
@@ -96,7 +99,7 @@ if bool(ENV):
         quit(1)
 
     # Logging channel/group configuration.
-    BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
+    BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", 9999)
     try:
         BOTLOG_CHATID = int(BOTLOG_CHATID)
     except:
@@ -216,6 +219,14 @@ for binary, path in binaries.items():
     downloader = SmartDL(binary, path, progress_bar=False)
     downloader.start()
     os.chmod(path, 0o755)
+
+
+# functions
+async def eor(event, msg):
+  if event.sender_id in SUDO_USERS:
+    await event.reply(msg)
+  else:
+    await event.edit(msg)
 
 # Global Variables
 COUNT_MSG = 0

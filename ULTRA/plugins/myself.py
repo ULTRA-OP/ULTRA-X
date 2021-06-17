@@ -7,7 +7,7 @@ from ULTRA import bot
 from ULTRAX import xbot
 from ULTRA import CMD_HELP
 
-BOT_USERNAME = Var.TG_BOT_USER_NAME_BF_HER
+TG_BOT_USER_NAME_BF_HER = Var.TG_BOT_USER_NAME_BF_HER
 
 # made by madboy
 # kang mat kr lawde
@@ -38,7 +38,7 @@ CMD_HELP.update
     "myself": f"**Plugin : **`myself`\
     \n\n**Your info button, but will re-direct to the profile of one who is clicking the button**\
     \n•  **Syntax-1 : **`.myself`\
-    \n•  **Syntax-2 : **`@{BOT_USERNAME} myself`\
+    \n•  **Syntax-2 : **`@{TG_BOT_USER_NAME_BF_HER} myself`\
     "
   }
 )
