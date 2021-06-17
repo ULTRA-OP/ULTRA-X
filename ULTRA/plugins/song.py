@@ -3,7 +3,6 @@
 # ~ LegendX
 # ~ ProBoyX
 # ~ MadBoy
-# ~ Alain
 
 # Reserved, Copyrighted by ULTRA-X, only for ULTRA-X UserBot, If found in any other repo, be ready for DMCA
 # Reserved, Copyrighted by ULTRA-X, only for ULTRA-X UserBot, If found in any other repo, be ready for DMCA
@@ -17,7 +16,7 @@
 # Last Warn - Undo the removed part else be ready for DMCA by LegendX
 # Mobile me back option he uspe click karde madhachod kang kiya to dekh
 
-
+from ..data.alive_db import get_pm_text, pm_img
 import os, re
 from ULTRAX import id, ID, devs
 from telethon.tl.functions.contacts import BlockRequest as block
@@ -44,16 +43,16 @@ Mʏ Mᴀsᴛᴇʀ ʜᴀs ᴀssɪɢɴᴇᴅ ᴍᴇ ᴛʜᴇ ᴅᴜᴛʏ ᴛᴏ �
 **Cʜᴏᴏsᴇ ᴀɴʏ Rᴇᴀsᴏɴ & GTFO**
 ''')
 
-ULTRA_BOT_PIC = os.environ.get("PMPERMIT_PIC", None)
-if ULTRA_BOT_PIC is None:
-    ULTRA_PIC = "https://telegra.ph/file/91d427a6873d44ca21c78.jpg"
-else:
-    ULTRA_PIC = ULTRA_BOT_PIC
-
 back = [[Button.inline("«« Bᴀᴄᴋ", data="pm_back")]]
 @xbot.on(events.InlineQuery())
 async def inline_legend(event):
   piro = event.text
+  pm_text = await get_pm_text()
+  if pm_text:
+    WARN = pm_text
+  else:
+    pass
+  ULTRA_PIC = await pm_img()
   if event.sender_id == bot.me.id and piro == 'pmsecurity' or event.sender_id==id and piro=='pmpermit':
     LEGENDX = event.builder
     LEGEND = [[Button.inline("Fʀɪᴇɴᴅ", data='frnd_bsdk'),Button.inline("Sᴘᴀᴍ", data='hmmmmm')]]
@@ -123,7 +122,6 @@ async def _(event):
 # ~ LegendX
 # ~ ProBoyX
 # ~ MadBoy
-# ~ Alain
 
 # Reserved, Copyrighted by ULTRA-X, only for ULTRA-X UserBot, If found in any other repo, be ready for DMCA
 # Reserved, Copyrighted by ULTRA-X, only for ULTRA-X UserBot, If found in any other repo, be ready for DMCA
