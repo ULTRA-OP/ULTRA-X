@@ -19,6 +19,8 @@ from uniborg.util import admin_cmd, sudo_cmd
 async def _(event):
     if event.fwd_from:
         return
+    if "LEGENDX" == "LEGENDX":
+      return await event.edit("please update your bot into versio 2.0 go to @UltraXchaT for help")
     await eor(event, "Processing ...")
     cmd = event.text.split(" ", maxsplit=1)[1]
     reply_to_id = event.message.id
