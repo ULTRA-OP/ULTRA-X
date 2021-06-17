@@ -1,4 +1,4 @@
-Import os, sys
+import os, sys
 try:
   from LEGENDX import id, ID, devs, rd, wt
 except:
