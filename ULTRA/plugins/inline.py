@@ -26,7 +26,8 @@ from ULTRA.utils import admin_cmd, sudo_cmd
 from PIL import Image
 import requests
 from io import BytesIO
-from ..data.alive_db import add_img, get_img, add_text, get_text
+from ..data.alive_db import *
+from ..data.sudo_db import *
 from ..data.dev_db import check_dev
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ"
 ALIVE_PHOTTO = PHOTO
@@ -36,6 +37,11 @@ if TG_BOT_USER_NAME_BF_HER is not None:
     async def inline_handler(event):
         builder = event.builder
         MSG = await get_text()
+        sudo = await all_sudo()
+        if sudo:
+          SUDO = True
+        else:
+          SUDO = False
         if await check_dev() == "True":
           DEV = True
         else:
@@ -51,8 +57,8 @@ if TG_BOT_USER_NAME_BF_HER is not None:
 ➥ **✘Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ✘** : {__version__}
 
 ➥ **✘Mʏ ᴍᴀsᴛᴇʀ✘** : [{DEFAULTUSER}](tg://user?id={ok})
-
-➥ **✘ɪ ᴀᴍ ᴅᴇᴠ✘**: {DEV}"""
+➥ **✘Sᴜᴅᴏ✘**  : **{SUDO}**
+➥ **✘ɪ ᴀᴍ ᴅᴇᴠ✘**: **{DEV}**"""
         ALIVE_PHOTTO = await get_img()
         result = None
         query = event.text
@@ -95,6 +101,20 @@ if TG_BOT_USER_NAME_BF_HER is not None:
 from ULTRA import bot 
 import os
 from . import *
+@bot.on(admin_cmd("pmimg"))
+@bot.on(sudo_cmd("pmimg"))
+async def fuk():
+  k = event.text.split(" ", 1)[1]
+  await pm_img(k)
+  await event.edit("updated successfully")
+
+@bot.on(admin_cmd("pmtext"))
+@bot.on(sudo_cmd("pmtext"))
+async def fuck():
+  k = event.text.split(" ", 1)[1]
+  await pm_text(k)
+  await event.edit("updated successfully")
+
 @bot.on(admin_cmd('setimg'))
 @bot.on(sudo_cmd(pattern='setimg', allow_sudo=True))
 async def setimgs(event):
