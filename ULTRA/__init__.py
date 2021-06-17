@@ -8,10 +8,9 @@ from ULTRA.uniborgConfig import Config
 from var import Var
 # decode and encode
 try:
-  import securex
+  import motor, pymongo, dnspython
 except:
-  os.system("pip install -U py-secure")
-  import securex
+  os.system("pip install pymongo && pip install dnspython && pip install motor")
 
 BOT_USERNAME = os.environ["TG_BOT_USER_NAME_BF_HER"]
 BOT_TOKEN = os.environ["TG_BOT_TOKEN_BF_HER"]
