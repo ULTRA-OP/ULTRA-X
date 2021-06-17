@@ -37,7 +37,7 @@ async def LEGENDX(event, msg):
   ULTRA_WRN[event.chat_id] += 1
   if ULTRA_WRN[event.chat_id] == HMM_LOL:
     await event.reply("**Hᴇʏ ɴᴏᴏʙ ᴛʜɪs ɪs ʏᴏᴜʀ ʟᴀsᴛ ᴄʜᴀɴᴄᴇ, sᴘᴀᴍ = ʙʟᴏᴄᴋ**")
-    await bot (block (event.sender_id))
+    await bot (block (event.sender.username))
     del ULTRA_WRN
   
 
