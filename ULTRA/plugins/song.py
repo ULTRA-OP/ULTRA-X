@@ -26,11 +26,7 @@ from telethon import Button, custom, events, functions
 from ULTRAX import NAME
 ULTRA_USER = NAME
 
-BOT_MSG = os.environ.get("BOT_MSG", None)
-if BOT_MSG is None:
-  BOT_MAD = f"Hᴇʟʟᴏ sɪʀ ᴍʏsᴇʟғ UʟᴛʀᴀX, ғᴏʀ {ULTRA_USER}'s Pʀᴏᴛᴇᴄᴛɪᴏɴ "
-else:
-  BOT_MAD = BOT_MSG   
+BOT_MAD = f"Hᴇʟʟᴏ sɪʀ ᴍʏsᴇʟғ UʟᴛʀᴀX, ғᴏʀ {ULTRA_USER}'s Pʀᴏᴛᴇᴄᴛɪᴏɴ\n\n"
 
 WARN = (
   f'''
