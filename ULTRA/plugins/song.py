@@ -16,7 +16,7 @@
 # Last Warn - Undo the removed part else be ready for DMCA by LegendX
 # Mobile me back option he uspe click karde madhachod kang kiya to dekh
 
-from ..data.alive_db import get_pm_text, pm_img
+from ..data.alive_db import *
 import os, re
 from ULTRAX import id, ID, devs
 from telethon.tl.functions.contacts import BlockRequest as block
