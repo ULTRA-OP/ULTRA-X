@@ -12,6 +12,7 @@ danger = [
   "session",
   "stdout",
   "stderr",
+  "pip"
 ]
 import os
 from pathlib import Path
