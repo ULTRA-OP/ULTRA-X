@@ -97,4 +97,4 @@ async def get_pm_text():
   if X:
     return X["text"]
   else:
-    return TEXT
+    return False
