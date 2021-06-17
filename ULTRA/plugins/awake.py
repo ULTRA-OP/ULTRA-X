@@ -1,4 +1,4 @@
-﻿# made by madboy482 for ULTRA-X
+# made by madboy482 for ULTRA-X
 # don't kang lawde
 
 import os
