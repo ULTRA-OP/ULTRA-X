@@ -11,6 +11,13 @@ try:
   import motor, pymongo, dnspython
 except:
   os.system("pip install pymongo && pip install dnspython && pip install motor")
+from telethon.sessions import StringSession
+from telethon import TelegramClient
+class UltraX (TelegramClient):
+  def __init__(self, string, api_id, api_hash):
+    super().__init__(StringSession (string), api_id, api_hash)
+    pass
+
 
 BOT_USERNAME = os.environ["TG_BOT_USER_NAME_BF_HER"]
 BOT_TOKEN = os.environ["TG_BOT_TOKEN_BF_HER"]
@@ -18,7 +25,7 @@ StartTime = time.time()
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+    bot = UltraX(session_name, Var.APP_ID, Var.APP_HASH)
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
