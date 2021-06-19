@@ -16,7 +16,19 @@ from telethon import TelegramClient
 class UltraX (TelegramClient):
   def __init__(self, string, api_id, api_hash):
     super().__init__(StringSession (string), api_id, api_hash)
-    self.pro = True
+    self.id = None
+    self.username = None
+    self.bot_username = None
+    self.bot_token = None
+  def set(self, **x):
+    if x.get("bot_username"):
+      self.bot_username = x["bot_username"]
+    if x.get("id"):
+      self.id = x["id"]
+    if x.get("username"):
+      self.username = x["username"]
+    if x.get("bot_token"):
+      self.bot_token = x["bot_token"]
 
 
 BOT_USERNAME = os.environ["TG_BOT_USER_NAME_BF_HER"]
