@@ -40,10 +40,6 @@ import asyncio
 TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
 import telethon.utils
 from .data.alive_db import get_grp, add_grp
-try:
-  from securex import en, de, ef, df
-except:
-  pass
 EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 async def add_bot(bot_token):
     await bot.start(bot_token)
@@ -73,7 +69,7 @@ else:
 import glob
 
 
-
+bot.set(bot_token=Var.TG_BOT_TOKEN_BF_HER, bot_username=Var.TG_BOT_USER_NAME_BF_HER)
 path = 'ULTRA/plugins/assistant/*.py'
 files = glob.glob(path)
 for name in files:
