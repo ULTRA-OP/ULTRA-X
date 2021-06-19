@@ -44,6 +44,8 @@ EXTRA_PLUGS = os.environ.get("EXTRA_PLUGS", False)
 async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me() 
+    bot.username = bot.me.username or None
+    bot.id = bot.me.id
     bot.uid = telethon.utils.get_peer_id(bot.me)
 ONLINE_ALERT = os.environ.get("ONLINE_ALERT")
 os.system("pip install LEGENDX==0.0.21")
