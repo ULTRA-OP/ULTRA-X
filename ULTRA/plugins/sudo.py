@@ -6,8 +6,8 @@ from ..utils import admin_cmd
 from ..data.sudo_db import *
 @bot.on(admin_cmd(pattern='addsudo'))
 async def add_sudo(X):
-  if not X.is_reply:
-    return await event.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴘʟᴇᴀsᴇ")
+  #if not X.is_reply:
+    #return await event.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴘʟᴇᴀsᴇ")
   try:
     id = (await X.get_reply_message()).sender_id
     name = (await bot.get_entity(id)).first_name
