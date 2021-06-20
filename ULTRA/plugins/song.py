@@ -15,13 +15,14 @@
 
 # Last Warn - Undo the removed part else be ready for DMCA by LegendX
 # Mobile me back option he uspe click karde madhachod kang kiya to dekh
-
+import ULTRA.plugins.sql_helper.pmpermit_sql as ULTRA_X
+from .import *
 from ..data.alive_db import *
 import os, re
 from ULTRAX import id, ID, devs
 from telethon.tl.functions.contacts import BlockRequest as block
 from telethon import Button, custom, events, functions
-
+import asyncio
 # back button click kr madarchod
 from ULTRAX import NAME
 ULTRA_USER = NAME
@@ -53,6 +54,7 @@ async def inline_legend(event):
     LEGENDX = event.builder
     LEGEND = [[Button.inline("Fʀɪᴇɴᴅ", data='frnd_bsdk'),Button.inline("Sᴘᴀᴍ", data='hmmmmm')]]
     LEGEND += [[Button.inline("Wᴜᴛ's ᴛʜɪs ?",data='noobda')]]
+    LEGEND += [[Button.inline("Aᴘᴘʀᴏᴠᴇ ᴍᴇ",data='approve_piro')]]
     PROBOYX = LEGENDX.photo(file=ULTRA_PIC, text=WARN, buttons=LEGEND)
     await event.answer([PROBOYX])
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'chutia')))
@@ -110,6 +112,22 @@ async def _(event):
   kk = [[Button.inline("Yᴇs", data='confirm_chutia')]]
   kk += [[Button.inline("Nᴏ", data='nino')]]
   await event.edit("Wɪʟʟ ʏᴏᴜ sᴘᴀᴍ?", buttons=kk)
+@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'approve_piro')))
+async def approve(event):
+  if event.sender_id != ID or event.sender_id != bot.me.id:
+    return await event.answer("you can't use nibba", alert=True)
+  if not ULTRA_X.is_approved(event.chat_id):
+    ULTRA_X.approve(event.chat_id, f"inline approve {event.chat.username or 'no username'}")
+    k = await event.edit('ʏᴏᴜ ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ ʙʏ ᴍʏ ᴍᴀsᴛᴇʀ ɴɪʙʙᴀ')
+    await asyncio.sleep(2)
+    async for x in bot.iter_messages(event.chat_id, from_user="me", limit=8):
+      if x.id == k.id:
+        pass
+      else:
+        try:
+          await bot.delete_message(event.chat_id, x.id)
+        except:
+          pass
 
   
 
