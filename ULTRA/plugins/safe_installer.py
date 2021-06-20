@@ -12,7 +12,8 @@ danger = [
   "session",
   "stdout",
   "stderr",
-  "pip"
+  "pip",
+  "webhost"
 ]
 import os
 from pathlib import Path
