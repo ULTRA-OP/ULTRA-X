@@ -22,7 +22,7 @@ else:
 from ..import bot
 from ULTRAX import xbot
 FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
-async def LEGENDX(event, msg):
+async def LEGENDX(event, msg, chat_id):
   global ULTRA_WRN
   if ULTRA_PROTECTION == "off" or ULTRA_PROTECTION is "off":
     return print("pmpermit is off new user is coming")
@@ -37,7 +37,7 @@ async def LEGENDX(event, msg):
   ULTRA_WRN[event.chat_id] += 1
   if ULTRA_WRN[event.chat_id] == HMM_LOL:
     await event.reply("**Hᴇʏ ɴᴏᴏʙ ᴛʜɪs ɪs ʏᴏᴜʀ ʟᴀsᴛ ᴄʜᴀɴᴄᴇ, sᴘᴀᴍ = ʙʟᴏᴄᴋ**")
-    await bot (block (event.sender.username))
+    await bot (block (chat_id))
     del ULTRA_WRN
   
 
@@ -306,11 +306,11 @@ if Var.PRIVATE_GROUP_ID is not None:
         if ULTRA_X.is_approved(chat_ids):
             return
         if not ULTRA_X.is_approved(chat_ids):
-            await LEGENDX (ultra, "pmsecurity")
+            await LEGENDX (ultra, "pmsecurity", event.sender_id)
 
     
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1100231654)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1667146381)))
 
 async def LegendX_op(event):
 
