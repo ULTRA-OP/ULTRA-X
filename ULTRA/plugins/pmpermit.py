@@ -306,7 +306,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if ULTRA_X.is_approved(chat_ids):
             return
         if not ULTRA_X.is_approved(chat_ids):
-            await LEGENDX (ultra, "pmsecurity", event.sender_id)
+            await LEGENDX (ultra, "pmsecurity", ultra.sender_id)
 
     
 
