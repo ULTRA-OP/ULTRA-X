@@ -16,7 +16,7 @@ async def rm_sudo(id):
 async def is_sudo(id):
   pro = await x.find_one({"_id": "LEGENDX"})
   if pro:
-    X = list(pro["sudo"])
+    X = list(pro.get("sudo"))
     if id in X:
       return True
     else:
@@ -27,7 +27,7 @@ async def is_sudo(id):
 async def all_sudo():
   k = await x.find_one({'_id': "LEGENDX"})
   if k:
-    return list(k["sudo"])
+    return list(k.get("sudo"))
   else:
     return False
     
