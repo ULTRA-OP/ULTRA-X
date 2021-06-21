@@ -133,7 +133,9 @@ async def rmwaifu(event):
 @bot.on(admin_cmd(pattern='wafu'))
 async def addwaifu(event):
   allwaifu = await all_waifu()
-  string = ""
+  if not allwaifu:
+    return await event.edit("waifu plug-in is offline no chat added on db type `.addwafu`")
+  string = "**WAIFU CHATS LIST**\n"
   for x in allwaifu:
     string += f'`{x}`\n'
   await event.edit(string)
