@@ -30,14 +30,14 @@ class UltraX (TelegramClient):
       self.username = x["username"]
     if x.get("bot_token"):
       self.bot_token = x["bot_token"]
-    if x.get("heroku_botusername"):
-      self.heroku_username = x["heroku_botusername"]
+    if x.get("heroku_username"):
+      self.heroku_username = x["heroku_username"]
   def __str__(self):
     detail = f'''
 Your name is {self.me.first_name}
 Your username is @{self.me.username or "no Username"}
 Your bot Username is @{self.bot_username}
-Your heroku bot username is {self.heroku_bot}'''
+Your heroku bot username is {self.heroku_username}'''
     return detail
 
 
