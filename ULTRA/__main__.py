@@ -71,7 +71,7 @@ else:
 import glob
 
 
-bot.set(bot_token=Var.TG_BOT_TOKEN_BF_HER, bot_username=Var.TG_BOT_USER_NAME_BF_HER)
+bot.set(heroku_username=Var.TG_BOT_USER_NAME_BF_HER)
 path = 'ULTRA/plugins/assistant/*.py'
 files = glob.glob(path)
 for name in files:
@@ -167,6 +167,7 @@ async def danger(username):
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
 
 async def setgrp():
+  bot.set(bot_username=(await tgbot.get_me()).username)
   k = await get_grp()
   if k:
     return print ('Private Group already setted')
