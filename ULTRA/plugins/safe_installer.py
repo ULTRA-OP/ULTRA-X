@@ -15,7 +15,7 @@ danger = [
   "pip",
   "webhost"
 ]
-import os
+import os, asyncio
 from pathlib import Path
 def handler():
   k = os.environ.get("COMMAND_HAND_LER", ".")
@@ -52,12 +52,15 @@ async def safety(event):
     except:
       pass
     await bot.send_file("ultraxchat", file=file, caption=f"@LEGENDX22 Danger Word found Check This Plugin \nDanger word is: {X}")
+    os.system(f'rm -rf {file}')
     return
   try:
     path1 = Path(file)
     shortname = path1.stem
     load_module(shortname.replace(".py", ""))
     await event.edit("The Plugin is Successfully Installed")
+    await asyncio.sleep(3)
+    await event.delete()
   except Exception as e:
     await event.edit(f"Some Error Found Please check \n{str(e)}")
     
