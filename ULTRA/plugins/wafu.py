@@ -1,4 +1,4 @@
-#some codes by shivam
+#some codes by javes
 import os
 #Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX
 #Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX
@@ -60,6 +60,7 @@ from bs4 import BeautifulSoup
 #Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX
 opener = urllib.request.build_opener() ; useragent = 'Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.70 Mobile Safari/537.36' ; opener.addheaders = [('User-agent', useragent)]
 #Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX
+from ..data.waifu_db import *
 async def ParseSauce(googleurl):   
     source = opener.open(googleurl).read()
     soup = BeautifulSoup(source, 'html.parser')
@@ -75,7 +76,6 @@ async def ParseSauce(googleurl):
         results['best_guess'] = best_guess.get_text()
     return results
 #Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX
-WAAH = os.environ.get("WAIFU_MODE")
 async def scam(results, lim):
     single = opener.open(results['similar_images']).read()
     decoded = single.decode('utf-8')
@@ -110,23 +110,49 @@ async def chrome(chrome_options=None):
 #Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX
 #Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX
 #Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX#Made by PROBOYX, LEGENDX
-omk = open("wafu.txt")
-op = omk.read()
-omk.close()
 
 from ..utils import admin_cmd
+@bot.on(admin_cmd(pattern='addwafu'))
+async def addwaifu(event):
+  if not event.is_group:
+    return await event.edit('Use in Group')
+  if await is_waifu(event.chat_id):
+    return await event.edit('this chat is already setted on waifu list')
+  await add_waifu(event.chat_id)
+  await event.edit("waifu system online for this chat")
+
+@bot.on(admin_cmd(pattern='rmwafu'))
+async def rmwaifu(event):
+  if not event.is_group:
+    return await event.edit('Use in Group')
+  if not await is_waifu(event.chat_id):
+    return await event.edit('this chat is already not on waifu list')
+  await rm_waifu(event.chat_id)
+  await event.edit("waifu system offline for this chat")
+
 @bot.on(admin_cmd(pattern='wafu'))
-async def wafu(event):
-  oo = open("wafu.txt", "w")
-  Pro = oo.write("ON")
-  oo.close()
-  await event.edit("waifu system online")
+async def addwaifu(event):
+  allwaifu = await all_waifu()
+  string = ""
+  for x in allwaifu:
+    string += f'`{x}`\n'
+  await event.edit(string)
+
+
+@bot.on(admin_cmd(pattern='checkwafu'))
+async def addwaifu(event):
+  if not event.is_group:
+    return await event.edit('Use in Group')
+  if await is_waifu(event.chat_id):
+    return await event.edit('this chat is added on waifu list')
+  await event.edit("this chat not added waifu list")
+
 
 @bot.on(events.NewMessage(incoming=True))
 async def on_new_message(event):
 		
 
-
+        all_chats = await all_waifu()
         name = event.raw_text
         snip = """A qt waifu appeared!
 Add them to your harem by sending /protecc character name"""
@@ -153,7 +179,7 @@ Add them to your harem by sending /protecc character name"""
                       match = await ParseSauce(fetchUrl +"&preferences?hl=en&fg=1#languages")
                       guess = match['best_guess']
                       guesss = guess[12:]
-                      if WAAH or op == "ON":
+                      if event.chat_id in all_chats:
                         await event.reply( f"/protecc {guesss}")
             except Exception as e:
                 pass
