@@ -13,7 +13,7 @@ async def add_waifu(id):
 
 async def rm_waifu(id):
   await x.update_one({"_id": "LEGENDX"}, {"$pull": {"wafu": id}})
-async def is_wafu(id):
+async def is_waifu(id):
   pro = await x.find_one({"_id": "LEGENDX"})
   if pro:
     X = list(pro.get("wafu"))
@@ -24,7 +24,7 @@ async def is_wafu(id):
   else:
     return False
 
-async def all_wafu():
+async def all_waifu():
   k = await x.find_one({'_id': "LEGENDX"})
   if k:
     return list(k.get("wafu"))
