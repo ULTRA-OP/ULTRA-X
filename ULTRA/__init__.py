@@ -29,6 +29,8 @@ class UltraX (TelegramClient):
       self.username = x["username"]
     if x.get("bot_token"):
       self.bot_token = x["bot_token"]
+  def __str__(self):
+    return f'Your name is {self.me.first_name}'
 
 
 BOT_USERNAME = os.environ["TG_BOT_USER_NAME_BF_HER"]
