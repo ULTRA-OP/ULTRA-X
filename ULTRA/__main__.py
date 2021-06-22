@@ -89,11 +89,9 @@ else:
     else:
         bot.start()
 
-import glob
-
 
 #setting details 
-bot.set(bot_username=(await xbot.get_me()).username)
+bot.set(bot_username=Var.TG_BOT_USER_NAME_BF_HER)
 
 #setted
 
