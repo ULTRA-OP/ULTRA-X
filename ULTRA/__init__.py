@@ -34,7 +34,7 @@ class UltraX (TelegramClient):
       self.heroku_username = x["heroku_username"]
   @classmethod
   def ultra(cls, session):
-"""Now api id and hash is optional you can use your bot without api id and hash it's cool 😌"""
+#   Now api id and hash is optional you can use your bot without api id and hash it's cool 😌
     return cls(session, 1621727, "31350903c528876f79527398c09660ce")
   def __str__(self):
     detail = f'''
