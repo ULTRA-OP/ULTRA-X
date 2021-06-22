@@ -122,7 +122,7 @@ async def approve(event):
       k = await event.edit('ʏᴏᴜ ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ ʙʏ ᴍʏ ᴍᴀsᴛᴇʀ ɴɪʙʙᴀ')
     except Exception as e:
       await event.answer(str(e), alert=True)
-        sys.exit()
+       sys.exit()
     await asyncio.sleep(2)
     async for x in bot.iter_messages(event.chat_id, from_user="me", limit=8):
       if x.id == k.id:
