@@ -167,7 +167,7 @@ async def danger(username):
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
 
 async def setgrp():
-  bot.set(bot_username=(await tgbot.get_me()).username)
+  bot.set(bot_username=(await xbot.get_me()).username)
   k = await get_grp()
   if k:
     return print ('Private Group already setted')
