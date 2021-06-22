@@ -18,7 +18,7 @@
 import ULTRA.plugins.sql_helper.pmpermit_sql as ULTRA_X
 from .import *
 from ..data.alive_db import *
-import os, re
+import os, re, sys
 from ULTRAX import id, ID, devs
 from telethon.tl.functions.contacts import BlockRequest as block
 from telethon import Button, custom, events, functions
@@ -117,8 +117,12 @@ async def approve(event):
   if event.sender_id != ID or event.sender_id != bot.me.id:
     return await event.answer("you can't use nibba", alert=True)
   if not ULTRA_X.is_approved(event.chat_id):
-    ULTRA_X.approve(event.chat_id, f"inline approve {event.chat.username or 'no username'}")
-    k = await event.edit('ʏᴏᴜ ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ ʙʏ ᴍʏ ᴍᴀsᴛᴇʀ ɴɪʙʙᴀ')
+    try:
+      ULTRA_X.approve(event.chat_id, f"inline approve {event.chat.username or 'no username'}")
+      k = await event.edit('ʏᴏᴜ ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ ʙʏ ᴍʏ ᴍᴀsᴛᴇʀ ɴɪʙʙᴀ')
+    except Exception as e:
+      await event.answer(str(e), alert=True)
+        sys.exit()
     await asyncio.sleep(2)
     async for x in bot.iter_messages(event.chat_id, from_user="me", limit=8):
       if x.id == k.id:
@@ -128,6 +132,9 @@ async def approve(event):
           await bot.delete_message(event.chat_id, x.id)
         except:
           pass
+  else:
+    await event.answer("This user approved", alert=False)
+
 
   
 
