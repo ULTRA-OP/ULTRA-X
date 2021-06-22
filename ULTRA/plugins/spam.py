@@ -6,11 +6,11 @@
 import asyncio
 from asyncio import wait
 from ULTRA import CMD_HELP
-
+from .import *
 
 from ULTRA.events import register
 from ..utils import sudo_cmd
-@register(outgoing=True, pattern="^.tspam")
+@bot.on(admin_cmd(pattern="tspam"))
 async def tmeme(e):
     tspam = str(e.text[7:])
     message = tspam.replace(" ", "")
@@ -18,7 +18,7 @@ async def tmeme(e):
         await e.respond(letter)
     await e.delete()
 
-@register(outgoing=True, pattern="^.spam")
+@bot.on(admin_cmd(pattern="spam"))
 @bot.on(sudo_cmd(pattern="spam", allow_sudo=True))
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -34,7 +34,7 @@ async def spammer(e):
                 "Spam was executed successfully"
                 )
                                
-@register(outgoing=True, pattern="^.bigspam")
+@bot.on(admin_cmd(pattern="bigspam"))
 @bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
 async def bigspam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -53,7 +53,7 @@ async def bigspam(e):
         
         
 
-@register(outgoing=True, pattern="^.mspam")
+@bot.on(admin_cmd(pattern="mspam"))
 async def tiny_pic_spam(e):
     reply = await e.get_reply_message()
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -71,7 +71,7 @@ async def tiny_pic_spam(e):
                 "MediaSpam was executed successfully boss"
                 )
 
-@register(outgoing=True, pattern="^.delayspam (.*)")
+@bot.on(admin_cmd(pattern="delayspam"))
 async def spammer(e):
     spamDelay = float(e.pattern_match.group(1).split(' ', 2)[0])
     counter = int(e.pattern_match.group(1).split(' ', 2)[1])
