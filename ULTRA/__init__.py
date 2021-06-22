@@ -12,12 +12,40 @@ try:
 except:
   os.system("pip install -U py-secure")
   import securex
+from telethon.sessions import StringSession
+from telethon import TelegramClient
+class UltraX (TelegramClient):
+  def __init__(self, string, api_id, api_hash):
+    super().__init__(StringSession (string), api_id, api_hash)
+    self.id = None
+    self.username = None
+    self.bot_username = None
+    self.bot_token = None
+    self.heroku_username = None
+  def set(self, **x):
+    if x.get("bot_username"):
+      self.bot_username = x["bot_username"]
+    if x.get("id"):
+      self.id = x["id"]
+    if x.get("username"):
+      self.username = x["username"]
+    if x.get("bot_token"):
+      self.bot_token = x["bot_token"]
+    if x.get("heroku_username"):
+      self.heroku_username = x["heroku_username"]
+  def __str__(self):
+    detail = f'''
+Your name is {self.me.first_name}
+Your username is @{self.me.username or "no Username"}
+Your bot Username is @{self.bot_username}
+Your heroku bot username is {self.heroku_username}'''
+    return detail
 
 StartTime = time.time()
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+    bot = UltraX(session_name, Var.APP_ID, Var.API_HASH)
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
