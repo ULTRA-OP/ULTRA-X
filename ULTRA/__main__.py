@@ -34,6 +34,7 @@ os.system("pip install telethon==1.20")
 import sys
 import os
 from ULTRA import bot
+import glob
 from telethon import events
 from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
