@@ -92,6 +92,12 @@ else:
 import glob
 
 
+#setting details 
+bot.set(bot_username=(await xbot.get_me()).username)
+
+#setted
+
+
 
 path = 'ULTRA/plugins/assistant/*.py'
 files = glob.glob(path)
@@ -148,6 +154,7 @@ import os
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
   pro = await xbot.get_me()
+  bot.set(bot_username=(await xbot.get_me()).username)
   legend = await bot.get_me()
   LEGENDX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
