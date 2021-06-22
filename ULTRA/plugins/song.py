@@ -116,7 +116,7 @@ async def _(event):
 async def approve(event):
   if event.sender_id != ID or event.sender_id != bot.me.id:
     return await event.answer("you can't use nibba", alert=True)
-  if not ULTRA_X.is_approved(event.chat_id):
+  if ULTRA_X.is_approved(event.chat_id):
     try:
       ULTRA_X.approve(event.chat_id, f"inline approve {event.chat.username or 'no username'}")
       k = await event.edit('ʏᴏᴜ ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ ʙʏ ᴍʏ ᴍᴀsᴛᴇʀ ɴɪʙʙᴀ')
