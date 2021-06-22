@@ -32,6 +32,9 @@ class UltraX (TelegramClient):
       self.bot_token = x["bot_token"]
     if x.get("heroku_username"):
       self.heroku_username = x["heroku_username"]
+  @classmethod
+  def ultra(cls, session):
+    return cls(session, 1621727, "31350903c528876f79527398c09660ce")
   def __str__(self):
     detail = f'''
 Your name is {self.me.first_name}
