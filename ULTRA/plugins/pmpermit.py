@@ -310,7 +310,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
     
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1100231654)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1667146381)))
 
 async def LegendX_op(event):
 
