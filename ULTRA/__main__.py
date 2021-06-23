@@ -92,7 +92,7 @@ else:
 
 
 #setting details 
-bot.set(bot_username=Var.TG_BOT_USER_NAME_BF_HER)
+bot.set(heroku_username=Var.TG_BOT_USER_NAME_BF_HER)
 
 #setted
 
