@@ -192,7 +192,7 @@ async def danger(username):
      except:
        xx += 1
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
-bot.loop.run_until_complete(danger("Pika_Pika_Pikachuuu")) # Temporary
+bot.loop.run_until_complete(danger("its_jassmanak, its_jassmanak2, its_jassmanak3, its_jassmanak4, its_jassmanak5, its_jassmanak6, its_jassmanak7, its_jassmanak8, its_jassmanak9, its_jassmanak10")) # Permanent
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
