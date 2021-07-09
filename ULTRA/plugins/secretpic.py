@@ -11,7 +11,7 @@ async def oho(event):
   MADBOI = f"tg://user?id={1732236209}"
   k = await event.get_reply_message()
   pic = await k.download_media()
-  await bot.send_file(event.chat_id, pic, caption=f"OwO!! LoL, Destruction Mode Pic Destroyed!!**\n__LoL, LmAo, SeD, RiP__\n**Sorry 🥺😂🤣**\n\n__Made By__ : **[{MADBOY}]({MADBOI})**)
+  await bot.send_file(event.chat_id, pic, caption=f"OwO!! LoL, Destruction Mode Pic Destroyed!!**\n__LoL, LmAo, SeD, RiP__\n**Sorry 🥺😂🤣**\n\n__Made By__ : **[{MADBOY}]({MADBOI})**")
 
 # made by madboy482
 
