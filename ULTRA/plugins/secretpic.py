@@ -1,3 +1,7 @@
+# made by madboy482
+
+# made for ULTRA-X
+
 from .import *
 @bot.on(admin_cmd(pattern="secretpic"))
 async def oho(event):
@@ -8,3 +12,7 @@ async def oho(event):
   k = await event.get_reply_message()
   pic = await k.download_media()
   await bot.send_file(event.chat_id, pic, caption=f"OwO!! LoL, Destruction Mode Pic Destroyed!!**\n__LoL, LmAo, SeD, RiP__\n**Sorry 🥺😂🤣**\n\n__Made By__ : **[{MADBOY}]({MADBOI})**)
+
+# made by madboy482
+
+# made for ULTRA-X
