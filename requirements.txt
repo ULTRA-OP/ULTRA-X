@@ -80,5 +80,5 @@ wikipedia>=1.4.0
 youtube-dl
 youtube-search-python
 tswift
-telethon==1.22.0
+telethon==1.23.0
 faker
