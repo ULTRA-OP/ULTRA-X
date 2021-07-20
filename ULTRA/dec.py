@@ -30,6 +30,8 @@ def UltraX(**x):
   incoming = x.get("incoming", False)
   outgoing = x.get("outgoing", False)
   pattern = x.get("pattern", False)
+  if not incoming and not outgoing:
+    x["outgoing"] = True
   if pattern:
     x["pattern"] = cmd + x["pattern"]
   if "admin_only" in x:
