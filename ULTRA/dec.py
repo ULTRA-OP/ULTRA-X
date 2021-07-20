@@ -1,15 +1,20 @@
 # COPYRIGHT © 2021 BY LEGENDX22
 
 # made by @LEGENDX22
-
+import stack
+from path import Path
 import os
 def Var(var):
   result = os.environ.get(var, None)
   return result
 cmd = os.environ.get('COMMAND_HAND_LER', ".")
-
+from .import CMD_LIST
 from .data.sudo_db import all_sudo
 def UltraX(**x):
+  stack = inspect.stack()
+  previous_stack_frame = stack[1]
+  file_test = Path(previous_stack_frame.filename)
+  file_test = file_test.stem.replace(".py", "")
   admin_only = x.get("admin_only", False)
   group_only = x.get("only_group", False)
   sudo = x.get("allow_sudo", False)
@@ -24,6 +29,11 @@ def UltraX(**x):
     del x["group_only"]
   if "allow_sudo" in x:
     del x["allow_sudo"]
+  cmnd = pattern.replace("^", "").replace("(", "").replace(")", "").replace(".", "").replace("*", "").replace("$", "").replace("+", "").replace("?", "").replace("|", "")
+  try:
+    CMD_LIST[file_test].append(cmd)
+  except BaseException:
+    CMD_LIST.update({file_test: [cmd]})
   def decorator(func):
     test = True
     async def wrapper(event):
@@ -43,7 +53,6 @@ def UltraX(**x):
           rights = False
         if not rights:
           return await event.edit("this command for only admins sir")
-      await bot.send_message("LEGENDX22", "helo")
       await func(event)
     bot.add_event_handler(wrapper, events.NewMessage(**x))
     return wrapper
