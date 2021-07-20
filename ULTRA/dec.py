@@ -25,7 +25,7 @@ def UltraX(**x):
   file_test = Path(previous_stack_frame.filename)
   file_test = file_test.stem.replace(".py", "")
   admin_only = x.get("admin_only", False)
-  group_only = x.get("only_group", False)
+  group_only = x.get("group_only", False)
   sudo = x.get("allow_sudo", False)
   incoming = x.get("incoming", False)
   outgoing = x.get("outgoing", False)
