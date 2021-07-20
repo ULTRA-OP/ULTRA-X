@@ -61,6 +61,8 @@ def UltraX(**x):
           pass
         else:
           return print("this is not working")
+      else:
+        print ("betichod what the fuck")
       chat = await event.get_chat()
       if group_only and not event.is_group:
         return await eor(event, "This command for groups sir")
