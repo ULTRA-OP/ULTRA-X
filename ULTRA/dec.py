@@ -57,12 +57,11 @@ def UltraX(**x):
       if sudo:
         print ("entering in sudo")
         if not event.out and event.sender_id in sudos:
-          print ("i fired this function")
           pass
         else:
-          return print("this is not working")
+          return
       else:
-        print ("betichod what the fuck")
+        pass
       chat = await event.get_chat()
       if group_only and not event.is_group:
         return await eor(event, "This command for groups sir")
@@ -74,6 +73,9 @@ def UltraX(**x):
         if not rights:
           return await eor(event, "this command for only admins sir")
       await func(event)
+    bot.add_event_handler(wrapper, events.NewMessage(**x))
+    x["outgoing"] = False
+    x["incoming"] = True
     bot.add_event_handler(wrapper, events.NewMessage(**x))
     return wrapper
   return decorator
