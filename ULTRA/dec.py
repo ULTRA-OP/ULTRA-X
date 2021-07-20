@@ -1,7 +1,7 @@
 # COPYRIGHT © 2021 BY LEGENDX22
 
 # made by @LEGENDX22
-import stack
+import inspect
 from pathlib import Path
 import os
 def Var(var):
