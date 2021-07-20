@@ -13,7 +13,7 @@ from .data.sudo_db import all_sudo
 from telethon import events
 async def eor(event, msg):
   if 1==1:
-    sudo = 1603318426
+    sudo = [1603318426]
   else:
     sudo = [12345]
   if event.sender_id in sudo:
@@ -51,7 +51,7 @@ def UltraX(**x):
   def decorator(func):
     test = True
     async def wrapper(event):
-      sudos = 1603318426
+      sudos = [1603318426]
       if not sudos:
         sudos = [12345]
       if sudo:
