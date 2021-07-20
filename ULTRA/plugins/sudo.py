@@ -4,7 +4,7 @@ import re, os
 from var import Var
 from ..utils import admin_cmd
 from ..data.sudo_db import *
-
+from .import *
 @bot.on(admin_cmd(pattern='rmsudo'))
 async def remove_sudo(event):
   if not event.is_reply:
@@ -40,7 +40,7 @@ async def sudolists(event):
     sudoz += pro
   await op.edit(sudoz)
 
-@bot.on(admin_cmd(pattern='addsudo'))
+@UltraX(pattern="addsudo")
 async def add_sudo(event):
   #if not event.is_reply:
     #return await event.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴘʟᴇᴀsᴇ")
