@@ -58,6 +58,8 @@ def UltraX(**x):
         print ("entering in sudo")
         if not event.out and event.sender_id in sudos:
           pass
+        elif event.sender_id == (await bot.get_me()).id:
+          pass
         else:
           return
       else:
