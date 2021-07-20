@@ -11,17 +11,11 @@ cmd = os.environ.get('COMMAND_HAND_LER', ".")
 from .import CMD_LIST, bot
 from .data.sudo_db import all_sudo
 from telethon import events
-async def eor(event, msg):
-  sudo = []
-  if await all_sudo():
-    for x in await all_sudo():
-      sudo.append(int(x))
+async def eor(event, msg, **ok):
+  if event.out:
+    await event.edit(msg, **ok)
   else:
-    sudo = [12345]
-  if event.sender_id in sudo:
-    await event.reply(msg)
-  else:
-    await event.edit(msg)
+    await event.reply(msg, **ok)
 
 
 def UltraX(**x):
@@ -53,7 +47,7 @@ def UltraX(**x):
   def decorator(func):
     test = True
     async def wrapper(event):
-      sudos = [1603318426]
+      sudos = await all_sudo()
       if not sudos:
         sudos = [12345]
       if sudo:
