@@ -55,7 +55,6 @@ def UltraX(**x):
       if not sudos:
         sudos = [12345]
       if sudo:
-        print ("entering in sudo")
         if not event.out and event.sender_id in sudos:
           pass
         elif event.sender_id == (await bot.get_me()).id:
@@ -74,10 +73,15 @@ def UltraX(**x):
           rights = False
         if not rights:
           return await eor(event, "this command for only admins sir")
-      await func(event)
+      try:
+        await func(event)
+      except Exception as e:
+        print (e)
+        await event.edit("**Error** - " + str(e))
     bot.add_event_handler(wrapper, events.NewMessage(**x))
-    x["outgoing"] = False
-    x["incoming"] = True
-    bot.add_event_handler(wrapper, events.NewMessage(**x))
+    if outgoing and sudo:
+      x["outgoing"] = False
+      x["incoming"] = True
+      bot.add_event_handler(wrapper, events.NewMessage(**x))
     return wrapper
   return decorator
