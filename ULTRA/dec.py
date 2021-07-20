@@ -12,7 +12,10 @@ from .import CMD_LIST, bot
 from .data.sudo_db import all_sudo
 from telethon import events
 async def eor(event, msg):
-  sudo = await all_sudo() if await all_sudo() else [12345]
+  if await all_sudo():
+    sudo = await all_sudo()
+  else:
+    sudo = [12345]
   if event.sender_id in sudo:
     await event.reply(msg)
   else:
@@ -54,8 +57,6 @@ def UltraX(**x):
       if sudo:
         if not event.out and not event.sender_id in sudos:
           return
-      else:
-        pass
       chat = await event.get_chat()
       if group_only and not event.is_group:
         return await eor(event, "This command for groups sir")
