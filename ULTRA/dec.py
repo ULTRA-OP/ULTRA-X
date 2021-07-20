@@ -2,7 +2,7 @@
 
 # made by @LEGENDX22
 import stack
-from path import Path
+from pathlib import Path
 import os
 def Var(var):
   result = os.environ.get(var, None)
