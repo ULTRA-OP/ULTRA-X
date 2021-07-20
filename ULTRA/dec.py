@@ -14,7 +14,7 @@ from telethon import events
 async def eor(event, msg):
   sudo = []
   if await all_sudo():
-    for x in await _all_sudo():
+    for x in await all_sudo():
       sudo.append(int(x))
   else:
     sudo = [12345]
