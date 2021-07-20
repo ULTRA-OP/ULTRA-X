@@ -10,6 +10,15 @@ def Var(var):
 cmd = os.environ.get('COMMAND_HAND_LER', ".")
 from .import CMD_LIST
 from .data.sudo_db import all_sudo
+
+async def eor(event, msg):
+  sudo = await all_sudo() if await all_sudo() else [12345]
+  if event.sender_id in sudo:
+    await event.reply(msg)
+  else:
+    await event.edit(msg)
+
+
 def UltraX(**x):
   stack = inspect.stack()
   previous_stack_frame = stack[1]
@@ -47,14 +56,14 @@ def UltraX(**x):
         pass
       chat = await event.get_chat()
       if group_only and not event.is_group:
-        return await event.edit("This command for groups sir")
+        return await eor(event, "This command for groups sir")
       if admin_only:
         try:
           rights = chat.admin_rights
         except:
           rights = False
         if not rights:
-          return await event.edit("this command for only admins sir")
+          return await eor(event, "this command for only admins sir")
       await func(event)
     bot.add_event_handler(wrapper, events.NewMessage(**x))
     return wrapper
