@@ -10,7 +10,7 @@ def Var(var):
 cmd = os.environ.get('COMMAND_HAND_LER', ".")
 from .import CMD_LIST, bot
 from .data.sudo_db import all_sudo
-
+from telethon import events
 async def eor(event, msg):
   sudo = await all_sudo() if await all_sudo() else [12345]
   if event.sender_id in sudo:
