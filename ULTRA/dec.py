@@ -55,8 +55,12 @@ def UltraX(**x):
       if not sudos:
         sudos = [12345]
       if sudo:
+        print ("entering in sudo")
         if not event.out and event.sender_id in sudos:
+          print ("i fired this function")
           pass
+        else:
+          return print("this is not working")
       chat = await event.get_chat()
       if group_only and not event.is_group:
         return await eor(event, "This command for groups sir")
