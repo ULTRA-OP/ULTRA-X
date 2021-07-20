@@ -268,6 +268,6 @@ CMD_HELP = {}
 ISAFK = False
 AFKREASON = None
 SUDO_LIST = {}
-
+from .dec import *
 from ULTRA.helpers import *
 from ULTRA.helpers import functions as legdef
