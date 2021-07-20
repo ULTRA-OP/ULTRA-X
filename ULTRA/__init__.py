@@ -252,13 +252,6 @@ for binary, path in binaries.items():
     os.chmod(path, 0o755)
 
 
-# functions
-async def eor(event, msg):
-  if event.sender_id in SUDO_USERS:
-    await event.reply(msg)
-  else:
-    await event.edit(msg)
-
 # Global Variables
 COUNT_MSG = 0
 USERS = {}
