@@ -23,7 +23,7 @@ def UltraX(**x):
   pattern = x.get("pattern", False)
   if pattern:
     x["pattern"] = cmd + x["pattern"]
-  if "admin_only" in x: # delete that coz variables already get the values
+  if "admin_only" in x:
     del x["admin_only"]
   if "group_only" in x:
     del x["group_only"]
