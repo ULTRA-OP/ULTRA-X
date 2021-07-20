@@ -12,8 +12,10 @@ from .import CMD_LIST, bot
 from .data.sudo_db import all_sudo
 from telethon import events
 async def eor(event, msg):
-  if 1==1:
-    sudo = [1603318426]
+  sudo = []
+  if await all_sudo():
+    for x in await _all_sudo():
+      sudo.append(int(x))
   else:
     sudo = [12345]
   if event.sender_id in sudo:
