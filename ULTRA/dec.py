@@ -1,5 +1,7 @@
-# decorator made by @LEGENDX22
-from telethon import events
+# COPYRIGHT © 2021 BY LEGENDX22
+
+# made by @LEGENDX22
+
 import os
 def Var(var):
   result = os.environ.get(var, None)
@@ -13,7 +15,9 @@ def UltraX(**x):
   sudo = x.get("allow_sudo", False)
   incoming = x.get("incoming", False)
   outgoing = x.get("outgoing", False)
-  x["pattern"] = cmd + x["pattern"]
+  pattern = x.get("pattern", False)
+  if pattern:
+    x["pattern"] = cmd + x["pattern"]
   if "admin_only" in x: # delete that coz variables already get the values
     del x["admin_only"]
   if "group_only" in x:
