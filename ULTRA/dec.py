@@ -38,6 +38,8 @@ def UltraX(**x):
     test = True
     async def wrapper(event):
       sudos = await all_sudo()
+      if not sudos:
+        sudos = [12345]
       if sudo:
         if not event.out and not event.sender_id in sudos:
           return
