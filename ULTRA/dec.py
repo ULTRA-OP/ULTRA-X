@@ -8,7 +8,7 @@ def Var(var):
   result = os.environ.get(var, None)
   return result
 cmd = os.environ.get('COMMAND_HAND_LER', ".")
-from .import CMD_LIST
+from .import CMD_LIST, bot
 from .data.sudo_db import all_sudo
 
 async def eor(event, msg):
