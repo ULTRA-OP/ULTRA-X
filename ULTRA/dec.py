@@ -31,9 +31,9 @@ def UltraX(**x):
     del x["allow_sudo"]
   cmnd = pattern.replace("^", "").replace("(", "").replace(")", "").replace(".", "").replace("*", "").replace("$", "").replace("+", "").replace("?", "").replace("|", "")
   try:
-    CMD_LIST[file_test].append(cmd)
+    CMD_LIST[file_test].append(cmnd)
   except BaseException:
-    CMD_LIST.update({file_test: [cmd]})
+    CMD_LIST.update({file_test: [cmnd]})
   def decorator(func):
     test = True
     async def wrapper(event):
