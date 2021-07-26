@@ -1,14 +1,10 @@
-"""Evaluate Python Code inside Telegram
-Syntax: .eval PythonCode"""
-# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
+# COPYRIGHT © 2021 BY LEGENDX22
+# SECURITY UPDATED BY LEGENDX22
 from telethon import events, errors, functions, types
 import inspect
 import traceback
 import asyncio
-import sys
+import sys, os
 import io, re
 from ULTRA import CMD_HELP, eor
 from uniborg.util import admin_cmd, sudo_cmd
@@ -27,9 +23,17 @@ dangers = [
   "stdout",
   "client.me"
   ]
+from . import *
 
-@borg.on(admin_cmd("eval"))
-@borg.on(sudo_cmd(pattern="eval", allow_sudo=True))
+def Var(var):
+  pro = os.environ.get(var, None)
+  return pro
+
+heroku_api = Var("HEROKU_API_KEY")
+string = Var("STRING_SESSION")
+number = bot.me.phone
+
+@UltraX(pattern="eval", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -84,18 +88,8 @@ async def _(event):
             )
             await event.edit("Your command excuted Successfully check Private grp")
     else:
-        string = ""
-        for x in dangers:
-          sed = re.search(x, final_output)
-          if sed:
-            string += x + " "
-          else:
-            pass
-        if string == "":
-          await eor(event, final_output)
-        else:
-          k = await bot.send_message(group, final_output)
-          await eor(event, f'Your code have danger word Found see your [result](https://t.me/c/{group}/{k.id})')
+      msg = str(final_output).replace(string, "STRING SESSION SECURED BY UltraX").replace(heroku_api, "Heroku Api secured by UltraX").replace(number, "Number secured by UltraX")
+      await eor(event, msg)
 
 
 async def aexec(code, event):
