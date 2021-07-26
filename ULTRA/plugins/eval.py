@@ -33,7 +33,7 @@ heroku_api = Var("HEROKU_API_KEY")
 string = Var("STRING_SESSION")
 number = bot.me.phone
 
-@UltraX(pattern="eval", allow_sudo=True))
+@UltraX(pattern="eval", allow_sudo=True)
 async def _(event):
     if event.fwd_from:
         return
