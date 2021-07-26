@@ -1,3 +1,4 @@
+# COPYRIGHT © 2021-22 BY LEGENDX22
 import os
 def Var(var):
   pro = os.environ.get(var, None)
