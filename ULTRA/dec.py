@@ -32,7 +32,7 @@ def UltraX(**x):
   if not incoming and not outgoing:
     x["outgoing"] = True
   if pattern:
-    x["pattern"] = cmd + x["pattern"]
+    x["pattern"] = "^" + cmd + x["pattern"]
   if "admin_only" in x:
     del x["admin_only"]
   if "group_only" in x:
