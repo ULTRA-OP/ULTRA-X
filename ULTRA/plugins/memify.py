@@ -22,13 +22,14 @@ async def handler(event):
         await event.edit("```Reply to a image/sticker.```")
         return
     file = await client.download_media(reply_message, Var.TEMP_DOWNLOAD_DIRECTORY)
-    await event.edit("```Memifying this image! (」ﾟﾛﾟ)｣ ```")
+    a= await event.edit("```Memifying this image! (」ﾟﾛﾟ)｣ ```")
     text = str(event.pattern_match.group(1)).strip()
     if len(text) < 1:
         return await event.edit("You might want to try `.help memify`")
     meme = await drawText(file, text)
     await client.send_file(event.chat_id, file=meme, force_document=False)
     os.remove(meme)
+    await a.delete()
 
 # Taken from https://github.com/UsergeTeam/Userge-Plugins/blob/master/plugins/memify.py#L64
 # Maybe edited to suit the needs of this module
