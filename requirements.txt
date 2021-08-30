@@ -11,7 +11,7 @@ asyncurban
 aiohttp
 aria2p
 async_generator
-beautifulsoup4
+apscheduler
 bs4
 bwb==3.0.0
 cfscrape
@@ -79,6 +79,8 @@ validators
 wikipedia>=1.4.0
 youtube-dl
 youtube-search-python
-tswift
+tgcryto
 telethon==1.23.0
 faker
+wget
+
