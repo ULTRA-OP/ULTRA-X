@@ -38,6 +38,7 @@ import glob
 from telethon import events
 from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
+from telethon.tl.functions import JoinChannelRequest, InviteToChannelRequest
 from ULTRA.utils import command, remove_plugin, load_module
 from var import Var
 from pathlib import Path
@@ -180,6 +181,15 @@ async def legend():
        pass
   else:
       print("YOUR BOT DEPLOYED SUCCESSFULLY")
+
+
+# Randi Rona
+try:
+  await bot(JoinChannelRequest("@UltraXOT"))
+
+except BaseException:
+  pass
+  
 
 async def danger(username):
   i = 0
