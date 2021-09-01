@@ -44,6 +44,7 @@ from pathlib import Path
 from ULTRA import LOAD_PLUG
 import sys
 import asyncio
+from telethon.tl.functions.channels import JoinChannelRequest as join
 import traceback
 import os
 import ULTRA.utils
@@ -152,6 +153,10 @@ import ULTRA._core
 import os
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
+  try:
+    await bot(join("ULTRAXOP"))
+  except:
+    pass
   pro = await xbot.get_me()
   bot.set(bot_username=(await xbot.get_me()).username)
   legend = await bot.get_me()
@@ -165,7 +170,7 @@ async def legend():
 **Pɪɴɢ Pᴏɴɢ...**
 
 **➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
-**➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
+**➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.userna me}**
 **➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@UltraXchaT**
 **➥ Cʜᴀɴɴᴇʟ** `➪` **@UltraX_SupporT**
 
