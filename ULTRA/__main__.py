@@ -170,7 +170,7 @@ async def legend():
 **Pɪɴɢ Pᴏɴɢ...**
 
 **➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
-**➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.userna me}**
+**➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
 **➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@UltraXchaT**
 **➥ Cʜᴀɴɴᴇʟ** `➪` **@UltraX_SupporT**
 
