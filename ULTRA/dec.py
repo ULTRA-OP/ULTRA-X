@@ -1,7 +1,7 @@
 # COPYRIGHT © 2021 BY LEGENDX22
 
 # made by @LEGENDX22
-import inspect
+import inspect, re
 from pathlib import Path
 import os
 def Var(var):
@@ -32,7 +32,7 @@ def UltraX(**x):
   if not incoming and not outgoing:
     x["outgoing"] = True
   if pattern:
-    x["pattern"] = "^" + cmd + x["pattern"]
+    x["pattern"] = re.compile(cmd + x["pattern"])
   if "admin_only" in x:
     del x["admin_only"]
   if "group_only" in x:
