@@ -74,7 +74,8 @@ def UltraX(**x):
       except Exception as e:
         print (e)
         await event.edit("**Error** - " + str(e))
-    bot.add_event_handler(wrapper, events.NewMessage(**x))
+    if pattern.startswith(cmd):
+      bot.add_event_handler(wrapper, events.NewMessage(**x))
     if x.get("outgoing", False) == True and sudo:
       x["outgoing"] = False
       x["incoming"] = True
