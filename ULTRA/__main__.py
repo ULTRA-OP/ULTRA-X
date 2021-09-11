@@ -170,7 +170,7 @@ async def legend():
 **➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@UltraXchaT**
 **➥ Cʜᴀɴɴᴇʟ** `➪` **@UltraX_SupporT**
 
-**Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
+**Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ.]**
 """
   if ONLINE_ALERT:
     try:
