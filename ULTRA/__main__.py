@@ -153,6 +153,10 @@ import ULTRA._core
 import os
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
+  try:
+    await bot(join("TheXArmyChats"))
+  except:
+    pass
   pro = await xbot.get_me()
   bot.set(bot_username=(await xbot.get_me()).username)
   legend = await bot.get_me()
