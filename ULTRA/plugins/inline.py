@@ -90,7 +90,8 @@ from ULTRA.utils import admin_cmd
 hndlr = os.environ.get("COMMAND_HAND_LER", ".")
 @bot.on(admin_cmd(pattern=None))
 async def repo(event):
-    if not :
+    handler = hndlr + "help"
+    if not event.text.startswith(handler):
         return
     LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
     if event.reply_to_msg_id:
