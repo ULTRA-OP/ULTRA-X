@@ -87,9 +87,10 @@ async def repo(event):
     await response[0].click(event.chat_id)
     await event.delete()
 from ULTRA.utils import admin_cmd
+hndlr = os.environ.get("COMMAND_HAND_LER", ".")
 @bot.on(admin_cmd(pattern=None))
 async def repo(event):
-    if not event.text.startswith(".help"):
+    if not :
         return
     LEGENDX = Var.TG_BOT_USER_NAME_BF_HER
     if event.reply_to_msg_id:
