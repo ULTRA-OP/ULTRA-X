@@ -16,13 +16,6 @@ async def eor(event, msg, **ok):
     await event.edit(msg, **ok)
   else:
     await event.reply(msg, **ok)
-hndlr = "\\" + cmd
-def ptrn(a, b):
-    if a.startswith("^"):
-        pattern = re.compile(b + a.replace("^", "").replace(".", ""))
-    else:
-        pattern = re.compile(b + a)
-    return pattern
 
 def UltraX(**x):
   stack = inspect.stack()
@@ -38,7 +31,7 @@ def UltraX(**x):
   if not incoming and not outgoing:
     x["outgoing"] = True
   if pattern:
-    x["pattern"] = ptrn(cmd, x["pattern"])
+    x["pattern"] = re.compile(cmd + x["pattern"]))
   if "admin_only" in x:
     del x["admin_only"]
   if "group_only" in x:
