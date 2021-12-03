@@ -1,3 +1,5 @@
+import os
+os.system("pip install Telethon==1.24.0")
 from telethon.sync import TelegramClient
 from telethon.sessions import StringSession
 print("")
