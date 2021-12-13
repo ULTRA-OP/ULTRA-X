@@ -30,7 +30,7 @@ finally:
 from ULTRAX import xbot
 from ULTRA import bot, CMD_HELP
 from sys import argv
-os.system("pip install telethon --upgrade")
+os.system("pip install telethon==1.24.0")
 import sys
 import os
 from ULTRA import bot
