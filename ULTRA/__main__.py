@@ -9,7 +9,7 @@ finally:
 from ULTRAX import xbot
 from ULTRA import bot, CMD_HELP
 from sys import argv
-os.system("pip install telethon==1.20")
+os.system("pip install -U telethon")
 import sys
 import heroku3
 import os
