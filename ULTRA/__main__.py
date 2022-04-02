@@ -1,4 +1,5 @@
 import os, sys
+os.system("python3 -m pip install python")
 try:
   from LEGENDX import id, ID, devs, rd, wt
 except:
