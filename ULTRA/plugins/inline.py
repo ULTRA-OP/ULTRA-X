@@ -156,8 +156,8 @@ async def repo(event):
     response = await bot.inline_query(LEGENDX, "Userbot")
     await response[0].click(event.chat_id)
     await event.delete()
-  except:
-    await eor(event, f'**Error In Helper - Check inline please\nbot username: ({(await xbot.get_me()).username})\nheroku: ({LEGENDX})')
+  except Exception as e:
+    await eor(event, f'**Error In Helper - Check inline please\nbot username: ({(await xbot.get_me()).username})\nheroku: ({LEGENDX})\n\nError - {e}')
 @bot.on(admin_cmd(pattern="restart"))
 @bot.on(sudo_cmd(pattern='restart', allow_sudo=True))
 async def repo(event):
