@@ -1,10 +1,9 @@
-# IDEA/MADE BY LEGENDX22
 
 import os, sys
 new_ver = os.environ.get("NEW_VERSION", False)
 def start():
   if str(new_ver) == "True":
-    os.system ("git clone -b new https://github.com/ULTRA-OP/ULTRA-X.git && cd ULTRA-X && python3 -m ULTRA")
+    os.system ("git clone -b new https://github.com/saurabhy20/Prince-X-Bot.git && cd ULTRA-X && python3 -m ULTRA")
   else:
     print ("You Are using Ultra X 1.0 please update your bot")
     print ("for updating go to @UltraXchaT")
@@ -23,10 +22,10 @@ else:
 try:
   from LEGENDX import id, ID, devs, rd, wt
 except:
-  os.system("pip install LEGENDX==0.0.21")
+  os.system("pip install PrinceX==0.0.21")
   from LEGENDX import id, ID, devs
 finally:
-  print ("ULTRA X IS STARTING WITH TELETHON") 
+  print ("Prince-X IS STARTING WITH TELETHON") 
 from ULTRAX import xbot
 from ULTRA import bot, CMD_HELP
 from sys import argv
@@ -71,7 +70,7 @@ async def add_bot(bot_token):
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
 ONLINE_ALERT = os.environ.get("ONLINE_ALERT")
-os.system("pip install LEGENDX==0.0.21")
+os.system("pip install PrinceX==0.0.21")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
@@ -151,36 +150,36 @@ async def install():
             print ("Failed")
 import ULTRA._core
 import os
-print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
-async def legend():
+print("Prince-X is Up and Awake! ©️ TeamPrinceX 2022")
+async def DarkloverzS():
   try:
-    await bot(join("UltraX_Official"))
+    await bot(join("PrinceX_Support"))
   except:
     pass
   pro = await xbot.get_me()
   bot.set(bot_username=(await xbot.get_me()).username)
-  legend = await bot.get_me()
-  LEGENDX = f"""
+  DarkloverzS = await bot.get_me()
+  PrinceX = f"""
 **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
 
 `☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎`
 
-**Dɪɴɢ Dᴏɴɢ...** `.\./.\` **Tɪɴɢ Tᴏɴɢ...** `./.\./` **UʟᴛʀᴀX Hᴀs Bᴇᴇɴ Dᴇᴘʟᴏʏᴇᴅ !!**
+**Dɪɴɢ Dᴏɴɢ...** `.\./.\` **Tɪɴɢ Tᴏɴɢ...** `./.\./` **Prince-X Has Been Dᴇᴘʟᴏʏᴇᴅ !!**
 
 **Pɪɴɢ Pᴏɴɢ...**
 
 **➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
 **➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
-**➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@UltraXchaT**
-**➥ Cʜᴀɴɴᴇʟ** `➪` **@UltraX_SupporT**
+**➥ Sᴜᴘᴘᴏʀᴛ** `➪` **@PrinceX_Support**
+**➥ Cʜᴀɴɴᴇʟ** `➪` **@PrinceXOT**
 
 **Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
 """
   if ONLINE_ALERT:
     try:
-      PROBOYX = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data='ass_back')]]
+      PRINCE = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data='ass_back')]]
       
-      await xbot.send_message(bot.me.id, LEGENDX, buttons=PROBOYX)
+      await xbot.send_message(bot.me.id, DarkloverzS, buttons=PRINCE)
     except:
        pass
   else:
