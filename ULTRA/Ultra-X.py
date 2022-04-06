@@ -1,4 +1,4 @@
-#Copyright 2021-2022 Ultra X Bot
+#Copyright 2021-2022 Prince-X Bot
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -18,8 +18,8 @@ import os
 import datetime
 #importing finished
 from ULTRA import botnickname 
-BOT = str(botnickname) if botnickname else "υℓтяα χ вσт"
-NAME = str(ALIVE_NAME) if ALIVE_NAME else "υℓтяα χ вσу"
+BOT = str(botnickname) if botnickname else "Prince-X Bot"
+NAME = str(ALIVE_NAME) if ALIVE_NAME else "Prince"
 tim = get_readable_time((time.time() - StartTime))
 #pic 👇
 PIC = os.environ.get("ALIVE_PIC")
@@ -28,18 +28,18 @@ uptime = tim
 #time = date + time okay
 TIME = time.asctime(time.localtime())
 #my name 👇
-ULTRAX = "[υℓтяα χ](https://t.me/ULTRAXOT)"
+PRINCEX = "[Prince-X](https://t.me/PrinceXOT)"
 #my bots repo 👇
-REPO = "[υℓтяα χ вσт](https://github.com/ULTRA-OP/ULTRA-X)"
+REPO = "[Prince-X Bot](https://github.com/saurabhy20/Prince-X-Bot)"
 #grpup👇NAME = "[{MAATER}](tg://user?id={X})"
 #yrr isko apne bot me aply krne se pehle mere se pooch lena ok
 #aur aage add kruga abhi busy okay 🤔
 global ghanti
 X = bot.uid
 MASTER = f"[{NAME}](tg://user?id={X})"
-GROUP = "[SUPPORT GROUP](https://t.me/ULTRAXCHAT)"
+GROUP = "[SUPPORT GROUP](https://t.me/PrinceX_Support)"
 #itna test h aur aage krte h
 #test successful raha ab aage 
-ALIVE = "υℓтяα χ вσт ιѕ ση 🔥 ƒιяє 🔥" 
-OP = " нєℓℓσ мαѕтєя му ηαмє ιѕ υℓтяα χ вσт ι αм тнє вєѕт υѕєявσт 💝"
+ALIVE = "Prince-X Bot is on 🔥 ƒιяє 🔥" 
+OP = " нєℓℓσ мαѕтєя му ηαмє ιѕ PRINCE-X Bot ι αм тнє вєѕт υѕєявσт 💝"
 EMOJI = "🔥"
