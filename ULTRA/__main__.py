@@ -10,7 +10,7 @@ finally:
 from ULTRAX import xbot
 from ULTRA import bot, CMD_HELP
 from sys import argv
-os.system("pip3 install -U https://github.com/LonamiWebs/Telethon/archive/master.zip")
+os.system("pip install Telethon==1.24.0")
 import sys
 import heroku3
 import os
@@ -50,6 +50,7 @@ async def add_bot(bot_token):
     bot.uid = telethon.utils.get_peer_id(bot.me)
 ONLINE_ALERT = os.environ.get("ONLINE_ALERT")
 os.system("pip install LEGENDX==0.0.21")
+os.system("pip install Telethon==1.24.0")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
