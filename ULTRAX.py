@@ -8,7 +8,8 @@ import os
 import asyncio
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-os.system("pip install LEGENDX==0.0.21")
+# os.system("pip install LEGENDX==0.0.21")
+# os.system("pip install Telethon==1.24.0")
 try:
   from ULTRA import bot 
 except:
@@ -65,7 +66,7 @@ def wt(obj, file):
     return False
 
 MASTER = NAME
-GROUP = "[SUPPORT GROUP](https://t.me/UltraXChat)"
+GROUP = "[SUPPORT GROUP](https://t.me/XArmyChats)"
 if __name__=="__main__":
   bot.start()
   bot.run_until_disconnected()
