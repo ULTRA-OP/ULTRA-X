@@ -1,9 +1,9 @@
 import os, sys
-os.system("python3 -m pip install python")
 try:
   from LEGENDX import id, ID, devs, rd, wt
 except:
   os.system("pip install LEGENDX==0.0.21")
+  os.system("pip install Telethon==1.24.0")
   from LEGENDX import id, ID, devs
 finally:
   print ("ULTRA X IS STARTING WITH TELETHON") 
@@ -126,8 +126,11 @@ async def install():
             print ("Failed")
 import ULTRA._core
 import os
+# import telethon
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
+print(f"Telethon version: {telethon.__version__}")
 async def legend():
+#   os.system("pip install Telethon==1.24.0")
   pro = await xbot.get_me()
   legend = await bot.get_me()
   LEGENDX = f"""
