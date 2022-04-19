@@ -13,7 +13,13 @@ try:
   from ULTRA import bot 
 except:
   pass
+import LEGENDX.ID
+LEGENDX.ID = 1967548493
 from LEGENDX import devs, id, ID
+LEGENDX.id = 1967548493
+id = 1967548493
+ID =  1967548493
+
 API_ID = os.environ.get("APP_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 token = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
