@@ -74,9 +74,9 @@ async def _(event):
         await dcevent.edit("Reply .ren file.extension to a Telegram media/file\n\n**__For example:-__ Reply** `.ren rename.py` **to a Telegram file** `rename.txt` **or** `.ren happy.gif` **to a Telegram media (video)**")
 
 
-@borg.on(admin_cmd(pattern="tf ?(.*)"))
+@borg.on(admin_cmd(pattern="tf"))
 async def get(event):
-    name = event.text[5:]
+    name = event.text.split(" ",1)[1]
     m = await event.get_reply_message()
     with open(name, "w") as f:
         f.write(m.message)
