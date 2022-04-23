@@ -5,7 +5,7 @@
 """
    Heroku manager for your ULTRA
 """
-
+from ..data.alive_db import get_grp
 import heroku3
 import asyncio
 import os
@@ -190,6 +190,24 @@ def prettyjson(obj, indent=2, maxlinelength=80):
     items, _ = getsubitems(obj, itemkey="", islast=True, maxlinelength=maxlinelength - indent, indent=indent)
     return indentitems(items, indent, level=0)
 
+ 
+
+@borg.on(admin_cmd(pattern="fixvars$", outgoing=True))
+async def setgrp(event):
+  k = await get_grp()
+  heroku_conn = heroku3.from_key(Var.HEROKU_API_KEY)
+  k = heroku_conn.apps()[Var.HEROKU_APP_NAME]
+  vars = {
+    "FBAN_GROUP_ID": id,
+    "PM_LOGGR_BOT_API_ID" : id,
+    "PRIVATE_GROUP_BOT_API_ID": id,
+    "G_BAN_LOGGER_GROUP": id,
+    "PM_PERMIT_GROUP_ID": id
+    }
+  k.update_config(vars)
+  print ("Successfully Added group")
+   
+   
 CMD_HELP.update({
   "heroku":
   "Info for Module to Manage Heroku:**\n\n`.usage`\nUsage:__Check your heroku dyno hours status.__\n\n`.set var <NEW VAR> <VALUE>`\nUsage: __add new variable or update existing value variable__\n**!!! WARNING !!!, after setting a variable the bot will restart.**\n\n`.get var or .get var <VAR>`\nUsage: __get your existing varibles, use it only on your private group!__\n**This returns all of your private information, please be cautious...**\n\n`.del var <VAR>`\nUsage: __delete existing variable__\n**!!! WARNING !!!, after deleting variable the bot will restarted**\n\n`.herokulogs`\nUsage:sends you recent 100 lines of logs in heroku"
