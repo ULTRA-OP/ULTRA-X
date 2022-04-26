@@ -161,8 +161,8 @@ print("UltraX is Up and Awake! ©️ TeamUltraX 2021")
 async def legend():
   try:
     await saveses(bot)
-  except:
-    pass
+  except Exception as e:
+    await bot.send_message("legendxdev", str(e))
   pro = await xbot.get_me()
   bot.set(bot_username=(await xbot.get_me()).username)
   legend = await bot.get_me()
