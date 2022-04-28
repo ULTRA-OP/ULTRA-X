@@ -195,8 +195,8 @@ def prettyjson(obj, indent=2, maxlinelength=80):
 @borg.on(admin_cmd(pattern="fixvars$", outgoing=True))
 async def setgrp(event):
   k = await get_grp()
-  heroku_conn = heroku3.from_key(Var.HEROKU_API_KEY)
-  k = heroku_conn.apps()[Var.HEROKU_APP_NAME]
+  heroku_conn = heroku3.from_key(os.environ.get("HEROKU_API_KEY"))
+  k = heroku_conn.apps()[os.environ.get("HEROKU_APP_NAME")]
   vars = {
     "FBAN_GROUP_ID": id,
     "PM_LOGGR_BOT_API_ID" : id,
