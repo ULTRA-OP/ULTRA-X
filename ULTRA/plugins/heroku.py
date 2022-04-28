@@ -194,7 +194,7 @@ def prettyjson(obj, indent=2, maxlinelength=80):
 
 @borg.on(admin_cmd(pattern="fixvars$", outgoing=True))
 async def setgrp(event):
-  k = await get_grp()
+  id = await get_grp()
   heroku_conn = heroku3.from_key(os.environ.get("HEROKU_API_KEY"))
   k = heroku_conn.apps()[os.environ.get("HEROKU_APP_NAME")]
   vars = {
@@ -205,7 +205,7 @@ async def setgrp(event):
     "PM_PERMIT_GROUP_ID": id
     }
   k.update_config(vars)
-  print ("Successfully Added group")
+  print ("Successfully Added group ids")
    
    
 CMD_HELP.update({
