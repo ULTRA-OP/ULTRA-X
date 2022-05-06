@@ -13,10 +13,8 @@ try:
   from ULTRA import bot 
 except:
   pass
-import LEGENDX.ID
-LEGENDX.ID = 1967548493
+
 from LEGENDX import devs, id, ID
-LEGENDX.id = 1967548493
 id = 1967548493
 ID =  1967548493
 
